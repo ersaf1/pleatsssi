@@ -1,0 +1,2 @@
+-- Seed data for Pleatsssi e-commerce app monolith
+-- Populates default categories, products, variants, etc. for local development
