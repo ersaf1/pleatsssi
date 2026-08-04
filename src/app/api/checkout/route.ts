@@ -2,18 +2,57 @@ import { NextResponse } from 'next/server';
 import { supabaseServerClient } from '@/lib/supabaseServer';
 import { snap } from '@/lib/midtrans';
 
+interface ProductInfo {
+  price: number;
+  discount: number;
+  name: string;
+}
+
+interface VariantWithProduct {
+  id: string;
+  stock: number;
+  sku: string;
+  color: string;
+  size: string;
+  products: ProductInfo | ProductInfo[] | null;
+}
+
+// Helper to handle both object and array results from Supabase joins
+function getProductInfo(products: ProductInfo | ProductInfo[] | null): ProductInfo | null {
+  if (!products) return null;
+  if (Array.isArray(products)) {
+    return products[0];
+  }
+  return products;
+}
+
 interface CheckoutItem {
   variantId: string;
-  name: string;
-  variantLabel: string;
-  price: number;
   quantity: number;
+  name?: string;
+  variantLabel?: string;
+  price?: number;
 }
 
 export async function POST(request: Request) {
   try {
     const body = await request.json().catch(() => ({}));
     const { addressId, courier, items } = body;
+
+    // Presence and format validation for addressId and courier
+    if (!addressId || typeof addressId !== 'string' || addressId.trim() === '') {
+      return NextResponse.json(
+        { success: false, message: 'Invalid payload: addressId must be a non-empty string' },
+        { status: 400 }
+      );
+    }
+
+    if (!courier || typeof courier !== 'string' || courier.trim() === '') {
+      return NextResponse.json(
+        { success: false, message: 'Invalid payload: courier must be a non-empty string' },
+        { status: 400 }
+      );
+    }
 
     if (!Array.isArray(items) || items.length === 0) {
       return NextResponse.json(
@@ -22,11 +61,11 @@ export async function POST(request: Request) {
       );
     }
 
-    // Validate each item in the payload
+    // Validate each item in the payload structure
     for (const item of items as CheckoutItem[]) {
-      if (!item.variantId || typeof item.price !== 'number' || item.price <= 0 || typeof item.quantity !== 'number' || item.quantity <= 0) {
+      if (!item.variantId || typeof item.quantity !== 'number' || item.quantity <= 0) {
         return NextResponse.json(
-          { success: false, message: 'Invalid payload: each item must have a valid variantId, price > 0, and quantity > 0' },
+          { success: false, message: 'Invalid payload: each item must have a valid variantId and quantity > 0' },
           { status: 400 }
         );
       }
@@ -39,11 +78,18 @@ export async function POST(request: Request) {
       return NextResponse.json({ success: false, message: 'Unauthenticated' }, { status: 401 });
     }
 
-    // 1. Calculate amount & validate variant stock levels
-    const variantIds = items.map((item: CheckoutItem) => item.variantId);
+    // Aggregate items by variantId to prevent stock bypasses via duplicate entries
+    const aggregatedMap = new Map<string, number>();
+    for (const item of items as CheckoutItem[]) {
+      const currentQty = aggregatedMap.get(item.variantId) || 0;
+      aggregatedMap.set(item.variantId, currentQty + item.quantity);
+    }
+
+    // Securely query variant details, including the nested product prices/discounts
+    const variantIds = Array.from(aggregatedMap.keys());
     const { data: variants, error: variantsErr } = await supabase
       .from('product_variants')
-      .select('id, stock, sku')
+      .select('id, stock, sku, color, size, products ( price, discount, name )')
       .in('id', variantIds);
 
     if (variantsErr || !variants) {
@@ -53,10 +99,31 @@ export async function POST(request: Request) {
       );
     }
 
-    const variantMap = new Map<string, { id: string; stock: number; sku: string }>();
+    const variantMap = new Map<string, VariantWithProduct>();
     for (const v of variants) {
       variantMap.set(v.id, v);
     }
+
+    // Validate stock levels using the aggregated quantities
+    for (const [variantId, qty] of aggregatedMap.entries()) {
+      const variant = variantMap.get(variantId);
+      if (!variant) {
+        return NextResponse.json(
+          { success: false, message: `Variant ${variantId} not found` },
+          { status: 400 }
+        );
+      }
+      if (variant.stock < qty) {
+        return NextResponse.json(
+          { success: false, message: `Insufficient stock for SKU ${variant.sku}` },
+          { status: 400 }
+        );
+      }
+    }
+
+    // Securely calculate pricing and prepare order items on the server side
+    let grossAmount = 0;
+    const secureItems = [];
 
     for (const item of items as CheckoutItem[]) {
       const variant = variantMap.get(item.variantId);
@@ -66,20 +133,34 @@ export async function POST(request: Request) {
           { status: 400 }
         );
       }
-      if (variant.stock < item.quantity) {
+      const prod = getProductInfo(variant.products);
+
+      if (!prod) {
         return NextResponse.json(
-          { success: false, message: `Insufficient stock for SKU ${variant.sku}` },
+          { success: false, message: `Product details not found for variant ${item.variantId}` },
           { status: 400 }
         );
       }
+
+      const originalPrice = Number(prod.price);
+      const discountPercent = Number(prod.discount || 0);
+      const securePrice = originalPrice * (1 - discountPercent / 100);
+      const subtotal = securePrice * item.quantity;
+      grossAmount += subtotal;
+
+      secureItems.push({
+        product_variant_id: item.variantId,
+        product_name: prod.name,
+        variant_label: `${variant.color} / ${variant.size}`,
+        price: securePrice,
+        quantity: item.quantity,
+        subtotal,
+      });
     }
 
-    let grossAmount = 0;
-    for (const item of items as CheckoutItem[]) {
-      grossAmount += item.price * item.quantity;
-    }
-
-    const orderNumber = `PLT-${Date.now()}`;
+    // Generate a collision-resistant order number
+    const randomSuffix = Math.random().toString(36).substring(2, 6).toUpperCase();
+    const orderNumber = `PLT-${Date.now()}-${randomSuffix}`;
 
     // 2. Insert into orders table in DB
     const { data: order, error: orderErr } = await supabase
@@ -106,15 +187,15 @@ export async function POST(request: Request) {
       );
     }
 
-    // Insert into order_items table in DB
-    const orderItemsData = (items as CheckoutItem[]).map((item) => ({
+    // Insert into order_items table in DB using secure server-calculated items
+    const orderItemsData = secureItems.map((item) => ({
       order_id: order.id,
-      product_variant_id: item.variantId,
-      product_name: item.name,
-      variant_label: item.variantLabel,
+      product_variant_id: item.product_variant_id,
+      product_name: item.product_name,
+      variant_label: item.variant_label,
       price: item.price,
       quantity: item.quantity,
-      subtotal: item.price * item.quantity,
+      subtotal: item.subtotal,
     }));
 
     const { error: itemsErr } = await supabase
@@ -122,7 +203,7 @@ export async function POST(request: Request) {
       .insert(orderItemsData);
 
     if (itemsErr) {
-      // Cleanup the order if items insertion fails
+      // Cleanup the order if items insertion fails (cascade delete handles database references)
       await supabase.from('orders').delete().eq('id', order.id);
       return NextResponse.json({ success: false, message: itemsErr.message }, { status: 400 });
     }
@@ -153,7 +234,7 @@ export async function POST(request: Request) {
       });
 
       if (paymentErr) {
-        // Cleanup order and items if payment record insertion fails
+        // Cleanup order if payment record insertion fails
         await supabase.from('orders').delete().eq('id', order.id);
         return NextResponse.json({ success: false, message: paymentErr.message }, { status: 400 });
       }
@@ -165,7 +246,7 @@ export async function POST(request: Request) {
       });
     } catch (err: unknown) {
       const errMsg = err instanceof Error ? err.message : 'Midtrans payment gateway error';
-      // Cleanup order and items if midtrans fails
+      // Cleanup order if midtrans fails
       await supabase.from('orders').delete().eq('id', order.id);
       return NextResponse.json({ success: false, message: errMsg }, { status: 500 });
     }
