@@ -34,12 +34,12 @@ const mockFetch = vi.fn();
 global.fetch = mockFetch;
 
 // Import store, route handler, and Supabase client
-import { useCartStore, type CartItem } from '../src/store/useCartStore';
-import { POST as syncPOST } from '../src/app/api/cart/sync/route';
-import { supabaseServerClient } from '../src/lib/supabaseServer';
+import { useCartStore, type CartItem } from '@/store/useCartStore';
+import { POST as syncPOST } from '@/app/api/cart/sync/route';
+import { supabaseServerClient } from '@/lib/supabaseServer';
 
 // Mock supabaseServerClient
-vi.mock('../src/lib/supabaseServer', () => ({
+vi.mock('@/lib/supabaseServer', () => ({
   supabaseServerClient: vi.fn(),
 }));
 
@@ -102,6 +102,12 @@ describe('Cart Store & API Sync', () => {
       useCartStore.getState().addItem(itemA);
       expect(useCartStore.getState().items).toEqual([itemA]);
     });
+
+    test('addItem caps initial add quantity at stockAvailable', () => {
+      useCartStore.getState().addItem({ ...itemA, quantity: 10 });
+      expect(useCartStore.getState().items[0].quantity).toBe(5);
+    });
+
 
     test('addItem increments quantity if variant already exists, capped at stockAvailable', () => {
       useCartStore.getState().addItem(itemA);
@@ -220,6 +226,35 @@ describe('Cart Store & API Sync', () => {
       expect(json.success).toBe(false);
       expect(json.message).toContain('items must be an array');
     });
+
+    test('returns 400 if items contains negative or zero quantity', async () => {
+      mockGetUser.mockResolvedValue({ data: { user: { id: 'user-id-123' } }, error: null });
+
+      const invalidItems = [
+        {
+          variantId: 'var-1',
+          productId: 'prod-1',
+          name: 'Dress 1',
+          variantLabel: 'Red / S',
+          price: 200000,
+          quantity: -5,
+          stockAvailable: 10,
+          imageUrl: 'image.jpg',
+        },
+      ];
+
+      const req = new Request('http://localhost/api/cart/sync', {
+        method: 'POST',
+        body: JSON.stringify({ items: invalidItems }),
+      });
+
+      const response = await syncPOST(req);
+      expect(response.status).toBe(400);
+      const json = await response.json();
+      expect(json.success).toBe(false);
+      expect(json.message).toContain('greater than 0');
+    });
+
 
     test('returns 200 early if items array is empty', async () => {
       mockGetUser.mockResolvedValue({ data: { user: { id: 'user-id-123' } }, error: null });

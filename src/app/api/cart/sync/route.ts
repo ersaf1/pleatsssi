@@ -21,6 +21,16 @@ export async function POST(request: Request) {
       return NextResponse.json({ success: true, message: 'No items to sync' });
     }
 
+    // Validate incoming items first before making database queries
+    for (const item of items) {
+      if (!item.variantId || typeof item.quantity !== 'number' || item.quantity <= 0) {
+        return NextResponse.json(
+          { success: false, message: 'Invalid payload: each item must have a variantId and a quantity greater than 0' },
+          { status: 400 }
+        );
+      }
+    }
+
     // Fetch existing cart items from database
     const { data: dbItems, error: fetchError } = await supabase
       .from('cart_items')
@@ -41,12 +51,11 @@ export async function POST(request: Request) {
     }
 
     for (const item of items) {
-      if (!item.variantId || typeof item.quantity !== 'number') {
-        continue;
-      }
       const existingQty = mergedMap.get(item.variantId) || 0;
       mergedMap.set(item.variantId, existingQty + item.quantity);
     }
+
+
 
     const upsertData = Array.from(mergedMap.entries()).map(([variantId, quantity]) => ({
       user_id: user.id,

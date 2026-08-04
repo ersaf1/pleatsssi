@@ -69,3 +69,13 @@ CREATE TABLE cart_items (
   UNIQUE(user_id, product_variant_id)
 );
 
+-- Enable RLS and add policies for cart_items
+ALTER TABLE cart_items ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Users can manage their own cart items." ON cart_items
+  FOR ALL
+  TO authenticated
+  USING (auth.uid() = user_id)
+  WITH CHECK (auth.uid() = user_id);
+
+

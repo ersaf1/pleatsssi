@@ -36,7 +36,12 @@ export const useCartStore = create<CartState>()(
             ),
           };
         }
-        return { items: [...state.items, item] };
+        return {
+          items: [
+            ...state.items,
+            { ...item, quantity: Math.min(item.quantity, item.stockAvailable) },
+          ],
+        };
       }),
       removeItem: (variantId) => set((state) => ({
         items: state.items.filter((i) => i.variantId !== variantId),
@@ -51,15 +56,20 @@ export const useCartStore = create<CartState>()(
         const { items } = get();
         if (items.length === 0) return;
         try {
-          await fetch('/api/cart/sync', {
+          const res = await fetch('/api/cart/sync', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ items }),
           });
+          if (!res.ok) {
+            throw new Error(`HTTP error! status: ${res.status}`);
+          }
         } catch (e) {
           console.error('Failed to sync cart', e);
+          throw e;
         }
       },
+
     }),
     { name: 'pleatsssi-cart' }
   )

@@ -49,3 +49,23 @@
 
 ## Issues or Concerns
 - None. The client store and server synchronizer compile, test, and build cleanly.
+
+---
+
+## Fixes Implemented (Code Review Feedback)
+
+We successfully addressed all code review feedback points:
+1. **Critical: Enabled Row Level Security (RLS) on `cart_items`**:
+   - Enabled RLS on the `cart_items` table in `supabase/migrations/20260804000000_init_schema.sql` and added a policy for `SELECT`, `INSERT`, `UPDATE`, and `DELETE` restricting access to only instances where `auth.uid() = user_id`.
+2. **Important: Handled Silent HTTP Failures on Client Sync**:
+   - Updated `syncWithBackend` in `src/store/useCartStore.ts` to check `res.ok` and throw an error on HTTP failure status codes, alerting callers of any sync failures.
+3. **Important: Added Server-side Input Validation**:
+   - Restructured `/api/cart/sync/route.ts` to validate that all items have `quantity > 0` and a valid `variantId` before making any database queries, rejecting bad requests with a `400` status.
+4. **Minor: Inconsistent Path Alias in Tests**:
+   - Refactored relative path imports in `tests/cart.test.ts` to use standard `@/*` path aliases.
+5. **Minor: Quantity Capping on Initial Add**:
+   - Updated the initial add logic in `useCartStore.ts` to cap the quantity at `stockAvailable` when adding the item to the cart for the first time.
+6. **Tests Added & Updated**:
+   - Added unit test cases for the initial add quantity capping logic and server-side quantity validation.
+   - All tests (22/22) pass successfully without any warnings.
+
