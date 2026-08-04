@@ -78,6 +78,16 @@ CREATE POLICY "Users can view their own order items." ON order_items
     )
   );
 
+CREATE POLICY "Allow insert for order owner" ON order_items
+  FOR INSERT
+  TO authenticated
+  WITH CHECK (
+    EXISTS (
+      SELECT 1 FROM orders
+      WHERE orders.id = order_items.order_id AND orders.user_id = auth.uid()
+    )
+  );
+
 -- Payments policies: users can view their own payments
 CREATE POLICY "Users can view their own payments." ON payments
   FOR SELECT
@@ -88,3 +98,14 @@ CREATE POLICY "Users can view their own payments." ON payments
       WHERE orders.id = payments.order_id AND orders.user_id = auth.uid()
     )
   );
+
+CREATE POLICY "Allow insert for order owner" ON payments
+  FOR INSERT
+  TO authenticated
+  WITH CHECK (
+    EXISTS (
+      SELECT 1 FROM orders
+      WHERE orders.id = payments.order_id AND orders.user_id = auth.uid()
+    )
+  );
+
