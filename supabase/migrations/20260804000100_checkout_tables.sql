@@ -45,6 +45,7 @@ CREATE INDEX idx_order_items_product_variant_id ON order_items(product_variant_i
 CREATE TABLE payments (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   order_id UUID NOT NULL REFERENCES orders(id) ON DELETE CASCADE UNIQUE,
+  snap_token VARCHAR(255),
   payment_method VARCHAR(50),
   midtrans_transaction_id VARCHAR(100) UNIQUE,
   status VARCHAR(30) NOT NULL,
