@@ -113,7 +113,7 @@ export async function POST(request: Request) {
       );
     }
 
-    // If order was not cancelled previously but is now cancelled, restore variant stock levels
+    // If order was not cancelled previously but is now cancelled, restore variant stock levels atomically via RPC
     if (orderStatus === 'cancelled' && order.status !== 'cancelled') {
       const { data: orderItems, error: itemsErr } = await supabase
         .from('order_items')
@@ -122,20 +122,10 @@ export async function POST(request: Request) {
 
       if (!itemsErr && orderItems) {
         for (const item of orderItems) {
-          const { data: variant, error: variantErr } = await supabase
-            .from('product_variants')
-            .select('stock')
-            .eq('id', item.product_variant_id)
-            .single();
-
-          if (!variantErr && variant) {
-            await supabase
-              .from('product_variants')
-              .update({
-                stock: variant.stock + item.quantity,
-              })
-              .eq('id', item.product_variant_id);
-          }
+          await supabase.rpc('adjust_variant_stock', {
+            variant_id: item.product_variant_id,
+            qty: item.quantity,
+          });
         }
       }
     }

@@ -22,11 +22,13 @@ describe('Checkout API Endpoint', () => {
   const mockSingle = vi.fn();
   const mockEq = vi.fn();
   const mockInsert = vi.fn();
+  const mockRpc = vi.fn();
 
   const mockSupabase = {
     auth: {
       getUser: mockGetUser,
     },
+    rpc: mockRpc,
     from: vi.fn().mockImplementation((table: string) => {
       if (table === 'product_variants') {
         return {
@@ -58,6 +60,7 @@ describe('Checkout API Endpoint', () => {
 
   beforeEach(() => {
     vi.clearAllMocks();
+    mockRpc.mockResolvedValue({ error: null });
     vi.mocked(supabaseServerClient).mockResolvedValue(mockSupabase as unknown as SupabaseClient);
   });
 

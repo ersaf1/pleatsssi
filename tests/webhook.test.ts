@@ -13,17 +13,20 @@ describe('Midtrans Webhook Payment Status Handler', () => {
   const originalServerKey = process.env.MIDTRANS_SERVER_KEY;
 
   // Mock functions for Supabase queries
-  const mockSingle = vi.fn();
+  const mockSingleOrder = vi.fn();
+  const mockSingleVariant = vi.fn();
   const mockUpdate = vi.fn();
   const mockSelect = vi.fn();
+  const mockRpc = vi.fn();
 
   const mockSupabase = {
+    rpc: mockRpc,
     from: vi.fn().mockImplementation((table: string) => {
       if (table === 'orders') {
         return {
           select: vi.fn().mockReturnValue({
             eq: vi.fn().mockReturnValue({
-              single: mockSingle,
+              single: mockSingleOrder,
             }),
           }),
           update: mockUpdate,
@@ -45,7 +48,7 @@ describe('Midtrans Webhook Payment Status Handler', () => {
         return {
           select: vi.fn().mockReturnValue({
             eq: vi.fn().mockReturnValue({
-              single: mockSingle,
+              single: mockSingleVariant,
             }),
           }),
           update: mockUpdate,
@@ -60,8 +63,9 @@ describe('Midtrans Webhook Payment Status Handler', () => {
     process.env.MIDTRANS_SERVER_KEY = 'test_server_key';
     vi.mocked(supabaseServerClient).mockResolvedValue(mockSupabase as unknown as SupabaseClient);
 
-    // Default mock response setup for orders update and payments update
+    // Default mock response setups
     mockUpdate.mockReturnValue({ eq: vi.fn().mockResolvedValue({ error: null }) });
+    mockRpc.mockResolvedValue({ error: null });
   });
 
   afterEach(() => {
@@ -81,7 +85,6 @@ describe('Midtrans Webhook Payment Status Handler', () => {
       method: 'POST',
       body: JSON.stringify({
         order_id: 'PLT-12345',
-        // Missing status_code, gross_amount, etc.
       }),
     });
 
@@ -147,7 +150,7 @@ describe('Midtrans Webhook Payment Status Handler', () => {
     };
 
     // Mock order fetch returning order not found
-    mockSingle.mockResolvedValueOnce({ data: null, error: { message: 'Order not found' } });
+    mockSingleOrder.mockResolvedValueOnce({ data: null, error: { message: 'Order not found' } });
 
     const req = new Request('http://localhost/api/webhooks/midtrans', {
       method: 'POST',
@@ -175,13 +178,12 @@ describe('Midtrans Webhook Payment Status Handler', () => {
       transaction_id: 'midtrans-tx-999',
     };
 
-    // 1. Mock Order query (currently 'pending' status)
-    mockSingle.mockResolvedValueOnce({
+    // Mock Order query (currently 'pending' status)
+    mockSingleOrder.mockResolvedValueOnce({
       data: { id: 'order-uuid-1', status: 'pending', payment_status: 'pending' },
       error: null,
     });
 
-    // 2. Mock updates
     const mockOrderEq = vi.fn().mockResolvedValue({ error: null });
     const mockPaymentEq = vi.fn().mockResolvedValue({ error: null });
 
@@ -233,7 +235,7 @@ describe('Midtrans Webhook Payment Status Handler', () => {
     expect(orderItemsFetch).toBe(false);
   });
 
-  test('restores variant stock levels if order transitions to cancelled status', async () => {
+  test('restores variant stock levels via atomic RPC if order transitions to cancelled status', async () => {
     const orderNumber = 'PLT-CANCEL-123';
     const grossAmount = '250000.00';
     const signature = generateSignature(orderNumber, '407', grossAmount, 'test_server_key');
@@ -248,7 +250,7 @@ describe('Midtrans Webhook Payment Status Handler', () => {
     };
 
     // 1. Mock Order query (currently 'pending' status)
-    mockSingle.mockResolvedValueOnce({
+    mockSingleOrder.mockResolvedValueOnce({
       data: { id: 'order-uuid-2', status: 'pending', payment_status: 'pending' },
       error: null,
     });
@@ -261,12 +263,6 @@ describe('Midtrans Webhook Payment Status Handler', () => {
       ],
       error: null,
     });
-
-    // 3. Mock product variant stock checks
-    // We will call single() twice for the 2 items
-    mockSingle
-      .mockResolvedValueOnce({ data: { stock: 10 }, error: null }) // stock for var-1
-      .mockResolvedValueOnce({ data: { stock: 5 }, error: null }); // stock for var-2
 
     const req = new Request('http://localhost/api/webhooks/midtrans', {
       method: 'POST',
@@ -294,19 +290,15 @@ describe('Midtrans Webhook Payment Status Handler', () => {
       })
     );
 
-    // Verify stock increment was called for var-1 (10 + 2 = 12)
-    expect(mockUpdate).toHaveBeenCalledWith(
-      expect.objectContaining({
-        stock: 12,
-      })
-    );
-
-    // Verify stock increment was called for var-2 (5 + 1 = 6)
-    expect(mockUpdate).toHaveBeenCalledWith(
-      expect.objectContaining({
-        stock: 6,
-      })
-    );
+    // Verify atomic RPC stock increments were called
+    expect(mockRpc).toHaveBeenCalledWith('adjust_variant_stock', {
+      variant_id: 'var-1',
+      qty: 2,
+    });
+    expect(mockRpc).toHaveBeenCalledWith('adjust_variant_stock', {
+      variant_id: 'var-2',
+      qty: 1,
+    });
   });
 
   test('does not restore stock levels if order was already cancelled', async () => {
@@ -323,8 +315,8 @@ describe('Midtrans Webhook Payment Status Handler', () => {
       transaction_id: 'midtrans-tx-already',
     };
 
-    // 1. Mock Order query (already 'cancelled' status)
-    mockSingle.mockResolvedValueOnce({
+    // Mock Order query (already 'cancelled' status)
+    mockSingleOrder.mockResolvedValueOnce({
       data: { id: 'order-uuid-3', status: 'cancelled', payment_status: 'failed' },
       error: null,
     });

@@ -110,3 +110,13 @@ CREATE POLICY "Allow insert for order owner" ON payments
     )
   );
 
+-- Function to atomically adjust variant stock level
+CREATE OR REPLACE FUNCTION adjust_variant_stock(variant_id UUID, qty INT)
+RETURNS VOID AS $$
+BEGIN
+  UPDATE product_variants
+  SET stock = stock + qty
+  WHERE id = variant_id;
+END;
+$$ LANGUAGE plpgsql SECURITY DEFINER;
+

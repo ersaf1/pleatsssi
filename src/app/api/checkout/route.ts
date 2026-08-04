@@ -162,6 +162,37 @@ export async function POST(request: Request) {
     const randomSuffix = Math.random().toString(36).substring(2, 6).toUpperCase();
     const orderNumber = `PLT-${Date.now()}-${randomSuffix}`;
 
+    // Decrement variant stock levels via atomic RPC
+    for (const [variantId, qty] of aggregatedMap.entries()) {
+      const { error: stockErr } = await supabase.rpc('adjust_variant_stock', {
+        variant_id: variantId,
+        qty: -qty,
+      });
+      if (stockErr) {
+        // Rollback any stock decrement we've already done in this loop
+        for (const [rollbackId, rollbackQty] of aggregatedMap.entries()) {
+          if (rollbackId === variantId) break;
+          await supabase.rpc('adjust_variant_stock', {
+            variant_id: rollbackId,
+            qty: rollbackQty,
+          });
+        }
+        return NextResponse.json(
+          { success: false, message: stockErr.message || 'Failed to update stock' },
+          { status: 400 }
+        );
+      }
+    }
+
+    const restoreStock = async () => {
+      for (const [variantId, qty] of aggregatedMap.entries()) {
+        await supabase.rpc('adjust_variant_stock', {
+          variant_id: variantId,
+          qty,
+        });
+      }
+    };
+
     // 2. Insert into orders table in DB
     const { data: order, error: orderErr } = await supabase
       .from('orders')
@@ -181,6 +212,7 @@ export async function POST(request: Request) {
       .single();
 
     if (orderErr || !order) {
+      await restoreStock();
       return NextResponse.json(
         { success: false, message: orderErr?.message || 'Failed to create order' },
         { status: 400 }
@@ -203,7 +235,8 @@ export async function POST(request: Request) {
       .insert(orderItemsData);
 
     if (itemsErr) {
-      // Cleanup the order if items insertion fails (cascade delete handles database references)
+      // Cleanup stock and order if items insertion fails
+      await restoreStock();
       await supabase.from('orders').delete().eq('id', order.id);
       return NextResponse.json({ success: false, message: itemsErr.message }, { status: 400 });
     }
@@ -234,7 +267,8 @@ export async function POST(request: Request) {
       });
 
       if (paymentErr) {
-        // Cleanup order if payment record insertion fails
+        // Cleanup stock and order if payment record insertion fails
+        await restoreStock();
         await supabase.from('orders').delete().eq('id', order.id);
         return NextResponse.json({ success: false, message: paymentErr.message }, { status: 400 });
       }
@@ -246,7 +280,8 @@ export async function POST(request: Request) {
       });
     } catch (err: unknown) {
       const errMsg = err instanceof Error ? err.message : 'Midtrans payment gateway error';
-      // Cleanup order if midtrans fails
+      // Cleanup stock and order if midtrans fails
+      await restoreStock();
       await supabase.from('orders').delete().eq('id', order.id);
       return NextResponse.json({ success: false, message: errMsg }, { status: 500 });
     }
