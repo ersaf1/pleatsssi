@@ -2,11 +2,19 @@ import { expect, test, vi, describe, beforeEach } from 'vitest';
 import { type SupabaseClient } from '@supabase/supabase-js';
 import { POST as checkoutPOST } from '@/app/api/checkout/route';
 import { supabaseServerClient } from '@/lib/supabaseServer';
+import { supabaseAdmin } from '@/lib/supabaseAdmin';
 import { snap } from '@/lib/midtrans';
 
 // Mock supabaseServerClient
 vi.mock('@/lib/supabaseServer', () => ({
   supabaseServerClient: vi.fn(),
+}));
+
+// Mock supabaseAdmin client
+vi.mock('@/lib/supabaseAdmin', () => ({
+  supabaseAdmin: {
+    rpc: vi.fn(),
+  },
 }));
 
 // Mock Midtrans snap client
@@ -22,13 +30,11 @@ describe('Checkout API Endpoint', () => {
   const mockSingle = vi.fn();
   const mockEq = vi.fn();
   const mockInsert = vi.fn();
-  const mockRpc = vi.fn();
 
   const mockSupabase = {
     auth: {
       getUser: mockGetUser,
     },
-    rpc: mockRpc,
     from: vi.fn().mockImplementation((table: string) => {
       if (table === 'product_variants') {
         return {
@@ -60,7 +66,7 @@ describe('Checkout API Endpoint', () => {
 
   beforeEach(() => {
     vi.clearAllMocks();
-    mockRpc.mockResolvedValue({ error: null });
+    vi.mocked(supabaseAdmin.rpc).mockResolvedValue({ error: null });
     vi.mocked(supabaseServerClient).mockResolvedValue(mockSupabase as unknown as SupabaseClient);
   });
 

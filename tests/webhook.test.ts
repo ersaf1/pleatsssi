@@ -1,12 +1,15 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { expect, test, vi, describe, beforeEach, afterEach } from 'vitest';
-import { type SupabaseClient } from '@supabase/supabase-js';
 import crypto from 'crypto';
 import { POST as webhookPOST } from '@/app/api/webhooks/midtrans/route';
-import { supabaseServerClient } from '@/lib/supabaseServer';
+import { supabaseAdmin } from '@/lib/supabaseAdmin';
 
-// Mock supabaseServerClient
-vi.mock('@/lib/supabaseServer', () => ({
-  supabaseServerClient: vi.fn(),
+// Mock supabaseAdmin client
+vi.mock('@/lib/supabaseAdmin', () => ({
+  supabaseAdmin: {
+    rpc: vi.fn(),
+    from: vi.fn(),
+  },
 }));
 
 describe('Midtrans Webhook Payment Status Handler', () => {
@@ -14,14 +17,18 @@ describe('Midtrans Webhook Payment Status Handler', () => {
 
   // Mock functions for Supabase queries
   const mockSingleOrder = vi.fn();
-  const mockSingleVariant = vi.fn();
   const mockUpdate = vi.fn();
   const mockSelect = vi.fn();
-  const mockRpc = vi.fn();
 
-  const mockSupabase = {
-    rpc: mockRpc,
-    from: vi.fn().mockImplementation((table: string) => {
+  beforeEach(() => {
+    vi.clearAllMocks();
+    process.env.MIDTRANS_SERVER_KEY = 'test_server_key';
+
+    // Mock supabaseAdmin.rpc default return
+    vi.mocked(supabaseAdmin.rpc).mockResolvedValue({ error: null });
+
+    // Mock supabaseAdmin.from
+    vi.mocked(supabaseAdmin.from).mockImplementation((table: string) => {
       if (table === 'orders') {
         return {
           select: vi.fn().mockReturnValue({
@@ -30,42 +37,25 @@ describe('Midtrans Webhook Payment Status Handler', () => {
             }),
           }),
           update: mockUpdate,
-        };
+        } as any;
       }
       if (table === 'payments') {
         return {
           update: mockUpdate,
-        };
+        } as any;
       }
       if (table === 'order_items') {
         return {
           select: vi.fn().mockReturnValue({
             eq: mockSelect,
           }),
-        };
+        } as any;
       }
-      if (table === 'product_variants') {
-        return {
-          select: vi.fn().mockReturnValue({
-            eq: vi.fn().mockReturnValue({
-              single: mockSingleVariant,
-            }),
-          }),
-          update: mockUpdate,
-        };
-      }
-      return {};
-    }),
-  };
-
-  beforeEach(() => {
-    vi.clearAllMocks();
-    process.env.MIDTRANS_SERVER_KEY = 'test_server_key';
-    vi.mocked(supabaseServerClient).mockResolvedValue(mockSupabase as unknown as SupabaseClient);
+      return {} as any;
+    });
 
     // Default mock response setups
     mockUpdate.mockReturnValue({ eq: vi.fn().mockResolvedValue({ error: null }) });
-    mockRpc.mockResolvedValue({ error: null });
   });
 
   afterEach(() => {
@@ -190,13 +180,13 @@ describe('Midtrans Webhook Payment Status Handler', () => {
     mockUpdate.mockImplementation((fields: { status?: string }) => {
       // If updating orders table
       if (fields.status === 'processing') {
-        return { eq: mockOrderEq };
+        return { eq: mockOrderEq } as any;
       }
       // If updating payments table
       if (fields.status === 'settlement') {
-        return { eq: mockPaymentEq };
+        return { eq: mockPaymentEq } as any;
       }
-      return { eq: vi.fn().mockResolvedValue({ error: null }) };
+      return { eq: vi.fn().mockResolvedValue({ error: null }) } as any;
     });
 
     const req = new Request('http://localhost/api/webhooks/midtrans', {
@@ -230,8 +220,7 @@ describe('Midtrans Webhook Payment Status Handler', () => {
     expect(mockPaymentEq).toHaveBeenCalledWith('order_id', 'order-uuid-1');
 
     // Verify stock release is NOT queried (since status didn't change to cancelled)
-    const mockFrom = mockSupabase.from;
-    const orderItemsFetch = vi.mocked(mockFrom).mock.calls.some(call => call[0] === 'order_items');
+    const orderItemsFetch = vi.mocked(supabaseAdmin.from).mock.calls.some(call => call[0] === 'order_items');
     expect(orderItemsFetch).toBe(false);
   });
 
@@ -291,11 +280,11 @@ describe('Midtrans Webhook Payment Status Handler', () => {
     );
 
     // Verify atomic RPC stock increments were called
-    expect(mockRpc).toHaveBeenCalledWith('adjust_variant_stock', {
+    expect(supabaseAdmin.rpc).toHaveBeenCalledWith('adjust_variant_stock', {
       variant_id: 'var-1',
       qty: 2,
     });
-    expect(mockRpc).toHaveBeenCalledWith('adjust_variant_stock', {
+    expect(supabaseAdmin.rpc).toHaveBeenCalledWith('adjust_variant_stock', {
       variant_id: 'var-2',
       qty: 1,
     });
@@ -332,8 +321,7 @@ describe('Midtrans Webhook Payment Status Handler', () => {
     expect(json.success).toBe(true);
 
     // Verify order_items query is NOT called (since status was already cancelled)
-    const mockFrom = mockSupabase.from;
-    const orderItemsFetch = vi.mocked(mockFrom).mock.calls.some(call => call[0] === 'order_items');
+    const orderItemsFetch = vi.mocked(supabaseAdmin.from).mock.calls.some(call => call[0] === 'order_items');
     expect(orderItemsFetch).toBe(false);
   });
 });

@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { supabaseServerClient } from '@/lib/supabaseServer';
+import { supabaseAdmin } from '@/lib/supabaseAdmin';
 import { snap } from '@/lib/midtrans';
 
 interface ProductInfo {
@@ -162,9 +163,9 @@ export async function POST(request: Request) {
     const randomSuffix = Math.random().toString(36).substring(2, 6).toUpperCase();
     const orderNumber = `PLT-${Date.now()}-${randomSuffix}`;
 
-    // Decrement variant stock levels via atomic RPC
+    // Decrement variant stock levels via atomic RPC using admin client
     for (const [variantId, qty] of aggregatedMap.entries()) {
-      const { error: stockErr } = await supabase.rpc('adjust_variant_stock', {
+      const { error: stockErr } = await supabaseAdmin.rpc('adjust_variant_stock', {
         variant_id: variantId,
         qty: -qty,
       });
@@ -172,7 +173,7 @@ export async function POST(request: Request) {
         // Rollback any stock decrement we've already done in this loop
         for (const [rollbackId, rollbackQty] of aggregatedMap.entries()) {
           if (rollbackId === variantId) break;
-          await supabase.rpc('adjust_variant_stock', {
+          await supabaseAdmin.rpc('adjust_variant_stock', {
             variant_id: rollbackId,
             qty: rollbackQty,
           });
@@ -186,7 +187,7 @@ export async function POST(request: Request) {
 
     const restoreStock = async () => {
       for (const [variantId, qty] of aggregatedMap.entries()) {
-        await supabase.rpc('adjust_variant_stock', {
+        await supabaseAdmin.rpc('adjust_variant_stock', {
           variant_id: variantId,
           qty,
         });

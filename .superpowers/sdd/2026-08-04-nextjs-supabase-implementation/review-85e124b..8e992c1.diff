@@ -1,0 +1,578 @@
+# Review package: 85e124b.. 8e992c1
+
+## Commits
+8e992c1 docs: update progress ledger for Task 5 completion
+11c157d feat: add midtrans webhook handler to update order statuses and fix payment snap_token schema
+
+
+## Files changed
+ .../progress.md                                    |   5 +-
+ src/app/api/webhooks/midtrans/route.ts             | 148 +++++++++
+ .../migrations/20260804000100_checkout_tables.sql  |   1 +
+ tests/webhook.test.ts                              | 347 +++++++++++++++++++++
+ 4 files changed, 499 insertions(+), 2 deletions(-)
+
+
+## Diff
+diff --git a/.superpowers/sdd/2026-08-04-nextjs-supabase-implementation/progress.md b/.superpowers/sdd/2026-08-04-nextjs-supabase-implementation/progress.md
+index c163488..fc56f18 100644
+--- a/.superpowers/sdd/2026-08-04-nextjs-supabase-implementation/progress.md
++++ b/.superpowers/sdd/2026-08-04-nextjs-supabase-implementation/progress.md
+@@ -1,21 +1,22 @@
+ # SDD ledger — plan: C:\Users\lulus\Dominator\pleatsssi\docs\superpowers\plans\2026-08-04-nextjs-supabase-implementation.md
+ 
+ Todo:
+ - [x] Task 1: Supabase Setup & Database Scaffolding
+ - [x] Task 2: Supabase SSR Authentication & Middleware Protection
+ - [x] Task 3: Zustand Cart Store & Sync API
+ - [x] Task 4: Checkout API & Midtrans Snap Integration
+-- [ ] Task 5: Midtrans Webhook Payment Status Handler
++- [x] Task 5: Midtrans Webhook Payment Status Handler
+ 
+ Deferred Minor Issues:
+ * Task 1: Add DB triggers for automatic `updated_at` timestamp updates.
+ * Task 1: Populate `supabase/seed.sql` with default category/product templates for better local DX.
+ * Task 2: Wrap `auth.getUser()` in try-catch in `middleware.ts` to handle auth API failures.
+ * Task 2: Use consistent path aliases (`@/*`) in test files instead of relative paths.
+ 
+ Progress Log:
+ [2026-08-04T12:59:00] Ledger initialized.
+ [2026-08-04T13:03:00] Task 1 complete (commits ae8b266..8ac9e83, review clean).
+ [2026-08-04T13:05:00] Task 2 complete (commits 8ac9e83..ab76da5, review clean).
+ [2026-08-04T13:12:00] Task 3 complete (commits ab76da5..1a1f9b6, review clean).
+-[2026-08-04T13:16:00] Task 4 complete (commit af29738, review clean).
++[2026-08-04T13:27:00] Task 4 complete (commits 1a1f9b6..85e124b, review clean).
++[2026-08-04T13:30:00] Task 5 complete (commits 85e124b..11c157d, review clean).
+diff --git a/src/app/api/webhooks/midtrans/route.ts b/src/app/api/webhooks/midtrans/route.ts
+new file mode 100644
+index 0000000..8bc740b
+--- /dev/null
++++ b/src/app/api/webhooks/midtrans/route.ts
+@@ -0,0 +1,148 @@
++import { NextResponse } from 'next/server';
++import { supabaseServerClient } from '@/lib/supabaseServer';
++import crypto from 'crypto';
++
++export async function POST(request: Request) {
++  try {
++    const payload = await request.json().catch(() => ({}));
++    const {
++      order_id,
++      status_code,
++      gross_amount,
++      signature_key,
++      transaction_status,
++      payment_type,
++      transaction_id,
++    } = payload;
++
++    // Validate presence of required signature inputs
++    if (!order_id || !status_code || !gross_amount || !signature_key || !transaction_status) {
++      return NextResponse.json(
++        { success: false, message: 'Missing required payload parameters' },
++        { status: 400 }
++      );
++    }
++
++    // Validate Signature Key
++    const serverKey = process.env.MIDTRANS_SERVER_KEY;
++    if (!serverKey) {
++      return NextResponse.json(
++        { success: false, message: 'Server configuration error: MIDTRANS_SERVER_KEY is not defined' },
++        { status: 500 }
++      );
++    }
++
++    const payloadStr = `${order_id}${status_code}${gross_amount}${serverKey}`;
++    const hash = crypto.createHash('sha512').update(payloadStr).digest('hex');
++
++    if (hash !== signature_key) {
++      return NextResponse.json({ success: false, message: 'Invalid Signature' }, { status: 403 });
++    }
++
++    const supabase = await supabaseServerClient();
++
++    // Fetch the existing order by its unique order number
++    const { data: order, error: orderFetchErr } = await supabase
++      .from('orders')
++      .select('id, status, payment_status')
++      .eq('order_number', order_id)
++      .single();
++
++    if (orderFetchErr || !order) {
++      return NextResponse.json(
++        { success: false, message: orderFetchErr?.message || 'Order not found' },
++        { status: 404 }
++      );
++    }
++
++    // Map Midtrans transaction_status to Database order status and payment status
++    let orderStatus = order.status;
++    let paymentStatus = order.payment_status;
++
++    if (transaction_status === 'settlement' || transaction_status === 'capture') {
++      orderStatus = 'processing';
++      paymentStatus = 'paid';
++    } else if (transaction_status === 'pending') {
++      orderStatus = 'pending';
++      paymentStatus = 'pending';
++    } else if (transaction_status === 'deny' || transaction_status === 'cancel') {
++      orderStatus = 'cancelled';
++      paymentStatus = 'failed';
++    } else if (transaction_status === 'expire') {
++      orderStatus = 'cancelled';
++      paymentStatus = 'expired';
++    } else if (transaction_status === 'refund') {
++      orderStatus = 'cancelled';
++      paymentStatus = 'refunded';
++    }
++
++    // Update order status and payment_status in DB
++    const { error: updateOrderErr } = await supabase
++      .from('orders')
++      .update({
++        status: orderStatus,
++        payment_status: paymentStatus,
++        updated_at: new Date().toISOString(),
++      })
++      .eq('id', order.id);
++
++    if (updateOrderErr) {
++      return NextResponse.json(
++        { success: false, message: updateOrderErr.message },
++        { status: 400 }
++      );
++    }
++
++    // Update payments table details
++    const { error: updatePaymentErr } = await supabase
++      .from('payments')
++      .update({
++        status: transaction_status,
++        payment_method: payment_type || null,
++        midtrans_transaction_id: transaction_id || null,
++        raw_payload: payload,
++        paid_at: (transaction_status === 'settlement' || transaction_status === 'capture') ? new Date().toISOString() : null,
++        updated_at: new Date().toISOString(),
++      })
++      .eq('order_id', order.id);
++
++    if (updatePaymentErr) {
++      return NextResponse.json(
++        { success: false, message: updatePaymentErr.message },
++        { status: 400 }
++      );
++    }
++
++    // If order was not cancelled previously but is now cancelled, restore variant stock levels
++    if (orderStatus === 'cancelled' && order.status !== 'cancelled') {
++      const { data: orderItems, error: itemsErr } = await supabase
++        .from('order_items')
++        .select('product_variant_id, quantity')
++        .eq('order_id', order.id);
++
++      if (!itemsErr && orderItems) {
++        for (const item of orderItems) {
++          const { data: variant, error: variantErr } = await supabase
++            .from('product_variants')
++            .select('stock')
++            .eq('id', item.product_variant_id)
++            .single();
++
++          if (!variantErr && variant) {
++            await supabase
++              .from('product_variants')
++              .update({
++                stock: variant.stock + item.quantity,
++              })
++              .eq('id', item.product_variant_id);
++          }
++        }
++      }
++    }
++
++    return NextResponse.json({ success: true });
++  } catch (err: unknown) {
++    const errorMessage = err instanceof Error ? err.message : 'Internal Server Error';
++    return NextResponse.json({ success: false, message: errorMessage }, { status: 500 });
++  }
++}
+diff --git a/supabase/migrations/20260804000100_checkout_tables.sql b/supabase/migrations/20260804000100_checkout_tables.sql
+index bbca159..020e2b9 100644
+--- a/supabase/migrations/20260804000100_checkout_tables.sql
++++ b/supabase/migrations/20260804000100_checkout_tables.sql
+@@ -38,20 +38,21 @@ CREATE TABLE order_items (
+ );
+ 
+ -- Index order items table columns
+ CREATE INDEX idx_order_items_order_id ON order_items(order_id);
+ CREATE INDEX idx_order_items_product_variant_id ON order_items(product_variant_id);
+ 
+ -- Create payments table
+ CREATE TABLE payments (
+   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+   order_id UUID NOT NULL REFERENCES orders(id) ON DELETE CASCADE UNIQUE,
++  snap_token VARCHAR(255),
+   payment_method VARCHAR(50),
+   midtrans_transaction_id VARCHAR(100) UNIQUE,
+   status VARCHAR(30) NOT NULL,
+   gross_amount DECIMAL(12,2) NOT NULL,
+   raw_payload JSONB,
+   paid_at TIMESTAMP WITH TIME ZONE,
+   created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL,
+   updated_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL
+ );
+ 
+diff --git a/tests/webhook.test.ts b/tests/webhook.test.ts
+new file mode 100644
+index 0000000..67848a7
+--- /dev/null
++++ b/tests/webhook.test.ts
+@@ -0,0 +1,347 @@
++import { expect, test, vi, describe, beforeEach, afterEach } from 'vitest';
++import { type SupabaseClient } from '@supabase/supabase-js';
++import crypto from 'crypto';
++import { POST as webhookPOST } from '@/app/api/webhooks/midtrans/route';
++import { supabaseServerClient } from '@/lib/supabaseServer';
++
++// Mock supabaseServerClient
++vi.mock('@/lib/supabaseServer', () => ({
++  supabaseServerClient: vi.fn(),
++}));
++
++describe('Midtrans Webhook Payment Status Handler', () => {
++  const originalServerKey = process.env.MIDTRANS_SERVER_KEY;
++
++  // Mock functions for Supabase queries
++  const mockSingle = vi.fn();
++  const mockUpdate = vi.fn();
++  const mockSelect = vi.fn();
++
++  const mockSupabase = {
++    from: vi.fn().mockImplementation((table: string) => {
++      if (table === 'orders') {
++        return {
++          select: vi.fn().mockReturnValue({
++            eq: vi.fn().mockReturnValue({
++              single: mockSingle,
++            }),
++          }),
++          update: mockUpdate,
++        };
++      }
++      if (table === 'payments') {
++        return {
++          update: mockUpdate,
++        };
++      }
++      if (table === 'order_items') {
++        return {
++          select: vi.fn().mockReturnValue({
++            eq: mockSelect,
++          }),
++        };
++      }
++      if (table === 'product_variants') {
++        return {
++          select: vi.fn().mockReturnValue({
++            eq: vi.fn().mockReturnValue({
++              single: mockSingle,
++            }),
++          }),
++          update: mockUpdate,
++        };
++      }
++      return {};
++    }),
++  };
++
++  beforeEach(() => {
++    vi.clearAllMocks();
++    process.env.MIDTRANS_SERVER_KEY = 'test_server_key';
++    vi.mocked(supabaseServerClient).mockResolvedValue(mockSupabase as unknown as SupabaseClient);
++
++    // Default mock response setup for orders update and payments update
++    mockUpdate.mockReturnValue({ eq: vi.fn().mockResolvedValue({ error: null }) });
++  });
++
++  afterEach(() => {
++    process.env.MIDTRANS_SERVER_KEY = originalServerKey;
++  });
++
++  // Helper to generate a valid signature key for tests
++  function generateSignature(orderId: string, statusCode: string, grossAmount: string, serverKey: string): string {
++    return crypto
++      .createHash('sha512')
++      .update(orderId + statusCode + grossAmount + serverKey)
++      .digest('hex');
++  }
++
++  test('returns 400 if required payload parameters are missing', async () => {
++    const req = new Request('http://localhost/api/webhooks/midtrans', {
++      method: 'POST',
++      body: JSON.stringify({
++        order_id: 'PLT-12345',
++        // Missing status_code, gross_amount, etc.
++      }),
++    });
++
++    const response = await webhookPOST(req);
++    expect(response.status).toBe(400);
++    const json = await response.json();
++    expect(json.success).toBe(false);
++    expect(json.message).toContain('Missing required payload parameters');
++  });
++
++  test('returns 500 if MIDTRANS_SERVER_KEY is not defined', async () => {
++    delete process.env.MIDTRANS_SERVER_KEY;
++
++    const payload = {
++      order_id: 'PLT-12345',
++      status_code: '200',
++      gross_amount: '150000.00',
++      signature_key: 'dummy',
++      transaction_status: 'settlement',
++    };
++
++    const req = new Request('http://localhost/api/webhooks/midtrans', {
++      method: 'POST',
++      body: JSON.stringify(payload),
++    });
++
++    const response = await webhookPOST(req);
++    expect(response.status).toBe(500);
++    const json = await response.json();
++    expect(json.success).toBe(false);
++    expect(json.message).toContain('MIDTRANS_SERVER_KEY is not defined');
++  });
++
++  test('returns 403 if signature is invalid', async () => {
++    const payload = {
++      order_id: 'PLT-12345',
++      status_code: '200',
++      gross_amount: '150000.00',
++      signature_key: 'wrong_signature_hash',
++      transaction_status: 'settlement',
++    };
++
++    const req = new Request('http://localhost/api/webhooks/midtrans', {
++      method: 'POST',
++      body: JSON.stringify(payload),
++    });
++
++    const response = await webhookPOST(req);
++    expect(response.status).toBe(403);
++    const json = await response.json();
++    expect(json.success).toBe(false);
++    expect(json.message).toBe('Invalid Signature');
++  });
++
++  test('returns 404 if order is not found in database', async () => {
++    const signature = generateSignature('PLT-12345', '200', '150000.00', 'test_server_key');
++    const payload = {
++      order_id: 'PLT-12345',
++      status_code: '200',
++      gross_amount: '150000.00',
++      signature_key: signature,
++      transaction_status: 'settlement',
++    };
++
++    // Mock order fetch returning order not found
++    mockSingle.mockResolvedValueOnce({ data: null, error: { message: 'Order not found' } });
++
++    const req = new Request('http://localhost/api/webhooks/midtrans', {
++      method: 'POST',
++      body: JSON.stringify(payload),
++    });
++
++    const response = await webhookPOST(req);
++    expect(response.status).toBe(404);
++    const json = await response.json();
++    expect(json.success).toBe(false);
++    expect(json.message).toBe('Order not found');
++  });
++
++  test('successfully processes payment settlement, updates order/payment statuses, and leaves stock unchanged', async () => {
++    const orderNumber = 'PLT-SUCCESS-123';
++    const grossAmount = '180000.00';
++    const signature = generateSignature(orderNumber, '200', grossAmount, 'test_server_key');
++    const payload = {
++      order_id: orderNumber,
++      status_code: '200',
++      gross_amount: grossAmount,
++      signature_key: signature,
++      transaction_status: 'settlement',
++      payment_type: 'bank_transfer',
++      transaction_id: 'midtrans-tx-999',
++    };
++
++    // 1. Mock Order query (currently 'pending' status)
++    mockSingle.mockResolvedValueOnce({
++      data: { id: 'order-uuid-1', status: 'pending', payment_status: 'pending' },
++      error: null,
++    });
++
++    // 2. Mock updates
++    const mockOrderEq = vi.fn().mockResolvedValue({ error: null });
++    const mockPaymentEq = vi.fn().mockResolvedValue({ error: null });
++
++    mockUpdate.mockImplementation((fields: { status?: string }) => {
++      // If updating orders table
++      if (fields.status === 'processing') {
++        return { eq: mockOrderEq };
++      }
++      // If updating payments table
++      if (fields.status === 'settlement') {
++        return { eq: mockPaymentEq };
++      }
++      return { eq: vi.fn().mockResolvedValue({ error: null }) };
++    });
++
++    const req = new Request('http://localhost/api/webhooks/midtrans', {
++      method: 'POST',
++      body: JSON.stringify(payload),
++    });
++
++    const response = await webhookPOST(req);
++    expect(response.status).toBe(200);
++    const json = await response.json();
++    expect(json.success).toBe(true);
++
++    // Verify order table update: status -> processing, payment_status -> paid
++    expect(mockUpdate).toHaveBeenCalledWith(
++      expect.objectContaining({
++        status: 'processing',
++        payment_status: 'paid',
++      })
++    );
++    expect(mockOrderEq).toHaveBeenCalledWith('id', 'order-uuid-1');
++
++    // Verify payment table update
++    expect(mockUpdate).toHaveBeenCalledWith(
++      expect.objectContaining({
++        status: 'settlement',
++        payment_method: 'bank_transfer',
++        midtrans_transaction_id: 'midtrans-tx-999',
++        raw_payload: payload,
++      })
++    );
++    expect(mockPaymentEq).toHaveBeenCalledWith('order_id', 'order-uuid-1');
++
++    // Verify stock release is NOT queried (since status didn't change to cancelled)
++    const mockFrom = mockSupabase.from;
++    const orderItemsFetch = vi.mocked(mockFrom).mock.calls.some(call => call[0] === 'order_items');
++    expect(orderItemsFetch).toBe(false);
++  });
++
++  test('restores variant stock levels if order transitions to cancelled status', async () => {
++    const orderNumber = 'PLT-CANCEL-123';
++    const grossAmount = '250000.00';
++    const signature = generateSignature(orderNumber, '407', grossAmount, 'test_server_key');
++    const payload = {
++      order_id: orderNumber,
++      status_code: '407',
++      gross_amount: grossAmount,
++      signature_key: signature,
++      transaction_status: 'cancel',
++      payment_type: 'gopay',
++      transaction_id: 'midtrans-tx-cancel',
++    };
++
++    // 1. Mock Order query (currently 'pending' status)
++    mockSingle.mockResolvedValueOnce({
++      data: { id: 'order-uuid-2', status: 'pending', payment_status: 'pending' },
++      error: null,
++    });
++
++    // 2. Mock order items query returning 2 items
++    mockSelect.mockResolvedValueOnce({
++      data: [
++        { product_variant_id: 'var-1', quantity: 2 },
++        { product_variant_id: 'var-2', quantity: 1 },
++      ],
++      error: null,
++    });
++
++    // 3. Mock product variant stock checks
++    // We will call single() twice for the 2 items
++    mockSingle
++      .mockResolvedValueOnce({ data: { stock: 10 }, error: null }) // stock for var-1
++      .mockResolvedValueOnce({ data: { stock: 5 }, error: null }); // stock for var-2
++
++    const req = new Request('http://localhost/api/webhooks/midtrans', {
++      method: 'POST',
++      body: JSON.stringify(payload),
++    });
++
++    const response = await webhookPOST(req);
++    expect(response.status).toBe(200);
++    const json = await response.json();
++    expect(json.success).toBe(true);
++
++    // Verify orders updated to cancelled/failed
++    expect(mockUpdate).toHaveBeenCalledWith(
++      expect.objectContaining({
++        status: 'cancelled',
++        payment_status: 'failed',
++      })
++    );
++
++    // Verify payments updated
++    expect(mockUpdate).toHaveBeenCalledWith(
++      expect.objectContaining({
++        status: 'cancel',
++        payment_method: 'gopay',
++      })
++    );
++
++    // Verify stock increment was called for var-1 (10 + 2 = 12)
++    expect(mockUpdate).toHaveBeenCalledWith(
++      expect.objectContaining({
++        stock: 12,
++      })
++    );
++
++    // Verify stock increment was called for var-2 (5 + 1 = 6)
++    expect(mockUpdate).toHaveBeenCalledWith(
++      expect.objectContaining({
++        stock: 6,
++      })
++    );
++  });
++
++  test('does not restore stock levels if order was already cancelled', async () => {
++    const orderNumber = 'PLT-ALREADY-CANCELLED';
++    const grossAmount = '120000.00';
++    const signature = generateSignature(orderNumber, '407', grossAmount, 'test_server_key');
++    const payload = {
++      order_id: orderNumber,
++      status_code: '407',
++      gross_amount: grossAmount,
++      signature_key: signature,
++      transaction_status: 'cancel',
++      payment_type: 'gopay',
++      transaction_id: 'midtrans-tx-already',
++    };
++
++    // 1. Mock Order query (already 'cancelled' status)
++    mockSingle.mockResolvedValueOnce({
++      data: { id: 'order-uuid-3', status: 'cancelled', payment_status: 'failed' },
++      error: null,
++    });
++
++    const req = new Request('http://localhost/api/webhooks/midtrans', {
++      method: 'POST',
++      body: JSON.stringify(payload),
++    });
++
++    const response = await webhookPOST(req);
++    expect(response.status).toBe(200);
++    const json = await response.json();
++    expect(json.success).toBe(true);
++
++    // Verify order_items query is NOT called (since status was already cancelled)
++    const mockFrom = mockSupabase.from;
++    const orderItemsFetch = vi.mocked(mockFrom).mock.calls.some(call => call[0] === 'order_items');
++    expect(orderItemsFetch).toBe(false);
++  });
++});

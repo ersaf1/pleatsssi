@@ -1,0 +1,699 @@
+# Review package: ab76da5.. 8f5797d
+
+## Commits
+8f5797d feat: add client-side cart store and server synchronizer
+
+
+## Files changed
+ .../progress.md                                    |  17 +-
+ .../task-3-report.md                               |  51 ++++
+ package-lock.json                                  |  32 ++-
+ package.json                                       |   3 +-
+ src/app/api/cart/sync/route.ts                     |  72 +++++
+ src/store/useCartStore.ts                          |  66 +++++
+ supabase/migrations/20260804000000_init_schema.sql |  12 +
+ tests/cart.test.ts                                 | 311 +++++++++++++++++++++
+ 8 files changed, 559 insertions(+), 5 deletions(-)
+
+
+## Diff
+diff --git a/.superpowers/sdd/2026-08-04-nextjs-supabase-implementation/progress.md b/.superpowers/sdd/2026-08-04-nextjs-supabase-implementation/progress.md
+index ac677ec..eab7d27 100644
+--- a/.superpowers/sdd/2026-08-04-nextjs-supabase-implementation/progress.md
++++ b/.superpowers/sdd/2026-08-04-nextjs-supabase-implementation/progress.md
+@@ -1,11 +1,22 @@
+ # SDD ledger — plan: C:\Users\lulus\Dominator\pleatsssi\docs\superpowers\plans\2026-08-04-nextjs-supabase-implementation.md
+ 
+ Todo:
+-- [ ] Task 1: Supabase Setup & Database Scaffolding
+-- [ ] Task 2: Supabase SSR Authentication & Middleware Protection
+-- [ ] Task 3: Zustand Cart Store & Sync API
++- [x] Task 1: Supabase Setup & Database Scaffolding
++- [x] Task 2: Supabase SSR Authentication & Middleware Protection
++- [x] Task 3: Zustand Cart Store & Sync API
+ - [ ] Task 4: Checkout API & Midtrans Snap Integration
+ - [ ] Task 5: Midtrans Webhook Payment Status Handler
+ 
++Deferred Minor Issues:
++* Task 1: Add DB triggers for automatic `updated_at` timestamp updates.
++* Task 1: Populate `supabase/seed.sql` with default category/product templates for better local DX.
++* Task 2: Wrap `auth.getUser()` in try-catch in `middleware.ts` to handle auth API failures.
++* Task 2: Use consistent path aliases (`@/*`) in test files instead of relative paths.
++
+ Progress Log:
+ [2026-08-04T12:59:00] Ledger initialized.
++[2026-08-04T13:03:00] Task 1 complete (commits ae8b266..8ac9e83, review clean).
++[2026-08-04T13:05:00] Task 2 complete (commits 8ac9e83..ab76da5, review clean).
++[2026-08-04T13:09:00] Task 3 complete (feat: add client-side cart store and server synchronizer).
++
++
+diff --git a/.superpowers/sdd/2026-08-04-nextjs-supabase-implementation/task-3-report.md b/.superpowers/sdd/2026-08-04-nextjs-supabase-implementation/task-3-report.md
+new file mode 100644
+index 0000000..5db86e9
+--- /dev/null
++++ b/.superpowers/sdd/2026-08-04-nextjs-supabase-implementation/task-3-report.md
+@@ -0,0 +1,51 @@
++# Task 3 Report: Zustand Cart Store & Sync API
++
++## What was implemented
++1. **Client-side Zustand Cart Store** (`src/store/useCartStore.ts`):
++   - Created the Zustand store with `persist` middleware to persist the cart items in `localStorage` under key `pleatsssi-cart`.
++   - Implemented state mutations:
++     - `addItem`: Adds an item to the cart, merges quantities if the variant exists, and caps the quantity at `stockAvailable`.
++     - `removeItem`: Removes an item by `variantId`.
++     - `updateQuantity`: Updates quantity for a variant, bounds the quantity between `1` and `stockAvailable`.
++     - `clearCart`: Empties the cart.
++     - `syncWithBackend`: Performs a `POST` request to `/api/cart/sync` sending the current items array (only if items are present).
++2. **Server-side API Sync Endpoint** (`src/app/api/cart/sync/route.ts`):
++   - Authenticates user using Supabase SSR (`supabaseServerClient()`). Returns `401` if unauthenticated.
++   - Parses guest cart items from the request body. Validates that it's an array, otherwise returns `400`.
++   - Merges the guest items in-memory with any existing items in the database `cart_items` table.
++   - Performs a database `upsert` of the merged items back to the `cart_items` table.
++3. **Database Scaffolding Update** (`supabase/migrations/20260804000000_init_schema.sql`):
++   - Added the table schema for `cart_items` with appropriate foreign key relationships (`user_id` and `product_variant_id`), constraints (`quantity > 0`), and a unique constraint on `(user_id, product_variant_id)` to support correct and safe upsert merges.
++
++## What was tested and test results
++- **Unit and API tests** (`tests/cart.test.ts`):
++  - Mocked `localStorage` and `window` dynamically using Vitest's `vi.hoisted` to handle ESM hoisting cleanly and prevent any warnings or errors.
++  - Implemented mock handlers for Supabase SSR and fetch endpoints.
++  - Added coverage for:
++    - Adding new items to the store.
++    - Adding existing items with quantity updates and stock level capping.
++    - Removing items from the store.
++    - Updating quantities with boundary limits (1 to stock available).
++    - Clearing the cart.
++    - Backend sync requests logic.
++    - API endpoint responses for: unauthenticated access, invalid payloads, empty synchronizations, database fetch errors, database upsert errors, and correct database merging.
++- **Verification results**:
++  - `npm run test`: Passed (20/20 tests passing, clean console output).
++  - `npm run typecheck`: Passed.
++  - `npm run lint`: Passed (0 errors, 1 unrelated warning).
++  - `npm run check` (Lint + Typecheck + Production Build): Passed.
++
++## Files Changed
++- `package.json` (modified: added `zustand`)
++- `package-lock.json` (modified: locked `zustand` dependencies)
++- `src/store/useCartStore.ts` (new)
++- `src/app/api/cart/sync/route.ts` (new)
++- `tests/cart.test.ts` (new)
++- `supabase/migrations/20260804000000_init_schema.sql` (modified: appended `cart_items` table definition)
++
++## Self-Review Findings
++- Avoided using `any` across typescript types by utilizing type-safe castings like `unknown as SupabaseClient` and specific interface assertions for `global` and `global.window` objects.
++- Handled edge cases: body parsing failures, empty arrays, invalid payloads, and database operation failures.
++
++## Issues or Concerns
++- None. The client store and server synchronizer compile, test, and build cleanly.
+diff --git a/package-lock.json b/package-lock.json
+index 1f5f6de..d9ba663 100644
+--- a/package-lock.json
++++ b/package-lock.json
+@@ -13,21 +13,22 @@
+         "@supabase/ssr": "^0.12.4",
+         "@supabase/supabase-js": "^2.112.0",
+         "class-variance-authority": "^0.7.1",
+         "clsx": "^2.1.1",
+         "lucide-react": "^1.6.0",
+         "next": "16.2.1",
+         "react": "19.2.4",
+         "react-dom": "19.2.4",
+         "shadcn": "^4.1.0",
+         "tailwind-merge": "^3.5.0",
+-        "tw-animate-css": "^1.4.0"
++        "tw-animate-css": "^1.4.0",
++        "zustand": "^5.0.14"
+       },
+       "devDependencies": {
+         "@tailwindcss/postcss": "^4",
+         "@types/node": "^24",
+         "@types/react": "^19",
+         "@types/react-dom": "^19",
+         "eslint": "^9",
+         "eslint-config-next": "16.2.1",
+         "tailwindcss": "^4",
+         "typescript": "^5",
+@@ -10958,13 +10959,42 @@
+       "resolved": "https://registry.npmjs.org/zod-validation-error/-/zod-validation-error-4.0.2.tgz",
+       "integrity": "sha512-Q6/nZLe6jxuU80qb/4uJ4t5v2VEZ44lzQjPDhYJNztRQ4wyWc6VF3D3Kb/fAuPetZQnhS3hnajCf9CsWesghLQ==",
+       "dev": true,
+       "license": "MIT",
+       "engines": {
+         "node": ">=18.0.0"
+       },
+       "peerDependencies": {
+         "zod": "^3.25.0 || ^4.0.0"
+       }
++    },
++    "node_modules/zustand": {
++      "version": "5.0.14",
++      "resolved": "https://registry.npmjs.org/zustand/-/zustand-5.0.14.tgz",
++      "integrity": "sha512-/8tAspM5LMPr28b3fwLYrtdj77ECpfZviaP75CMTnwO8ISyaE4GDIG/9rDDYq/cH9D2Xw2A2RXglLInmVBQB/g==",
++      "license": "MIT",
++      "engines": {
++        "node": ">=12.20.0"
++      },
++      "peerDependencies": {
++        "@types/react": ">=18.0.0",
++        "immer": ">=9.0.6",
++        "react": ">=18.0.0",
++        "use-sync-external-store": ">=1.2.0"
++      },
++      "peerDependenciesMeta": {
++        "@types/react": {
++          "optional": true
++        },
++        "immer": {
++          "optional": true
++        },
++        "react": {
++          "optional": true
++        },
++        "use-sync-external-store": {
++          "optional": true
++        }
++      }
+     }
+   }
+ }
+diff --git a/package.json b/package.json
+index 748ad84..f0d64d8 100644
+--- a/package.json
++++ b/package.json
+@@ -40,21 +40,22 @@
+     "@supabase/ssr": "^0.12.4",
+     "@supabase/supabase-js": "^2.112.0",
+     "class-variance-authority": "^0.7.1",
+     "clsx": "^2.1.1",
+     "lucide-react": "^1.6.0",
+     "next": "16.2.1",
+     "react": "19.2.4",
+     "react-dom": "19.2.4",
+     "shadcn": "^4.1.0",
+     "tailwind-merge": "^3.5.0",
+-    "tw-animate-css": "^1.4.0"
++    "tw-animate-css": "^1.4.0",
++    "zustand": "^5.0.14"
+   },
+   "devDependencies": {
+     "@tailwindcss/postcss": "^4",
+     "@types/node": "^24",
+     "@types/react": "^19",
+     "@types/react-dom": "^19",
+     "eslint": "^9",
+     "eslint-config-next": "16.2.1",
+     "tailwindcss": "^4",
+     "typescript": "^5",
+diff --git a/src/app/api/cart/sync/route.ts b/src/app/api/cart/sync/route.ts
+new file mode 100644
+index 0000000..1a0116e
+--- /dev/null
++++ b/src/app/api/cart/sync/route.ts
+@@ -0,0 +1,72 @@
++import { NextResponse } from 'next/server';
++import { supabaseServerClient } from '@/lib/supabaseServer';
++
++export async function POST(request: Request) {
++  try {
++    const body = await request.json().catch(() => ({}));
++    const items = body.items;
++
++    if (!Array.isArray(items)) {
++      return NextResponse.json({ success: false, message: 'Invalid payload: items must be an array' }, { status: 400 });
++    }
++
++    const supabase = await supabaseServerClient();
++    const { data: { user }, error: authError } = await supabase.auth.getUser();
++
++    if (authError || !user) {
++      return NextResponse.json({ success: false, message: 'Unauthenticated' }, { status: 401 });
++    }
++
++    if (items.length === 0) {
++      return NextResponse.json({ success: true, message: 'No items to sync' });
++    }
++
++    // Fetch existing cart items from database
++    const { data: dbItems, error: fetchError } = await supabase
++      .from('cart_items')
++      .select('product_variant_id, quantity')
++      .eq('user_id', user.id);
++
++    if (fetchError) {
++      return NextResponse.json({ success: false, message: fetchError.message }, { status: 400 });
++    }
++
++    // Merge logic
++    const mergedMap = new Map<string, number>();
++
++    if (dbItems) {
++      for (const dbItem of dbItems) {
++        mergedMap.set(dbItem.product_variant_id, dbItem.quantity);
++      }
++    }
++
++    for (const item of items) {
++      if (!item.variantId || typeof item.quantity !== 'number') {
++        continue;
++      }
++      const existingQty = mergedMap.get(item.variantId) || 0;
++      mergedMap.set(item.variantId, existingQty + item.quantity);
++    }
++
++    const upsertData = Array.from(mergedMap.entries()).map(([variantId, quantity]) => ({
++      user_id: user.id,
++      product_variant_id: variantId,
++      quantity,
++    }));
++
++    if (upsertData.length > 0) {
++      const { error: upsertError } = await supabase
++        .from('cart_items')
++        .upsert(upsertData, { onConflict: 'user_id,product_variant_id' });
++
++      if (upsertError) {
++        return NextResponse.json({ success: false, message: upsertError.message }, { status: 400 });
++      }
++    }
++
++    return NextResponse.json({ success: true });
++  } catch (err: unknown) {
++    const errorMessage = err instanceof Error ? err.message : 'Internal Server Error';
++    return NextResponse.json({ success: false, message: errorMessage }, { status: 500 });
++  }
++}
+diff --git a/src/store/useCartStore.ts b/src/store/useCartStore.ts
+new file mode 100644
+index 0000000..8d29bd2
+--- /dev/null
++++ b/src/store/useCartStore.ts
+@@ -0,0 +1,66 @@
++import { create } from 'zustand';
++import { persist } from 'zustand/middleware';
++
++export interface CartItem {
++  variantId: string;
++  productId: string;
++  name: string;
++  variantLabel: string;
++  price: number;
++  quantity: number;
++  stockAvailable: number;
++  imageUrl: string;
++}
++
++interface CartState {
++  items: CartItem[];
++  addItem: (item: CartItem) => void;
++  removeItem: (variantId: string) => void;
++  updateQuantity: (variantId: string, quantity: number) => void;
++  clearCart: () => void;
++  syncWithBackend: () => Promise<void>;
++}
++
++export const useCartStore = create<CartState>()(
++  persist(
++    (set, get) => ({
++      items: [],
++      addItem: (item) => set((state) => {
++        const exists = state.items.find((i) => i.variantId === item.variantId);
++        if (exists) {
++          return {
++            items: state.items.map((i) =>
++              i.variantId === item.variantId
++                ? { ...i, quantity: Math.min(i.quantity + item.quantity, i.stockAvailable) }
++                : i
++            ),
++          };
++        }
++        return { items: [...state.items, item] };
++      }),
++      removeItem: (variantId) => set((state) => ({
++        items: state.items.filter((i) => i.variantId !== variantId),
++      })),
++      updateQuantity: (variantId, quantity) => set((state) => ({
++        items: state.items.map((i) =>
++          i.variantId === variantId ? { ...i, quantity: Math.max(1, Math.min(quantity, i.stockAvailable)) } : i
++        ),
++      })),
++      clearCart: () => set({ items: [] }),
++      syncWithBackend: async () => {
++        const { items } = get();
++        if (items.length === 0) return;
++        try {
++          await fetch('/api/cart/sync', {
++            method: 'POST',
++            headers: { 'Content-Type': 'application/json' },
++            body: JSON.stringify({ items }),
++          });
++        } catch (e) {
++          console.error('Failed to sync cart', e);
++        }
++      },
++    }),
++    { name: 'pleatsssi-cart' }
++  )
++);
+diff --git a/supabase/migrations/20260804000000_init_schema.sql b/supabase/migrations/20260804000000_init_schema.sql
+index 3c4b31d..243d584 100644
+--- a/supabase/migrations/20260804000000_init_schema.sql
++++ b/supabase/migrations/20260804000000_init_schema.sql
+@@ -50,10 +50,22 @@ CREATE TABLE products (
+ CREATE TABLE product_variants (
+   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+   product_id UUID NOT NULL REFERENCES products(id) ON DELETE CASCADE,
+   color VARCHAR(50) NOT NULL,
+   color_hex VARCHAR(7) NOT NULL,
+   size VARCHAR(10) NOT NULL,
+   sku VARCHAR(100) NOT NULL UNIQUE,
+   stock INT NOT NULL DEFAULT 0,
+   created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL
+ );
++
++-- Cart Items Table
++CREATE TABLE cart_items (
++  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
++  user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
++  product_variant_id UUID NOT NULL REFERENCES product_variants(id) ON DELETE CASCADE,
++  quantity INTEGER NOT NULL CHECK (quantity > 0),
++  created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL,
++  updated_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL,
++  UNIQUE(user_id, product_variant_id)
++);
++
+diff --git a/tests/cart.test.ts b/tests/cart.test.ts
+new file mode 100644
+index 0000000..0fe0f9a
+--- /dev/null
++++ b/tests/cart.test.ts
+@@ -0,0 +1,311 @@
++import { expect, test, vi, describe, beforeEach } from 'vitest';
++import { type SupabaseClient } from '@supabase/supabase-js';
++
++// Use vi.hoisted to ensure localStorage mock is set up before store import is evaluated (due to ESM hoisting)
++vi.hoisted(() => {
++  const mockStore: Record<string, string> = {};
++  (global as unknown as { __mockLocalStorage: Record<string, string> }).__mockLocalStorage = mockStore;
++  
++  const localStorageMock = {
++    getItem: (key: string) => mockStore[key] || null,
++    setItem: (key: string, value: string) => {
++      mockStore[key] = value;
++    },
++    removeItem: (key: string) => {
++      delete mockStore[key];
++    },
++    clear: () => {
++      for (const key in mockStore) {
++        delete mockStore[key];
++      }
++    },
++    length: 0,
++    key: () => '',
++  };
++
++  global.localStorage = localStorageMock;
++  global.window = {
++    localStorage: localStorageMock,
++  } as unknown as Window & typeof globalThis;
++});
++
++// Mock fetch globally
++const mockFetch = vi.fn();
++global.fetch = mockFetch;
++
++// Import store, route handler, and Supabase client
++import { useCartStore, type CartItem } from '../src/store/useCartStore';
++import { POST as syncPOST } from '../src/app/api/cart/sync/route';
++import { supabaseServerClient } from '../src/lib/supabaseServer';
++
++// Mock supabaseServerClient
++vi.mock('../src/lib/supabaseServer', () => ({
++  supabaseServerClient: vi.fn(),
++}));
++
++describe('Cart Store & API Sync', () => {
++  const mockGetUser = vi.fn();
++  const mockSelect = vi.fn();
++  const mockEq = vi.fn();
++  const mockUpsert = vi.fn();
++
++  const mockSupabase = {
++    auth: {
++      getUser: mockGetUser,
++    },
++    from: vi.fn().mockReturnValue({
++      select: mockSelect,
++      upsert: mockUpsert,
++    }),
++  };
++
++  beforeEach(() => {
++    // Reset Zustand store state
++    useCartStore.getState().clearCart();
++    // Clear localStorage mock
++    const mockStore = (global as unknown as { __mockLocalStorage: Record<string, string> }).__mockLocalStorage;
++    for (const key in mockStore) {
++      delete mockStore[key];
++    }
++    // Clear all vitest mocks
++    vi.clearAllMocks();
++    
++    // Set default mock implementations
++    vi.mocked(supabaseServerClient).mockResolvedValue(mockSupabase as unknown as SupabaseClient);
++    mockSelect.mockReturnValue({ eq: mockEq });
++  });
++
++  describe('Zustand Cart Store', () => {
++    const itemA: CartItem = {
++      variantId: 'var-a',
++      productId: 'prod-1',
++      name: 'Dress A',
++      variantLabel: 'Black / S',
++      price: 100000,
++      quantity: 1,
++      stockAvailable: 5,
++      imageUrl: 'http://example.com/a.jpg',
++    };
++
++    const itemB: CartItem = {
++      variantId: 'var-b',
++      productId: 'prod-2',
++      name: 'Dress B',
++      variantLabel: 'White / M',
++      price: 150000,
++      quantity: 2,
++      stockAvailable: 3,
++      imageUrl: 'http://example.com/b.jpg',
++    };
++
++    test('addItem adds a new item', () => {
++      useCartStore.getState().addItem(itemA);
++      expect(useCartStore.getState().items).toEqual([itemA]);
++    });
++
++    test('addItem increments quantity if variant already exists, capped at stockAvailable', () => {
++      useCartStore.getState().addItem(itemA);
++      
++      // Add same item with quantity 2 (total 3)
++      useCartStore.getState().addItem({ ...itemA, quantity: 2 });
++      expect(useCartStore.getState().items[0].quantity).toBe(3);
++
++      // Add another 3 items (total 6, but capped at stockAvailable = 5)
++      useCartStore.getState().addItem({ ...itemA, quantity: 3 });
++      expect(useCartStore.getState().items[0].quantity).toBe(5);
++    });
++
++    test('removeItem removes an item by variantId', () => {
++      useCartStore.getState().addItem(itemA);
++      useCartStore.getState().addItem(itemB);
++      expect(useCartStore.getState().items.length).toBe(2);
++
++      useCartStore.getState().removeItem('var-a');
++      expect(useCartStore.getState().items).toEqual([itemB]);
++    });
++
++    test('updateQuantity updates quantity, keeping it between 1 and stockAvailable', () => {
++      useCartStore.getState().addItem(itemA);
++
++      // Update to 3 (valid)
++      useCartStore.getState().updateQuantity('var-a', 3);
++      expect(useCartStore.getState().items[0].quantity).toBe(3);
++
++      // Update to 10 (exceeds stockAvailable = 5, caps at 5)
++      useCartStore.getState().updateQuantity('var-a', 10);
++      expect(useCartStore.getState().items[0].quantity).toBe(5);
++
++      // Update to 0 (below 1, floor at 1)
++      useCartStore.getState().updateQuantity('var-a', 0);
++      expect(useCartStore.getState().items[0].quantity).toBe(1);
++    });
++
++    test('clearCart empties the cart items', () => {
++      useCartStore.getState().addItem(itemA);
++      useCartStore.getState().addItem(itemB);
++      useCartStore.getState().clearCart();
++      expect(useCartStore.getState().items).toEqual([]);
++    });
++
++    test('syncWithBackend makes POST request with items', async () => {
++      useCartStore.getState().addItem(itemA);
++      mockFetch.mockResolvedValue({
++        ok: true,
++        json: async () => ({ success: true }),
++      } as Response);
++
++      await useCartStore.getState().syncWithBackend();
++
++      expect(mockFetch).toHaveBeenCalledWith('/api/cart/sync', {
++        method: 'POST',
++        headers: { 'Content-Type': 'application/json' },
++        body: JSON.stringify({ items: [itemA] }),
++      });
++    });
++
++    test('syncWithBackend does not make request if cart is empty', async () => {
++      await useCartStore.getState().syncWithBackend();
++      expect(mockFetch).not.toHaveBeenCalled();
++    });
++  });
++
++  describe('POST /api/cart/sync API Endpoint', () => {
++    const guestItems = [
++      {
++        variantId: 'var-1',
++        productId: 'prod-1',
++        name: 'Dress 1',
++        variantLabel: 'Red / S',
++        price: 200000,
++        quantity: 2,
++        stockAvailable: 10,
++        imageUrl: 'image.jpg',
++      },
++      {
++        variantId: 'var-2',
++        productId: 'prod-2',
++        name: 'Dress 2',
++        variantLabel: 'Blue / M',
++        price: 250000,
++        quantity: 1,
++        stockAvailable: 5,
++        imageUrl: 'image.jpg',
++      },
++    ];
++
++    test('returns 401 if unauthenticated', async () => {
++      mockGetUser.mockResolvedValue({ data: { user: null }, error: new Error('User not found') });
++
++      const req = new Request('http://localhost/api/cart/sync', {
++        method: 'POST',
++        body: JSON.stringify({ items: guestItems }),
++      });
++
++      const response = await syncPOST(req);
++      expect(response.status).toBe(401);
++      const json = await response.json();
++      expect(json.success).toBe(false);
++      expect(json.message).toBe('Unauthenticated');
++    });
++
++    test('returns 400 if items is not an array', async () => {
++      const req = new Request('http://localhost/api/cart/sync', {
++        method: 'POST',
++        body: JSON.stringify({ items: 'not-an-array' }),
++      });
++
++      const response = await syncPOST(req);
++      expect(response.status).toBe(400);
++      const json = await response.json();
++      expect(json.success).toBe(false);
++      expect(json.message).toContain('items must be an array');
++    });
++
++    test('returns 200 early if items array is empty', async () => {
++      mockGetUser.mockResolvedValue({ data: { user: { id: 'user-id-123' } }, error: null });
++
++      const req = new Request('http://localhost/api/cart/sync', {
++        method: 'POST',
++        body: JSON.stringify({ items: [] }),
++      });
++
++      const response = await syncPOST(req);
++      expect(response.status).toBe(200);
++      const json = await response.json();
++      expect(json.success).toBe(true);
++      expect(json.message).toBe('No items to sync');
++      expect(mockSupabase.from).not.toHaveBeenCalled();
++    });
++
++    test('returns 400 if fetching database cart fails', async () => {
++      mockGetUser.mockResolvedValue({ data: { user: { id: 'user-id-123' } }, error: null });
++      mockEq.mockResolvedValue({ data: null, error: { message: 'Database fetch error' } });
++
++      const req = new Request('http://localhost/api/cart/sync', {
++        method: 'POST',
++        body: JSON.stringify({ items: guestItems }),
++      });
++
++      const response = await syncPOST(req);
++      expect(response.status).toBe(400);
++      const json = await response.json();
++      expect(json.success).toBe(false);
++      expect(json.message).toBe('Database fetch error');
++    });
++
++    test('successfully merges guest cart items with DB cart items and upserts them', async () => {
++      mockGetUser.mockResolvedValue({ data: { user: { id: 'user-id-123' } }, error: null });
++      
++      // Database already has: var-1 with quantity 3, var-3 with quantity 1
++      mockEq.mockResolvedValue({
++        data: [
++          { product_variant_id: 'var-1', quantity: 3 },
++          { product_variant_id: 'var-3', quantity: 1 },
++        ],
++        error: null,
++      });
++
++      mockUpsert.mockResolvedValue({ error: null });
++
++      const req = new Request('http://localhost/api/cart/sync', {
++        method: 'POST',
++        body: JSON.stringify({ items: guestItems }),
++      });
++
++      const response = await syncPOST(req);
++      expect(response.status).toBe(200);
++      const json = await response.json();
++      expect(json.success).toBe(true);
++
++      // Expected merged result:
++      // var-1: DB quantity 3 + guest quantity 2 = 5
++      // var-2: guest quantity 1
++      // var-3: DB quantity 1 (preserved)
++      expect(mockUpsert).toHaveBeenCalledWith(
++        [
++          { user_id: 'user-id-123', product_variant_id: 'var-1', quantity: 5 },
++          { user_id: 'user-id-123', product_variant_id: 'var-3', quantity: 1 },
++          { user_id: 'user-id-123', product_variant_id: 'var-2', quantity: 1 },
++        ],
++        { onConflict: 'user_id,product_variant_id' }
++      );
++    });
++
++    test('returns 400 if upserting merged items fails', async () => {
++      mockGetUser.mockResolvedValue({ data: { user: { id: 'user-id-123' } }, error: null });
++      mockEq.mockResolvedValue({ data: [], error: null });
++      mockUpsert.mockResolvedValue({ error: { message: 'Database upsert error' } });
++
++      const req = new Request('http://localhost/api/cart/sync', {
++        method: 'POST',
++        body: JSON.stringify({ items: guestItems }),
++      });
++
++      const response = await syncPOST(req);
++      expect(response.status).toBe(400);
++      const json = await response.json();
++      expect(json.success).toBe(false);
++      expect(json.message).toBe('Database upsert error');
++    });
++  });
++});

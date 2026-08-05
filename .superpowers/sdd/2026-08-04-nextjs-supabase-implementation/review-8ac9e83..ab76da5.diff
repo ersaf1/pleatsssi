@@ -1,0 +1,284 @@
+# Review package: 8ac9e83.. ab76da5
+
+## Commits
+ab76da5 feat: add auth route handlers and middleware
+
+
+## Files changed
+ src/app/api/auth/login/route.ts    |  18 ++++++
+ src/app/api/auth/logout/route.ts   |  13 ++++
+ src/app/api/auth/register/route.ts |  22 +++++++
+ src/middleware.ts                  |  37 +++++++++++
+ tests/auth.test.ts                 | 129 +++++++++++++++++++++++++++++++++++++
+ vitest.config.mts                  |   5 ++
+ 6 files changed, 224 insertions(+)
+
+
+## Diff
+diff --git a/src/app/api/auth/login/route.ts b/src/app/api/auth/login/route.ts
+new file mode 100644
+index 0000000..609788d
+--- /dev/null
++++ b/src/app/api/auth/login/route.ts
+@@ -0,0 +1,18 @@
++import { NextResponse } from 'next/server';
++import { supabaseServerClient } from '@/lib/supabaseServer';
++
++export async function POST(request: Request) {
++  try {
++    const { email, password } = await request.json();
++    const supabase = await supabaseServerClient();
++    const { data, error } = await supabase.auth.signInWithPassword({ email, password });
++    
++    if (error) {
++      return NextResponse.json({ success: false, message: error.message }, { status: 400 });
++    }
++    return NextResponse.json({ success: true, data });
++  } catch (err: unknown) {
++    const errorMessage = err instanceof Error ? err.message : 'Internal Server Error';
++    return NextResponse.json({ success: false, message: errorMessage }, { status: 500 });
++  }
++}
+diff --git a/src/app/api/auth/logout/route.ts b/src/app/api/auth/logout/route.ts
+new file mode 100644
+index 0000000..9adf956
+--- /dev/null
++++ b/src/app/api/auth/logout/route.ts
+@@ -0,0 +1,13 @@
++import { NextResponse } from 'next/server';
++import { supabaseServerClient } from '@/lib/supabaseServer';
++
++export async function POST() {
++  try {
++    const supabase = await supabaseServerClient();
++    await supabase.auth.signOut();
++    return NextResponse.json({ success: true });
++  } catch (err: unknown) {
++    const errorMessage = err instanceof Error ? err.message : 'Internal Server Error';
++    return NextResponse.json({ success: false, message: errorMessage }, { status: 500 });
++  }
++}
+diff --git a/src/app/api/auth/register/route.ts b/src/app/api/auth/register/route.ts
+new file mode 100644
+index 0000000..ff81eb6
+--- /dev/null
++++ b/src/app/api/auth/register/route.ts
+@@ -0,0 +1,22 @@
++import { NextResponse } from 'next/server';
++import { supabaseServerClient } from '@/lib/supabaseServer';
++
++export async function POST(request: Request) {
++  try {
++    const { email, password, name } = await request.json();
++    const supabase = await supabaseServerClient();
++    const { data, error } = await supabase.auth.signUp({
++      email,
++      password,
++      options: { data: { name } }
++    });
++
++    if (error) {
++      return NextResponse.json({ success: false, message: error.message }, { status: 400 });
++    }
++    return NextResponse.json({ success: true, data });
++  } catch (err: unknown) {
++    const errorMessage = err instanceof Error ? err.message : 'Internal Server Error';
++    return NextResponse.json({ success: false, message: errorMessage }, { status: 500 });
++  }
++}
+diff --git a/src/middleware.ts b/src/middleware.ts
+new file mode 100644
+index 0000000..9c4d535
+--- /dev/null
++++ b/src/middleware.ts
+@@ -0,0 +1,37 @@
++import { NextResponse, type NextRequest } from 'next/server';
++import { createServerClient } from '@supabase/ssr';
++
++export async function middleware(request: NextRequest) {
++  let response = NextResponse.next({ request });
++  const supabase = createServerClient(
++    process.env.NEXT_PUBLIC_SUPABASE_URL!,
++    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
++    {
++      cookies: {
++        getAll() {
++          return request.cookies.getAll();
++        },
++        setAll(cookiesToSet) {
++          cookiesToSet.forEach(({ name, value }) => request.cookies.set(name, value));
++          response = NextResponse.next({ request });
++          cookiesToSet.forEach(({ name, value, options }) =>
++            response.cookies.set(name, value, options)
++          );
++        },
++      },
++    }
++  );
++
++  const { data: { user } } = await supabase.auth.getUser();
++
++  // Protect checkout and profile routes
++  if (!user && (request.nextUrl.pathname.startsWith('/id/profile') || request.nextUrl.pathname.startsWith('/id/checkout'))) {
++    return NextResponse.redirect(new URL('/id/login', request.url));
++  }
++
++  return response;
++}
++
++export const config = {
++  matcher: ['/id/profile/:path*', '/id/checkout/:path*'],
++};
+diff --git a/tests/auth.test.ts b/tests/auth.test.ts
+new file mode 100644
+index 0000000..57fe4c7
+--- /dev/null
++++ b/tests/auth.test.ts
+@@ -0,0 +1,129 @@
++import { expect, test, vi, describe, beforeEach } from 'vitest';
++import { type SupabaseClient } from '@supabase/supabase-js';
++import { POST as loginPOST } from '../src/app/api/auth/login/route';
++import { POST as registerPOST } from '../src/app/api/auth/register/route';
++import { POST as logoutPOST } from '../src/app/api/auth/logout/route';
++import { supabaseServerClient } from '../src/lib/supabaseServer';
++
++// Mock supabaseServerClient
++vi.mock('../src/lib/supabaseServer', () => ({
++  supabaseServerClient: vi.fn(),
++}));
++
++describe('Auth Route Handlers', () => {
++  const mockSignInWithPassword = vi.fn();
++  const mockSignUp = vi.fn();
++  const mockSignOut = vi.fn();
++
++  const mockSupabase = {
++    auth: {
++      signInWithPassword: mockSignInWithPassword,
++      signUp: mockSignUp,
++      signOut: mockSignOut,
++    },
++  };
++
++  beforeEach(() => {
++    vi.clearAllMocks();
++    vi.mocked(supabaseServerClient).mockResolvedValue(mockSupabase as unknown as SupabaseClient);
++  });
++
++
++  describe('POST /api/auth/login', () => {
++    test('successful login', async () => {
++      const mockSession = { user: { id: 'user-id', email: 'test@example.com' }, session: { access_token: 'token' } };
++      mockSignInWithPassword.mockResolvedValue({ data: mockSession, error: null });
++
++      const req = new Request('http://localhost/api/auth/login', {
++        method: 'POST',
++        body: JSON.stringify({ email: 'test@example.com', password: 'password123' }),
++      });
++
++      const response = await loginPOST(req);
++      expect(response.status).toBe(200);
++      const json = await response.json();
++      expect(json).toEqual({ success: true, data: mockSession });
++      expect(mockSignInWithPassword).toHaveBeenCalledWith({
++        email: 'test@example.com',
++        password: 'password123',
++      });
++    });
++
++    test('failed login', async () => {
++      mockSignInWithPassword.mockResolvedValue({ data: { user: null, session: null }, error: { message: 'Invalid login credentials' } });
++
++      const req = new Request('http://localhost/api/auth/login', {
++        method: 'POST',
++        body: JSON.stringify({ email: 'test@example.com', password: 'wrong' }),
++      });
++
++      const response = await loginPOST(req);
++      expect(response.status).toBe(400);
++      const json = await response.json();
++      expect(json).toEqual({ success: false, message: 'Invalid login credentials' });
++    });
++
++    test('internal error', async () => {
++      mockSignInWithPassword.mockRejectedValue(new Error('Database error'));
++
++      const req = new Request('http://localhost/api/auth/login', {
++        method: 'POST',
++        body: JSON.stringify({ email: 'test@example.com', password: 'password' }),
++      });
++
++      const response = await loginPOST(req);
++      expect(response.status).toBe(500);
++      const json = await response.json();
++      expect(json.success).toBe(false);
++      expect(json.message).toContain('Database error');
++    });
++  });
++
++  describe('POST /api/auth/register', () => {
++    test('successful registration', async () => {
++      const mockSignUpData = { user: { id: 'new-user-id', email: 'new@example.com' } };
++      mockSignUp.mockResolvedValue({ data: mockSignUpData, error: null });
++
++      const req = new Request('http://localhost/api/auth/register', {
++        method: 'POST',
++        body: JSON.stringify({ email: 'new@example.com', password: 'password123', name: 'John Doe' }),
++      });
++
++      const response = await registerPOST(req);
++      expect(response.status).toBe(200);
++      const json = await response.json();
++      expect(json).toEqual({ success: true, data: mockSignUpData });
++      expect(mockSignUp).toHaveBeenCalledWith({
++        email: 'new@example.com',
++        password: 'password123',
++        options: { data: { name: 'John Doe' } },
++      });
++    });
++
++    test('failed registration', async () => {
++      mockSignUp.mockResolvedValue({ data: { user: null }, error: { message: 'User already registered' } });
++
++      const req = new Request('http://localhost/api/auth/register', {
++        method: 'POST',
++        body: JSON.stringify({ email: 'new@example.com', password: 'password123', name: 'John Doe' }),
++      });
++
++      const response = await registerPOST(req);
++      expect(response.status).toBe(400);
++      const json = await response.json();
++      expect(json).toEqual({ success: false, message: 'User already registered' });
++    });
++  });
++
++  describe('POST /api/auth/logout', () => {
++    test('successful logout', async () => {
++      mockSignOut.mockResolvedValue({ error: null });
++
++      const response = await logoutPOST();
++      expect(response.status).toBe(200);
++      const json = await response.json();
++      expect(json).toEqual({ success: true });
++      expect(mockSignOut).toHaveBeenCalled();
++    });
++  });
++});
+diff --git a/vitest.config.mts b/vitest.config.mts
+index f4ca2a5..d11d3b0 100644
+--- a/vitest.config.mts
++++ b/vitest.config.mts
+@@ -1,8 +1,13 @@
+ import { defineConfig } from 'vitest/config';
++import path from 'path';
+ 
+ export default defineConfig({
+   test: {
+     environment: 'node',
++    alias: {
++      '@': path.resolve(import.meta.dirname, './src'),
++    },
+   },
+   envPrefix: ['VITE_', 'NEXT_PUBLIC_'],
+ });
++

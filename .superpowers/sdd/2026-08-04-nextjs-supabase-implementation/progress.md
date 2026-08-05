@@ -12,6 +12,8 @@ Deferred Minor Issues:
 * Task 1: Populate `supabase/seed.sql` with default category/product templates for better local DX.
 * Task 2: Wrap `auth.getUser()` in try-catch in `middleware.ts` to handle auth API failures.
 * Task 2: Use consistent path aliases (`@/*`) in test files instead of relative paths.
+* Task 5: Add a database check constraint `CHECK (stock >= 0)` on `product_variants.stock` or handle it in the RPC to prevent overselling race conditions.
+* Task 5: Wrap multi-step webhook database modifications (order status, payment status, stock restoration) inside a database transaction to prevent partial state inconsistency.
 
 Progress Log:
 [2026-08-04T12:59:00] Ledger initialized.
@@ -19,4 +21,4 @@ Progress Log:
 [2026-08-04T13:05:00] Task 2 complete (commits 8ac9e83..ab76da5, review clean).
 [2026-08-04T13:12:00] Task 3 complete (commits ab76da5..1a1f9b6, review clean).
 [2026-08-04T13:27:00] Task 4 complete (commits 1a1f9b6..85e124b, review clean).
-[2026-08-04T13:30:00] Task 5 complete (commits 85e124b..d443a14, review clean after addressing findings).
+[2026-08-04T13:35:00] Task 5 complete (commits 85e124b..49cc2df, review clean).

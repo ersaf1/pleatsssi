@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { supabaseServerClient } from '@/lib/supabaseServer';
+import { supabaseAdmin } from '@/lib/supabaseAdmin';
 import crypto from 'crypto';
 
 export async function POST(request: Request) {
@@ -39,7 +39,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ success: false, message: 'Invalid Signature' }, { status: 403 });
     }
 
-    const supabase = await supabaseServerClient();
+    const supabase = supabaseAdmin;
 
     // Fetch the existing order by its unique order number
     const { data: order, error: orderFetchErr } = await supabase

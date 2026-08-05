@@ -120,3 +120,8 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql SECURITY DEFINER;
 
+REVOKE EXECUTE ON FUNCTION adjust_variant_stock(UUID, INT) FROM PUBLIC;
+REVOKE EXECUTE ON FUNCTION adjust_variant_stock(UUID, INT) FROM authenticated;
+REVOKE EXECUTE ON FUNCTION adjust_variant_stock(UUID, INT) FROM anon;
+GRANT EXECUTE ON FUNCTION adjust_variant_stock(UUID, INT) TO service_role;
+
