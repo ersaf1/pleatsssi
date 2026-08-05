@@ -66,7 +66,7 @@ describe('Checkout API Endpoint', () => {
 
   beforeEach(() => {
     vi.clearAllMocks();
-    vi.mocked(supabaseAdmin.rpc).mockResolvedValue({ error: null });
+    vi.mocked(supabaseAdmin.rpc).mockResolvedValue({ error: null } as any);
     vi.mocked(supabaseServerClient).mockResolvedValue(mockSupabase as unknown as SupabaseClient);
   });
 

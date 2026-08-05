@@ -25,7 +25,7 @@ describe('Midtrans Webhook Payment Status Handler', () => {
     process.env.MIDTRANS_SERVER_KEY = 'test_server_key';
 
     // Mock supabaseAdmin.rpc default return
-    vi.mocked(supabaseAdmin.rpc).mockResolvedValue({ error: null });
+    vi.mocked(supabaseAdmin.rpc).mockResolvedValue({ error: null } as any);
 
     // Mock supabaseAdmin.from
     vi.mocked(supabaseAdmin.from).mockImplementation((table: string) => {
