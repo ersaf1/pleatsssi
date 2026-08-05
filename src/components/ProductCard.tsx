@@ -15,51 +15,51 @@ export function ProductCard({ product, className }: ProductCardProps) {
       className={cn("group block", className)}
       aria-label={`${product.name}, ${product.price}`}
     >
-      <div className="relative aspect-[3/4] overflow-hidden bg-[#f5f5f5]">
+      <div className="relative aspect-[3/4] overflow-hidden rounded-sm border border-[#EADFD4]/60 bg-[#F5F0E6]">
         <Image
           src={product.image}
           alt={product.name}
           fill
           sizes="(max-width: 768px) 50vw, (max-width: 1280px) 33vw, 25vw"
-          className="object-cover transition-opacity duration-300 group-hover:opacity-0"
+          className="object-cover transition-all duration-500 ease-out group-hover:scale-105 group-hover:opacity-0"
         />
         <Image
           src={product.hoverImage}
           alt=""
           fill
           sizes="(max-width: 768px) 50vw, (max-width: 1280px) 33vw, 25vw"
-          className="object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          className="object-cover opacity-0 transition-all duration-500 ease-out group-hover:scale-105 group-hover:opacity-100"
           aria-hidden="true"
         />
         {product.discount && (
-          <span className="absolute left-2 top-2 bg-[#cc0000] px-2 py-0.5 text-[11px] uppercase tracking-wider text-white">
+          <span className="absolute left-2.5 top-2.5 bg-[#0B4F3A] px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.15em] text-[#FAF7F2] shadow-sm">
             {product.discount}
           </span>
         )}
       </div>
 
-      <div className="pt-3">
-        <h3 className="text-[13px] leading-snug text-[#333] transition-colors group-hover:text-black">
+      <div className="px-0.5 pt-3.5">
+        <h3 className="text-[13px] font-normal leading-snug text-[#1A1918] transition-colors group-hover:text-[#0B4F3A]">
           {product.name}
         </h3>
-        <p className="mt-1 text-[13px]">
+        <p className="mt-1 text-[13px] font-medium">
           {product.originalPrice ? (
             <>
-              <span className="mr-2 text-gray-400 line-through">{product.originalPrice}</span>
-              <span className="text-[#cc0000]">{product.price}</span>
+              <span className="mr-2 font-normal text-[#786E65] line-through">{product.originalPrice}</span>
+              <span className="font-semibold text-[#0B4F3A]">{product.price}</span>
             </>
           ) : (
-            <span className="text-black">{product.price}</span>
+            <span className="text-[#1A1918]">{product.price}</span>
           )}
         </p>
         {product.swatches.length > 1 && (
-          <div className="mt-2 flex items-center gap-1.5">
+          <div className="mt-2.5 flex items-center gap-1.5">
             {product.swatches.slice(0, 5).map((swatch) => (
               <span
                 key={swatch}
-                className="relative block h-4 w-4 overflow-hidden rounded-full border border-black/10"
+                className="relative block h-3.5 w-3.5 overflow-hidden rounded-full border border-[#EADFD4]"
               >
-                <Image src={swatch} alt="" fill sizes="16px" className="object-cover" />
+                <Image src={swatch} alt="" fill sizes="14px" className="object-cover" />
               </span>
             ))}
           </div>
