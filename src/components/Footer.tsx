@@ -91,13 +91,13 @@ export function Footer() {
   }
 
   return (
-    <footer className="bg-white text-black font-sans text-[15px] w-full py-12 px-6 md:px-12">
+    <footer className="bg-[#F5F0E6] text-[#1A1918] font-sans text-[15px] w-full py-16 px-6 md:px-12 border-t border-[#EADFD4]">
       <div className="xl:grid xl:grid-cols-2 xl:gap-16">
         {/* Left column: Newsletter + Social */}
         <div>
           {/* Newsletter */}
           <section>
-            <h2 className="text-sm font-bold uppercase tracking-widest mb-4">
+            <h2 className="text-xs font-semibold uppercase tracking-[0.18em] text-[#1A1918] mb-4">
               DAFTAR UNTUK MENDAPATKAN INFO FASHION TERBARU
             </h2>
             <form onSubmit={handleSubmit} className="flex">
@@ -107,31 +107,31 @@ export function Footer() {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Masukkan email anda di sini"
                 required
-                className="border border-black px-4 py-2 text-sm flex-1 outline-none min-w-0"
+                className="bg-[#FAF7F2] border border-[#EADFD4] px-4 py-2.5 text-sm flex-1 outline-none min-w-0 text-[#1A1918] placeholder:text-[#786E65] focus:border-[#0B4F3A] transition-colors"
               />
               <button
                 type="submit"
-                className="bg-black text-white px-6 py-2 text-sm uppercase tracking-widest hover:bg-gray-800 transition-colors whitespace-nowrap"
+                className="bg-[#0B4F3A] text-[#FAF7F2] px-6 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] hover:bg-[#073628] transition-colors whitespace-nowrap"
               >
                 SUBSCRIBE
               </button>
             </form>
-            <p className="text-xs text-gray-600 mt-2">
+            <p className="text-xs text-[#786E65] mt-3 leading-relaxed">
               Dengan berlangganan, Anda menyetujui{" "}
-              <Link href="/id/terms-of-use" className="underline hover:text-black">
+              <Link href="/id/terms-of-use" className="underline text-[#1A1918] hover:text-[#0B4F3A] transition-colors">
                 Syarat &amp; Ketentuan
               </Link>{" "}
               dan{" "}
-              <Link href="/id/privacy-policy" className="underline hover:text-black">
+              <Link href="/id/privacy-policy" className="underline text-[#1A1918] hover:text-[#0B4F3A] transition-colors">
                 Kebijakan Privasi
               </Link>{" "}
-              CHARLES &amp; KEITH
+              PLEATSSSI
             </p>
           </section>
 
           {/* Social Links */}
           <section>
-            <h2 className="text-sm font-bold uppercase tracking-widest mb-4 mt-8">
+            <h2 className="text-xs font-semibold uppercase tracking-[0.18em] text-[#1A1918] mb-4 mt-10">
               IKUTI KAMI
             </h2>
             <div className="flex gap-4">
@@ -142,7 +142,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.name}
-                  className="text-black hover:text-gray-500 transition-colors"
+                  className="text-[#1A1918] hover:text-[#0B4F3A] transition-colors"
                 >
                   {social.icon}
                 </a>
@@ -152,11 +152,11 @@ export function Footer() {
         </div>
 
         {/* Right column: Nav columns */}
-        <div className="mt-10 xl:mt-0">
+        <div className="mt-12 xl:mt-0">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {navColumns.map((col) => (
               <div key={col.heading}>
-                <h3 className="text-sm font-bold uppercase tracking-widest mb-4">
+                <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-[#1A1918] mb-4">
                   {col.heading}
                 </h3>
                 <ul>
@@ -165,14 +165,14 @@ export function Footer() {
                       {link.href.startsWith("/") ? (
                         <Link
                           href={link.href}
-                          className="text-sm text-gray-600 hover:text-black block mb-2 transition-colors"
+                          className="text-sm text-[#786E65] hover:text-[#0B4F3A] block mb-2.5 transition-colors"
                         >
                           {link.label}
                         </Link>
                       ) : (
                         <a
                           href={link.href}
-                          className="text-sm text-gray-600 hover:text-black block mb-2 transition-colors"
+                          className="text-sm text-[#786E65] hover:text-[#0B4F3A] block mb-2.5 transition-colors"
                         >
                           {link.label}
                         </a>
@@ -187,11 +187,12 @@ export function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-gray-200 mt-8 pt-6">
-        <p className="text-xs text-gray-500 text-center">
-          &copy; CHARLES &amp; KEITH 2026
+      <div className="border-t border-[#EADFD4] mt-12 pt-8">
+        <p className="text-xs text-[#786E65] text-center tracking-wider">
+          &copy; PLEATSSSI 2026
         </p>
       </div>
     </footer>
   );
 }
+

@@ -32,14 +32,14 @@ export function AnnouncementBanner() {
     <div
       className={cn(
         "hidden xl:flex items-center justify-center w-full h-10",
-        "bg-[#f0f0f0]"
+        "bg-[#0B4F3A]"
       )}
       aria-live="polite"
       aria-atomic="true"
     >
       <p
         className={cn(
-          "text-black text-[15px] font-normal tracking-normal text-center px-4",
+          "text-[#FAF7F2] text-[12px] font-medium tracking-[0.18em] uppercase text-center px-4",
           "transition-opacity duration-300",
           visible ? "opacity-100" : "opacity-0"
         )}
@@ -49,3 +49,4 @@ export function AnnouncementBanner() {
     </div>
   );
 }
+
