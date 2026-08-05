@@ -1,0 +1,480 @@
+# Review package: f576910.. c1e574c
+
+## Commits
+c1e574c style: redesign header, announcement banner, and footer for Pleatsssi
+
+
+## Files changed
+ src/components/AnnouncementBanner.tsx |  5 ++--
+ src/components/Footer.tsx             | 35 ++++++++++++-----------
+ src/components/Header.tsx             | 53 +++++++++++++++--------------------
+ src/components/MobileNav.tsx          | 23 +++++++--------
+ 4 files changed, 56 insertions(+), 60 deletions(-)
+
+
+## Diff
+diff --git a/src/components/AnnouncementBanner.tsx b/src/components/AnnouncementBanner.tsx
+index cecc9f0..d098827 100644
+--- a/src/components/AnnouncementBanner.tsx
++++ b/src/components/AnnouncementBanner.tsx
+@@ -25,27 +25,28 @@ export function AnnouncementBanner() {
+       }, 300);
+     }, 5000);
+ 
+     return () => clearInterval(interval);
+   }, []);
+ 
+   return (
+     <div
+       className={cn(
+         "hidden xl:flex items-center justify-center w-full h-10",
+-        "bg-[#f0f0f0]"
++        "bg-[#0B4F3A]"
+       )}
+       aria-live="polite"
+       aria-atomic="true"
+     >
+       <p
+         className={cn(
+-          "text-black text-[15px] font-normal tracking-normal text-center px-4",
++          "text-[#FAF7F2] text-[12px] font-medium tracking-[0.18em] uppercase text-center px-4",
+           "transition-opacity duration-300",
+           visible ? "opacity-100" : "opacity-0"
+         )}
+       >
+         {MESSAGES[currentIndex]}
+       </p>
+     </div>
+   );
+ }
++
+diff --git a/src/components/Footer.tsx b/src/components/Footer.tsx
+index 8b688f7..664a481 100644
+--- a/src/components/Footer.tsx
++++ b/src/components/Footer.tsx
+@@ -84,114 +84,115 @@ const navColumns = [
+ export function Footer() {
+   const [email, setEmail] = useState("");
+ 
+   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+     e.preventDefault();
+     console.log("Newsletter subscribe:", email);
+     setEmail("");
+   }
+ 
+   return (
+-    <footer className="bg-white text-black font-sans text-[15px] w-full py-12 px-6 md:px-12">
++    <footer className="bg-[#F5F0E6] text-[#1A1918] font-sans text-[15px] w-full py-16 px-6 md:px-12 border-t border-[#EADFD4]">
+       <div className="xl:grid xl:grid-cols-2 xl:gap-16">
+         {/* Left column: Newsletter + Social */}
+         <div>
+           {/* Newsletter */}
+           <section>
+-            <h2 className="text-sm font-bold uppercase tracking-widest mb-4">
++            <h2 className="text-xs font-semibold uppercase tracking-[0.18em] text-[#1A1918] mb-4">
+               DAFTAR UNTUK MENDAPATKAN INFO FASHION TERBARU
+             </h2>
+             <form onSubmit={handleSubmit} className="flex">
+               <input
+                 type="email"
+                 value={email}
+                 onChange={(e) => setEmail(e.target.value)}
+                 placeholder="Masukkan email anda di sini"
+                 required
+-                className="border border-black px-4 py-2 text-sm flex-1 outline-none min-w-0"
++                className="bg-[#FAF7F2] border border-[#EADFD4] px-4 py-2.5 text-sm flex-1 outline-none min-w-0 text-[#1A1918] placeholder:text-[#786E65] focus:border-[#0B4F3A] transition-colors"
+               />
+               <button
+                 type="submit"
+-                className="bg-black text-white px-6 py-2 text-sm uppercase tracking-widest hover:bg-gray-800 transition-colors whitespace-nowrap"
++                className="bg-[#0B4F3A] text-[#FAF7F2] px-6 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] hover:bg-[#073628] transition-colors whitespace-nowrap"
+               >
+                 SUBSCRIBE
+               </button>
+             </form>
+-            <p className="text-xs text-gray-600 mt-2">
++            <p className="text-xs text-[#786E65] mt-3 leading-relaxed">
+               Dengan berlangganan, Anda menyetujui{" "}
+-              <Link href="/id/terms-of-use" className="underline hover:text-black">
++              <Link href="/id/terms-of-use" className="underline text-[#1A1918] hover:text-[#0B4F3A] transition-colors">
+                 Syarat &amp; Ketentuan
+               </Link>{" "}
+               dan{" "}
+-              <Link href="/id/privacy-policy" className="underline hover:text-black">
++              <Link href="/id/privacy-policy" className="underline text-[#1A1918] hover:text-[#0B4F3A] transition-colors">
+                 Kebijakan Privasi
+               </Link>{" "}
+-              CHARLES &amp; KEITH
++              PLEATSSSI
+             </p>
+           </section>
+ 
+           {/* Social Links */}
+           <section>
+-            <h2 className="text-sm font-bold uppercase tracking-widest mb-4 mt-8">
++            <h2 className="text-xs font-semibold uppercase tracking-[0.18em] text-[#1A1918] mb-4 mt-10">
+               IKUTI KAMI
+             </h2>
+             <div className="flex gap-4">
+               {socialLinks.map((social) => (
+                 <a
+                   key={social.name}
+                   href={social.href}
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label={social.name}
+-                  className="text-black hover:text-gray-500 transition-colors"
++                  className="text-[#1A1918] hover:text-[#0B4F3A] transition-colors"
+                 >
+                   {social.icon}
+                 </a>
+               ))}
+             </div>
+           </section>
+         </div>
+ 
+         {/* Right column: Nav columns */}
+-        <div className="mt-10 xl:mt-0">
++        <div className="mt-12 xl:mt-0">
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+             {navColumns.map((col) => (
+               <div key={col.heading}>
+-                <h3 className="text-sm font-bold uppercase tracking-widest mb-4">
++                <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-[#1A1918] mb-4">
+                   {col.heading}
+                 </h3>
+                 <ul>
+                   {col.links.map((link) => (
+                     <li key={link.label}>
+                       {link.href.startsWith("/") ? (
+                         <Link
+                           href={link.href}
+-                          className="text-sm text-gray-600 hover:text-black block mb-2 transition-colors"
++                          className="text-sm text-[#786E65] hover:text-[#0B4F3A] block mb-2.5 transition-colors"
+                         >
+                           {link.label}
+                         </Link>
+                       ) : (
+                         <a
+                           href={link.href}
+-                          className="text-sm text-gray-600 hover:text-black block mb-2 transition-colors"
++                          className="text-sm text-[#786E65] hover:text-[#0B4F3A] block mb-2.5 transition-colors"
+                         >
+                           {link.label}
+                         </a>
+                       )}
+                     </li>
+                   ))}
+                 </ul>
+               </div>
+             ))}
+           </div>
+         </div>
+       </div>
+ 
+       {/* Bottom bar */}
+-      <div className="border-t border-gray-200 mt-8 pt-6">
+-        <p className="text-xs text-gray-500 text-center">
+-          &copy; CHARLES &amp; KEITH 2026
++      <div className="border-t border-[#EADFD4] mt-12 pt-8">
++        <p className="text-xs text-[#786E65] text-center tracking-wider">
++          &copy; PLEATSSSI 2026
+         </p>
+       </div>
+     </footer>
+   );
+ }
++
+diff --git a/src/components/Header.tsx b/src/components/Header.tsx
+index a25edec..e145afd 100644
+--- a/src/components/Header.tsx
++++ b/src/components/Header.tsx
+@@ -20,183 +20,176 @@ const NAV_ITEMS: NavItem[] = [
+   { label: "DOMPET", href: "/id/wallets" },
+   { label: "AKSESORI", href: "/id/accessories" },
+   { label: "KOLEKSI ANAK-ANAK", href: "/id/kids" },
+   { label: "GIFTS", href: "/id/curated/gifts" },
+   { label: "TRENDING NOW", href: "/id/trending-now" },
+   { label: "STORIES", href: "/id/press/editorials" },
+   { label: "SALE", href: "/id/sale", isSale: true },
+ ];
+ 
+ const NAV_LINK_BASE =
+-  "text-[13px] uppercase tracking-wider px-3 py-2 transition-colors relative group";
++  "text-[12px] uppercase tracking-[0.15em] px-3 py-2.5 transition-colors relative group font-medium";
+ 
+ interface HeaderProps {
+   /**
+-   * overlay — transparan di atas hero (homepage), berubah putih saat scroll.
+-   * solid   — selalu putih dengan teks hitam (halaman dalam).
++   * overlay — transparan / floating di atas hero
++   * solid   — solid cream background
+    */
+   theme?: "overlay" | "solid";
+ }
+ 
+ export function Header({ theme = "overlay" }: HeaderProps) {
+   const [isMenuOpen, setIsMenuOpen] = useState(false);
+   const [scrolled, setScrolled] = useState(false);
+ 
+-  const isSolidTheme = theme === "solid";
+-  const dark = isSolidTheme || scrolled;
+-
+   useEffect(() => {
+     const onScroll = () => setScrolled(window.scrollY > 10);
+     window.addEventListener("scroll", onScroll, { passive: true });
+     return () => window.removeEventListener("scroll", onScroll);
+   }, []);
+ 
+   return (
+     <>
+-      {/* Sticky header: announcement banner in flow, logo+nav absolutely overlays the hero below */}
+       <header className="sticky top-0 z-50">
+-        {/* Announcement banner — in flow (gray strip, desktop only) */}
+         <AnnouncementBanner />
+ 
+-        {/* Logo row + nav — absolute so it overlays the hero image (overlay theme) */}
+         <div
+           className={cn(
+-            "inset-x-0 transition-colors duration-300",
+-            !isSolidTheme && "absolute",
+-            dark ? "bg-white border-b border-gray-100" : "bg-transparent border-b border-transparent"
++            "backdrop-blur-md bg-[#FAF7F2]/90 border-b border-[#EADFD4] transition-colors duration-300 shadow-sm"
+           )}
+         >
+           {/* ── Top row ─────────────────────────────────────────────── */}
+-          <div className="flex items-center h-[60px] px-4 xl:px-8">
++          <div className="flex items-center h-[64px] px-4 xl:px-8">
+             {/* Left — desktop: search icon | mobile: hamburger */}
+             <div className="flex-1 flex items-center">
+               {/* Desktop search */}
+               <button
+                 aria-label="Search"
+-                className={cn("hidden xl:flex items-center justify-center p-1 transition-colors", dark ? "text-black hover:text-gray-600" : "text-white hover:text-gray-200")}
++                className="hidden xl:flex items-center justify-center p-1.5 text-[#1A1918] hover:text-[#0B4F3A] transition-colors"
+               >
+                 <Search size={20} strokeWidth={1.5} />
+               </button>
+ 
+               {/* Mobile hamburger */}
+               <button
+                 aria-label="Open navigation menu"
+                 onClick={() => setIsMenuOpen(true)}
+-                className={cn("flex xl:hidden items-center justify-center p-1 transition-colors", dark ? "text-black hover:text-gray-600" : "text-white hover:text-gray-200")}
++                className="flex xl:hidden items-center justify-center p-1.5 text-[#1A1918] hover:text-[#0B4F3A] transition-colors"
+               >
+                 <Menu size={22} strokeWidth={1.5} />
+               </button>
+             </div>
+ 
+             {/* Center — logo */}
+             <div className="flex-1 flex justify-center">
+               <Link
+                 href="/"
+-                className={cn("font-bold uppercase tracking-widest text-lg whitespace-nowrap transition-colors", dark ? "text-black" : "text-white")}
++                className="font-['Italiana',serif] text-2xl xl:text-3xl text-[#1A1918] tracking-[0.25em] uppercase whitespace-nowrap transition-opacity hover:opacity-80"
+               >
+-                CHARLES &amp; KEITH
++                PLEATSSSI
+               </Link>
+             </div>
+ 
+             {/* Right — desktop: country + icons | mobile: search + cart */}
+             <div className="flex-1 flex items-center justify-end gap-1">
+               {/* Desktop utility icons */}
+               <div className="hidden xl:flex items-center gap-1">
+                 {/* Country selector */}
+                 <button
+                   aria-label="Select country: Indonesia"
+-                  className={cn("px-2 py-1 text-[13px] uppercase tracking-wider transition-colors font-normal", dark ? "text-[#333] hover:text-black" : "text-white hover:text-gray-200")}
++                  className="px-2.5 py-1 text-[12px] uppercase tracking-[0.15em] text-[#1A1918] hover:text-[#0B4F3A] transition-colors font-medium"
+                 >
+                   ID
+                 </button>
+ 
+                 {/* Wishlist */}
+                 <button
+                   aria-label="Wishlist"
+-                  className={cn("p-2 transition-colors", dark ? "text-black hover:text-gray-600" : "text-white hover:text-gray-200")}
++                  className="p-2 text-[#1A1918] hover:text-[#0B4F3A] transition-colors"
+                 >
+                   <Heart size={20} strokeWidth={1.5} />
+                 </button>
+ 
+                 {/* Account */}
+                 <button
+                   aria-label="My account"
+-                  className={cn("p-2 transition-colors", dark ? "text-black hover:text-gray-600" : "text-white hover:text-gray-200")}
++                  className="p-2 text-[#1A1918] hover:text-[#0B4F3A] transition-colors"
+                 >
+                   <User size={20} strokeWidth={1.5} />
+                 </button>
+ 
+                 {/* Cart */}
+                 <button
+                   aria-label="Shopping bag, 0 items"
+-                  className={cn("relative p-2 transition-colors", dark ? "text-black hover:text-gray-600" : "text-white hover:text-gray-200")}
++                  className="relative p-2 text-[#1A1918] hover:text-[#0B4F3A] transition-colors"
+                 >
+                   <ShoppingBag size={20} strokeWidth={1.5} />
+                   <span
+                     aria-hidden="true"
+-                    className={cn("absolute -top-0.5 -right-0.5 flex h-4 w-4 items-center justify-center rounded-full text-[10px] font-normal leading-none", dark ? "bg-black text-white" : "bg-white text-black")}
++                    className="absolute -top-0.5 -right-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-[#0B4F3A] text-[#FAF7F2] text-[10px] font-semibold leading-none"
+                   >
+                     0
+                   </span>
+                 </button>
+               </div>
+ 
+               {/* Mobile: search + cart */}
+               <div className="flex xl:hidden items-center gap-1">
+                 <button
+                   aria-label="Search"
+-                  className={cn("p-2 transition-colors", dark ? "text-black hover:text-gray-600" : "text-white hover:text-gray-200")}
++                  className="p-2 text-[#1A1918] hover:text-[#0B4F3A] transition-colors"
+                 >
+                   <Search size={20} strokeWidth={1.5} />
+                 </button>
+                 <button
+                   aria-label="Shopping bag, 0 items"
+-                  className={cn("relative p-2 transition-colors", dark ? "text-black hover:text-gray-600" : "text-white hover:text-gray-200")}
++                  className="relative p-2 text-[#1A1918] hover:text-[#0B4F3A] transition-colors"
+                 >
+                   <ShoppingBag size={20} strokeWidth={1.5} />
+                   <span
+                     aria-hidden="true"
+-                    className={cn("absolute -top-0.5 -right-0.5 flex h-4 w-4 items-center justify-center rounded-full text-[10px] font-normal leading-none", dark ? "bg-black text-white" : "bg-white text-black")}
++                    className="absolute -top-0.5 -right-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-[#0B4F3A] text-[#FAF7F2] text-[10px] font-semibold leading-none"
+                   >
+                     0
+                   </span>
+                 </button>
+               </div>
+             </div>
+           </div>
+ 
+           {/* ── Nav row (desktop only) ───────────────────────────────── */}
+           <nav
+-            className={cn("hidden xl:flex items-center justify-center border-t px-8", dark ? "border-gray-100" : "border-white/20")}
++            className="hidden xl:flex items-center justify-center border-t border-[#EADFD4]/60 px-8"
+             aria-label="Main navigation"
+           >
+-            <ul className="flex items-center" role="list">
++            <ul className="flex items-center gap-1" role="list">
+               {NAV_ITEMS.map((item) => (
+                 <li key={item.href}>
+                   <Link
+                     href={item.href}
+                     className={cn(
+                       NAV_LINK_BASE,
+                       item.isSale
+-                        ? "text-red-500 hover:text-red-400"
+-                        : dark ? "text-[#333] hover:text-black" : "text-white hover:text-gray-200"
++                        ? "text-[#0B4F3A] font-semibold hover:text-[#073628]"
++                        : "text-[#1A1918] hover:text-[#0B4F3A]"
+                     )}
+                   >
+                     {item.label}
+                     {/* hover underline */}
+                     <span
+                       aria-hidden="true"
+-                      className="absolute bottom-0 left-3 right-3 h-px bg-current scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"
++                      className="absolute bottom-0 left-3 right-3 h-[2px] bg-[#0B4F3A] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"
+                     />
+                   </Link>
+                 </li>
+               ))}
+             </ul>
+           </nav>
+         </div>
+       </header>
+ 
+       {/* Mobile slide-in drawer */}
+       <MobileNav isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
+     </>
+   );
+ }
++
+diff --git a/src/components/MobileNav.tsx b/src/components/MobileNav.tsx
+index af0e981..cfc3b82 100644
+--- a/src/components/MobileNav.tsx
++++ b/src/components/MobileNav.tsx
+@@ -32,65 +32,66 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
+           "transition-opacity duration-300",
+           isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+         )}
+         onClick={onClose}
+         aria-hidden="true"
+       />
+ 
+       {/* Drawer */}
+       <div
+         className={cn(
+-          "fixed top-0 left-0 h-full w-80 max-w-[85vw] bg-white z-50 xl:hidden",
+-          "flex flex-col",
++          "fixed top-0 left-0 h-full w-80 max-w-[85vw] bg-[#FAF7F2] z-50 xl:hidden",
++          "flex flex-col border-r border-[#EADFD4]",
+           "transition-transform duration-300 ease-in-out",
+           isOpen ? "translate-x-0" : "-translate-x-full"
+         )}
+         role="dialog"
+         aria-modal="true"
+         aria-label="Navigation menu"
+       >
+         {/* Drawer header */}
+-        <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100">
++        <div className="flex items-center justify-between px-5 py-4 border-b border-[#EADFD4]">
+           <Link
+             href="/"
+             onClick={onClose}
+-            className="font-bold uppercase tracking-widest text-base text-black"
++            className="font-['Italiana',serif] uppercase tracking-[0.25em] text-xl text-[#1A1918]"
+           >
+-            CHARLES &amp; KEITH
++            PLEATSSSI
+           </Link>
+           <button
+             onClick={onClose}
+             aria-label="Close navigation menu"
+-            className="p-1 text-black hover:text-gray-600 transition-colors"
++            className="p-1 text-[#1A1918] hover:text-[#0B4F3A] transition-colors"
+           >
+             <X size={20} strokeWidth={1.5} />
+           </button>
+         </div>
+ 
+         {/* Nav items */}
+         <nav className="flex-1 overflow-y-auto">
+           <ul role="list">
+             {NAV_ITEMS.map((item) => (
+-              <li key={item.href} className="border-b border-gray-100">
++              <li key={item.href} className="border-b border-[#EADFD4]/60">
+                 <Link
+                   href={item.href}
+                   onClick={onClose}
+                   className={cn(
+                     "flex items-center justify-between px-5 py-4",
+-                    "text-[13px] uppercase tracking-wider font-normal",
++                    "text-[12px] uppercase tracking-[0.15em] font-medium",
+                     "transition-colors",
+                     'isSale' in item && item.isSale
+-                      ? "text-red-600 hover:text-red-700"
+-                      : "text-[#333] hover:text-black"
++                      ? "text-[#0B4F3A] font-semibold hover:text-[#073628]"
++                      : "text-[#1A1918] hover:text-[#0B4F3A]"
+                   )}
+                 >
+                   <span>{item.label}</span>
+-                  <ChevronRight size={16} strokeWidth={1.5} className="text-gray-400 flex-shrink-0" />
++                  <ChevronRight size={16} strokeWidth={1.5} className="text-[#786E65] flex-shrink-0" />
+                 </Link>
+               </li>
+             ))}
+           </ul>
+         </nav>
+       </div>
+     </>
+   );
+ }
++

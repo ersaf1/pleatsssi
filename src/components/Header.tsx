@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { Search, Menu, User, Heart, ShoppingBag } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -29,23 +29,8 @@ const NAV_ITEMS: NavItem[] = [
 const NAV_LINK_BASE =
   "text-[12px] uppercase tracking-[0.15em] px-3 py-2.5 transition-colors relative group font-medium";
 
-interface HeaderProps {
-  /**
-   * overlay — transparan / floating di atas hero
-   * solid   — solid cream background
-   */
-  theme?: "overlay" | "solid";
-}
-
-export function Header({ theme = "overlay" }: HeaderProps) {
+export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 10);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   return (
     <>
