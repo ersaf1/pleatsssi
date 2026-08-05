@@ -7,10 +7,10 @@ export default function IdLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <>
+    <div className="min-h-screen bg-[#FAF7F2] text-[#1A1918] flex flex-col font-sans antialiased">
       <Header theme="solid" />
-      <main className="flex-1">{children}</main>
+      <main className="flex-1 bg-[#FAF7F2] text-[#1A1918]">{children}</main>
       <Footer />
-    </>
+    </div>
   );
 }

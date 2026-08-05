@@ -15,10 +15,9 @@ export default function RootLayout({
   return (
     <html lang="id" className="h-full">
       <head>
-        <link rel="stylesheet" href="https://use.typekit.net/exv2fdk.css" />
-        <meta name="theme-color" content="#000000" />
+        <meta name="theme-color" content="#FAF7F2" />
       </head>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col bg-[#FAF7F2] text-[#1A1918] font-sans antialiased">{children}</body>
     </html>
   );
 }
