@@ -18,9 +18,12 @@ export function CategoryPage({ slug }: CategoryPageProps) {
       : getProductsByCollection(slug);
 
   return (
-    <>
+    <div className="min-h-screen bg-[#FAF7F2]/30 pb-8">
       <CategoryHero meta={meta} productCount={products.length} />
-      <ProductGrid products={products} />
-    </>
+      <div className="pt-8">
+        <ProductGrid products={products} />
+      </div>
+    </div>
   );
 }
+
