@@ -2,10 +2,16 @@ import { expect, test, vi, describe, beforeEach } from 'vitest';
 import { NextRequest } from 'next/server';
 import { middleware } from '../src/middleware';
 import { createServerClient } from '@supabase/ssr';
+import { isSupabaseConfigured } from '../src/lib/services/serviceUtils';
 
 // Mock @supabase/ssr
 vi.mock('@supabase/ssr', () => ({
   createServerClient: vi.fn(),
+}));
+
+// Mock serviceUtils
+vi.mock('../src/lib/services/serviceUtils', () => ({
+  isSupabaseConfigured: vi.fn().mockReturnValue(true),
 }));
 
 describe('Admin Authentication Middleware Guard', () => {
@@ -14,6 +20,7 @@ describe('Admin Authentication Middleware Guard', () => {
 
   beforeEach(() => {
     vi.clearAllMocks();
+    vi.mocked(isSupabaseConfigured).mockReturnValue(true);
 
     vi.mocked(createServerClient).mockReturnValue({
       auth: {
@@ -23,13 +30,24 @@ describe('Admin Authentication Middleware Guard', () => {
     } as unknown as ReturnType<typeof createServerClient>);
   });
 
+  test('bypasses middleware if Supabase is unconfigured', async () => {
+    vi.mocked(isSupabaseConfigured).mockReturnValue(false);
+
+    const req = new NextRequest('http://localhost/id/admin/dashboard');
+    const res = await middleware(req);
+
+    expect(res.status).toBe(200);
+    expect(res.headers.get('location')).toBeNull();
+    expect(createServerClient).not.toHaveBeenCalled();
+  });
+
   test('redirects unauthenticated user accessing /id/admin/dashboard to /id/admin/login', async () => {
     mockGetUser.mockResolvedValue({ data: { user: null } });
 
     const req = new NextRequest('http://localhost/id/admin/dashboard');
     const res = await middleware(req);
 
-    expect(res.status).toBe(307); // Next.js redirect status
+    expect(res.status).toBe(307);
     expect(res.headers.get('location')).toBe('http://localhost/id/admin/login');
   });
 
@@ -43,7 +61,7 @@ describe('Admin Authentication Middleware Guard', () => {
     expect(res.headers.get('location')).toBeNull();
   });
 
-  test('redirects authenticated customer role accessing /id/admin/dashboard to /id/admin/login', async () => {
+  test('redirects authenticated customer role accessing /id/admin/dashboard with error param', async () => {
     mockGetUser.mockResolvedValue({
       data: {
         user: { id: 'cust-123', user_metadata: { role: 'customer' } },
@@ -59,7 +77,7 @@ describe('Admin Authentication Middleware Guard', () => {
     const res = await middleware(req);
 
     expect(res.status).toBe(307);
-    expect(res.headers.get('location')).toBe('http://localhost/id/admin/login');
+    expect(res.headers.get('location')).toBe('http://localhost/id/admin/login?error=access_denied');
   });
 
   test('allows authenticated admin role accessing /id/admin/dashboard', async () => {

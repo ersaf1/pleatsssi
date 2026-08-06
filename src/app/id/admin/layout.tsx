@@ -2,7 +2,7 @@
 
 import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {
   LayoutDashboard,
   Package,
@@ -16,6 +16,7 @@ import {
   X,
   ShieldCheck,
 } from 'lucide-react';
+import { supabaseBrowserClient } from '@/lib/supabaseClient';
 
 const navItems = [
   { href: '/id/admin/dashboard', label: 'Dashboard', icon: LayoutDashboard },
@@ -36,6 +37,23 @@ export default function AdminLayout({
   const router = useRouter();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [loggingOut, setLoggingOut] = useState(false);
+  const [userProfile, setUserProfile] = useState<{ name: string; email: string }>({
+    name: 'Administrator',
+    email: 'admin@pleatsssi.com',
+  });
+
+  useEffect(() => {
+    if (pathname !== '/id/admin/login') {
+      supabaseBrowserClient.auth.getUser().then(({ data }) => {
+        if (data?.user) {
+          const userMeta = data.user.user_metadata;
+          const name = userMeta?.name || userMeta?.full_name || data.user.email?.split('@')[0] || 'Administrator';
+          const email = data.user.email || 'admin@pleatsssi.com';
+          setUserProfile({ name, email });
+        }
+      });
+    }
+  }, [pathname]);
 
   // If viewing the login page, render children directly without the admin layout shell
   if (pathname === '/id/admin/login') {
@@ -52,6 +70,14 @@ export default function AdminLayout({
       setLoggingOut(false);
     }
   };
+
+  const initials = userProfile.name
+    .split(' ')
+    .map((n) => n[0])
+    .filter(Boolean)
+    .join('')
+    .substring(0, 2)
+    .toUpperCase() || 'AD';
 
   return (
     <div className="min-h-screen bg-[#FAF7F2] flex flex-col md:flex-row">
@@ -128,11 +154,11 @@ export default function AdminLayout({
         <div className="p-4 border-t border-[#E5E0D8] space-y-3">
           <div className="flex items-center space-x-3 px-3 py-2">
             <div className="w-8 h-8 rounded-full bg-[#0B4F3A]/10 text-[#0B4F3A] flex items-center justify-center font-bold text-xs">
-              AD
+              {initials}
             </div>
             <div className="truncate">
-              <p className="text-xs font-semibold text-[#1A1918] truncate">Administrator</p>
-              <p className="text-[11px] text-[#706D65] truncate">admin@pleatsssi.com</p>
+              <p className="text-xs font-semibold text-[#1A1918] truncate">{userProfile.name}</p>
+              <p className="text-[11px] text-[#706D65] truncate">{userProfile.email}</p>
             </div>
           </div>
 

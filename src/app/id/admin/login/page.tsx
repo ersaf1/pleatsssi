@@ -3,13 +3,22 @@
 import { useState, type FormEvent } from 'react';
 import { useRouter } from 'next/navigation';
 import { Lock, Mail, AlertCircle, ArrowRight, Loader2 } from 'lucide-react';
+import { supabaseBrowserClient } from '@/lib/supabaseClient';
 
 export default function AdminLoginPage() {
   const router = useRouter();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('error') === 'access_denied') {
+        return 'Access denied: Admin role required. Your account does not have permission to access the admin dashboard.';
+      }
+    }
+    return null;
+  });
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -29,6 +38,29 @@ export default function AdminLoginPage() {
 
       if (!res.ok || !data.success) {
         setError(data.message || 'Login failed. Please check your credentials.');
+        setLoading(false);
+        return;
+      }
+
+      // Check role of logged-in user
+      const user = data.data?.user;
+      let role = user?.user_metadata?.role;
+
+      if (!role || (role !== 'admin' && role !== 'owner')) {
+        if (user?.id) {
+          const { data: profile } = await supabaseBrowserClient
+            .from('users')
+            .select('role')
+            .eq('id', user.id)
+            .single();
+          if (profile?.role) {
+            role = profile.role;
+          }
+        }
+      }
+
+      if (role !== 'admin' && role !== 'owner') {
+        setError('Access denied: Admin role required. Your account does not have permission to access the admin dashboard.');
         setLoading(false);
         return;
       }
