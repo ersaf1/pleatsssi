@@ -6,12 +6,9 @@ import { cn } from "@/lib/utils";
 
 const NAV_ITEMS = [
   { label: "PRODUK BARU", href: "/id/new-arrivals" },
-  { label: "SEPATU", href: "/id/shoes" },
-  { label: "TAS", href: "/id/bags" },
-  { label: "DOMPET", href: "/id/wallets" },
-  { label: "AKSESORI", href: "/id/accessories" },
-  { label: "KOLEKSI ANAK-ANAK", href: "/id/kids" },
-  { label: "GIFTS", href: "/id/curated/gifts" },
+  { label: "ROK", href: "/id/skirts" },
+  { label: "ATASAN", href: "/id/tops" },
+  { label: "CELANA", href: "/id/pants" },
   { label: "TRENDING NOW", href: "/id/trending-now" },
   { label: "STORIES", href: "/id/press/editorials" },
   { label: "SALE", href: "/id/sale", isSale: true },

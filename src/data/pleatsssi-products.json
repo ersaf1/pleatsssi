@@ -1,0 +1,5927 @@
+[
+  {
+    "id": "AGATE-AGATE-SKIRT",
+    "name": "AGATE SKIRT",
+    "color": "",
+    "price": "IDR960,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 960000,
+    "installment": "IDR320,000",
+    "image": "/images/products/AGATE/AGATE SKIRT.jpg",
+    "hoverImage": "/images/products/AGATE/AGATE SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/AGATE/AGATE SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "AGATE-AGATE-TOP",
+    "name": "AGATE TOP",
+    "color": "",
+    "price": "IDR865,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 865000,
+    "installment": "IDR288,333",
+    "image": "/images/products/AGATE/AGATE TOP.jpg",
+    "hoverImage": "/images/products/AGATE/AGATE TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/AGATE/AGATE TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "APLHA-ALPHA-SHORT-PANTS",
+    "name": "ALPHA SHORT PANTS",
+    "color": "",
+    "price": "IDR980,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 980000,
+    "installment": "IDR326,666",
+    "image": "/images/products/APLHA/ALPHA SHORT PANTS.jpg",
+    "hoverImage": "/images/products/APLHA/ALPHA SHORT PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/APLHA/ALPHA SHORT PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "APLHA-ALPHA-SKIRT",
+    "name": "ALPHA SKIRT",
+    "color": "",
+    "price": "IDR810,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 810000,
+    "installment": "IDR270,000",
+    "image": "/images/products/APLHA/ALPHA SKIRT.JPG",
+    "hoverImage": "/images/products/APLHA/ALPHA SKIRT.JPG",
+    "swatches": [],
+    "gallery": [
+      "/images/products/APLHA/ALPHA SKIRT.JPG"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "APLHA-ALPHA-TOP",
+    "name": "ALPHA TOP",
+    "color": "",
+    "price": "IDR820,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 820000,
+    "installment": "IDR273,333",
+    "image": "/images/products/APLHA/ALPHA TOP.jpg",
+    "hoverImage": "/images/products/APLHA/ALPHA TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/APLHA/ALPHA TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "APLHA-APLHA-PANTS",
+    "name": "APLHA PANTS",
+    "color": "",
+    "price": "IDR850,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 850000,
+    "installment": "IDR283,333",
+    "image": "/images/products/APLHA/APLHA PANTS.jpg",
+    "hoverImage": "/images/products/APLHA/APLHA PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/APLHA/APLHA PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "ARROW-ARROW-PANTS",
+    "name": "ARROW PANTS",
+    "color": "",
+    "price": "IDR970,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 970000,
+    "installment": "IDR323,333",
+    "image": "/images/products/ARROW/ARROW PANTS.jpg",
+    "hoverImage": "/images/products/ARROW/ARROW PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/ARROW/ARROW PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "ARROW-ARROW-SHORT-PANTS",
+    "name": "ARROW SHORT PANTS",
+    "color": "",
+    "price": "IDR910,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 910000,
+    "installment": "IDR303,333",
+    "image": "/images/products/ARROW/ARROW SHORT PANTS.jpg",
+    "hoverImage": "/images/products/ARROW/ARROW SHORT PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/ARROW/ARROW SHORT PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "ARROW-ARROW-SKIRT",
+    "name": "ARROW SKIRT",
+    "color": "",
+    "price": "IDR975,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 975000,
+    "installment": "IDR325,000",
+    "image": "/images/products/ARROW/ARROW SKIRT.JPG",
+    "hoverImage": "/images/products/ARROW/ARROW SKIRT.JPG",
+    "swatches": [],
+    "gallery": [
+      "/images/products/ARROW/ARROW SKIRT.JPG"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "ARROW-ARROW-TOP",
+    "name": "ARROW TOP",
+    "color": "",
+    "price": "IDR940,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 940000,
+    "installment": "IDR313,333",
+    "image": "/images/products/ARROW/ARROW TOP.jpg",
+    "hoverImage": "/images/products/ARROW/ARROW TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/ARROW/ARROW TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "AURORA-ONE-AURORA-SKIRT",
+    "name": "AURORA SKIRT",
+    "color": "",
+    "price": "IDR985,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 985000,
+    "installment": "IDR328,333",
+    "image": "/images/products/AURORA ONE/AURORA SKIRT.JPG",
+    "hoverImage": "/images/products/AURORA ONE/AURORA SKIRT.JPG",
+    "swatches": [],
+    "gallery": [
+      "/images/products/AURORA ONE/AURORA SKIRT.JPG"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "AURORA-TOO-AURORA-TOO-SHORT-TOP",
+    "name": "AURORA TOO SHORT TOP",
+    "color": "",
+    "price": "IDR860,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 860000,
+    "installment": "IDR286,666",
+    "image": "/images/products/AURORA TOO/AURORA TOO SHORT TOP.JPG",
+    "hoverImage": "/images/products/AURORA TOO/AURORA TOO SHORT TOP.JPG",
+    "swatches": [],
+    "gallery": [
+      "/images/products/AURORA TOO/AURORA TOO SHORT TOP.JPG"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "AURORA-TOO-AURORA-TOO-SKIRT",
+    "name": "AURORA TOO SKIRT",
+    "color": "",
+    "price": "IDR895,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 895000,
+    "installment": "IDR298,333",
+    "image": "/images/products/AURORA TOO/AURORA TOO SKIRT.jpg",
+    "hoverImage": "/images/products/AURORA TOO/AURORA TOO SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/AURORA TOO/AURORA TOO SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "AURORA-TOO-AURORA-TOO-TOP",
+    "name": "AURORA TOO TOP",
+    "color": "",
+    "price": "IDR855,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 855000,
+    "installment": "IDR285,000",
+    "image": "/images/products/AURORA TOO/AURORA TOO TOP.jpg",
+    "hoverImage": "/images/products/AURORA TOO/AURORA TOO TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/AURORA TOO/AURORA TOO TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "AURORA-ONE-AURORA-TOO-TOP-65-CM",
+    "name": "AURORA TOO TOP 65 CM",
+    "color": "",
+    "price": "IDR820,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 820000,
+    "installment": "IDR273,333",
+    "image": "/images/products/AURORA ONE/AURORA TOO TOP 65 CM.jpg",
+    "hoverImage": "/images/products/AURORA ONE/AURORA TOO TOP 65 CM.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/AURORA ONE/AURORA TOO TOP 65 CM.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "AURORA-ONE-AURORA-TOP",
+    "name": "AURORA TOP",
+    "color": "",
+    "price": "IDR960,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 960000,
+    "installment": "IDR320,000",
+    "image": "/images/products/AURORA ONE/AURORA TOP.JPG",
+    "hoverImage": "/images/products/AURORA ONE/AURORA TOP.JPG",
+    "swatches": [],
+    "gallery": [
+      "/images/products/AURORA ONE/AURORA TOP.JPG"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "BACKY-BACKY-SKIRT",
+    "name": "BACKY SKIRT",
+    "color": "",
+    "price": "IDR890,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 890000,
+    "installment": "IDR296,666",
+    "image": "/images/products/BACKY/BACKY SKIRT.JPG",
+    "hoverImage": "/images/products/BACKY/BACKY SKIRT.JPG",
+    "swatches": [],
+    "gallery": [
+      "/images/products/BACKY/BACKY SKIRT.JPG"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "BAGGY-BAGGY-PANTS",
+    "name": "BAGGY PANTS",
+    "color": "",
+    "price": "IDR815,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 815000,
+    "installment": "IDR271,666",
+    "image": "/images/products/BAGGY/BAGGY PANTS.jpg",
+    "hoverImage": "/images/products/BAGGY/BAGGY PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/BAGGY/BAGGY PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "BAGGY-BAGGY-SHORT-PANTS",
+    "name": "BAGGY SHORT PANTS",
+    "color": "",
+    "price": "IDR940,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 940000,
+    "installment": "IDR313,333",
+    "image": "/images/products/BAGGY/BAGGY SHORT PANTS.jpg",
+    "hoverImage": "/images/products/BAGGY/BAGGY SHORT PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/BAGGY/BAGGY SHORT PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "BAGGY-BAGGY-SKIRT",
+    "name": "BAGGY SKIRT",
+    "color": "",
+    "price": "IDR940,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 940000,
+    "installment": "IDR313,333",
+    "image": "/images/products/BAGGY/BAGGY SKIRT.jpg",
+    "hoverImage": "/images/products/BAGGY/BAGGY SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/BAGGY/BAGGY SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "BAMBI-BAMBI-SKIRT",
+    "name": "BAMBI SKIRT",
+    "color": "",
+    "price": "IDR955,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 955000,
+    "installment": "IDR318,333",
+    "image": "/images/products/BAMBI/BAMBI SKIRT.jpg",
+    "hoverImage": "/images/products/BAMBI/BAMBI SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/BAMBI/BAMBI SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "BAMBI-BAMBI-TOP",
+    "name": "BAMBI TOP",
+    "color": "",
+    "price": "IDR955,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 955000,
+    "installment": "IDR318,333",
+    "image": "/images/products/BAMBI/BAMBI TOP.jpg",
+    "hoverImage": "/images/products/BAMBI/BAMBI TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/BAMBI/BAMBI TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "BECKY-BECKY-PANTS",
+    "name": "BECKY PANTS",
+    "color": "",
+    "price": "IDR800,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 800000,
+    "installment": "IDR266,666",
+    "image": "/images/products/BECKY/BECKY PANTS.jpg",
+    "hoverImage": "/images/products/BECKY/BECKY PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/BECKY/BECKY PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "BECKY-BECKY-SHORT-PANTS",
+    "name": "BECKY SHORT PANTS",
+    "color": "",
+    "price": "IDR970,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 970000,
+    "installment": "IDR323,333",
+    "image": "/images/products/BECKY/BECKY SHORT PANTS.jpg",
+    "hoverImage": "/images/products/BECKY/BECKY SHORT PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/BECKY/BECKY SHORT PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "BLOOM-BLOOM-SKIRT",
+    "name": "BLOOM SKIRT",
+    "color": "",
+    "price": "IDR815,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 815000,
+    "installment": "IDR271,666",
+    "image": "/images/products/BLOOM/BLOOM SKIRT.JPG",
+    "hoverImage": "/images/products/BLOOM/BLOOM SKIRT.JPG",
+    "swatches": [],
+    "gallery": [
+      "/images/products/BLOOM/BLOOM SKIRT.JPG"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "BLOOM-BLOOM-TOP",
+    "name": "BLOOM TOP",
+    "color": "",
+    "price": "IDR980,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 980000,
+    "installment": "IDR326,666",
+    "image": "/images/products/BLOOM/BLOOM TOP.JPG",
+    "hoverImage": "/images/products/BLOOM/BLOOM TOP.JPG",
+    "swatches": [],
+    "gallery": [
+      "/images/products/BLOOM/BLOOM TOP.JPG"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "BOLDEN-BOLDEN-LONG-TOP-TUNIK",
+    "name": "BOLDEN LONG TOP TUNIK",
+    "color": "",
+    "price": "IDR800,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 800000,
+    "installment": "IDR266,666",
+    "image": "/images/products/BOLDEN/BOLDEN LONG TOP  TUNIK.jpg",
+    "hoverImage": "/images/products/BOLDEN/BOLDEN LONG TOP  TUNIK.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/BOLDEN/BOLDEN LONG TOP  TUNIK.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "BOLDEN-BOLDEN-SHORT-PANTS",
+    "name": "BOLDEN SHORT PANTS",
+    "color": "",
+    "price": "IDR840,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 840000,
+    "installment": "IDR280,000",
+    "image": "/images/products/BOLDEN/BOLDEN SHORT PANTS.jpg",
+    "hoverImage": "/images/products/BOLDEN/BOLDEN SHORT PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/BOLDEN/BOLDEN SHORT PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "BOLDEN-BOLDEN-SKIRT",
+    "name": "BOLDEN SKIRT",
+    "color": "",
+    "price": "IDR825,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 825000,
+    "installment": "IDR275,000",
+    "image": "/images/products/BOLDEN/BOLDEN SKIRT.jpg",
+    "hoverImage": "/images/products/BOLDEN/BOLDEN SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/BOLDEN/BOLDEN SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "BOLDEN-BOLDEN-TOP",
+    "name": "BOLDEN TOP",
+    "color": "",
+    "price": "IDR800,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 800000,
+    "installment": "IDR266,666",
+    "image": "/images/products/BOLDEN/BOLDEN TOP.jpg",
+    "hoverImage": "/images/products/BOLDEN/BOLDEN TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/BOLDEN/BOLDEN TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "CALYA-CALYA-PANTS",
+    "name": "CALYA PANTS",
+    "color": "",
+    "price": "IDR905,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 905000,
+    "installment": "IDR301,666",
+    "image": "/images/products/CALYA/CALYA PANTS .jpg",
+    "hoverImage": "/images/products/CALYA/CALYA PANTS .jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/CALYA/CALYA PANTS .jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "CALYA-CALYA-SHORT-PANTS",
+    "name": "CALYA SHORT PANTS",
+    "color": "",
+    "price": "IDR820,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 820000,
+    "installment": "IDR273,333",
+    "image": "/images/products/CALYA/CALYA SHORT PANTS.jpg",
+    "hoverImage": "/images/products/CALYA/CALYA SHORT PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/CALYA/CALYA SHORT PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "CALYA-CALYA-SKIRT",
+    "name": "CALYA SKIRT",
+    "color": "",
+    "price": "IDR920,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 920000,
+    "installment": "IDR306,666",
+    "image": "/images/products/CALYA/CALYA SKIRT.JPG",
+    "hoverImage": "/images/products/CALYA/CALYA SKIRT.JPG",
+    "swatches": [],
+    "gallery": [
+      "/images/products/CALYA/CALYA SKIRT.JPG"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "CALYA-CALYA-TOP",
+    "name": "CALYA TOP",
+    "color": "",
+    "price": "IDR915,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 915000,
+    "installment": "IDR305,000",
+    "image": "/images/products/CALYA/CALYA TOP.JPG",
+    "hoverImage": "/images/products/CALYA/CALYA TOP.JPG",
+    "swatches": [],
+    "gallery": [
+      "/images/products/CALYA/CALYA TOP.JPG"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "CANAL-CANAL-SHORT-PANTS",
+    "name": "CANAL SHORT PANTS",
+    "color": "",
+    "price": "IDR800,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 800000,
+    "installment": "IDR266,666",
+    "image": "/images/products/CANAL/CANAL SHORT PANTS.jpg",
+    "hoverImage": "/images/products/CANAL/CANAL SHORT PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/CANAL/CANAL SHORT PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "CANAL-CANAL-SKIRT",
+    "name": "CANAL SKIRT",
+    "color": "",
+    "price": "IDR885,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 885000,
+    "installment": "IDR295,000",
+    "image": "/images/products/CANAL/CANAL SKIRT.jpg",
+    "hoverImage": "/images/products/CANAL/CANAL SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/CANAL/CANAL SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "CANIS-CANIS-PANTS",
+    "name": "CANIS PANTS",
+    "color": "",
+    "price": "IDR945,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 945000,
+    "installment": "IDR315,000",
+    "image": "/images/products/CANIS/CANIS PANTS.jpg",
+    "hoverImage": "/images/products/CANIS/CANIS PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/CANIS/CANIS PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "CANIS-CANIS-SHORT-PANTS",
+    "name": "CANIS SHORT PANTS",
+    "color": "",
+    "price": "IDR990,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 990000,
+    "installment": "IDR330,000",
+    "image": "/images/products/CANIS/CANIS SHORT PANTS.jpg",
+    "hoverImage": "/images/products/CANIS/CANIS SHORT PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/CANIS/CANIS SHORT PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "CANIS-CANIS-SKIRT",
+    "name": "CANIS SKIRT",
+    "color": "",
+    "price": "IDR955,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 955000,
+    "installment": "IDR318,333",
+    "image": "/images/products/CANIS/CANIS SKIRT.JPG",
+    "hoverImage": "/images/products/CANIS/CANIS SKIRT.JPG",
+    "swatches": [],
+    "gallery": [
+      "/images/products/CANIS/CANIS SKIRT.JPG"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "CANIS-CANIS-TOP",
+    "name": "CANIS TOP",
+    "color": "",
+    "price": "IDR875,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 875000,
+    "installment": "IDR291,666",
+    "image": "/images/products/CANIS/CANIS TOP.JPG",
+    "hoverImage": "/images/products/CANIS/CANIS TOP.JPG",
+    "swatches": [],
+    "gallery": [
+      "/images/products/CANIS/CANIS TOP.JPG"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "CANVA-CANVA-LONG-TOP-TUNIK",
+    "name": "CANVA LONG TOP TUNIK",
+    "color": "",
+    "price": "IDR840,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 840000,
+    "installment": "IDR280,000",
+    "image": "/images/products/CANVA/CANVA LONG TOP  TUNIK.jpg",
+    "hoverImage": "/images/products/CANVA/CANVA LONG TOP  TUNIK.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/CANVA/CANVA LONG TOP  TUNIK.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "CANVA-CANVA-PANTS",
+    "name": "CANVA PANTS",
+    "color": "",
+    "price": "IDR840,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 840000,
+    "installment": "IDR280,000",
+    "image": "/images/products/CANVA/CANVA PANTS.jpg",
+    "hoverImage": "/images/products/CANVA/CANVA PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/CANVA/CANVA PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "CANVA-CANVA-SHORT-PANTS",
+    "name": "CANVA SHORT PANTS",
+    "color": "",
+    "price": "IDR930,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 930000,
+    "installment": "IDR310,000",
+    "image": "/images/products/CANVA/CANVA SHORT PANTS.jpg",
+    "hoverImage": "/images/products/CANVA/CANVA SHORT PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/CANVA/CANVA SHORT PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "CANVA-CANVA-SKIRT",
+    "name": "CANVA SKIRT",
+    "color": "",
+    "price": "IDR965,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 965000,
+    "installment": "IDR321,666",
+    "image": "/images/products/CANVA/CANVA SKIRT.JPG",
+    "hoverImage": "/images/products/CANVA/CANVA SKIRT.JPG",
+    "swatches": [],
+    "gallery": [
+      "/images/products/CANVA/CANVA SKIRT.JPG"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "CANVA-CANVA-TOP",
+    "name": "CANVA TOP",
+    "color": "",
+    "price": "IDR810,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 810000,
+    "installment": "IDR270,000",
+    "image": "/images/products/CANVA/CANVA TOP.JPG",
+    "hoverImage": "/images/products/CANVA/CANVA TOP.JPG",
+    "swatches": [],
+    "gallery": [
+      "/images/products/CANVA/CANVA TOP.JPG"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "CATHY-SKIRT",
+    "name": "CATHY SKIRT",
+    "color": "",
+    "price": "IDR810,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 810000,
+    "installment": "IDR270,000",
+    "image": "/images/products/CATHY SKIRT.jpg",
+    "hoverImage": "/images/products/CATHY SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/CATHY SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "CATTLEYA-CATTLEYA-LONG-TOP-TUNIK",
+    "name": "CATTLEYA LONG TOP TUNIK",
+    "color": "",
+    "price": "IDR895,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 895000,
+    "installment": "IDR298,333",
+    "image": "/images/products/CATTLEYA/CATTLEYA LONG TOP  TUNIK.jpg",
+    "hoverImage": "/images/products/CATTLEYA/CATTLEYA LONG TOP  TUNIK.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/CATTLEYA/CATTLEYA LONG TOP  TUNIK.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "CATTLEYA-CATTLEYA-SHORT-TOP",
+    "name": "CATTLEYA SHORT TOP",
+    "color": "",
+    "price": "IDR860,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 860000,
+    "installment": "IDR286,666",
+    "image": "/images/products/CATTLEYA/CATTLEYA SHORT TOP.jpg",
+    "hoverImage": "/images/products/CATTLEYA/CATTLEYA SHORT TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/CATTLEYA/CATTLEYA SHORT TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "CATTLEYA-CATTLEYA-SKIRT",
+    "name": "CATTLEYA SKIRT",
+    "color": "",
+    "price": "IDR890,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 890000,
+    "installment": "IDR296,666",
+    "image": "/images/products/CATTLEYA/CATTLEYA SKIRT.jpg",
+    "hoverImage": "/images/products/CATTLEYA/CATTLEYA SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/CATTLEYA/CATTLEYA SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "CATTLEYA-CATTLEYA-TOP",
+    "name": "CATTLEYA TOP",
+    "color": "",
+    "price": "IDR955,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 955000,
+    "installment": "IDR318,333",
+    "image": "/images/products/CATTLEYA/CATTLEYA TOP.jpg",
+    "hoverImage": "/images/products/CATTLEYA/CATTLEYA TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/CATTLEYA/CATTLEYA TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "CECILE-CECILE-LONG-TOP-TUNIK",
+    "name": "CECILE LONG TOP TUNIK",
+    "color": "",
+    "price": "IDR895,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 895000,
+    "installment": "IDR298,333",
+    "image": "/images/products/CECILE/CECILE LONG TOP  TUNIK.jpg",
+    "hoverImage": "/images/products/CECILE/CECILE LONG TOP  TUNIK.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/CECILE/CECILE LONG TOP  TUNIK.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "CECILE-CECILE-SKIRT",
+    "name": "CECILE SKIRT",
+    "color": "",
+    "price": "IDR800,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 800000,
+    "installment": "IDR266,666",
+    "image": "/images/products/CECILE/CECILE SKIRT.jpg",
+    "hoverImage": "/images/products/CECILE/CECILE SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/CECILE/CECILE SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "CECILE-CECILIA-PANTS",
+    "name": "CECILIA PANTS",
+    "color": "",
+    "price": "IDR855,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 855000,
+    "installment": "IDR285,000",
+    "image": "/images/products/CECILE/CECILIA PANTS.jpg",
+    "hoverImage": "/images/products/CECILE/CECILIA PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/CECILE/CECILIA PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "CECILE-CECILIA-SHORT-PANTS",
+    "name": "CECILIA SHORT PANTS",
+    "color": "",
+    "price": "IDR830,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 830000,
+    "installment": "IDR276,666",
+    "image": "/images/products/CECILE/CECILIA SHORT PANTS.jpg",
+    "hoverImage": "/images/products/CECILE/CECILIA SHORT PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/CECILE/CECILIA SHORT PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "CECILE-CECILIA-TOP",
+    "name": "CECILIA TOP",
+    "color": "",
+    "price": "IDR835,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 835000,
+    "installment": "IDR278,333",
+    "image": "/images/products/CECILE/CECILIA TOP.jpg",
+    "hoverImage": "/images/products/CECILE/CECILIA TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/CECILE/CECILIA TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "CLAUDE-CLAUDE-LONG-TOP-TUNIK",
+    "name": "CLAUDE LONG TOP TUNIK",
+    "color": "",
+    "price": "IDR940,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 940000,
+    "installment": "IDR313,333",
+    "image": "/images/products/CLAUDE/CLAUDE LONG TOP  TUNIK.jpg",
+    "hoverImage": "/images/products/CLAUDE/CLAUDE LONG TOP  TUNIK.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/CLAUDE/CLAUDE LONG TOP  TUNIK.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "CLAUDE-CLAUDE-SHORT-PANTS",
+    "name": "CLAUDE SHORT PANTS",
+    "color": "",
+    "price": "IDR985,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 985000,
+    "installment": "IDR328,333",
+    "image": "/images/products/CLAUDE/CLAUDE SHORT PANTS.jpg",
+    "hoverImage": "/images/products/CLAUDE/CLAUDE SHORT PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/CLAUDE/CLAUDE SHORT PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "CLAUDE-CLAUDE-SHORT-TOP",
+    "name": "CLAUDE SHORT TOP",
+    "color": "",
+    "price": "IDR815,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 815000,
+    "installment": "IDR271,666",
+    "image": "/images/products/CLAUDE/CLAUDE SHORT TOP.jpg",
+    "hoverImage": "/images/products/CLAUDE/CLAUDE SHORT TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/CLAUDE/CLAUDE SHORT TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "CLAUDE-CLAUDE-SKIRT",
+    "name": "CLAUDE SKIRT",
+    "color": "",
+    "price": "IDR825,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 825000,
+    "installment": "IDR275,000",
+    "image": "/images/products/CLAUDE/CLAUDE SKIRT.jpg",
+    "hoverImage": "/images/products/CLAUDE/CLAUDE SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/CLAUDE/CLAUDE SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "CLAUDE-CLAUDE-TOP",
+    "name": "CLAUDE TOP",
+    "color": "",
+    "price": "IDR825,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 825000,
+    "installment": "IDR275,000",
+    "image": "/images/products/CLAUDE/CLAUDE TOP.jpg",
+    "hoverImage": "/images/products/CLAUDE/CLAUDE TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/CLAUDE/CLAUDE TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "CORNELIA-CORNELIA-SKIRT",
+    "name": "CORNELIA SKIRT",
+    "color": "",
+    "price": "IDR930,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 930000,
+    "installment": "IDR310,000",
+    "image": "/images/products/CORNELIA/CORNELIA SKIRT.jpg",
+    "hoverImage": "/images/products/CORNELIA/CORNELIA SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/CORNELIA/CORNELIA SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "CORNELIA-CORNELIA-TOP",
+    "name": "CORNELIA TOP",
+    "color": "",
+    "price": "IDR845,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 845000,
+    "installment": "IDR281,666",
+    "image": "/images/products/CORNELIA/CORNELIA TOP.jpg",
+    "hoverImage": "/images/products/CORNELIA/CORNELIA TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/CORNELIA/CORNELIA TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "CUSH-CUSH-SHORT-PANTS",
+    "name": "CUSH SHORT PANTS",
+    "color": "",
+    "price": "IDR985,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 985000,
+    "installment": "IDR328,333",
+    "image": "/images/products/CUSH/CUSH SHORT PANTS.jpg",
+    "hoverImage": "/images/products/CUSH/CUSH SHORT PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/CUSH/CUSH SHORT PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "CUSH-CUSH-SKIRT",
+    "name": "CUSH SKIRT",
+    "color": "",
+    "price": "IDR940,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 940000,
+    "installment": "IDR313,333",
+    "image": "/images/products/CUSH/CUSH SKIRT.jpg",
+    "hoverImage": "/images/products/CUSH/CUSH SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/CUSH/CUSH SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "CUSH-CUSH-TOP",
+    "name": "CUSH TOP",
+    "color": "",
+    "price": "IDR980,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 980000,
+    "installment": "IDR326,666",
+    "image": "/images/products/CUSH/CUSH TOP.jpg",
+    "hoverImage": "/images/products/CUSH/CUSH TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/CUSH/CUSH TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "DARDEN-DARDEN-LONG-TOP-TUNIK",
+    "name": "DARDEN LONG TOP TUNIK",
+    "color": "",
+    "price": "IDR920,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 920000,
+    "installment": "IDR306,666",
+    "image": "/images/products/DARDEN/DARDEN LONG TOP  TUNIK.jpg",
+    "hoverImage": "/images/products/DARDEN/DARDEN LONG TOP  TUNIK.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/DARDEN/DARDEN LONG TOP  TUNIK.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "DARDEN-DARDEN-PANTS",
+    "name": "DARDEN PANTS",
+    "color": "",
+    "price": "IDR840,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 840000,
+    "installment": "IDR280,000",
+    "image": "/images/products/DARDEN/DARDEN PANTS.jpg",
+    "hoverImage": "/images/products/DARDEN/DARDEN PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/DARDEN/DARDEN PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "DARDEN-DARDEN-SHORT-PANTS",
+    "name": "DARDEN SHORT PANTS",
+    "color": "",
+    "price": "IDR850,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 850000,
+    "installment": "IDR283,333",
+    "image": "/images/products/DARDEN/DARDEN SHORT PANTS.jpg",
+    "hoverImage": "/images/products/DARDEN/DARDEN SHORT PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/DARDEN/DARDEN SHORT PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "DARDEN-DARDEN-SHORT-TOP",
+    "name": "DARDEN SHORT TOP",
+    "color": "",
+    "price": "IDR930,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 930000,
+    "installment": "IDR310,000",
+    "image": "/images/products/DARDEN/DARDEN SHORT TOP.jpg",
+    "hoverImage": "/images/products/DARDEN/DARDEN SHORT TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/DARDEN/DARDEN SHORT TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "DARDEN-DARDEN-SKIRT",
+    "name": "DARDEN SKIRT",
+    "color": "",
+    "price": "IDR930,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 930000,
+    "installment": "IDR310,000",
+    "image": "/images/products/DARDEN/DARDEN SKIRT.jpg",
+    "hoverImage": "/images/products/DARDEN/DARDEN SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/DARDEN/DARDEN SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "DARDEN-DARDEN-TOP",
+    "name": "DARDEN TOP",
+    "color": "",
+    "price": "IDR875,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 875000,
+    "installment": "IDR291,666",
+    "image": "/images/products/DARDEN/DARDEN TOP.jpg",
+    "hoverImage": "/images/products/DARDEN/DARDEN TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/DARDEN/DARDEN TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "DARDEN-DARDEN-TOP-65-CM",
+    "name": "DARDEN TOP 65 CM",
+    "color": "",
+    "price": "IDR875,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 875000,
+    "installment": "IDR291,666",
+    "image": "/images/products/DARDEN/DARDEN TOP 65 CM.jpg",
+    "hoverImage": "/images/products/DARDEN/DARDEN TOP 65 CM.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/DARDEN/DARDEN TOP 65 CM.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "DAY-NIGHT-DAY-NIGHT-PANTS",
+    "name": "DAY NIGHT PANTS",
+    "color": "",
+    "price": "IDR855,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 855000,
+    "installment": "IDR285,000",
+    "image": "/images/products/DAY NIGHT/DAY NIGHT PANTS.jpg",
+    "hoverImage": "/images/products/DAY NIGHT/DAY NIGHT PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/DAY NIGHT/DAY NIGHT PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "DAY-NIGHT-DAY-NIGT-SKIRT",
+    "name": "DAY NIGT SKIRT",
+    "color": "",
+    "price": "IDR875,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 875000,
+    "installment": "IDR291,666",
+    "image": "/images/products/DAY NIGHT/DAY NIGT SKIRT.jpg",
+    "hoverImage": "/images/products/DAY NIGHT/DAY NIGT SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/DAY NIGHT/DAY NIGT SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "FLONET-FLONET-PANT",
+    "name": "FLONET PANT",
+    "color": "",
+    "price": "IDR830,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 830000,
+    "installment": "IDR276,666",
+    "image": "/images/products/FLONET/FLONET PANT.jpg",
+    "hoverImage": "/images/products/FLONET/FLONET PANT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/FLONET/FLONET PANT.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "FLONET-FLONET-SHORT-PANTS",
+    "name": "FLONET SHORT PANTS",
+    "color": "",
+    "price": "IDR885,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 885000,
+    "installment": "IDR295,000",
+    "image": "/images/products/FLONET/FLONET SHORT PANTS.jpg",
+    "hoverImage": "/images/products/FLONET/FLONET SHORT PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/FLONET/FLONET SHORT PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "FLONET-FLONET-SKIRT",
+    "name": "FLONET SKIRT",
+    "color": "",
+    "price": "IDR815,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 815000,
+    "installment": "IDR271,666",
+    "image": "/images/products/FLONET/FLONET SKIRT.jpg",
+    "hoverImage": "/images/products/FLONET/FLONET SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/FLONET/FLONET SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "GARDENY-GARDENY-SHORT-PANTS",
+    "name": "GARDENY SHORT PANTS",
+    "color": "",
+    "price": "IDR805,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 805000,
+    "installment": "IDR268,333",
+    "image": "/images/products/GARDENY/GARDENY SHORT PANTS.jpg",
+    "hoverImage": "/images/products/GARDENY/GARDENY SHORT PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/GARDENY/GARDENY SHORT PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "GARDENY-GARDENY-SKIRT",
+    "name": "GARDENY SKIRT",
+    "color": "",
+    "price": "IDR980,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 980000,
+    "installment": "IDR326,666",
+    "image": "/images/products/GARDENY/GARDENY SKIRT.jpg",
+    "hoverImage": "/images/products/GARDENY/GARDENY SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/GARDENY/GARDENY SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "IMG-3835",
+    "name": "IMG 3835",
+    "color": "",
+    "price": "IDR940,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 940000,
+    "installment": "IDR313,333",
+    "image": "/images/products/IMG_3835.JPG",
+    "hoverImage": "/images/products/IMG_3835.JPG",
+    "swatches": [],
+    "gallery": [
+      "/images/products/IMG_3835.JPG"
+    ],
+    "category": "others",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "ANOV-IMG-4610",
+    "name": "IMG 4610",
+    "color": "",
+    "price": "IDR900,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 900000,
+    "installment": "IDR300,000",
+    "image": "/images/products/ANOV/IMG_4610.PNG",
+    "hoverImage": "/images/products/ANOV/IMG_4610.PNG",
+    "swatches": [],
+    "gallery": [
+      "/images/products/ANOV/IMG_4610.PNG"
+    ],
+    "category": "others",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "CATTLEYA-IMG-4611",
+    "name": "IMG 4611",
+    "color": "",
+    "price": "IDR965,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 965000,
+    "installment": "IDR321,666",
+    "image": "/images/products/CATTLEYA/IMG_4611.PNG",
+    "hoverImage": "/images/products/CATTLEYA/IMG_4611.PNG",
+    "swatches": [],
+    "gallery": [
+      "/images/products/CATTLEYA/IMG_4611.PNG"
+    ],
+    "category": "others",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "SALUR-IMG-4612",
+    "name": "IMG 4612",
+    "color": "",
+    "price": "IDR860,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 860000,
+    "installment": "IDR286,666",
+    "image": "/images/products/SALUR/IMG_4612.PNG",
+    "hoverImage": "/images/products/SALUR/IMG_4612.PNG",
+    "swatches": [],
+    "gallery": [
+      "/images/products/SALUR/IMG_4612.PNG"
+    ],
+    "category": "others",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "JOAN-IMG-4613",
+    "name": "IMG 4613",
+    "color": "",
+    "price": "IDR840,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 840000,
+    "installment": "IDR280,000",
+    "image": "/images/products/JOAN/IMG_4613.PNG",
+    "hoverImage": "/images/products/JOAN/IMG_4613.PNG",
+    "swatches": [],
+    "gallery": [
+      "/images/products/JOAN/IMG_4613.PNG"
+    ],
+    "category": "others",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "CANVA-IMG-4614",
+    "name": "IMG 4614",
+    "color": "",
+    "price": "IDR945,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 945000,
+    "installment": "IDR315,000",
+    "image": "/images/products/CANVA/IMG_4614.PNG",
+    "hoverImage": "/images/products/CANVA/IMG_4614.PNG",
+    "swatches": [],
+    "gallery": [
+      "/images/products/CANVA/IMG_4614.PNG"
+    ],
+    "category": "others",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "CANIS-IMG-4615",
+    "name": "IMG 4615",
+    "color": "",
+    "price": "IDR925,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 925000,
+    "installment": "IDR308,333",
+    "image": "/images/products/CANIS/IMG_4615.PNG",
+    "hoverImage": "/images/products/CANIS/IMG_4615.PNG",
+    "swatches": [],
+    "gallery": [
+      "/images/products/CANIS/IMG_4615.PNG"
+    ],
+    "category": "others",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "IMG-4666",
+    "name": "IMG 4666",
+    "color": "",
+    "price": "IDR800,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 800000,
+    "installment": "IDR266,666",
+    "image": "/images/products/IMG_4666.JPG",
+    "hoverImage": "/images/products/IMG_4666.JPG",
+    "swatches": [],
+    "gallery": [
+      "/images/products/IMG_4666.JPG"
+    ],
+    "category": "others",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "IMG-7538",
+    "name": "IMG 7538",
+    "color": "",
+    "price": "IDR830,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 830000,
+    "installment": "IDR276,666",
+    "image": "/images/products/IMG_7538.JPG",
+    "hoverImage": "/images/products/IMG_7538.JPG",
+    "swatches": [],
+    "gallery": [
+      "/images/products/IMG_7538.JPG"
+    ],
+    "category": "others",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "IMG-7840",
+    "name": "IMG 7840",
+    "color": "",
+    "price": "IDR965,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 965000,
+    "installment": "IDR321,666",
+    "image": "/images/products/IMG_7840.JPG",
+    "hoverImage": "/images/products/IMG_7840.JPG",
+    "swatches": [],
+    "gallery": [
+      "/images/products/IMG_7840.JPG"
+    ],
+    "category": "others",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "KLEE-KLEE-LONG-TOP-TUNIK",
+    "name": "KLEE LONG TOP TUNIK",
+    "color": "",
+    "price": "IDR960,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 960000,
+    "installment": "IDR320,000",
+    "image": "/images/products/KLEE/KLEE LONG TOP  TUNIK.jpg",
+    "hoverImage": "/images/products/KLEE/KLEE LONG TOP  TUNIK.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/KLEE/KLEE LONG TOP  TUNIK.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "KLEE-KLEE-SKIRT",
+    "name": "KLEE SKIRT",
+    "color": "",
+    "price": "IDR875,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 875000,
+    "installment": "IDR291,666",
+    "image": "/images/products/KLEE/KLEE SKIRT.jpg",
+    "hoverImage": "/images/products/KLEE/KLEE SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/KLEE/KLEE SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "KLEE-KLEE-TOP",
+    "name": "KLEE TOP",
+    "color": "",
+    "price": "IDR930,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 930000,
+    "installment": "IDR310,000",
+    "image": "/images/products/KLEE/KLEE TOP.jpg",
+    "hoverImage": "/images/products/KLEE/KLEE TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/KLEE/KLEE TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "KREI-KREI-65CM",
+    "name": "KREI 65CM",
+    "color": "",
+    "price": "IDR860,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 860000,
+    "installment": "IDR286,666",
+    "image": "/images/products/KREI/KREI 65CM.jpg",
+    "hoverImage": "/images/products/KREI/KREI 65CM.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/KREI/KREI 65CM.jpg"
+    ],
+    "category": "others",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "KREI-KREI-TOP",
+    "name": "KREI TOP",
+    "color": "",
+    "price": "IDR885,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 885000,
+    "installment": "IDR295,000",
+    "image": "/images/products/KREI/KREI TOP.jpg",
+    "hoverImage": "/images/products/KREI/KREI TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/KREI/KREI TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "KRISTIN-KRISTIN-LONG-TOP-TUNIK",
+    "name": "KRISTIN LONG TOP TUNIK",
+    "color": "",
+    "price": "IDR800,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 800000,
+    "installment": "IDR266,666",
+    "image": "/images/products/KRISTIN/KRISTIN LONG TOP  TUNIK.jpg",
+    "hoverImage": "/images/products/KRISTIN/KRISTIN LONG TOP  TUNIK.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/KRISTIN/KRISTIN LONG TOP  TUNIK.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "KRISTIN-KRISTIN-PANTS",
+    "name": "KRISTIN PANTS",
+    "color": "",
+    "price": "IDR880,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 880000,
+    "installment": "IDR293,333",
+    "image": "/images/products/KRISTIN/KRISTIN PANTS.jpg",
+    "hoverImage": "/images/products/KRISTIN/KRISTIN PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/KRISTIN/KRISTIN PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "KRISTIN-KRISTIN-SHORT-PANTS",
+    "name": "KRISTIN SHORT PANTS",
+    "color": "",
+    "price": "IDR890,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 890000,
+    "installment": "IDR296,666",
+    "image": "/images/products/KRISTIN/KRISTIN SHORT PANTS.jpg",
+    "hoverImage": "/images/products/KRISTIN/KRISTIN SHORT PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/KRISTIN/KRISTIN SHORT PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "KRISTIN-KRISTIN-SKIRT",
+    "name": "KRISTIN SKIRT",
+    "color": "",
+    "price": "IDR925,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 925000,
+    "installment": "IDR308,333",
+    "image": "/images/products/KRISTIN/KRISTIN SKIRT.jpg",
+    "hoverImage": "/images/products/KRISTIN/KRISTIN SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/KRISTIN/KRISTIN SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "KRISTIN-KRISTIN-TOP",
+    "name": "KRISTIN TOP",
+    "color": "",
+    "price": "IDR935,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 935000,
+    "installment": "IDR311,666",
+    "image": "/images/products/KRISTIN/KRISTIN TOP.jpg",
+    "hoverImage": "/images/products/KRISTIN/KRISTIN TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/KRISTIN/KRISTIN TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "KROSE-KROSE-SKIRT",
+    "name": "KROSE SKIRT",
+    "color": "",
+    "price": "IDR935,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 935000,
+    "installment": "IDR311,666",
+    "image": "/images/products/KROSE/KROSE SKIRT.jpg",
+    "hoverImage": "/images/products/KROSE/KROSE SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/KROSE/KROSE SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "KROSE-KROSE-TOP",
+    "name": "KROSE TOP",
+    "color": "",
+    "price": "IDR800,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 800000,
+    "installment": "IDR266,666",
+    "image": "/images/products/KROSE/KROSE TOP.jpg",
+    "hoverImage": "/images/products/KROSE/KROSE TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/KROSE/KROSE TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "KUMBANG-KUMBANG-LONG-TOP-TUNIK",
+    "name": "KUMBANG LONG TOP TUNIK",
+    "color": "",
+    "price": "IDR920,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 920000,
+    "installment": "IDR306,666",
+    "image": "/images/products/KUMBANG/KUMBANG LONG TOP TUNIK.jpg",
+    "hoverImage": "/images/products/KUMBANG/KUMBANG LONG TOP TUNIK.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/KUMBANG/KUMBANG LONG TOP TUNIK.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "KUMBANG-KUMBANG-SHORT-PANTS",
+    "name": "KUMBANG SHORT PANTS",
+    "color": "",
+    "price": "IDR945,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 945000,
+    "installment": "IDR315,000",
+    "image": "/images/products/KUMBANG/KUMBANG SHORT PANTS.jpg",
+    "hoverImage": "/images/products/KUMBANG/KUMBANG SHORT PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/KUMBANG/KUMBANG SHORT PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "KUMBANG-KUMBANG-SKIRT",
+    "name": "KUMBANG SKIRT",
+    "color": "",
+    "price": "IDR885,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 885000,
+    "installment": "IDR295,000",
+    "image": "/images/products/KUMBANG/KUMBANG SKIRT.jpg",
+    "hoverImage": "/images/products/KUMBANG/KUMBANG SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/KUMBANG/KUMBANG SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "KUMBANG-KUMBANG-TOP",
+    "name": "KUMBANG TOP",
+    "color": "",
+    "price": "IDR870,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 870000,
+    "installment": "IDR290,000",
+    "image": "/images/products/KUMBANG/KUMBANG TOP.jpg",
+    "hoverImage": "/images/products/KUMBANG/KUMBANG TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/KUMBANG/KUMBANG TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "LILAA-LILAA-LONG-TOP-TUNIK",
+    "name": "LILAA LONG TOP TUNIK",
+    "color": "",
+    "price": "IDR900,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 900000,
+    "installment": "IDR300,000",
+    "image": "/images/products/LILAA/LILAA LONG TOP TUNIK.jpg",
+    "hoverImage": "/images/products/LILAA/LILAA LONG TOP TUNIK.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/LILAA/LILAA LONG TOP TUNIK.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "LILAA-LILAA-SKIRT",
+    "name": "LILAA SKIRT",
+    "color": "",
+    "price": "IDR885,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 885000,
+    "installment": "IDR295,000",
+    "image": "/images/products/LILAA/LILAA SKIRT.jpg",
+    "hoverImage": "/images/products/LILAA/LILAA SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/LILAA/LILAA SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "LILAA-LILAA-TOP",
+    "name": "LILAA TOP",
+    "color": "",
+    "price": "IDR825,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 825000,
+    "installment": "IDR275,000",
+    "image": "/images/products/LILAA/LILAA TOP.jpg",
+    "hoverImage": "/images/products/LILAA/LILAA TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/LILAA/LILAA TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "LINN-LINN-CURL",
+    "name": "LINN CURL",
+    "color": "",
+    "price": "IDR890,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 890000,
+    "installment": "IDR296,666",
+    "image": "/images/products/LINN/LINN CURL.jpg",
+    "hoverImage": "/images/products/LINN/LINN CURL.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/LINN/LINN CURL.jpg"
+    ],
+    "category": "others",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "LINN-LINN-HALF-KANAN-SKIRT",
+    "name": "LINN HALF KANAN SKIRT",
+    "color": "",
+    "price": "IDR930,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 930000,
+    "installment": "IDR310,000",
+    "image": "/images/products/LINN/LINN HALF KANAN SKIRT.jpg",
+    "hoverImage": "/images/products/LINN/LINN HALF KANAN SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/LINN/LINN HALF KANAN SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "LINN-LINN-HALF-KIRI-SKIRT",
+    "name": "LINN HALF KIRI SKIRT",
+    "color": "",
+    "price": "IDR960,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 960000,
+    "installment": "IDR320,000",
+    "image": "/images/products/LINN/LINN HALF KIRI SKIRT.jpg",
+    "hoverImage": "/images/products/LINN/LINN HALF KIRI SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/LINN/LINN HALF KIRI SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "LINN-LINN-PANTS",
+    "name": "LINN PANTS",
+    "color": "",
+    "price": "IDR925,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 925000,
+    "installment": "IDR308,333",
+    "image": "/images/products/LINN/LINN PANTS.jpg",
+    "hoverImage": "/images/products/LINN/LINN PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/LINN/LINN PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "LINN-LINN-SHORT-PANT",
+    "name": "LINN SHORT PANT",
+    "color": "",
+    "price": "IDR835,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 835000,
+    "installment": "IDR278,333",
+    "image": "/images/products/LINN/LINN SHORT PANT.jpg",
+    "hoverImage": "/images/products/LINN/LINN SHORT PANT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/LINN/LINN SHORT PANT.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "LINN-LINN-TOP",
+    "name": "LINN TOP",
+    "color": "",
+    "price": "IDR900,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 900000,
+    "installment": "IDR300,000",
+    "image": "/images/products/LINN/LINN TOP.jpg",
+    "hoverImage": "/images/products/LINN/LINN TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/LINN/LINN TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "LONDON-LONDON-PANTS",
+    "name": "LONDON PANTS",
+    "color": "",
+    "price": "IDR840,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 840000,
+    "installment": "IDR280,000",
+    "image": "/images/products/LONDON/LONDON PANTS.jpg",
+    "hoverImage": "/images/products/LONDON/LONDON PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/LONDON/LONDON PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "LONDON-LONDON-SHORT-PANTS",
+    "name": "LONDON SHORT PANTS",
+    "color": "",
+    "price": "IDR950,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 950000,
+    "installment": "IDR316,666",
+    "image": "/images/products/LONDON/LONDON SHORT PANTS.jpg",
+    "hoverImage": "/images/products/LONDON/LONDON SHORT PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/LONDON/LONDON SHORT PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "LONDON-LONDON-SKIRT",
+    "name": "LONDON SKIRT",
+    "color": "",
+    "price": "IDR825,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 825000,
+    "installment": "IDR275,000",
+    "image": "/images/products/LONDON/LONDON SKIRT.jpg",
+    "hoverImage": "/images/products/LONDON/LONDON SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/LONDON/LONDON SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "LOTUS-LOTUS-LONG-TOP-TUNIK",
+    "name": "LOTUS LONG TOP TUNIK",
+    "color": "",
+    "price": "IDR940,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 940000,
+    "installment": "IDR313,333",
+    "image": "/images/products/LOTUS/LOTUS LONG TOP  TUNIK.jpg",
+    "hoverImage": "/images/products/LOTUS/LOTUS LONG TOP  TUNIK.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/LOTUS/LOTUS LONG TOP  TUNIK.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "LOTUS-LOTUS-SKIRT",
+    "name": "LOTUS SKIRT",
+    "color": "",
+    "price": "IDR830,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 830000,
+    "installment": "IDR276,666",
+    "image": "/images/products/LOTUS/LOTUS SKIRT.jpg",
+    "hoverImage": "/images/products/LOTUS/LOTUS SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/LOTUS/LOTUS SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "LOTUS-LOTUS-TOP",
+    "name": "LOTUS TOP",
+    "color": "",
+    "price": "IDR940,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 940000,
+    "installment": "IDR313,333",
+    "image": "/images/products/LOTUS/LOTUS TOP.jpg",
+    "hoverImage": "/images/products/LOTUS/LOTUS TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/LOTUS/LOTUS TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "MARRE-MARRE-SKIRT",
+    "name": "MARRE SKIRT",
+    "color": "",
+    "price": "IDR995,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 995000,
+    "installment": "IDR331,666",
+    "image": "/images/products/MARRE/MARRE SKIRT.jpg",
+    "hoverImage": "/images/products/MARRE/MARRE SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/MARRE/MARRE SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "MARRE-MARRE-TOP",
+    "name": "MARRE TOP",
+    "color": "",
+    "price": "IDR875,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 875000,
+    "installment": "IDR291,666",
+    "image": "/images/products/MARRE/MARRE TOP.jpg",
+    "hoverImage": "/images/products/MARRE/MARRE TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/MARRE/MARRE TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "MARS-MARS-LONG-TOP-TUNIK",
+    "name": "MARS LONG TOP TUNIK",
+    "color": "",
+    "price": "IDR905,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 905000,
+    "installment": "IDR301,666",
+    "image": "/images/products/MARS/MARS LONG TOP  TUNIK.jpg",
+    "hoverImage": "/images/products/MARS/MARS LONG TOP  TUNIK.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/MARS/MARS LONG TOP  TUNIK.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "MARS-MARS-SKIRT",
+    "name": "MARS SKIRT",
+    "color": "",
+    "price": "IDR935,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 935000,
+    "installment": "IDR311,666",
+    "image": "/images/products/MARS/MARS SKIRT.jpg",
+    "hoverImage": "/images/products/MARS/MARS SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/MARS/MARS SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "MARS-MARS-TOP",
+    "name": "MARS TOP",
+    "color": "",
+    "price": "IDR970,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 970000,
+    "installment": "IDR323,333",
+    "image": "/images/products/MARS/MARS TOP.jpg",
+    "hoverImage": "/images/products/MARS/MARS TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/MARS/MARS TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "MEKO-MEKO-SKIRT",
+    "name": "MEKO SKIRT",
+    "color": "",
+    "price": "IDR985,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 985000,
+    "installment": "IDR328,333",
+    "image": "/images/products/MEKO/MEKO SKIRT.jpg",
+    "hoverImage": "/images/products/MEKO/MEKO SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/MEKO/MEKO SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "MEKO-MEKO-TOP",
+    "name": "MEKO TOP",
+    "color": "",
+    "price": "IDR845,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 845000,
+    "installment": "IDR281,666",
+    "image": "/images/products/MEKO/MEKO TOP.jpg",
+    "hoverImage": "/images/products/MEKO/MEKO TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/MEKO/MEKO TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "MOZA-MOZA-SKIRT",
+    "name": "MOZA SKIRT",
+    "color": "",
+    "price": "IDR900,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 900000,
+    "installment": "IDR300,000",
+    "image": "/images/products/MOZA/MOZA SKIRT.jpg",
+    "hoverImage": "/images/products/MOZA/MOZA SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/MOZA/MOZA SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "MOZA-MOZA-TOP",
+    "name": "MOZA TOP",
+    "color": "",
+    "price": "IDR860,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 860000,
+    "installment": "IDR286,666",
+    "image": "/images/products/MOZA/MOZA TOP.jpg",
+    "hoverImage": "/images/products/MOZA/MOZA TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/MOZA/MOZA TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "NANCY-SKIRT",
+    "name": "NANCY SKIRT",
+    "color": "",
+    "price": "IDR855,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 855000,
+    "installment": "IDR285,000",
+    "image": "/images/products/NANCY SKIRT.jpg",
+    "hoverImage": "/images/products/NANCY SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/NANCY SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "ORION-PANTS",
+    "name": "ORION PANTS",
+    "color": "",
+    "price": "IDR910,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 910000,
+    "installment": "IDR303,333",
+    "image": "/images/products/ORION PANTS.jpg",
+    "hoverImage": "/images/products/ORION PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/ORION PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "ORION-SHORT-PANTS",
+    "name": "ORION SHORT PANTS",
+    "color": "",
+    "price": "IDR835,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 835000,
+    "installment": "IDR278,333",
+    "image": "/images/products/ORION SHORT PANTS.jpg",
+    "hoverImage": "/images/products/ORION SHORT PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/ORION SHORT PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "PICNIC-PICNIC-TOP",
+    "name": "PICNIC TOP",
+    "color": "",
+    "price": "IDR950,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 950000,
+    "installment": "IDR316,666",
+    "image": "/images/products/PICNIC/PICNIC TOP.jpg",
+    "hoverImage": "/images/products/PICNIC/PICNIC TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/PICNIC/PICNIC TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "PIGI-PIGI-PANTS",
+    "name": "PIGI PANTS",
+    "color": "",
+    "price": "IDR810,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 810000,
+    "installment": "IDR270,000",
+    "image": "/images/products/PIGI/PIGI PANTS.jpg",
+    "hoverImage": "/images/products/PIGI/PIGI PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/PIGI/PIGI PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "PIGI-PIGI-SHORT-PANTS",
+    "name": "PIGI SHORT PANTS",
+    "color": "",
+    "price": "IDR840,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 840000,
+    "installment": "IDR280,000",
+    "image": "/images/products/PIGI/PIGI SHORT PANTS.jpg",
+    "hoverImage": "/images/products/PIGI/PIGI SHORT PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/PIGI/PIGI SHORT PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "PIGI-PIGI-SKIRT",
+    "name": "PIGI SKIRT",
+    "color": "",
+    "price": "IDR825,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 825000,
+    "installment": "IDR275,000",
+    "image": "/images/products/PIGI/PIGI SKIRT.jpg",
+    "hoverImage": "/images/products/PIGI/PIGI SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/PIGI/PIGI SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "PIGI-PIGI-TOP",
+    "name": "PIGI TOP",
+    "color": "",
+    "price": "IDR815,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 815000,
+    "installment": "IDR271,666",
+    "image": "/images/products/PIGI/PIGI TOP.jpg",
+    "hoverImage": "/images/products/PIGI/PIGI TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/PIGI/PIGI TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "PLEATSSSI-PLEATSSSI-SHORT-PANTS",
+    "name": "PLEATSSSI SHORT PANTS",
+    "color": "",
+    "price": "IDR965,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 965000,
+    "installment": "IDR321,666",
+    "image": "/images/products/PLEATSSSI/PLEATSSSI SHORT PANTS.jpg",
+    "hoverImage": "/images/products/PLEATSSSI/PLEATSSSI SHORT PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/PLEATSSSI/PLEATSSSI SHORT PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "PLEATSSSI-PLEATSSSI-SKIRT",
+    "name": "PLEATSSSI SKIRT",
+    "color": "",
+    "price": "IDR830,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 830000,
+    "installment": "IDR276,666",
+    "image": "/images/products/PLEATSSSI/PLEATSSSI SKIRT.jpg",
+    "hoverImage": "/images/products/PLEATSSSI/PLEATSSSI SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/PLEATSSSI/PLEATSSSI SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "POLKA-POLKA-SKIRT",
+    "name": "POLKA SKIRT",
+    "color": "",
+    "price": "IDR965,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 965000,
+    "installment": "IDR321,666",
+    "image": "/images/products/POLKA/POLKA SKIRT.jpg",
+    "hoverImage": "/images/products/POLKA/POLKA SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/POLKA/POLKA SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "POLY-POLY-SKIRT",
+    "name": "POLY SKIRT",
+    "color": "",
+    "price": "IDR1,000,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 1000000,
+    "installment": "IDR333,333",
+    "image": "/images/products/POLY/POLY SKIRT.jpg",
+    "hoverImage": "/images/products/POLY/POLY SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/POLY/POLY SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "POLY-POLY-TOP",
+    "name": "POLY TOP",
+    "color": "",
+    "price": "IDR915,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 915000,
+    "installment": "IDR305,000",
+    "image": "/images/products/POLY/POLY TOP.jpg",
+    "hoverImage": "/images/products/POLY/POLY TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/POLY/POLY TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "POPPY-POPPY-SKIRT",
+    "name": "POPPY SKIRT",
+    "color": "",
+    "price": "IDR940,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 940000,
+    "installment": "IDR313,333",
+    "image": "/images/products/POPPY/POPPY SKIRT.jpg",
+    "hoverImage": "/images/products/POPPY/POPPY SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/POPPY/POPPY SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "POPPY-POPPY-TOP",
+    "name": "POPPY TOP",
+    "color": "",
+    "price": "IDR810,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 810000,
+    "installment": "IDR270,000",
+    "image": "/images/products/POPPY/POPPY TOP.jpg",
+    "hoverImage": "/images/products/POPPY/POPPY TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/POPPY/POPPY TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "POWDER-ONE-POWDER-LONG-TOP-TUNIK",
+    "name": "POWDER LONG TOP TUNIK",
+    "color": "",
+    "price": "IDR800,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 800000,
+    "installment": "IDR266,666",
+    "image": "/images/products/POWDER ONE/POWDER LONG TOP  TUNIK.jpg",
+    "hoverImage": "/images/products/POWDER ONE/POWDER LONG TOP  TUNIK.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/POWDER ONE/POWDER LONG TOP  TUNIK.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "POWDER-ONE-POWDER-PANTS",
+    "name": "POWDER PANTS",
+    "color": "",
+    "price": "IDR885,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 885000,
+    "installment": "IDR295,000",
+    "image": "/images/products/POWDER ONE/POWDER PANTS.jpg",
+    "hoverImage": "/images/products/POWDER ONE/POWDER PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/POWDER ONE/POWDER PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "POWDER-ONE-POWDER-SHORT-PANTS",
+    "name": "POWDER SHORT PANTS",
+    "color": "",
+    "price": "IDR905,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 905000,
+    "installment": "IDR301,666",
+    "image": "/images/products/POWDER ONE/POWDER SHORT PANTS.jpg",
+    "hoverImage": "/images/products/POWDER ONE/POWDER SHORT PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/POWDER ONE/POWDER SHORT PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "POWDER-ONE-POWDER-SHORT-TOP",
+    "name": "POWDER SHORT TOP",
+    "color": "",
+    "price": "IDR855,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 855000,
+    "installment": "IDR285,000",
+    "image": "/images/products/POWDER ONE/POWDER SHORT TOP.jpg",
+    "hoverImage": "/images/products/POWDER ONE/POWDER SHORT TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/POWDER ONE/POWDER SHORT TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "POWDER-ONE-POWDER-SKIRT",
+    "name": "POWDER SKIRT",
+    "color": "",
+    "price": "IDR950,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 950000,
+    "installment": "IDR316,666",
+    "image": "/images/products/POWDER ONE/POWDER SKIRT.jpg",
+    "hoverImage": "/images/products/POWDER ONE/POWDER SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/POWDER ONE/POWDER SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "POWDER-TOO-POWDER-TOO-LONG-TOP-TUNIK",
+    "name": "POWDER TOO LONG TOP TUNIK",
+    "color": "",
+    "price": "IDR800,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 800000,
+    "installment": "IDR266,666",
+    "image": "/images/products/POWDER TOO/POWDER TOO LONG TOP  TUNIK.jpg",
+    "hoverImage": "/images/products/POWDER TOO/POWDER TOO LONG TOP  TUNIK.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/POWDER TOO/POWDER TOO LONG TOP  TUNIK.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "POWDER-TOO-POWDER-TOO-SHORT-TOP",
+    "name": "POWDER TOO SHORT TOP",
+    "color": "",
+    "price": "IDR965,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 965000,
+    "installment": "IDR321,666",
+    "image": "/images/products/POWDER TOO/POWDER TOO SHORT TOP.jpg",
+    "hoverImage": "/images/products/POWDER TOO/POWDER TOO SHORT TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/POWDER TOO/POWDER TOO SHORT TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "POWDER-TOO-POWDER-TOO-SKIRT",
+    "name": "POWDER TOO SKIRT",
+    "color": "",
+    "price": "IDR860,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 860000,
+    "installment": "IDR286,666",
+    "image": "/images/products/POWDER TOO/POWDER TOO SKIRT.JPG",
+    "hoverImage": "/images/products/POWDER TOO/POWDER TOO SKIRT.JPG",
+    "swatches": [],
+    "gallery": [
+      "/images/products/POWDER TOO/POWDER TOO SKIRT.JPG"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "POWDER-TOO-POWDER-TOO-TOP",
+    "name": "POWDER TOO TOP",
+    "color": "",
+    "price": "IDR915,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 915000,
+    "installment": "IDR305,000",
+    "image": "/images/products/POWDER TOO/POWDER TOO TOP.jpg",
+    "hoverImage": "/images/products/POWDER TOO/POWDER TOO TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/POWDER TOO/POWDER TOO TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "POWDER-ONE-POWDER-TOP",
+    "name": "POWDER TOP",
+    "color": "",
+    "price": "IDR920,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 920000,
+    "installment": "IDR306,666",
+    "image": "/images/products/POWDER ONE/POWDER TOP.jpg",
+    "hoverImage": "/images/products/POWDER ONE/POWDER TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/POWDER ONE/POWDER TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "POWDER-TREE-POWDER-TREE-LONG-TOPTUNIK",
+    "name": "POWDER TREE LONG TOPTUNIK",
+    "color": "",
+    "price": "IDR920,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 920000,
+    "installment": "IDR306,666",
+    "image": "/images/products/POWDER TREE/POWDER TREE LONG TOPTUNIK.jpg",
+    "hoverImage": "/images/products/POWDER TREE/POWDER TREE LONG TOPTUNIK.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/POWDER TREE/POWDER TREE LONG TOPTUNIK.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "POWDER-TREE-POWDER-TREE-SKIRT",
+    "name": "POWDER TREE SKIRT",
+    "color": "",
+    "price": "IDR800,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 800000,
+    "installment": "IDR266,666",
+    "image": "/images/products/POWDER TREE/POWDER TREE SKIRT.jpg",
+    "hoverImage": "/images/products/POWDER TREE/POWDER TREE SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/POWDER TREE/POWDER TREE SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "POWDER-TREE-POWDER-TREE-TOP",
+    "name": "POWDER TREE TOP",
+    "color": "",
+    "price": "IDR955,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 955000,
+    "installment": "IDR318,333",
+    "image": "/images/products/POWDER TREE/POWDER TREE TOP.jpg",
+    "hoverImage": "/images/products/POWDER TREE/POWDER TREE TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/POWDER TREE/POWDER TREE TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "PREGO-PREGO-SHORT-PANTS",
+    "name": "PREGO SHORT PANTS",
+    "color": "",
+    "price": "IDR985,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 985000,
+    "installment": "IDR328,333",
+    "image": "/images/products/PREGO/PREGO SHORT PANTS.jpg",
+    "hoverImage": "/images/products/PREGO/PREGO SHORT PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/PREGO/PREGO SHORT PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "PREGO-PREGO-SKIRT",
+    "name": "PREGO SKIRT",
+    "color": "",
+    "price": "IDR845,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 845000,
+    "installment": "IDR281,666",
+    "image": "/images/products/PREGO/PREGO SKIRT.jpg",
+    "hoverImage": "/images/products/PREGO/PREGO SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/PREGO/PREGO SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "PREGO-PREGO-TOP",
+    "name": "PREGO TOP",
+    "color": "",
+    "price": "IDR870,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 870000,
+    "installment": "IDR290,000",
+    "image": "/images/products/PREGO/PREGO TOP.jpg",
+    "hoverImage": "/images/products/PREGO/PREGO TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/PREGO/PREGO TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "RAIA-ONE-RAIA-SHORT-TOP",
+    "name": "RAIA SHORT TOP",
+    "color": "",
+    "price": "IDR960,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 960000,
+    "installment": "IDR320,000",
+    "image": "/images/products/RAIA ONE/RAIA SHORT TOP.jpg",
+    "hoverImage": "/images/products/RAIA ONE/RAIA SHORT TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/RAIA ONE/RAIA SHORT TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "RAIA-ONE-RAIA-SKIRT",
+    "name": "RAIA SKIRT",
+    "color": "",
+    "price": "IDR995,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 995000,
+    "installment": "IDR331,666",
+    "image": "/images/products/RAIA ONE/RAIA SKIRT.jpg",
+    "hoverImage": "/images/products/RAIA ONE/RAIA SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/RAIA ONE/RAIA SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "RAIA-TOO-RAIA-TOO-LONG-TOPTUNIK",
+    "name": "RAIA TOO LONG TOPTUNIK",
+    "color": "",
+    "price": "IDR915,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 915000,
+    "installment": "IDR305,000",
+    "image": "/images/products/RAIA TOO/RAIA TOO LONG TOPTUNIK.jpg",
+    "hoverImage": "/images/products/RAIA TOO/RAIA TOO LONG TOPTUNIK.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/RAIA TOO/RAIA TOO LONG TOPTUNIK.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "RAIA-TOO-RAIA-TOO-SKIRT",
+    "name": "RAIA TOO SKIRT",
+    "color": "",
+    "price": "IDR985,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 985000,
+    "installment": "IDR328,333",
+    "image": "/images/products/RAIA TOO/RAIA TOO SKIRT.jpg",
+    "hoverImage": "/images/products/RAIA TOO/RAIA TOO SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/RAIA TOO/RAIA TOO SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "RAIA-TOO-RAIA-TOO-TOP",
+    "name": "RAIA TOO TOP",
+    "color": "",
+    "price": "IDR840,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 840000,
+    "installment": "IDR280,000",
+    "image": "/images/products/RAIA TOO/RAIA TOO TOP.jpg",
+    "hoverImage": "/images/products/RAIA TOO/RAIA TOO TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/RAIA TOO/RAIA TOO TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "RAIA-ONE-RAIA-TOP",
+    "name": "RAIA TOP",
+    "color": "",
+    "price": "IDR800,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 800000,
+    "installment": "IDR266,666",
+    "image": "/images/products/RAIA ONE/RAIA TOP.jpg",
+    "hoverImage": "/images/products/RAIA ONE/RAIA TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/RAIA ONE/RAIA TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "RAIA-TREE-RAIA-TREE-LONGTOPTUNIK",
+    "name": "RAIA TREE LONGTOPTUNIK",
+    "color": "",
+    "price": "IDR865,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 865000,
+    "installment": "IDR288,333",
+    "image": "/images/products/RAIA TREE/RAIA TREE LONGTOPTUNIK.jpg",
+    "hoverImage": "/images/products/RAIA TREE/RAIA TREE LONGTOPTUNIK.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/RAIA TREE/RAIA TREE LONGTOPTUNIK.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "RAIA-TREE-RAIA-TREE-SHORT-TOP",
+    "name": "RAIA TREE SHORT TOP",
+    "color": "",
+    "price": "IDR905,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 905000,
+    "installment": "IDR301,666",
+    "image": "/images/products/RAIA TREE/RAIA TREE SHORT TOP.jpg",
+    "hoverImage": "/images/products/RAIA TREE/RAIA TREE SHORT TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/RAIA TREE/RAIA TREE SHORT TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "RAIA-TREE-RAIA-TREE-SKIRT",
+    "name": "RAIA TREE SKIRT",
+    "color": "",
+    "price": "IDR990,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 990000,
+    "installment": "IDR330,000",
+    "image": "/images/products/RAIA TREE/RAIA TREE SKIRT.jpg",
+    "hoverImage": "/images/products/RAIA TREE/RAIA TREE SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/RAIA TREE/RAIA TREE SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "RAIA-TREE-RAIA-TREE-TOP",
+    "name": "RAIA TREE TOP",
+    "color": "",
+    "price": "IDR820,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 820000,
+    "installment": "IDR273,333",
+    "image": "/images/products/RAIA TREE/RAIA TREE TOP.jpg",
+    "hoverImage": "/images/products/RAIA TREE/RAIA TREE TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/RAIA TREE/RAIA TREE TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "RAIL-RAIL-PANTS",
+    "name": "RAIL PANTS",
+    "color": "",
+    "price": "IDR940,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 940000,
+    "installment": "IDR313,333",
+    "image": "/images/products/RAIL/RAIL PANTS.jpg",
+    "hoverImage": "/images/products/RAIL/RAIL PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/RAIL/RAIL PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "RAIL-RAIL-SHORT-PANTS",
+    "name": "RAIL SHORT PANTS",
+    "color": "",
+    "price": "IDR900,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 900000,
+    "installment": "IDR300,000",
+    "image": "/images/products/RAIL/RAIL SHORT PANTS.jpg",
+    "hoverImage": "/images/products/RAIL/RAIL SHORT PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/RAIL/RAIL SHORT PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "RAIL-RAIL-SKIRT",
+    "name": "RAIL SKIRT",
+    "color": "",
+    "price": "IDR840,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 840000,
+    "installment": "IDR280,000",
+    "image": "/images/products/RAIL/RAIL SKIRT.jpg",
+    "hoverImage": "/images/products/RAIL/RAIL SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/RAIL/RAIL SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "RAIL-RAIL-TOP",
+    "name": "RAIL TOP",
+    "color": "",
+    "price": "IDR810,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 810000,
+    "installment": "IDR270,000",
+    "image": "/images/products/RAIL/RAIL TOP.jpg",
+    "hoverImage": "/images/products/RAIL/RAIL TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/RAIL/RAIL TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "SAROONG-SAGE-SAGE-SKIRT",
+    "name": "SAGE SKIRT",
+    "color": "",
+    "price": "IDR825,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 825000,
+    "installment": "IDR275,000",
+    "image": "/images/products/SAROONG & SAGE/SAGE SKIRT.jpg",
+    "hoverImage": "/images/products/SAROONG & SAGE/SAGE SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/SAROONG & SAGE/SAGE SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "SALUR-SALUR-SKIRT",
+    "name": "SALUR SKIRT",
+    "color": "",
+    "price": "IDR910,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 910000,
+    "installment": "IDR303,333",
+    "image": "/images/products/SALUR/SALUR SKIRT.jpg",
+    "hoverImage": "/images/products/SALUR/SALUR SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/SALUR/SALUR SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "SALUR-SALUR-TOP",
+    "name": "SALUR TOP",
+    "color": "",
+    "price": "IDR945,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 945000,
+    "installment": "IDR315,000",
+    "image": "/images/products/SALUR/SALUR TOP.jpg",
+    "hoverImage": "/images/products/SALUR/SALUR TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/SALUR/SALUR TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "SAROONG-SAGE-SAROONG-PANTS",
+    "name": "SAROONG PANTS",
+    "color": "",
+    "price": "IDR965,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 965000,
+    "installment": "IDR321,666",
+    "image": "/images/products/SAROONG & SAGE/SAROONG PANTS.jpg",
+    "hoverImage": "/images/products/SAROONG & SAGE/SAROONG PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/SAROONG & SAGE/SAROONG PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "SAROONG-SAGE-SAROONG-SHORT-PANTS",
+    "name": "SAROONG SHORT PANTS",
+    "color": "",
+    "price": "IDR805,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 805000,
+    "installment": "IDR268,333",
+    "image": "/images/products/SAROONG & SAGE/SAROONG SHORT PANTS.jpg",
+    "hoverImage": "/images/products/SAROONG & SAGE/SAROONG SHORT PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/SAROONG & SAGE/SAROONG SHORT PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "SAROONG-SAGE-SAROONG-SKIRT",
+    "name": "SAROONG SKIRT",
+    "color": "",
+    "price": "IDR900,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 900000,
+    "installment": "IDR300,000",
+    "image": "/images/products/SAROONG & SAGE/SAROONG SKIRT.jpg",
+    "hoverImage": "/images/products/SAROONG & SAGE/SAROONG SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/SAROONG & SAGE/SAROONG SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "SASHI-SASHI-PAHING-SKIRT",
+    "name": "SASHI PAHING SKIRT",
+    "color": "",
+    "price": "IDR935,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 935000,
+    "installment": "IDR311,666",
+    "image": "/images/products/SASHI/SASHI PAHING SKIRT.jpg",
+    "hoverImage": "/images/products/SASHI/SASHI PAHING SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/SASHI/SASHI PAHING SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "SASHI-SASHI-PAHING-TOP",
+    "name": "SASHI PAHING TOP",
+    "color": "",
+    "price": "IDR840,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 840000,
+    "installment": "IDR280,000",
+    "image": "/images/products/SASHI/SASHI PAHING TOP.jpg",
+    "hoverImage": "/images/products/SASHI/SASHI PAHING TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/SASHI/SASHI PAHING TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "SECRET-GARDEN-SECRET-GARDEN-LONG-TOPTUNIK",
+    "name": "SECRET GARDEN LONG TOPTUNIK",
+    "color": "",
+    "price": "IDR840,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 840000,
+    "installment": "IDR280,000",
+    "image": "/images/products/SECRET GARDEN/SECRET GARDEN LONG TOPTUNIK.jpg",
+    "hoverImage": "/images/products/SECRET GARDEN/SECRET GARDEN LONG TOPTUNIK.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/SECRET GARDEN/SECRET GARDEN LONG TOPTUNIK.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "SECRET-GARDEN-SECRET-GARDEN-SKIRT",
+    "name": "SECRET GARDEN SKIRT",
+    "color": "",
+    "price": "IDR965,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 965000,
+    "installment": "IDR321,666",
+    "image": "/images/products/SECRET GARDEN/SECRET GARDEN SKIRT.jpg",
+    "hoverImage": "/images/products/SECRET GARDEN/SECRET GARDEN SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/SECRET GARDEN/SECRET GARDEN SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "SECRET-GARDEN-SECRET-GARDEN-TOP",
+    "name": "SECRET GARDEN TOP",
+    "color": "",
+    "price": "IDR825,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 825000,
+    "installment": "IDR275,000",
+    "image": "/images/products/SECRET GARDEN/SECRET GARDEN TOP.jpg",
+    "hoverImage": "/images/products/SECRET GARDEN/SECRET GARDEN TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/SECRET GARDEN/SECRET GARDEN TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "SEDAYU-SEDAYU-SHORT-PANTS",
+    "name": "SEDAYU SHORT PANTS",
+    "color": "",
+    "price": "IDR805,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 805000,
+    "installment": "IDR268,333",
+    "image": "/images/products/SEDAYU/SEDAYU SHORT PANTS.jpg",
+    "hoverImage": "/images/products/SEDAYU/SEDAYU SHORT PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/SEDAYU/SEDAYU SHORT PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "SEDAYU-SEDAYU-SKIRT",
+    "name": "SEDAYU SKIRT",
+    "color": "",
+    "price": "IDR915,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 915000,
+    "installment": "IDR305,000",
+    "image": "/images/products/SEDAYU/SEDAYU SKIRT.jpg",
+    "hoverImage": "/images/products/SEDAYU/SEDAYU SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/SEDAYU/SEDAYU SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "SEEDY-SEEDY-LONG-TOP-TUNIK",
+    "name": "SEEDY LONG TOP TUNIK",
+    "color": "",
+    "price": "IDR850,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 850000,
+    "installment": "IDR283,333",
+    "image": "/images/products/SEEDY/SEEDY LONG TOP  TUNIK.jpg",
+    "hoverImage": "/images/products/SEEDY/SEEDY LONG TOP  TUNIK.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/SEEDY/SEEDY LONG TOP  TUNIK.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "SEEDY-SEEDY-SHORT",
+    "name": "SEEDY SHORT",
+    "color": "",
+    "price": "IDR965,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 965000,
+    "installment": "IDR321,666",
+    "image": "/images/products/SEEDY/SEEDY SHORT.jpg",
+    "hoverImage": "/images/products/SEEDY/SEEDY SHORT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/SEEDY/SEEDY SHORT.jpg"
+    ],
+    "category": "others",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "SEEDY-SEEDY-SKIRT",
+    "name": "SEEDY SKIRT",
+    "color": "",
+    "price": "IDR895,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 895000,
+    "installment": "IDR298,333",
+    "image": "/images/products/SEEDY/SEEDY SKIRT.jpg",
+    "hoverImage": "/images/products/SEEDY/SEEDY SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/SEEDY/SEEDY SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "SHELLEN-SHELLEN-LONGTOPTUNIK",
+    "name": "SHELLEN LONGTOPTUNIK",
+    "color": "",
+    "price": "IDR820,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 820000,
+    "installment": "IDR273,333",
+    "image": "/images/products/SHELLEN/SHELLEN LONGTOPTUNIK.jpg",
+    "hoverImage": "/images/products/SHELLEN/SHELLEN LONGTOPTUNIK.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/SHELLEN/SHELLEN LONGTOPTUNIK.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "SHELLEN-SHELLEN-TOP",
+    "name": "SHELLEN TOP",
+    "color": "",
+    "price": "IDR915,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 915000,
+    "installment": "IDR305,000",
+    "image": "/images/products/SHELLEN/SHELLEN TOP.jpg",
+    "hoverImage": "/images/products/SHELLEN/SHELLEN TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/SHELLEN/SHELLEN TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "SILIKA-SILIKA-SKIRT",
+    "name": "SILIKA SKIRT",
+    "color": "",
+    "price": "IDR955,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 955000,
+    "installment": "IDR318,333",
+    "image": "/images/products/SILIKA/SILIKA SKIRT.jpg",
+    "hoverImage": "/images/products/SILIKA/SILIKA SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/SILIKA/SILIKA SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "SILIKA-SILIKA-TOP",
+    "name": "SILIKA TOP",
+    "color": "",
+    "price": "IDR910,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 910000,
+    "installment": "IDR303,333",
+    "image": "/images/products/SILIKA/SILIKA TOP.jpg",
+    "hoverImage": "/images/products/SILIKA/SILIKA TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/SILIKA/SILIKA TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "SOFIA-SOFIA-LONG-TOP-TUNIK",
+    "name": "SOFIA LONG TOP TUNIK",
+    "color": "",
+    "price": "IDR870,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 870000,
+    "installment": "IDR290,000",
+    "image": "/images/products/SOFIA/SOFIA LONG TOP  TUNIK.jpg",
+    "hoverImage": "/images/products/SOFIA/SOFIA LONG TOP  TUNIK.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/SOFIA/SOFIA LONG TOP  TUNIK.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "SOFIA-SOFIA-SKIRT",
+    "name": "SOFIA SKIRT",
+    "color": "",
+    "price": "IDR860,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 860000,
+    "installment": "IDR286,666",
+    "image": "/images/products/SOFIA/SOFIA SKIRT.jpg",
+    "hoverImage": "/images/products/SOFIA/SOFIA SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/SOFIA/SOFIA SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "SOFIA-SOFIA-TOP",
+    "name": "SOFIA TOP",
+    "color": "",
+    "price": "IDR915,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 915000,
+    "installment": "IDR305,000",
+    "image": "/images/products/SOFIA/SOFIA TOP.jpg",
+    "hoverImage": "/images/products/SOFIA/SOFIA TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/SOFIA/SOFIA TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "SWEELY-TABUR-SWEELY-SKIRT",
+    "name": "SWEELY SKIRT",
+    "color": "",
+    "price": "IDR825,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 825000,
+    "installment": "IDR275,000",
+    "image": "/images/products/SWEELY&TABUR/SWEELY SKIRT.jpg",
+    "hoverImage": "/images/products/SWEELY&TABUR/SWEELY SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/SWEELY&TABUR/SWEELY SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "SWEELY-TABUR-SWEELY-TOP",
+    "name": "SWEELY TOP",
+    "color": "",
+    "price": "IDR950,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 950000,
+    "installment": "IDR316,666",
+    "image": "/images/products/SWEELY&TABUR/SWEELY TOP.jpg",
+    "hoverImage": "/images/products/SWEELY&TABUR/SWEELY TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/SWEELY&TABUR/SWEELY TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "SWEELY-TABUR-TABUR-SKIRT",
+    "name": "TABUR SKIRT",
+    "color": "",
+    "price": "IDR870,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 870000,
+    "installment": "IDR290,000",
+    "image": "/images/products/SWEELY&TABUR/TABUR SKIRT.jpg",
+    "hoverImage": "/images/products/SWEELY&TABUR/TABUR SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/SWEELY&TABUR/TABUR SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "THE-EYE-ONE-THE-AYE-TOP",
+    "name": "THE AYE TOP",
+    "color": "",
+    "price": "IDR935,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 935000,
+    "installment": "IDR311,666",
+    "image": "/images/products/THE EYE ONE/THE AYE TOP.jpg",
+    "hoverImage": "/images/products/THE EYE ONE/THE AYE TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/THE EYE ONE/THE AYE TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "THE-EYE-ONE-THE-EYE-LONG-TOP-TUNIK",
+    "name": "THE EYE LONG TOP TUNIK",
+    "color": "",
+    "price": "IDR860,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 860000,
+    "installment": "IDR286,666",
+    "image": "/images/products/THE EYE ONE/THE EYE LONG TOP  TUNIK.jpg",
+    "hoverImage": "/images/products/THE EYE ONE/THE EYE LONG TOP  TUNIK.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/THE EYE ONE/THE EYE LONG TOP  TUNIK.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "THE-EYE-ONE-THE-EYE-ONE-SHORT-TOP",
+    "name": "THE EYE ONE SHORT TOP",
+    "color": "",
+    "price": "IDR985,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 985000,
+    "installment": "IDR328,333",
+    "image": "/images/products/THE EYE ONE/THE EYE ONE SHORT TOP.jpg",
+    "hoverImage": "/images/products/THE EYE ONE/THE EYE ONE SHORT TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/THE EYE ONE/THE EYE ONE SHORT TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "THE-EYE-ONE-THE-EYE-PANTS",
+    "name": "THE EYE PANTS",
+    "color": "",
+    "price": "IDR995,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 995000,
+    "installment": "IDR331,666",
+    "image": "/images/products/THE EYE ONE/THE EYE PANTS.jpg",
+    "hoverImage": "/images/products/THE EYE ONE/THE EYE PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/THE EYE ONE/THE EYE PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "THE-EYE-ONE-THE-EYE-SHORT-PANTS",
+    "name": "THE EYE SHORT PANTS",
+    "color": "",
+    "price": "IDR800,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 800000,
+    "installment": "IDR266,666",
+    "image": "/images/products/THE EYE ONE/THE EYE SHORT PANTS.jpg",
+    "hoverImage": "/images/products/THE EYE ONE/THE EYE SHORT PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/THE EYE ONE/THE EYE SHORT PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "THE-EYE-ONE-THE-EYE-SKIRT",
+    "name": "THE EYE SKIRT",
+    "color": "",
+    "price": "IDR810,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 810000,
+    "installment": "IDR270,000",
+    "image": "/images/products/THE EYE ONE/THE EYE SKIRT.jpg",
+    "hoverImage": "/images/products/THE EYE ONE/THE EYE SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/THE EYE ONE/THE EYE SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "THE-EYE-TOO-THE-EYE-TOO-SKIRT",
+    "name": "THE EYE TOO SKIRT",
+    "color": "",
+    "price": "IDR945,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 945000,
+    "installment": "IDR315,000",
+    "image": "/images/products/THE EYE TOO/THE EYE TOO SKIRT.jpg",
+    "hoverImage": "/images/products/THE EYE TOO/THE EYE TOO SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/THE EYE TOO/THE EYE TOO SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "THE-EYE-TOO-THE-EYE-TOO-TOP",
+    "name": "THE EYE TOO TOP",
+    "color": "",
+    "price": "IDR970,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 970000,
+    "installment": "IDR323,333",
+    "image": "/images/products/THE EYE TOO/THE EYE TOO TOP.jpg",
+    "hoverImage": "/images/products/THE EYE TOO/THE EYE TOO TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/THE EYE TOO/THE EYE TOO TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "THE-EYE-TOO-THE-EYE-TWO-PANT",
+    "name": "THE EYE TWO PANT",
+    "color": "",
+    "price": "IDR820,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 820000,
+    "installment": "IDR273,333",
+    "image": "/images/products/THE EYE TOO/THE EYE TWO PANT.jpg",
+    "hoverImage": "/images/products/THE EYE TOO/THE EYE TWO PANT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/THE EYE TOO/THE EYE TWO PANT.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "THE-EYE-TOO-THE-EYE-TWO-SHORT-PANTS",
+    "name": "THE EYE TWO SHORT PANTS",
+    "color": "",
+    "price": "IDR805,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 805000,
+    "installment": "IDR268,333",
+    "image": "/images/products/THE EYE TOO/THE EYE TWO SHORT PANTS.jpg",
+    "hoverImage": "/images/products/THE EYE TOO/THE EYE TWO SHORT PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/THE EYE TOO/THE EYE TWO SHORT PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "THE-HILLS-THE-HILLS-LONG-TOP-TUNIK",
+    "name": "THE HILLS LONG TOP TUNIK",
+    "color": "",
+    "price": "IDR920,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 920000,
+    "installment": "IDR306,666",
+    "image": "/images/products/THE HILLS/THE HILLS LONG TOP  TUNIK.jpg",
+    "hoverImage": "/images/products/THE HILLS/THE HILLS LONG TOP  TUNIK.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/THE HILLS/THE HILLS LONG TOP  TUNIK.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "THE-HILLS-THE-HILLS-SHORT-TOP",
+    "name": "THE HILLS SHORT TOP",
+    "color": "",
+    "price": "IDR835,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 835000,
+    "installment": "IDR278,333",
+    "image": "/images/products/THE HILLS/THE HILLS SHORT TOP.jpg",
+    "hoverImage": "/images/products/THE HILLS/THE HILLS SHORT TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/THE HILLS/THE HILLS SHORT TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "THE-HILLS-THE-HILLS-SKIRT",
+    "name": "THE HILLS SKIRT",
+    "color": "",
+    "price": "IDR1,000,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 1000000,
+    "installment": "IDR333,333",
+    "image": "/images/products/THE HILLS/THE HILLS SKIRT.jpg",
+    "hoverImage": "/images/products/THE HILLS/THE HILLS SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/THE HILLS/THE HILLS SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "THE-HILLS-THE-HILLS-TOP",
+    "name": "THE HILLS TOP",
+    "color": "",
+    "price": "IDR910,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 910000,
+    "installment": "IDR303,333",
+    "image": "/images/products/THE HILLS/THE HILLS TOP.jpg",
+    "hoverImage": "/images/products/THE HILLS/THE HILLS TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/THE HILLS/THE HILLS TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "THE-VIEW-TULIPE-THE-VIEW-SKIRT",
+    "name": "THE VIEW SKIRT",
+    "color": "",
+    "price": "IDR850,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 850000,
+    "installment": "IDR283,333",
+    "image": "/images/products/THE VIEW&TULIPE/THE VIEW SKIRT.jpg",
+    "hoverImage": "/images/products/THE VIEW&TULIPE/THE VIEW SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/THE VIEW&TULIPE/THE VIEW SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "THE-VIEW-TULIPE-THE-VIEW-TOP",
+    "name": "THE VIEW TOP",
+    "color": "",
+    "price": "IDR875,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 875000,
+    "installment": "IDR291,666",
+    "image": "/images/products/THE VIEW&TULIPE/THE VIEW TOP.jpg",
+    "hoverImage": "/images/products/THE VIEW&TULIPE/THE VIEW TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/THE VIEW&TULIPE/THE VIEW TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "TOMA-TOMA-LONG-TOP",
+    "name": "TOMA LONG TOP",
+    "color": "",
+    "price": "IDR925,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 925000,
+    "installment": "IDR308,333",
+    "image": "/images/products/TOMA/TOMA LONG TOP.jpg",
+    "hoverImage": "/images/products/TOMA/TOMA LONG TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/TOMA/TOMA LONG TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "TOMA-TOMA-SHORT-TOP",
+    "name": "TOMA SHORT TOP",
+    "color": "",
+    "price": "IDR810,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 810000,
+    "installment": "IDR270,000",
+    "image": "/images/products/TOMA/TOMA SHORT TOP.jpg",
+    "hoverImage": "/images/products/TOMA/TOMA SHORT TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/TOMA/TOMA SHORT TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "TOMA-TOMA-SKIRT",
+    "name": "TOMA SKIRT",
+    "color": "",
+    "price": "IDR980,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 980000,
+    "installment": "IDR326,666",
+    "image": "/images/products/TOMA/TOMA SKIRT.jpg",
+    "hoverImage": "/images/products/TOMA/TOMA SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/TOMA/TOMA SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "TOMA-TOMA-TOP",
+    "name": "TOMA TOP",
+    "color": "",
+    "price": "IDR910,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 910000,
+    "installment": "IDR303,333",
+    "image": "/images/products/TOMA/TOMA TOP.jpg",
+    "hoverImage": "/images/products/TOMA/TOMA TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/TOMA/TOMA TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "THE-VIEW-TULIPE-TULIPE-LONG-TOP",
+    "name": "TULIPE LONG TOP",
+    "color": "",
+    "price": "IDR930,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 930000,
+    "installment": "IDR310,000",
+    "image": "/images/products/THE VIEW&TULIPE/TULIPE LONG TOP.jpg",
+    "hoverImage": "/images/products/THE VIEW&TULIPE/TULIPE LONG TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/THE VIEW&TULIPE/TULIPE LONG TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "THE-VIEW-TULIPE-TULIPE-SKIRT",
+    "name": "TULIPE SKIRT",
+    "color": "",
+    "price": "IDR920,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 920000,
+    "installment": "IDR306,666",
+    "image": "/images/products/THE VIEW&TULIPE/TULIPE SKIRT.jpg",
+    "hoverImage": "/images/products/THE VIEW&TULIPE/TULIPE SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/THE VIEW&TULIPE/TULIPE SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "THE-VIEW-TULIPE-TULIPE-TOP",
+    "name": "TULIPE TOP",
+    "color": "",
+    "price": "IDR845,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 845000,
+    "installment": "IDR281,666",
+    "image": "/images/products/THE VIEW&TULIPE/TULIPE TOP.jpg",
+    "hoverImage": "/images/products/THE VIEW&TULIPE/TULIPE TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/THE VIEW&TULIPE/TULIPE TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "UNTITLED-ARTWORK",
+    "name": "Untitled Artwork",
+    "color": "",
+    "price": "IDR965,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 965000,
+    "installment": "IDR321,666",
+    "image": "/images/products/Untitled_Artwork.JPG",
+    "hoverImage": "/images/products/Untitled_Artwork.JPG",
+    "swatches": [],
+    "gallery": [
+      "/images/products/Untitled_Artwork.JPG"
+    ],
+    "category": "others",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "VOIR-VOIR-LONG-TOP-TUNIK",
+    "name": "VOIR LONG TOP TUNIK",
+    "color": "",
+    "price": "IDR890,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 890000,
+    "installment": "IDR296,666",
+    "image": "/images/products/VOIR/VOIR LONG TOP TUNIK.jpg",
+    "hoverImage": "/images/products/VOIR/VOIR LONG TOP TUNIK.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/VOIR/VOIR LONG TOP TUNIK.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "VOIR-VOIR-SHORT-TOP",
+    "name": "VOIR SHORT TOP",
+    "color": "",
+    "price": "IDR810,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 810000,
+    "installment": "IDR270,000",
+    "image": "/images/products/VOIR/VOIR SHORT TOP.jpg",
+    "hoverImage": "/images/products/VOIR/VOIR SHORT TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/VOIR/VOIR SHORT TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "VOIR-VOIR-SKIRT",
+    "name": "VOIR SKIRT",
+    "color": "",
+    "price": "IDR805,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 805000,
+    "installment": "IDR268,333",
+    "image": "/images/products/VOIR/VOIR SKIRT.jpg",
+    "hoverImage": "/images/products/VOIR/VOIR SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/VOIR/VOIR SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "VOIR-VOIR-TOP",
+    "name": "VOIR TOP",
+    "color": "",
+    "price": "IDR995,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 995000,
+    "installment": "IDR331,666",
+    "image": "/images/products/VOIR/VOIR TOP.jpg",
+    "hoverImage": "/images/products/VOIR/VOIR TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/VOIR/VOIR TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "BLUMEE-WHATSAPP-IMAGE-2026-01-13-AT-20-17-15",
+    "name": "WhatsApp Image",
+    "color": "",
+    "price": "IDR930,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 930000,
+    "installment": "IDR310,000",
+    "image": "/images/products/BLUMEE/WhatsApp Image 2026-01-13 at 20.17.15.jpeg",
+    "hoverImage": "/images/products/BLUMEE/WhatsApp Image 2026-01-13 at 20.17.15.jpeg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/BLUMEE/WhatsApp Image 2026-01-13 at 20.17.15.jpeg"
+    ],
+    "category": "others",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "WILLOW-WILLOW-PANTS",
+    "name": "WILLOW PANTS",
+    "color": "",
+    "price": "IDR850,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 850000,
+    "installment": "IDR283,333",
+    "image": "/images/products/WILLOW/WILLOW PANTS.jpg",
+    "hoverImage": "/images/products/WILLOW/WILLOW PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/WILLOW/WILLOW PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "WILLOW-WILLOW-SHORT-PANTS",
+    "name": "WILLOW SHORT PANTS",
+    "color": "",
+    "price": "IDR840,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 840000,
+    "installment": "IDR280,000",
+    "image": "/images/products/WILLOW/WILLOW SHORT PANTS.jpg",
+    "hoverImage": "/images/products/WILLOW/WILLOW SHORT PANTS.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/WILLOW/WILLOW SHORT PANTS.jpg"
+    ],
+    "category": "pants",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "WILLOW-WILLOW-SHORT-TOP",
+    "name": "WILLOW SHORT TOP",
+    "color": "",
+    "price": "IDR960,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 960000,
+    "installment": "IDR320,000",
+    "image": "/images/products/WILLOW/WILLOW SHORT TOP.jpg",
+    "hoverImage": "/images/products/WILLOW/WILLOW SHORT TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/WILLOW/WILLOW SHORT TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "WILLOW-WILLOW-SKIRT",
+    "name": "WILLOW SKIRT",
+    "color": "",
+    "price": "IDR840,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 840000,
+    "installment": "IDR280,000",
+    "image": "/images/products/WILLOW/WILLOW SKIRT.jpg",
+    "hoverImage": "/images/products/WILLOW/WILLOW SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/WILLOW/WILLOW SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "WINE-YUNA-WINE-SKIRT",
+    "name": "WINE SKIRT",
+    "color": "",
+    "price": "IDR925,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 925000,
+    "installment": "IDR308,333",
+    "image": "/images/products/WINE & YUNA/WINE SKIRT.jpg",
+    "hoverImage": "/images/products/WINE & YUNA/WINE SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/WINE & YUNA/WINE SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "WINE-YUNA-YUNA-LONG-TOP-TUNIK",
+    "name": "YUNA LONG TOP TUNIK",
+    "color": "",
+    "price": "IDR820,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 820000,
+    "installment": "IDR273,333",
+    "image": "/images/products/WINE & YUNA/YUNA LONG TOP  TUNIK.jpg",
+    "hoverImage": "/images/products/WINE & YUNA/YUNA LONG TOP  TUNIK.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/WINE & YUNA/YUNA LONG TOP  TUNIK.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "WINE-YUNA-YUNA-SKIRT",
+    "name": "YUNA SKIRT",
+    "color": "",
+    "price": "IDR975,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 975000,
+    "installment": "IDR325,000",
+    "image": "/images/products/WINE & YUNA/YUNA SKIRT.jpg",
+    "hoverImage": "/images/products/WINE & YUNA/YUNA SKIRT.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/WINE & YUNA/YUNA SKIRT.jpg"
+    ],
+    "category": "skirts",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  },
+  {
+    "id": "WINE-YUNA-YUNA-TOP",
+    "name": "YUNA TOP",
+    "color": "",
+    "price": "IDR845,000",
+    "originalPrice": null,
+    "discount": null,
+    "priceValue": 845000,
+    "installment": "IDR281,666",
+    "image": "/images/products/WINE & YUNA/YUNA TOP.jpg",
+    "hoverImage": "/images/products/WINE & YUNA/YUNA TOP.jpg",
+    "swatches": [],
+    "gallery": [
+      "/images/products/WINE & YUNA/YUNA TOP.jpg"
+    ],
+    "category": "tops",
+    "collections": [
+      "new-arrivals",
+      "trending-now",
+      "sale",
+      "gifts"
+    ],
+    "isSale": false,
+    "pdpUrl": ""
+  }
+]

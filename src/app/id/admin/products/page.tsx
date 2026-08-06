@@ -1337,7 +1337,7 @@ export default function AdminProductsPage() {
             </div>
 
             <p className="text-sm text-[#706D65]">
-              Are you sure you want to delete product <strong className="text-[#1A1918]">"{deletingProduct.name}"</strong> (<code className="font-mono text-xs">/id/products/{deletingProduct.slug}</code>)? This will also delete all associated variants and gallery images.
+              Are you sure you want to delete product <strong className="text-[#1A1918]">&quot;{deletingProduct.name}&quot;</strong> (<code className="font-mono text-xs">/id/products/{deletingProduct.slug}</code>)? This will also delete all associated variants and gallery images.
             </p>
 
             <div className="flex items-center justify-end space-x-3 pt-4 border-t border-[#E5E0D8]">

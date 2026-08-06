@@ -34,7 +34,7 @@ export default function AdminDashboardPage() {
     loading: true,
   });
 
-  const [categoriesList, setCategoriesList] = useState<any[]>([]);
+  const [categoriesList, setCategoriesList] = useState<Array<{ id: string; name: string; slug: string; description?: string }>>([]);
 
   const loadDashboardData = async () => {
     setStats((prev) => ({ ...prev, loading: true }));
@@ -73,7 +73,7 @@ export default function AdminDashboardPage() {
           : PRODUCTS.length;
 
       let catCount = Object.keys(CATEGORY_META).length;
-      let cats: any[] = Object.entries(CATEGORY_META).map(([slug, cat]) => ({
+      let cats: Array<{ id: string; name: string; slug: string; description?: string }> = Object.entries(CATEGORY_META).map(([slug, cat]) => ({
         id: slug,
         name: cat.title,
         slug: slug,
@@ -105,6 +105,7 @@ export default function AdminDashboardPage() {
   };
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     loadDashboardData();
   }, []);
 

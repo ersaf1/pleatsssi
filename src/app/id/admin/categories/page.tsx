@@ -589,7 +589,7 @@ export default function AdminCategoriesPage() {
             </div>
 
             <p className="text-sm text-[#706D65]">
-              Are you sure you want to delete category <strong className="text-[#1A1918]">"{deletingCategory.name}"</strong> (<code className="font-mono text-xs">/id/{deletingCategory.slug}</code>)? Products assigned to this category will be preserved.
+              Are you sure you want to delete category <strong className="text-[#1A1918]">&ldquo;{deletingCategory.name}&rdquo;</strong> (<code className="font-mono text-xs">/id/{deletingCategory.slug}</code>)? Products assigned to this category will be preserved.
             </p>
 
             <div className="flex items-center justify-end space-x-3 pt-4 border-t border-[#E5E0D8]">

@@ -1,9 +1,9 @@
-import type { InfoPageContent } from "@/components/InfoPage";
+﻿import type { InfoPageContent } from "@/components/InfoPage";
 
 export const INFO_PAGES: Record<string, InfoPageContent> = {
   faq: {
     title: "FAQ",
-    intro: "Pertanyaan yang sering diajukan seputar belanja di CHARLES & KEITH Indonesia.",
+    intro: "Pertanyaan yang sering diajukan seputar belanja di PLEATSSSI Indonesia.",
     sections: [
       {
         heading: "Bagaimana cara memesan produk?",
@@ -38,7 +38,7 @@ export const INFO_PAGES: Record<string, InfoPageContent> = {
       {
         heading: "Apakah produk dijamin asli?",
         paragraphs: [
-          "Seluruh produk yang dijual di situs ini adalah produk resmi CHARLES & KEITH dan 100% asli.",
+          "Seluruh produk yang dijual di situs ini adalah produk resmi PLEATSSSI dan 100% asli.",
         ],
       },
     ],
@@ -51,7 +51,7 @@ export const INFO_PAGES: Record<string, InfoPageContent> = {
         heading: "Biaya Pengiriman",
         paragraphs: [
           "Gratis pengiriman untuk area JABODETABEK. Untuk wilayah lain di Indonesia, biaya pengiriman dihitung berdasarkan tujuan dan ditampilkan saat checkout.",
-          "Anda juga dapat memilih opsi ambil di toko (click & collect) tanpa biaya di toko CHARLES & KEITH pilihan.",
+          "Anda juga dapat memilih opsi ambil di toko (click & collect) tanpa biaya di toko PLEATSSSI pilihan.",
         ],
       },
       {
@@ -100,7 +100,7 @@ export const INFO_PAGES: Record<string, InfoPageContent> = {
       {
         heading: "Penukaran",
         paragraphs: [
-          "Penukaran ukuran atau warna dapat dilakukan di toko CHARLES & KEITH terdekat dengan membawa bukti pembelian, selama stok tersedia.",
+          "Penukaran ukuran atau warna dapat dilakukan di toko PLEATSSSI terdekat dengan membawa bukti pembelian, selama stok tersedia.",
         ],
       },
     ],
@@ -119,9 +119,9 @@ export const INFO_PAGES: Record<string, InfoPageContent> = {
       {
         heading: "Ukuran Tas",
         paragraphs: [
-          "S: tas mini dan micro — muat ponsel, card holder, dan lipstik.",
-          "M: ukuran sedang — muat dompet panjang, ponsel, power bank, dan botol minum kecil.",
-          "XL: tote dan tas besar — muat laptop 13 inci, dokumen A4, dan perlengkapan harian lainnya.",
+          "S: tas mini dan micro â€” muat ponsel, card holder, dan lipstik.",
+          "M: ukuran sedang â€” muat dompet panjang, ponsel, power bank, dan botol minum kecil.",
+          "XL: tote dan tas besar â€” muat laptop 13 inci, dokumen A4, dan perlengkapan harian lainnya.",
         ],
       },
       {
@@ -147,7 +147,7 @@ export const INFO_PAGES: Record<string, InfoPageContent> = {
       {
         heading: "Media Sosial",
         paragraphs: [
-          "Anda juga dapat menghubungi kami melalui Instagram @charleskeithofficial atau Facebook CHARLES & KEITH Indonesia untuk pertanyaan umum seputar produk dan promo.",
+          "Anda juga dapat menghubungi kami melalui Instagram @pleatsssi atau Facebook PLEATSSSI Indonesia untuk pertanyaan umum seputar produk dan promo.",
         ],
       },
       {
@@ -160,28 +160,28 @@ export const INFO_PAGES: Record<string, InfoPageContent> = {
   },
   "lokasi-toko": {
     title: "Lokasi Toko",
-    intro: "Kunjungi toko CHARLES & KEITH terdekat di kota Anda.",
+    intro: "Kunjungi toko PLEATSSSI terdekat di kota Anda.",
     sections: [
       {
         heading: "Jakarta",
         paragraphs: [
-          "Plaza Indonesia — Jl. M.H. Thamrin Kav. 28-30, Lantai 2. Buka setiap hari 10.00 - 22.00 WIB.",
-          "Grand Indonesia — Jl. M.H. Thamrin No. 1, Skybridge Lantai 2. Buka setiap hari 10.00 - 22.00 WIB.",
-          "Senayan City — Jl. Asia Afrika Lot 19, Lantai 1. Buka setiap hari 10.00 - 22.00 WIB.",
-          "Pondok Indah Mall 2 — Jl. Metro Pondok Indah, Lantai 1. Buka setiap hari 10.00 - 22.00 WIB.",
+          "Plaza Indonesia â€” Jl. M.H. Thamrin Kav. 28-30, Lantai 2. Buka setiap hari 10.00 - 22.00 WIB.",
+          "Grand Indonesia â€” Jl. M.H. Thamrin No. 1, Skybridge Lantai 2. Buka setiap hari 10.00 - 22.00 WIB.",
+          "Senayan City â€” Jl. Asia Afrika Lot 19, Lantai 1. Buka setiap hari 10.00 - 22.00 WIB.",
+          "Pondok Indah Mall 2 â€” Jl. Metro Pondok Indah, Lantai 1. Buka setiap hari 10.00 - 22.00 WIB.",
         ],
       },
       {
         heading: "Tangerang & Bekasi",
         paragraphs: [
-          "Summarecon Mall Serpong — Jl. Boulevard Gading Serpong, Lantai 1. Buka setiap hari 10.00 - 22.00 WIB.",
-          "Summarecon Mall Bekasi — Jl. Boulevard Ahmad Yani, Lantai 1. Buka setiap hari 10.00 - 22.00 WIB.",
+          "Summarecon Mall Serpong â€” Jl. Boulevard Gading Serpong, Lantai 1. Buka setiap hari 10.00 - 22.00 WIB.",
+          "Summarecon Mall Bekasi â€” Jl. Boulevard Ahmad Yani, Lantai 1. Buka setiap hari 10.00 - 22.00 WIB.",
         ],
       },
       {
         heading: "Surabaya",
         paragraphs: [
-          "Tunjungan Plaza 4 — Jl. Jend. Basuki Rachmat No. 8-12, Lantai 1. Buka setiap hari 10.00 - 22.00 WIB.",
+          "Tunjungan Plaza 4 â€” Jl. Jend. Basuki Rachmat No. 8-12, Lantai 1. Buka setiap hari 10.00 - 22.00 WIB.",
         ],
       },
       {
@@ -194,7 +194,7 @@ export const INFO_PAGES: Record<string, InfoPageContent> = {
   },
   "perawatan-produk": {
     title: "Perawatan Produk",
-    intro: "Panduan merawat produk CHARLES & KEITH agar tetap awet dan tampak baru.",
+    intro: "Panduan merawat produk PLEATSSSI agar tetap awet dan tampak baru.",
     sections: [
       {
         heading: "Tas & Dompet",
@@ -226,7 +226,7 @@ export const INFO_PAGES: Record<string, InfoPageContent> = {
       {
         heading: "Penerimaan Syarat",
         paragraphs: [
-          "Dengan mengakses dan menggunakan situs CHARLES & KEITH Indonesia, Anda menyetujui syarat dan ketentuan penggunaan ini. Jika Anda tidak menyetujui syarat ini, mohon hentikan penggunaan situs.",
+          "Dengan mengakses dan menggunakan situs PLEATSSSI Indonesia, Anda menyetujui syarat dan ketentuan penggunaan ini. Jika Anda tidak menyetujui syarat ini, mohon hentikan penggunaan situs.",
         ],
       },
       {
@@ -244,7 +244,7 @@ export const INFO_PAGES: Record<string, InfoPageContent> = {
       {
         heading: "Kekayaan Intelektual",
         paragraphs: [
-          "Seluruh konten situs — termasuk logo, teks, foto, dan desain — adalah milik CHARLES & KEITH dan dilindungi undang-undang kekayaan intelektual. Dilarang menggunakan konten tanpa izin tertulis.",
+          "Seluruh konten situs â€” termasuk logo, teks, foto, dan desain â€” adalah milik PLEATSSSI dan dilindungi undang-undang kekayaan intelektual. Dilarang menggunakan konten tanpa izin tertulis.",
         ],
       },
     ],
@@ -262,7 +262,7 @@ export const INFO_PAGES: Record<string, InfoPageContent> = {
       {
         heading: "Penggunaan Data",
         paragraphs: [
-          "Data Anda digunakan untuk memproses pesanan, mengirimkan pembaruan status pengiriman, memberikan layanan pelanggan, dan — dengan persetujuan Anda — mengirimkan info promo dan koleksi terbaru.",
+          "Data Anda digunakan untuk memproses pesanan, mengirimkan pembaruan status pengiriman, memberikan layanan pelanggan, dan â€” dengan persetujuan Anda â€” mengirimkan info promo dan koleksi terbaru.",
         ],
       },
       {

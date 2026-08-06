@@ -9,11 +9,10 @@ export interface CategoryMeta {
 }
 
 export const CATEGORY_LABELS: Record<CategorySlug, string> = {
-  bags: "Tas",
-  shoes: "Sepatu",
-  wallets: "Dompet",
-  accessories: "Aksesori",
-  kids: "Koleksi Anak-Anak",
+  skirts: "Rok",
+  tops: "Atasan",
+  pants: "Celana",
+  others: "Lainnya",
 };
 
 export const CATEGORY_META: Record<string, CategoryMeta> = {
@@ -22,47 +21,39 @@ export const CATEGORY_META: Record<string, CategoryMeta> = {
     title: "PRODUK BARU",
     breadcrumbLabel: "Produk Baru",
     description:
-      "Jelajahi koleksi terbaru CHARLES & KEITH — tas, sepatu, dompet, dan aksesori yang baru saja tiba minggu ini.",
+      "Jelajahi koleksi terbaru PLEATSSSI — rok, atasan, dan celana yang baru saja tiba minggu ini.",
     kind: "collection",
   },
-  shoes: {
-    slug: "shoes",
-    title: "SEPATU",
-    breadcrumbLabel: "Sepatu",
+  skirts: {
+    slug: "skirts",
+    title: "ROK",
+    breadcrumbLabel: "Rok",
     description:
-      "Dari pumps elegan hingga loafers kasual, temukan sepatu yang sempurna untuk setiap kesempatan.",
+      "Koleksi rok PLEATSSSI — rok lipit, mini, dan midi dengan detail modern yang mudah dipadukan.",
     kind: "category",
   },
-  bags: {
-    slug: "bags",
-    title: "TAS",
-    breadcrumbLabel: "Tas",
+  tops: {
+    slug: "tops",
+    title: "ATASAN",
+    breadcrumbLabel: "Atasan",
     description:
-      "Koleksi tas CHARLES & KEITH — top handle, tas bahu, tote, dan crossbody dengan desain modern yang fungsional.",
+      "Atasan PLEATSSSI — t-shirt, long top, tunik, dan blus dengan siluet nyaman untuk setiap kesempatan.",
     kind: "category",
   },
-  wallets: {
-    slug: "wallets",
-    title: "DOMPET",
-    breadcrumbLabel: "Dompet",
+  pants: {
+    slug: "pants",
+    title: "CELANA",
+    breadcrumbLabel: "Celana",
     description:
-      "Dompet dan card holder dengan detail quilted dan siluet ramping untuk menyimpan kartu dan uang dengan rapi.",
+      "Celana PLEATSSSI — panjang dan pendek dengan potongan yang stylish untuk tampilan kasual maupun formal.",
     kind: "category",
   },
-  accessories: {
-    slug: "accessories",
-    title: "AKSESORI",
-    breadcrumbLabel: "Aksesori",
+  others: {
+    slug: "others",
+    title: "LAINNYA",
+    breadcrumbLabel: "Lainnya",
     description:
-      "Sempurnakan penampilanmu dengan charm, kacamata, dan perhiasan dari koleksi aksesori CHARLES & KEITH.",
-    kind: "category",
-  },
-  kids: {
-    slug: "kids",
-    title: "KOLEKSI ANAK-ANAK",
-    breadcrumbLabel: "Koleksi Anak-Anak",
-    description:
-      "Tas dan sepatu anak-anak dengan desain playful yang nyaman dipakai seharian.",
+      "Temukan item pilihan dari koleksi PLEATSSSI yang tidak termasuk dalam kategori utama.",
     kind: "category",
   },
   "trending-now": {
@@ -78,7 +69,7 @@ export const CATEGORY_META: Record<string, CategoryMeta> = {
     title: "SALE",
     breadcrumbLabel: "Sale",
     description:
-      "Penawaran terbatas — dapatkan tas, sepatu, dan aksesori pilihan dengan potongan harga spesial.",
+      "Penawaran terbatas — dapatkan rok, atasan, dan celana pilihan dengan harga spesial.",
     kind: "collection",
   },
   gifts: {
@@ -86,18 +77,17 @@ export const CATEGORY_META: Record<string, CategoryMeta> = {
     title: "GIFTS",
     breadcrumbLabel: "Gifts",
     description:
-      "Hadiah sempurna untuk orang tersayang — pilihan tas mini, dompet, charm, dan perhiasan yang berkesan.",
+      "Hadiah sempurna untuk orang tersayang — pilihan fashion PLEATSSSI yang berkesan.",
     kind: "collection",
   },
 };
 
 export const CATEGORY_ROUTE_SLUGS = [
   "new-arrivals",
-  "shoes",
-  "bags",
-  "wallets",
-  "accessories",
-  "kids",
+  "skirts",
+  "tops",
+  "pants",
+  "others",
   "trending-now",
   "sale",
 ] as const;
