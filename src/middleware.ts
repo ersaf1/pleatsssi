@@ -23,15 +23,56 @@ export async function middleware(request: NextRequest) {
   );
 
   const { data: { user } } = await supabase.auth.getUser();
+  const pathname = request.nextUrl.pathname;
 
   // Protect checkout and profile routes
-  if (!user && (request.nextUrl.pathname.startsWith('/id/profile') || request.nextUrl.pathname.startsWith('/id/checkout'))) {
+  if (!user && (pathname.startsWith('/id/profile') || pathname.startsWith('/id/checkout'))) {
     return NextResponse.redirect(new URL('/id/login', request.url));
+  }
+
+  // Admin route protection: /id/admin/*
+  if (pathname.startsWith('/id/admin')) {
+    const isLoginPage = pathname === '/id/admin/login';
+
+    if (!user) {
+      if (!isLoginPage) {
+        return NextResponse.redirect(new URL('/id/admin/login', request.url));
+      }
+      return response;
+    }
+
+    // Determine user role (check user_metadata first, then query users profile)
+    let role = user.user_metadata?.role;
+
+    if (!role || (role !== 'admin' && role !== 'owner')) {
+      const { data: profile } = await supabase
+        .from('users')
+        .select('role')
+        .eq('id', user.id)
+        .single();
+
+      if (profile?.role) {
+        role = profile.role;
+      }
+    }
+
+    const isAdminOrOwner = role === 'admin' || role === 'owner';
+
+    if (isLoginPage) {
+      if (isAdminOrOwner) {
+        return NextResponse.redirect(new URL('/id/admin/dashboard', request.url));
+      }
+      return response;
+    }
+
+    if (!isAdminOrOwner) {
+      return NextResponse.redirect(new URL('/id/admin/login', request.url));
+    }
   }
 
   return response;
 }
 
 export const config = {
-  matcher: ['/id/profile/:path*', '/id/checkout/:path*'],
+  matcher: ['/id/profile/:path*', '/id/checkout/:path*', '/id/admin', '/id/admin/:path*'],
 };
