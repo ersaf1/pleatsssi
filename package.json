@@ -33,6 +33,7 @@
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
+    "db:seed": "node --import tsx scripts/seed-supabase.ts",
     "check": "npm run lint && npm run typecheck && npm run build"
   },
   "dependencies": {
@@ -56,9 +57,11 @@
     "@types/node": "^24",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "dotenv": "^17.4.2",
     "eslint": "^9",
     "eslint-config-next": "16.2.1",
     "tailwindcss": "^4",
+    "tsx": "^4.23.9",
     "typescript": "^5",
     "vitest": "^4.1.10"
   }
