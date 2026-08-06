@@ -33,6 +33,7 @@ interface DbProduct {
   price: number | string;
   discount?: number | string;
   status: string;
+  collections?: string[];
   categories?: DbProductCategory;
   product_variants?: DbProductVariant[];
   product_images?: DbProductImage[];
@@ -56,6 +57,7 @@ export async function getDynamicProducts(): Promise<Product[]> {
           price,
           discount,
           status,
+          collections,
           categories(id, name, slug),
           product_variants(id, color, color_hex, size, sku, stock),
           product_images(id, image_url, sort_order, is_primary)
@@ -97,7 +99,7 @@ export async function getDynamicProducts(): Promise<Product[]> {
         swatches: swatches,
         gallery: sortedImages.map((img: DbProductImage) => img.image_url),
         category: (p.categories?.slug || 'others') as Product['category'],
-        collections: ['new-arrivals'], // default mapped collection
+        collections: p.collections && p.collections.length > 0 ? p.collections : ['new-arrivals'],
         isSale: discountNum > 0,
         pdpUrl: `/id/products/${p.id}`
       };

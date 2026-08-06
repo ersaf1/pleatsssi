@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { CATEGORY_META } from "@/data/categories";
+import { CATEGORY_META, type CategoryMeta } from "@/data/categories";
 import { type Product } from "@/data/products";
 import { CategoryHero } from "./CategoryHero";
 import { ProductGrid } from "./ProductGrid";
@@ -7,10 +7,11 @@ import { getDynamicProducts } from "@/lib/services/productService";
 
 interface CategoryPageProps {
   slug: string;
+  initialMeta?: CategoryMeta;
 }
 
-export async function CategoryPage({ slug }: CategoryPageProps) {
-  const meta = CATEGORY_META[slug];
+export async function CategoryPage({ slug, initialMeta }: CategoryPageProps) {
+  const meta = initialMeta || CATEGORY_META[slug];
   if (!meta) notFound();
 
   const allProducts = await getDynamicProducts();
