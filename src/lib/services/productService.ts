@@ -346,7 +346,11 @@ export async function createProduct(
         .insert(variantRows)
         .select('id, color, color_hex, size, sku, stock');
 
-      if (!vError && vData) {
+      if (vError) {
+        return { data: null, error: `Failed to create product variants: ${vError.message}` };
+      }
+
+      if (vData) {
         variants = vData as AdminProductVariant[];
       }
     }
@@ -364,7 +368,11 @@ export async function createProduct(
         .insert(imageRows)
         .select('id, image_url, sort_order, is_primary');
 
-      if (!imgError && imgData) {
+      if (imgError) {
+        return { data: null, error: `Failed to create product images: ${imgError.message}` };
+      }
+
+      if (imgData) {
         images = imgData as AdminProductImage[];
       }
     }
@@ -445,7 +453,19 @@ export async function updateProduct(
     let images: AdminProductImage[] = [];
 
     if (input.variants !== undefined) {
-      await supabaseBrowserClient.from('product_variants').delete().eq('product_id', id);
+      const { data: existingVData } = await supabaseBrowserClient
+        .from('product_variants')
+        .select('color, color_hex, size, sku, stock')
+        .eq('product_id', id);
+
+      const { error: delVError } = await supabaseBrowserClient
+        .from('product_variants')
+        .delete()
+        .eq('product_id', id);
+
+      if (delVError) {
+        return { data: null, error: `Failed to clear old product variants: ${delVError.message}` };
+      }
 
       if (input.variants.length > 0) {
         const variantRows = input.variants.map((v) => ({
@@ -457,10 +477,19 @@ export async function updateProduct(
           stock: Number(v.stock || 0),
         }));
 
-        const { data: vData } = await supabaseBrowserClient
+        const { data: vData, error: vError } = await supabaseBrowserClient
           .from('product_variants')
           .insert(variantRows)
           .select('id, color, color_hex, size, sku, stock');
+
+        if (vError) {
+          if (existingVData && existingVData.length > 0) {
+            await supabaseBrowserClient
+              .from('product_variants')
+              .insert(existingVData.map((ev) => ({ ...ev, product_id: id })));
+          }
+          return { data: null, error: `Failed to update product variants: ${vError.message}` };
+        }
 
         if (vData) variants = vData as AdminProductVariant[];
       }
@@ -473,7 +502,19 @@ export async function updateProduct(
     }
 
     if (input.images !== undefined) {
-      await supabaseBrowserClient.from('product_images').delete().eq('product_id', id);
+      const { data: existingImgData } = await supabaseBrowserClient
+        .from('product_images')
+        .select('image_url, sort_order, is_primary')
+        .eq('product_id', id);
+
+      const { error: delImgError } = await supabaseBrowserClient
+        .from('product_images')
+        .delete()
+        .eq('product_id', id);
+
+      if (delImgError) {
+        return { data: null, error: `Failed to clear old product images: ${delImgError.message}` };
+      }
 
       if (input.images.length > 0) {
         const imageRows = input.images.map((img, idx) => ({
@@ -483,10 +524,19 @@ export async function updateProduct(
           is_primary: img.is_primary ?? (idx === 0),
         }));
 
-        const { data: imgData } = await supabaseBrowserClient
+        const { data: imgData, error: imgError } = await supabaseBrowserClient
           .from('product_images')
           .insert(imageRows)
           .select('id, image_url, sort_order, is_primary');
+
+        if (imgError) {
+          if (existingImgData && existingImgData.length > 0) {
+            await supabaseBrowserClient
+              .from('product_images')
+              .insert(existingImgData.map((eImg) => ({ ...eImg, product_id: id })));
+          }
+          return { data: null, error: `Failed to update product images: ${imgError.message}` };
+        }
 
         if (imgData) images = imgData as AdminProductImage[];
       }

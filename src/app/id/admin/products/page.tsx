@@ -678,7 +678,7 @@ export default function AdminProductsPage() {
                           target="_blank"
                           className="inline-flex items-center text-xs font-mono text-[#0B4F3A] hover:underline mt-0.5"
                         >
-                          /id/products/{prod.slug}
+                          /id/products/{prod.id}
                           <ExternalLink className="w-3 h-3 ml-1 opacity-70" />
                         </Link>
                       </td>
