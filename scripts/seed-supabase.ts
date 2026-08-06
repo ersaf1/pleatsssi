@@ -68,8 +68,12 @@ async function uploadImage(imagePath: string, bucketName = 'pleatsssi-assets'): 
 
   try {
     const fileBuffer = fs.readFileSync(localFilePath);
-    const fileName = path.basename(cleanPath);
-    const storagePath = cleanPath.includes('products') ? `products/${fileName}` : `banners/${fileName}`;
+    
+    // Preserve full relative directory structure (e.g. images/products/AGATE/AGATE SKIRT.jpg -> products/AGATE/AGATE SKIRT.jpg)
+    let storagePath = cleanPath.replace(/^(public\/)?(images\/)?/, '');
+    if (!storagePath.startsWith('products/') && !storagePath.startsWith('banners/')) {
+      storagePath = cleanPath.includes('products') ? `products/${storagePath}` : `banners/${storagePath}`;
+    }
 
     const ext = path.extname(localFilePath).toLowerCase();
     let contentType = 'image/jpeg';
@@ -119,12 +123,14 @@ export async function seed() {
     const { data, error } = await supabase.from('categories').upsert(cat, { onConflict: 'slug' }).select();
     if (error) {
       console.error(`Category seed error [${cat.slug}]:`, error.message);
-      categoryMap.set(cat.slug, `00000000-0000-0000-0000-00000000000${categoryMap.size + 1}`);
+      const indexStr = String(categoryMap.size + 1).padStart(12, '0');
+      categoryMap.set(cat.slug, `00000000-0000-0000-0000-${indexStr}`);
     } else if (data && data[0]) {
       categoryMap.set(cat.slug, data[0].id);
       console.log(`Category seeded: ${cat.slug} (ID: ${data[0].id})`);
     } else {
-      categoryMap.set(cat.slug, `00000000-0000-0000-0000-00000000000${categoryMap.size + 1}`);
+      const indexStr = String(categoryMap.size + 1).padStart(12, '0');
+      categoryMap.set(cat.slug, `00000000-0000-0000-0000-${indexStr}`);
     }
   }
 
@@ -184,6 +190,16 @@ export async function seed() {
       console.warn(`Variant seed warning [${p.name}]:`, varError.message);
     }
 
+    // Clear existing images for idempotency before re-inserting
+    const { error: clearImagesError } = await supabase
+      .from('product_images')
+      .delete()
+      .eq('product_id', productId);
+
+    if (clearImagesError) {
+      console.warn(`Clear existing images warning [${p.name}]:`, clearImagesError.message);
+    }
+
     // Images
     const rawImages = p.gallery && p.gallery.length > 0 ? p.gallery : [p.image, p.hoverImage].filter(Boolean);
     const uniqueImages = Array.from(new Set(rawImages)) as string[];
@@ -237,6 +253,16 @@ export async function seed() {
 
   // 4. Seed Banners
   console.log("\n--- Seeding Banners ---");
+  // Clear existing banners for idempotency before re-inserting
+  const { error: clearBannersError } = await supabase
+    .from('banners')
+    .delete()
+    .neq('id', '00000000-0000-0000-0000-000000000000');
+
+  if (clearBannersError) {
+    console.warn("Clear existing banners warning:", clearBannersError.message);
+  }
+
   const banners = [
     {
       type: "hero",
@@ -295,4 +321,7 @@ export async function seed() {
   console.log("\nSeeding process completed!");
 }
 
-seed();
+seed().catch((err: unknown) => {
+  console.error("Seed script failed:", err);
+  process.exit(1);
+});
