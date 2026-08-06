@@ -86,7 +86,7 @@ describe('Dynamic Services with configured Supabase', () => {
     expect(categories).toEqual(mockCategories);
   });
 
-  test('product service maps DB product correctly when configured', async () => {
+  test('product service maps DB product, calculates original price, and sorts images correctly', async () => {
     const mockDbProducts = [
       {
         id: 'p1',
@@ -102,8 +102,8 @@ describe('Dynamic Services with configured Supabase', () => {
           { id: 'v1', color: 'Black', color_hex: '#000000', size: 'M', sku: 'SKU1', stock: 5 }
         ],
         product_images: [
-          { id: 'i1', image_url: '/p1.jpg', sort_order: 1, is_primary: true },
-          { id: 'i2', image_url: '/p2.jpg', sort_order: 2, is_primary: false }
+          { id: 'i2', image_url: '/hover.jpg', sort_order: 2, is_primary: false },
+          { id: 'i1', image_url: '/primary.jpg', sort_order: 1, is_primary: true }
         ]
       }
     ];
@@ -120,11 +120,13 @@ describe('Dynamic Services with configured Supabase', () => {
     expect(products[0].name).toBe('Pleated Shirt');
     expect(products[0].color).toBe('Black');
     expect(products[0].price).toBe('IDR500,000');
-    expect(products[0].originalPrice).toBe('IDR550,000');
+    // Original price calculation: 500000 / (1 - 0.10) = 555,555.55... -> IDR555,556
+    expect(products[0].originalPrice).toBe('IDR555,556');
     expect(products[0].discount).toBe('10% OFF');
     expect(products[0].priceValue).toBe(500000);
-    expect(products[0].image).toBe('/p1.jpg');
-    expect(products[0].hoverImage).toBe('/p2.jpg');
+    expect(products[0].image).toBe('/primary.jpg');
+    expect(products[0].hoverImage).toBe('/hover.jpg');
+    expect(products[0].gallery).toEqual(['/primary.jpg', '/hover.jpg']);
     expect(products[0].category).toBe('tops');
     expect(products[0].isSale).toBe(true);
     expect(products[0].pdpUrl).toBe('/id/products/p1');

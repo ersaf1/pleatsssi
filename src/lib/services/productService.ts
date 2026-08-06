@@ -1,30 +1,6 @@
 import { supabaseBrowserClient } from '../supabaseClient';
 import { PRODUCTS as STATIC_PRODUCTS, type Product } from '@/data/products';
-
-function isSupabaseConfigured(): boolean {
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-  if (!url || !key) return false;
-  if (url.includes('your-supabase-project') || url.includes('placeholder') || url.includes('example.com')) return false;
-  if (key.includes('your-anon-key') || key.includes('placeholder')) return false;
-  return true;
-}
-
-function withTimeout<T>(promise: PromiseLike<T>, ms: number = 2000): Promise<T> {
-  return new Promise((resolve, reject) => {
-    const timer = setTimeout(() => reject(new Error('Supabase query timeout')), ms);
-    promise.then(
-      (res) => {
-        clearTimeout(timer);
-        resolve(res);
-      },
-      (err) => {
-        clearTimeout(timer);
-        reject(err);
-      }
-    );
-  });
-}
+import { isSupabaseConfigured, withTimeout } from './serviceUtils';
 
 export async function getDynamicProducts(): Promise<Product[]> {
   if (!isSupabaseConfigured()) {
@@ -57,26 +33,36 @@ export async function getDynamicProducts(): Promise<Product[]> {
     
     // Map DB structure to Product interface
     return data.map((p: any) => {
-      const primaryImage = p.product_images?.find((img: any) => img.is_primary)?.image_url || p.product_images?.[0]?.image_url || '';
-      const hoverImage = p.product_images?.[1]?.image_url || primaryImage;
+      const sortedImages = [...(p.product_images || [])].sort((a: any, b: any) => (a.sort_order ?? 0) - (b.sort_order ?? 0));
+      const primaryImage = sortedImages.find((img: any) => img.is_primary)?.image_url || sortedImages[0]?.image_url || '';
+      const nonPrimaryImg = sortedImages.find((img: any) => !img.is_primary)?.image_url;
+      const hoverImage = nonPrimaryImg || primaryImage;
       const swatches = Array.from(new Set(p.product_variants?.map((v: any) => v.color_hex).filter(Boolean))) as string[];
-      
+      const priceNum = Number(p.price);
+      const discountNum = Number(p.discount || 0);
+
+      let originalPrice: string | null = null;
+      if (discountNum > 0 && discountNum < 100) {
+        const origVal = Math.round(priceNum / (1 - discountNum / 100));
+        originalPrice = `IDR${origVal.toLocaleString('en-US')}`;
+      }
+
       return {
         id: p.id,
         name: p.name,
         color: p.product_variants?.[0]?.color || '',
-        price: `IDR${Number(p.price).toLocaleString('en-US')}`,
-        originalPrice: p.discount > 0 ? `IDR${Number(p.price * (1 + p.discount/100)).toLocaleString('en-US')}` : null,
-        discount: p.discount > 0 ? `${p.discount}% OFF` : null,
-        priceValue: Number(p.price),
-        installment: `IDR${Math.round(Number(p.price) / 3).toLocaleString('en-US')}`,
+        price: `IDR${priceNum.toLocaleString('en-US')}`,
+        originalPrice: originalPrice,
+        discount: discountNum > 0 ? `${discountNum}% OFF` : null,
+        priceValue: priceNum,
+        installment: `IDR${Math.round(priceNum / 3).toLocaleString('en-US')}`,
         image: primaryImage,
         hoverImage: hoverImage,
         swatches: swatches,
-        gallery: p.product_images?.map((img: any) => img.image_url) || [],
+        gallery: sortedImages.map((img: any) => img.image_url),
         category: p.categories?.slug || 'others',
         collections: ['new-arrivals'], // default mapped collection
-        isSale: p.discount > 0,
+        isSale: discountNum > 0,
         pdpUrl: `/id/products/${p.id}`
       };
     }) as Product[];
