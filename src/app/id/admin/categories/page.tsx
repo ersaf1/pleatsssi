@@ -40,6 +40,7 @@ export default function AdminCategoriesPage() {
   // Modal State
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingCategory, setEditingCategory] = useState<CategoryItem | null>(null);
+  const [isSlugEdited, setIsSlugEdited] = useState(false);
 
   // Delete Dialog State
   const [deletingCategory, setDeletingCategory] = useState<CategoryItem | null>(null);
@@ -84,6 +85,7 @@ export default function AdminCategoriesPage() {
 
   const handleOpenCreateModal = () => {
     setEditingCategory(null);
+    setIsSlugEdited(false);
     setFormData({
       name: '',
       slug: '',
@@ -96,6 +98,7 @@ export default function AdminCategoriesPage() {
 
   const handleOpenEditModal = (cat: CategoryItem) => {
     setEditingCategory(cat);
+    setIsSlugEdited(true);
     setFormData({
       name: cat.name || '',
       slug: cat.slug || '',
@@ -113,9 +116,13 @@ export default function AdminCategoriesPage() {
     setFormData((prev) => ({
       ...prev,
       name: val,
-      // Auto fill slug if creating new category or if slug matches old auto slug
-      slug: !editingCategory || !prev.slug ? autoSlug : prev.slug,
+      slug: !editingCategory && !isSlugEdited ? autoSlug : prev.slug,
     }));
+  };
+
+  const handleSlugChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setIsSlugEdited(true);
+    setFormData((prev) => ({ ...prev, slug: e.target.value }));
   };
 
   const handleImageUpload = async (e: ChangeEvent<HTMLInputElement>) => {
@@ -155,12 +162,12 @@ export default function AdminCategoriesPage() {
     setSaving(true);
     try {
       if (editingCategory) {
-        // Update existing category
+        // Update existing category (pass null explicitly for cleared optional fields)
         const { data, error } = await updateCategory(editingCategory.id, {
           name: formData.name.trim(),
           slug,
-          description: formData.description.trim() || undefined,
-          image_url: formData.image_url.trim() || undefined,
+          description: formData.description.trim() || null,
+          image_url: formData.image_url.trim() || null,
           parent_id: formData.parent_id.trim() || null,
         });
 
@@ -465,7 +472,7 @@ export default function AdminCategoriesPage() {
                     type="text"
                     required
                     value={formData.slug}
-                    onChange={(e) => setFormData((prev) => ({ ...prev, slug: e.target.value }))}
+                    onChange={handleSlugChange}
                     placeholder="dresses"
                     className="w-full pl-11 pr-3.5 py-2 border border-[#D5D0C8] rounded-lg text-sm font-mono focus:outline-hidden focus:ring-2 focus:ring-[#0B4F3A]"
                   />

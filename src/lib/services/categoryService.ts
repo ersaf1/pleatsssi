@@ -46,8 +46,8 @@ export async function getDynamicCategories(): Promise<CategoryItem[]> {
 export async function createCategory(input: {
   name: string;
   slug: string;
-  description?: string;
-  image_url?: string;
+  description?: string | null;
+  image_url?: string | null;
   parent_id?: string | null;
 }): Promise<{ data: CategoryItem | null; error: string | null }> {
   if (!isSupabaseConfigured()) {
@@ -83,8 +83,8 @@ export async function updateCategory(
   input: {
     name?: string;
     slug?: string;
-    description?: string;
-    image_url?: string;
+    description?: string | null;
+    image_url?: string | null;
     parent_id?: string | null;
   }
 ): Promise<{ data: CategoryItem | null; error: string | null }> {

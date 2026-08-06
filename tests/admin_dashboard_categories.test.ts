@@ -39,9 +39,11 @@ describe('Admin Dashboard Layout & Category CRUD', () => {
     }
   });
 
-  test('updateCategory handles unconfigured Supabase gracefully', async () => {
+  test('updateCategory handles unconfigured Supabase gracefully and supports explicit null for option clearing', async () => {
     const res = await updateCategory('test-id', {
       name: 'Updated Title',
+      description: null,
+      image_url: null,
     });
 
     if (!isSupabaseConfigured()) {
