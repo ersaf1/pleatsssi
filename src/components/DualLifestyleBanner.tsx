@@ -1,29 +1,35 @@
-interface Panel {
+import Image from 'next/image';
+
+export interface LifestylePanel {
   image: string;
   category: string;
-  subtitle?: string;
+  subtitle?: string | null;
   cta: string;
   href: string;
 }
 
-const panels: Panel[] = [
+interface DualLifestyleBannerProps {
+  panels?: LifestylePanel[];
+}
+
+const FALLBACK_PANELS: LifestylePanel[] = [
   {
-    image: "/images/lifestyle-shoes.png",
-    category: "Shoes Collection",
-    subtitle: "Koleksi Sepatu",
-    cta: "Belanja Sekarang",
-    href: "#",
+    image: '/images/lifestyle-shoes.png',
+    category: 'Shoes Collection',
+    subtitle: 'Koleksi Sepatu',
+    cta: 'Belanja Sekarang',
+    href: '#',
   },
   {
-    image: "/images/lifestyle-new.png",
-    category: "New This Week",
-    subtitle: "Rilisan Terbaru",
-    cta: "Belanja Sekarang",
-    href: "#",
+    image: '/images/lifestyle-new.png',
+    category: 'New This Week',
+    subtitle: 'Rilisan Terbaru',
+    cta: 'Belanja Sekarang',
+    href: '#',
   },
 ];
 
-export function DualLifestyleBanner() {
+export function DualLifestyleBanner({ panels = FALLBACK_PANELS }: DualLifestyleBannerProps) {
   return (
     <section className="bg-[#FAF7F2] p-4 md:p-8 border-b border-[#EADFD4]">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 w-full max-w-[1920px] mx-auto">
@@ -34,9 +40,11 @@ export function DualLifestyleBanner() {
             className="relative block overflow-hidden group border border-[#EADFD4] rounded-sm bg-[#F5F0E6]"
           >
             <div className="overflow-hidden w-full">
-              <img
+              <Image
                 src={panel.image}
                 alt={panel.category}
+                width={960}
+                height={640}
                 className="w-full h-auto object-cover transition-transform duration-700 ease-out group-hover:scale-105"
               />
             </div>

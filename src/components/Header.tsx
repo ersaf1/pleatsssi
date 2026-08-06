@@ -7,13 +7,13 @@ import { cn } from "@/lib/utils";
 import { MobileNav } from "./MobileNav";
 import { AnnouncementBanner } from "./AnnouncementBanner";
 
-interface NavItem {
+export interface NavItem {
   label: string;
   href: string;
   isSale?: boolean;
 }
 
-const NAV_ITEMS: NavItem[] = [
+const DEFAULT_NAV_ITEMS: NavItem[] = [
   { label: "PRODUK BARU", href: "/id/new-arrivals" },
   { label: "ROK", href: "/id/skirts" },
   { label: "ATASAN", href: "/id/tops" },
@@ -26,7 +26,11 @@ const NAV_ITEMS: NavItem[] = [
 const NAV_LINK_BASE =
   "text-[12px] uppercase tracking-[0.15em] px-3 py-2.5 transition-colors relative group font-medium";
 
-export function Header() {
+interface HeaderProps {
+  navItems?: NavItem[];
+}
+
+export function Header({ navItems = DEFAULT_NAV_ITEMS }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -144,7 +148,7 @@ export function Header() {
             aria-label="Main navigation"
           >
             <ul className="flex items-center gap-1" role="list">
-              {NAV_ITEMS.map((item) => (
+              {navItems.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
@@ -170,7 +174,7 @@ export function Header() {
       </header>
 
       {/* Mobile slide-in drawer */}
-      <MobileNav isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
+      <MobileNav isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} navItems={navItems} />
     </>
   );
 }
