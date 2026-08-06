@@ -52,3 +52,7 @@ CREATE TABLE IF NOT EXISTS product_images (
   created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL
 );
 
+-- Ensure categories table has image_url column
+ALTER TABLE categories ADD COLUMN IF NOT EXISTS image_url TEXT;
+
+

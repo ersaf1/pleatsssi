@@ -10,7 +10,7 @@ async function getCategoryMeta(slug: string): Promise<CategoryMeta | null> {
     return CATEGORY_META[slug];
   }
   const dynamicCategories = await getDynamicCategories();
-  const dbCat = dynamicCategories.find((c: { slug: string; name?: string; description?: string }) => c.slug === slug);
+  const dbCat = dynamicCategories.find((c) => c.slug === slug);
   if (dbCat) {
     const name = dbCat.name || slug;
     return {
