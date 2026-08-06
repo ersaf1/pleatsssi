@@ -1,12 +1,9 @@
 import type { Metadata } from "next";
-import { CATEGORY_META, CATEGORY_ROUTE_SLUGS } from "@/data/categories";
+import { CATEGORY_META } from "@/data/categories";
+import { getDynamicCategories } from "@/lib/services/categoryService";
 import { CategoryPage } from "@/components/CategoryPage";
 
-export const dynamicParams = false;
-
-export function generateStaticParams() {
-  return CATEGORY_ROUTE_SLUGS.map((category) => ({ category }));
-}
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({
   params,
@@ -14,11 +11,13 @@ export async function generateMetadata({
   params: Promise<{ category: string }>;
 }): Promise<Metadata> {
   const { category } = await params;
-  const meta = CATEGORY_META[category];
+  const dynamicCategories = await getDynamicCategories();
+  const meta = CATEGORY_META[category] || dynamicCategories.find((c: { slug: string }) => c.slug === category);
   if (!meta) return {};
+  const label = (meta as { breadcrumbLabel?: string; name?: string }).breadcrumbLabel || (meta as { name?: string }).name || category;
   return {
-    title: `${meta.breadcrumbLabel} | CHARLES & KEITH Indonesia`,
-    description: meta.description,
+    title: `${label} | PLEATSSSI Indonesia`,
+    description: meta.description || "",
   };
 }
 

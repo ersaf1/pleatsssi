@@ -11,50 +11,42 @@ import { useCartStore } from "@/store/useCartStore";
 import { ProductCarousel } from "./ProductCarousel";
 
 const SIZE_OPTIONS: Record<CategorySlug, string[]> = {
-  bags: ["S", "M", "XL"],
-  shoes: ["35", "36", "37", "38", "39", "40"],
-  wallets: ["ONE SIZE"],
-  accessories: ["ONE SIZE"],
-  kids: ["ONE SIZE"],
+  skirts: ["S", "M", "L", "XL"],
+  tops: ["S", "M", "L", "XL"],
+  pants: ["S", "M", "L", "XL"],
+  others: ["ONE SIZE"],
 };
 
 const EDITORS_NOTE: Record<CategorySlug, string> = {
-  bags: "adalah perpaduan sempurna antara gaya dan fungsi. Siluetnya yang modern dan ruangnya yang fungsional menjadikannya pilihan tepat untuk menemani hari-harimu, dari kantor hingga akhir pekan.",
-  shoes: "dirancang untuk kenyamanan sepanjang hari, menghadirkan keseimbangan antara gaya klasik dan sentuhan kontemporer yang mudah dipadukan dengan berbagai busana.",
-  wallets: "menawarkan desain ramping dengan kompartemen fungsional — teman setia untuk menyimpan kartu, uang tunai, dan struk dengan rapi.",
-  accessories: "membuktikan bahwa detail kecil membawa dampak besar. Aksen sempurna untuk melengkapi dan mempersonalisasi penampilanmu.",
-  kids: "dirancang khusus untuk si kecil — ringan, nyaman dipakai seharian, dan penuh gaya dengan detail yang playful.",
+  skirts: "dipotong dengan detail yang cermat untuk jatuh indah di setiap gerakan. Siluetnya yang modern menjadikannya pilihan sempurna dari pagi hingga malam.",
+  tops: "dirancang untuk kenyamanan sepanjang hari, menghadirkan keseimbangan antara gaya kasual dan sentuhan kontemporer yang mudah dipadukan dengan berbagai busana.",
+  pants: "menawarkan potongan yang nyaman dengan siluet stylish — teman setia untuk tampilan santai maupun formal.",
+  others: "menghadirkan detail menarik yang melengkapi koleksi — pilihan sempurna untuk memperkaya tampilanmu.",
 };
 
 const PRODUCT_DETAILS: Record<CategorySlug, string[]> = {
-  bags: [
-    "Bahan: Kulit sintetis premium",
-    "Dimensi: Tinggi 22 cm x Lebar 28 cm x Tebal 12 cm",
-    "Lapisan dalam: Kain",
-    "Penutup: Ritsleting",
-    "Dilengkapi tali yang dapat disesuaikan dan dust bag",
+  skirts: [
+    "Bahan: Katun premium yang nyaman",
+    "Detail lipit dengan hasil jahitan rapi",
+    "Tersedia dalam berbagai ukuran: S, M, L, XL",
+    "Ritsleting tersembunyi di bagian belakang",
   ],
-  shoes: [
-    "Bahan bagian atas: Kulit sintetis",
-    "Sol luar: Karet anti-slip",
-    "Tinggi hak: 3 cm",
-    "Bantalan dalam yang empuk untuk kenyamanan ekstra",
+  tops: [
+    "Bahan: Katun adem dan menyerap keringat",
+    "Potongan longgar yang nyaman dipakai seharian",
+    "Tersedia dalam berbagai ukuran: S, M, L, XL",
+    "Jahitan rapi dengan detail modern",
   ],
-  wallets: [
-    "Bahan: Kulit sintetis",
-    "Dimensi: Panjang 19 cm x Tinggi 10 cm x Lebar 2.5 cm",
-    "8 slot kartu, 2 kantong uang kertas, 1 kantong ritsleting",
-    "Penutup: Kancing magnet",
+  pants: [
+    "Bahan: Katun premium dengan tekstur nyaman",
+    "Potongan high-waist dengan tali yang dapat disesuaikan",
+    "Tersedia dalam berbagai ukuran: S, M, L, XL",
+    "Saku samping fungsional",
   ],
-  accessories: [
-    "Bahan: Campuran logam berlapis dan akrilik",
-    "Ringan dan nyaman digunakan sehari-hari",
-    "Dikemas dalam kotak CHARLES & KEITH",
-  ],
-  kids: [
-    "Bahan: Kulit sintetis lembut yang aman untuk anak",
-    "Ringan dan mudah dibersihkan",
-    "Dilengkapi penutup yang mudah dibuka-tutup oleh anak",
+  others: [
+    "Bahan: Katun premium yang nyaman",
+    "Detail jahitan rapi dengan finishing halus",
+    "Dikemas dalam kemasan khas PLEATSSSI",
   ],
 };
 
@@ -86,7 +78,7 @@ export function ProductDetail({
 }: ProductDetailProps) {
   const gallery = product.gallery;
   const [activeImage, setActiveImage] = useState(0);
-  const sizes = SIZE_OPTIONS[product.category];
+  const sizes = SIZE_OPTIONS[product.category] || SIZE_OPTIONS.others;
   const [selectedSize, setSelectedSize] = useState(sizes[0]);
   const [wishlisted, setWishlisted] = useState(false);
   const [added, setAdded] = useState(false);
@@ -94,7 +86,7 @@ export function ProductDetail({
 
   const addItem = useCartStore((state) => state.addItem);
 
-  const isTrending = product.collections.includes("trending-now");
+  const isTrending = product.collections?.includes("trending-now");
   const hasVariants = variants.length > 1;
 
   function handleAddToBag() {
@@ -113,12 +105,16 @@ export function ProductDetail({
     window.setTimeout(() => setAdded(false), 2000);
   }
 
+  const editorsNote = EDITORS_NOTE[product.category] || EDITORS_NOTE.others;
+  const productDetails = PRODUCT_DETAILS[product.category] || PRODUCT_DETAILS.others;
+  const categoryLabel = CATEGORY_LABELS[product.category] || product.category;
+
   const accordionSections = [
     {
       title: "Editor's Note",
       content: (
         <p>
-          <span className="font-semibold text-[#1A1918]">{product.name}</span> {EDITORS_NOTE[product.category]}
+          <span className="font-semibold text-[#1A1918]">{product.name}</span> {editorsNote}
         </p>
       ),
     },
@@ -127,7 +123,7 @@ export function ProductDetail({
       content: (
         <div className="space-y-4">
           <ul className="list-disc space-y-1 pl-5">
-            {PRODUCT_DETAILS[product.category].map((item) => (
+            {productDetails.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
@@ -170,7 +166,7 @@ export function ProductDetail({
             |
           </span>
           <Link href={`/id/${product.category}`} className="transition-colors hover:text-[#0B4F3A]">
-            {CATEGORY_LABELS[product.category]}
+            {categoryLabel}
           </Link>
           <span className="mx-2 text-[#D4C9B8]" aria-hidden="true">
             |

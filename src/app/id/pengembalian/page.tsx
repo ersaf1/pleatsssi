@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { InfoPage } from "@/components/InfoPage";
 import { INFO_PAGES } from "@/data/info-pages";
 
 export const metadata: Metadata = {
-  title: "Pengembalian | CHARLES & KEITH Indonesia",
+  title: "Pengembalian | PLEATSSSI Indonesia",
   description: INFO_PAGES.pengembalian.intro,
 };
 

@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { InfoPage } from "@/components/InfoPage";
 import { INFO_PAGES } from "@/data/info-pages";
 
 export const metadata: Metadata = {
-  title: "Cookies Policy | CHARLES & KEITH Indonesia",
+  title: "Cookies Policy | PLEATSSSI Indonesia",
   description: INFO_PAGES["cookies-policy"].intro,
 };
 

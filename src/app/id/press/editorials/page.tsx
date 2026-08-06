@@ -1,34 +1,34 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Stories | CHARLES & KEITH Indonesia",
+  title: "Stories | PLEATSSSI Indonesia",
   description:
-    "Editorial, tren, dan cerita di balik koleksi terbaru CHARLES & KEITH Indonesia.",
+    "Editorial, tren, dan cerita di balik koleksi terbaru PLEATSSSI Indonesia.",
 };
 
 const STORIES = [
   {
-    title: "Get Ready For Fall: Bags",
+    title: "Get Ready For Fall: Skirts",
     category: "Editorial",
     date: "4 Agustus 2026",
     excerpt:
-      "Musim baru, siluet baru. Dari top handle berstruktur hingga tas bahu yang slouchy, inilah tas-tas yang mendefinisikan gaya musim gugur tahun ini.",
+      "Musim baru, siluet baru. Dari rok lipit berstruktur hingga mini yang playful, inilah rok-rok yang mendefinisikan gaya musim gugur tahun ini.",
     image: "/images/hero-desktop.png",
-    href: "/id/bags",
-    cta: "Belanja Tas",
+    href: "/id/skirts",
+    cta: "Belanja Rok",
     featured: true,
   },
   {
-    title: "Shoes Collection",
+    title: "Top & Tunik Collection",
     category: "Tren",
     date: "28 Juli 2026",
     excerpt:
-      "Pumps pointed, loafers faux suede, dan flats slingback — langkah pertama menuju lemari sepatu musim ini dimulai di sini.",
+      "Atasan long top, tunik, dan crop top â€” langkah pertama menuju lemari fashion musim ini dimulai di sini.",
     image: "/images/lifestyle-shoes.png",
-    href: "/id/shoes",
-    cta: "Belanja Sepatu",
+    href: "/id/tops",
+    cta: "Belanja Atasan",
     featured: false,
   },
   {
@@ -36,7 +36,7 @@ const STORIES = [
     category: "Baru Tiba",
     date: "21 Juli 2026",
     excerpt:
-      "Sembilan gaya baru baru saja mendarat: tas knotted-belt, card holder quilted, dan charm playful yang siap melengkapi rotasi mingguanmu.",
+      "Ratusan gaya baru baru saja mendarat: rok lipit, celana high-waist, dan atasan serbaguna yang siap melengkapi rotasi mingguanmu.",
     image: "/images/lifestyle-new.png",
     href: "/id/new-arrivals",
     cta: "Lihat Produk Baru",
@@ -53,7 +53,7 @@ export default function EditorialsPage() {
         Stories
       </h1>
       <p className="mx-auto mt-3 max-w-2xl text-center text-[13px] leading-relaxed text-gray-600">
-        Editorial, tren, dan cerita di balik koleksi terbaru CHARLES &amp; KEITH.
+        Editorial, tren, dan cerita di balik koleksi terbaru PLEATSSSI.
       </p>
 
       {/* Featured story */}

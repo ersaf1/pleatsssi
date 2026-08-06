@@ -4,7 +4,7 @@ import { isSupabaseConfigured, withTimeout } from './serviceUtils';
 
 export async function getDynamicInfoPage(slug: string) {
   const staticPage = STATIC_INFO[slug];
-  const fallback = staticPage ? { title: staticPage.title, content: (staticPage as any).content || JSON.stringify(staticPage) } : null;
+  const fallback = staticPage ? { title: staticPage.title, content: (staticPage as unknown as Record<string, unknown>).content || JSON.stringify(staticPage) } : null;
 
   if (!isSupabaseConfigured()) {
     return fallback;

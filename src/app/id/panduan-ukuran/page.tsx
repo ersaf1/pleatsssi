@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { InfoPage } from "@/components/InfoPage";
 import { INFO_PAGES } from "@/data/info-pages";
 
 export const metadata: Metadata = {
-  title: "Panduan Ukuran | CHARLES & KEITH Indonesia",
+  title: "Panduan Ukuran | PLEATSSSI Indonesia",
   description: INFO_PAGES["panduan-ukuran"].intro,
 };
 

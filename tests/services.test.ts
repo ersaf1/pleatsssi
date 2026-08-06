@@ -50,7 +50,7 @@ describe('Dynamic Services with configured Supabase', () => {
           single: () => Promise.resolve({ data: mockData, error: null })
         })
       })
-    } as any);
+    } as unknown as ReturnType<typeof supabaseBrowserClient.from>);
 
     const page = await getDynamicInfoPage('faq');
     expect(page).toEqual(mockData);
@@ -66,7 +66,7 @@ describe('Dynamic Services with configured Supabase', () => {
           order: () => Promise.resolve({ data: mockBanners, error: null })
         })
       })
-    } as any);
+    } as unknown as ReturnType<typeof supabaseBrowserClient.from>);
 
     const banners = await getDynamicBanners();
     expect(banners).toEqual(mockBanners);
@@ -80,7 +80,7 @@ describe('Dynamic Services with configured Supabase', () => {
       select: () => ({
         order: () => Promise.resolve({ data: mockCategories, error: null })
       })
-    } as any);
+    } as unknown as ReturnType<typeof supabaseBrowserClient.from>);
 
     const categories = await getDynamicCategories();
     expect(categories).toEqual(mockCategories);
@@ -112,7 +112,7 @@ describe('Dynamic Services with configured Supabase', () => {
       select: () => ({
         eq: () => Promise.resolve({ data: mockDbProducts, error: null })
       })
-    } as any);
+    } as unknown as ReturnType<typeof supabaseBrowserClient.from>);
 
     const products = await getDynamicProducts();
     expect(products.length).toBe(1);
