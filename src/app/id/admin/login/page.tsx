@@ -2,13 +2,14 @@
 
 import { useState, type FormEvent } from 'react';
 import { useRouter } from 'next/navigation';
-import { Lock, Mail, AlertCircle, ArrowRight, Loader2 } from 'lucide-react';
+import { Lock, Mail, AlertCircle, ArrowRight, Loader2, Eye, EyeOff } from 'lucide-react';
 import { supabaseBrowserClient } from '@/lib/supabaseClient';
 
 export default function AdminLoginPage() {
   const router = useRouter();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(() => {
     if (typeof window !== 'undefined') {
@@ -74,36 +75,35 @@ export default function AdminLoginPage() {
   };
 
   return (
-    <div className="min-h-[80vh] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-[#FAF7F2]">
-      <div className="max-w-md w-full space-y-8 bg-white p-8 rounded-xl shadow-sm border border-[#E5E0D8]">
+    <div className="min-h-[80vh] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-[#F8FAFC]">
+      <div className="bg-white p-8 sm:p-10 rounded-2xl shadow-sm border border-[#E2E8F0] max-w-md w-full relative overflow-hidden space-y-8">
+        <div className="absolute top-0 left-0 right-0 h-1.5 bg-[#0B4F3A]" />
         <div>
           <div className="mx-auto h-12 w-12 rounded-full bg-[#0B4F3A]/10 flex items-center justify-center text-[#0B4F3A]">
-            <Lock className="w-6 h-6" />
+            <Lock className="w-6 h-6 text-[#0B4F3A]" />
           </div>
-          <h2 className="mt-4 text-center text-2xl font-serif font-bold text-[#1A1918] tracking-tight">
+          <h2 className="mt-4 text-center text-2xl sm:text-3xl font-serif font-bold text-[#0F172A] tracking-tight">
             PLEATSSSI Admin
           </h2>
-          <p className="mt-2 text-center text-sm text-[#706D65]">
+          <p className="mt-2 text-center text-sm text-[#475569]">
             Sign in with your admin or owner credentials to access the dashboard
           </p>
         </div>
 
         {error && (
-          <div className="rounded-md bg-red-50 p-4 border border-red-200">
-            <div className="flex items-start">
-              <AlertCircle className="h-5 w-5 text-red-500 mt-0.5 mr-2 shrink-0" />
-              <p className="text-sm font-medium text-red-800">{error}</p>
-            </div>
+          <div className="bg-rose-50 border border-rose-200 p-4 rounded-xl text-rose-800 text-sm font-medium flex items-start gap-3">
+            <AlertCircle className="h-5 w-5 text-rose-600 mt-0.5 shrink-0" />
+            <p className="flex-1">{error}</p>
           </div>
         )}
 
         <form className="mt-6 space-y-5" onSubmit={handleSubmit}>
           <div>
-            <label htmlFor="email-address" className="block text-xs font-semibold uppercase tracking-wider text-[#1A1918] mb-1.5">
+            <label htmlFor="email-address" className="block text-xs font-bold uppercase tracking-wider text-[#0F172A] mb-1.5">
               Email Address
             </label>
-            <div className="relative rounded-md shadow-xs">
-              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-[#706D65]">
+            <div className="relative">
+              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-[#64748B]">
                 <Mail className="h-4 w-4" />
               </div>
               <input
@@ -114,31 +114,43 @@ export default function AdminLoginPage() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="block w-full pl-10 pr-3 py-2.5 border border-[#D5D0C8] rounded-lg text-sm placeholder-[#9E9A90] text-[#1A1918] focus:outline-hidden focus:ring-2 focus:ring-[#0B4F3A] focus:border-transparent transition-all"
+                className="w-full pl-10 pr-10 py-3 border border-[#CBD5E1] rounded-xl text-sm placeholder-[#94A3B8] text-[#0F172A] focus:outline-hidden focus:ring-2 focus:ring-[#0B4F3A] focus:border-transparent transition-all shadow-xs"
                 placeholder="admin@pleatsssi.com"
               />
             </div>
           </div>
 
           <div>
-            <label htmlFor="password" className="block text-xs font-semibold uppercase tracking-wider text-[#1A1918] mb-1.5">
+            <label htmlFor="password" className="block text-xs font-bold uppercase tracking-wider text-[#0F172A] mb-1.5">
               Password
             </label>
-            <div className="relative rounded-md shadow-xs">
-              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-[#706D65]">
+            <div className="relative">
+              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-[#64748B]">
                 <Lock className="h-4 w-4" />
               </div>
               <input
                 id="password"
                 name="password"
-                type="password"
+                type={showPassword ? 'text' : 'password'}
                 autoComplete="current-password"
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="block w-full pl-10 pr-3 py-2.5 border border-[#D5D0C8] rounded-lg text-sm placeholder-[#9E9A90] text-[#1A1918] focus:outline-hidden focus:ring-2 focus:ring-[#0B4F3A] focus:border-transparent transition-all"
+                className="w-full pl-10 pr-10 py-3 border border-[#CBD5E1] rounded-xl text-sm placeholder-[#94A3B8] text-[#0F172A] focus:outline-hidden focus:ring-2 focus:ring-[#0B4F3A] focus:border-transparent transition-all shadow-xs"
                 placeholder="••••••••"
               />
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="absolute inset-y-0 right-0 pr-3 flex items-center text-[#64748B] hover:text-[#0F172A] cursor-pointer"
+                aria-label={showPassword ? 'Hide password' : 'Show password'}
+              >
+                {showPassword ? (
+                  <EyeOff className="h-4 w-4" />
+                ) : (
+                  <Eye className="h-4 w-4" />
+                )}
+              </button>
             </div>
           </div>
 
@@ -146,7 +158,7 @@ export default function AdminLoginPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-lg text-sm font-semibold text-white bg-[#0B4F3A] hover:bg-[#083C2C] focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-[#0B4F3A] transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow-xs"
+              className="w-full flex justify-center items-center py-3.5 px-4 rounded-xl text-sm font-bold text-white bg-[#0B4F3A] hover:bg-[#083C2C] focus:ring-2 focus:ring-[#0B4F3A] focus:ring-offset-2 transition-all shadow-sm cursor-pointer disabled:opacity-50"
             >
               {loading ? (
                 <>

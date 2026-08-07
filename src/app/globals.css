@@ -158,3 +158,21 @@
     @apply font-sans;
   }
 }
+
+/* ── Editorial cursor — hide system cursor on pointer devices ── */
+@media (pointer: fine) {
+  *,
+  *:hover {
+    cursor: none !important;
+  }
+}
+
+/* ── Smooth scroll ── */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ── Scroll-reveal base: prevent flash of unstyled content ── */
+[data-word] {
+  display: inline-block;
+}

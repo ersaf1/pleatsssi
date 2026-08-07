@@ -154,7 +154,6 @@ export default function AdminInfoPagesPage() {
         showNotification('success', `Info page "${data.title}" created successfully!`);
       }
     } else {
-      // Mock mode fallback update
       const mockPage: InfoPageItem = {
         id: editingPage?.id || `info-mock-${Date.now()}`,
         slug: formData.slug.trim().toLowerCase(),
@@ -255,31 +254,31 @@ export default function AdminInfoPagesPage() {
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 border-b border-[#E5E0D8] pb-5">
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 border-b border-[#E2E8F0] pb-5">
         <div>
-          <div className="flex items-center space-x-2">
-            <h1 className="font-serif font-bold text-2xl sm:text-3xl text-[#1A1918]">
+          <div className="flex items-center space-x-2.5">
+            <h1 className="font-bold text-2xl sm:text-3xl text-[#0F172A]">
               Static & Info Pages
             </h1>
             <span
-              className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold ${
+              className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold ${
                 isLiveDb
-                  ? 'bg-emerald-100 text-emerald-800 border border-emerald-300'
-                  : 'bg-amber-100 text-amber-800 border border-amber-300'
+                  ? 'bg-emerald-50 text-emerald-800 border border-emerald-200'
+                  : 'bg-amber-50 text-amber-800 border border-amber-200'
               }`}
             >
               {isLiveDb ? (
                 <>
-                  <CheckCircle2 className="w-3 h-3 mr-1" /> Live Database
+                  <CheckCircle2 className="w-3.5 h-3.5 mr-1 text-emerald-600" /> Live Database
                 </>
               ) : (
                 <>
-                  <AlertCircle className="w-3 h-3 mr-1" /> Static Fallback
+                  <AlertCircle className="w-3.5 h-3.5 mr-1 text-amber-600" /> Static Fallback
                 </>
               )}
             </span>
           </div>
-          <p className="text-sm text-[#706D65] mt-1">
+          <p className="text-sm text-[#64748B] mt-1">
             Manage legal pages, FAQs, shipping policies, terms of service, and size guides.
           </p>
         </div>
@@ -288,7 +287,7 @@ export default function AdminInfoPagesPage() {
           <button
             onClick={fetchPages}
             disabled={loading}
-            className="flex items-center space-x-2 px-3.5 py-2 text-sm font-medium text-[#1A1918] bg-white border border-[#E5E0D8] rounded-lg hover:bg-[#FAF7F2] transition-colors disabled:opacity-50"
+            className="flex items-center space-x-2 px-3.5 py-2 text-sm font-semibold text-[#334155] bg-white border border-[#CBD5E1] rounded-xl hover:bg-[#F8FAFC] transition-colors disabled:opacity-50"
           >
             <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} />
             <span>Refresh</span>
@@ -296,7 +295,7 @@ export default function AdminInfoPagesPage() {
 
           <button
             onClick={() => handleOpenCreateModal()}
-            className="flex items-center space-x-2 px-4 py-2 text-sm font-medium text-white bg-[#0B4F3A] rounded-lg hover:bg-[#083C2C] transition-colors shadow-xs"
+            className="bg-[#0B4F3A] hover:bg-[#083C2C] text-white px-4 py-2.5 rounded-xl font-bold text-sm shadow-xs flex items-center space-x-2 transition-colors"
           >
             <Plus className="w-4 h-4" />
             <span>Create Page</span>
@@ -310,20 +309,20 @@ export default function AdminInfoPagesPage() {
           className={`p-4 rounded-xl border flex items-center justify-between transition-all ${
             notification.type === 'success'
               ? 'bg-emerald-50 border-emerald-200 text-emerald-800'
-              : 'bg-red-50 border-red-200 text-red-800'
+              : 'bg-rose-50 border-rose-200 text-rose-800'
           }`}
         >
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2.5">
             {notification.type === 'success' ? (
               <CheckCircle2 className="w-5 h-5 text-emerald-600 flex-shrink-0" />
             ) : (
-              <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0" />
+              <AlertCircle className="w-5 h-5 text-rose-600 flex-shrink-0" />
             )}
             <span className="text-sm font-medium">{notification.message}</span>
           </div>
           <button
             onClick={() => setNotification(null)}
-            className="text-gray-400 hover:text-gray-600"
+            className="text-slate-400 hover:text-slate-600 p-1"
           >
             <X className="w-4 h-4" />
           </button>
@@ -331,35 +330,35 @@ export default function AdminInfoPagesPage() {
       )}
 
       {/* Quick Add Presets Bar */}
-      <div className="bg-white p-4 rounded-xl border border-[#E5E0D8] shadow-xs space-y-3">
-        <span className="text-xs font-semibold text-[#706D65] uppercase tracking-wider block">
+      <div className="bg-white p-4 rounded-2xl border border-[#E2E8F0] shadow-xs space-y-3">
+        <span className="text-xs font-bold text-[#475569] uppercase tracking-wider block">
           Quick Preset Page Templates:
         </span>
         <div className="flex flex-wrap gap-2">
           <button
             onClick={() => handleOpenCreateModal('faq', 'Pertanyaan Umum (FAQ)')}
-            className="flex items-center space-x-1.5 px-3 py-1.5 bg-[#FAF7F2] border border-[#E5E0D8] hover:border-[#0B4F3A] rounded-lg text-xs font-medium text-[#1A1918] transition-colors"
+            className="flex items-center space-x-1.5 px-3 py-1.5 bg-[#F8FAFC] border border-[#CBD5E1] hover:border-[#0B4F3A] hover:bg-emerald-50/50 rounded-xl text-xs font-semibold text-[#0F172A] transition-colors"
           >
             <HelpCircle className="w-3.5 h-3.5 text-[#0B4F3A]" />
             <span>FAQ Page</span>
           </button>
           <button
             onClick={() => handleOpenCreateModal('shipping-returns', 'Pengiriman & Pengembalian')}
-            className="flex items-center space-x-1.5 px-3 py-1.5 bg-[#FAF7F2] border border-[#E5E0D8] hover:border-[#0B4F3A] rounded-lg text-xs font-medium text-[#1A1918] transition-colors"
+            className="flex items-center space-x-1.5 px-3 py-1.5 bg-[#F8FAFC] border border-[#CBD5E1] hover:border-[#0B4F3A] hover:bg-emerald-50/50 rounded-xl text-xs font-semibold text-[#0F172A] transition-colors"
           >
             <Truck className="w-3.5 h-3.5 text-[#0B4F3A]" />
             <span>Shipping & Returns</span>
           </button>
           <button
             onClick={() => handleOpenCreateModal('size-guide', 'Panduan Ukuran (Size Guide)')}
-            className="flex items-center space-x-1.5 px-3 py-1.5 bg-[#FAF7F2] border border-[#E5E0D8] hover:border-[#0B4F3A] rounded-lg text-xs font-medium text-[#1A1918] transition-colors"
+            className="flex items-center space-x-1.5 px-3 py-1.5 bg-[#F8FAFC] border border-[#CBD5E1] hover:border-[#0B4F3A] hover:bg-emerald-50/50 rounded-xl text-xs font-semibold text-[#0F172A] transition-colors"
           >
             <Ruler className="w-3.5 h-3.5 text-[#0B4F3A]" />
             <span>Size Guide</span>
           </button>
           <button
             onClick={() => handleOpenCreateModal('terms-conditions', 'Syarat & Ketentuan')}
-            className="flex items-center space-x-1.5 px-3 py-1.5 bg-[#FAF7F2] border border-[#E5E0D8] hover:border-[#0B4F3A] rounded-lg text-xs font-medium text-[#1A1918] transition-colors"
+            className="flex items-center space-x-1.5 px-3 py-1.5 bg-[#F8FAFC] border border-[#CBD5E1] hover:border-[#0B4F3A] hover:bg-emerald-50/50 rounded-xl text-xs font-semibold text-[#0F172A] transition-colors"
           >
             <ShieldCheck className="w-3.5 h-3.5 text-[#0B4F3A]" />
             <span>Terms & Conditions</span>
@@ -368,71 +367,71 @@ export default function AdminInfoPagesPage() {
       </div>
 
       {/* Search Input */}
-      <div className="bg-white p-4 rounded-xl border border-[#E5E0D8] shadow-xs flex justify-between items-center">
+      <div className="bg-white p-4 rounded-2xl border border-[#E2E8F0] shadow-xs flex justify-between items-center">
         <div className="relative flex-1 max-w-md">
-          <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-[#706D65]" />
+          <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-[#94A3B8]" />
           <input
             type="text"
             placeholder="Search page by title or slug..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 bg-[#FAF7F2] border border-[#E5E0D8] rounded-lg text-sm text-[#1A1918] focus:outline-none focus:border-[#0B4F3A] transition-colors"
+            className="w-full pl-10 pr-4 py-2 border border-[#CBD5E1] rounded-xl text-sm placeholder-[#94A3B8] text-[#0F172A] focus:ring-2 focus:ring-[#0B4F3A] bg-white focus:outline-hidden"
           />
         </div>
       </div>
 
       {/* Info Pages Data Table */}
-      <div className="bg-white rounded-xl border border-[#E5E0D8] shadow-xs overflow-hidden">
+      <div className="bg-white rounded-2xl border border-[#E2E8F0] shadow-xs overflow-hidden">
         {loading ? (
-          <div className="p-12 text-center text-[#706D65]">
+          <div className="p-12 text-center text-[#64748B]">
             <Loader2 className="w-8 h-8 animate-spin mx-auto text-[#0B4F3A] mb-3" />
             <p className="text-sm font-medium">Loading info pages...</p>
           </div>
         ) : filteredPages.length === 0 ? (
-          <div className="p-12 text-center text-[#706D65]">
-            <FileText className="w-12 h-12 mx-auto text-[#706D65]/40 mb-3" />
-            <p className="text-base font-serif font-bold text-[#1A1918]">No Info Pages Found</p>
+          <div className="p-12 text-center text-[#64748B]">
+            <FileText className="w-12 h-12 mx-auto text-[#CBD5E1] mb-3" />
+            <p className="text-base font-bold text-[#0F172A]">No Info Pages Found</p>
             <p className="text-xs mt-1">Create a new page using the button above or pick a template.</p>
           </div>
         ) : (
           <div className="overflow-x-auto">
-            <table className="w-full text-left text-sm text-[#1A1918]">
-              <thead className="bg-[#FAF7F2] text-[#706D65] uppercase text-xs tracking-wider font-semibold border-b border-[#E5E0D8]">
+            <table className="w-full text-left text-sm text-[#0F172A]">
+              <thead className="bg-[#F8FAFC] text-[#475569] uppercase text-[11px] tracking-wider font-bold border-b border-[#E2E8F0]">
                 <tr>
-                  <th className="py-3 px-4">Page Title</th>
-                  <th className="py-3 px-4">Slug Route</th>
-                  <th className="py-3 px-4">Content Summary</th>
-                  <th className="py-3 px-4">Last Updated</th>
-                  <th className="py-3 px-4 text-right">Actions</th>
+                  <th className="py-3.5 px-4">Page Title</th>
+                  <th className="py-3.5 px-4">Slug Route</th>
+                  <th className="py-3.5 px-4">Content Summary</th>
+                  <th className="py-3.5 px-4">Last Updated</th>
+                  <th className="py-3.5 px-4 text-right">Actions</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-[#E5E0D8]">
+              <tbody className="divide-y divide-[#F1F5F9]">
                 {filteredPages.map((page) => (
-                  <tr key={page.id || page.slug} className="hover:bg-[#FAF7F2]/60 transition-colors">
+                  <tr key={page.id || page.slug} className="hover:bg-[#F8FAFC]/70 transition-colors border-b border-[#F1F5F9]">
                     {/* Title */}
-                    <td className="py-3.5 px-4 font-semibold text-[#1A1918]">
+                    <td className="py-3.5 px-4 font-semibold text-[#0F172A]">
                       {page.title}
                     </td>
 
                     {/* Slug Route */}
-                    <td className="py-3.5 px-4 font-mono text-xs text-[#0B4F3A]">
+                    <td className="py-3.5 px-4">
                       <Link
                         href={`/id/info/${page.slug}`}
                         target="_blank"
-                        className="inline-flex items-center hover:underline"
+                        className="inline-flex items-center text-xs font-mono text-[#0B4F3A] bg-emerald-50 hover:bg-emerald-100 border border-emerald-200/60 px-2.5 py-1 rounded-lg transition-colors font-medium"
                       >
                         <span>/id/info/{page.slug}</span>
-                        <ExternalLink className="w-3 h-3 ml-1" />
+                        <ExternalLink className="w-3 h-3 ml-1 opacity-70" />
                       </Link>
                     </td>
 
                     {/* Summary */}
-                    <td className="py-3.5 px-4 text-xs text-[#706D65] max-w-sm truncate">
+                    <td className="py-3.5 px-4 text-xs text-[#64748B] max-w-sm truncate">
                       {page.content.length > 80 ? `${page.content.substring(0, 80)}...` : page.content}
                     </td>
 
                     {/* Updated date */}
-                    <td className="py-3.5 px-4 text-xs text-[#706D65]">
+                    <td className="py-3.5 px-4 text-xs text-[#64748B]">
                       {page.updated_at
                         ? new Date(page.updated_at).toLocaleDateString('id-ID', {
                             day: 'numeric',
@@ -443,29 +442,31 @@ export default function AdminInfoPagesPage() {
                     </td>
 
                     {/* Actions */}
-                    <td className="py-3.5 px-4 text-right space-x-2">
-                      <Link
-                        href={`/id/info/${page.slug}`}
-                        target="_blank"
-                        className="inline-block p-1.5 text-gray-600 hover:bg-gray-100 rounded-md transition-colors"
-                        title="View Public Page"
-                      >
-                        <Eye className="w-4 h-4" />
-                      </Link>
-                      <button
-                        onClick={() => handleOpenEditModal(page)}
-                        className="p-1.5 text-[#0B4F3A] hover:bg-[#0B4F3A]/10 rounded-md transition-colors"
-                        title="Edit Page"
-                      >
-                        <Edit2 className="w-4 h-4" />
-                      </button>
-                      <button
-                        onClick={() => setDeletingPage(page)}
-                        className="p-1.5 text-red-600 hover:bg-red-50 rounded-md transition-colors"
-                        title="Delete Page"
-                      >
-                        <Trash2 className="w-4 h-4" />
-                      </button>
+                    <td className="py-3.5 px-4 text-right">
+                      <div className="flex items-center justify-end space-x-1">
+                        <Link
+                          href={`/id/info/${page.slug}`}
+                          target="_blank"
+                          className="text-slate-600 hover:bg-slate-100 p-2 rounded-lg transition-colors"
+                          title="View Public Page"
+                        >
+                          <Eye className="w-4 h-4" />
+                        </Link>
+                        <button
+                          onClick={() => handleOpenEditModal(page)}
+                          className="text-[#0B4F3A] hover:bg-[#0B4F3A]/10 p-2 rounded-lg transition-colors"
+                          title="Edit Page"
+                        >
+                          <Edit2 className="w-4 h-4" />
+                        </button>
+                        <button
+                          onClick={() => setDeletingPage(page)}
+                          className="text-rose-600 hover:bg-rose-50 p-2 rounded-lg transition-colors"
+                          title="Delete Page"
+                        >
+                          <Trash2 className="w-4 h-4" />
+                        </button>
+                      </div>
                     </td>
                   </tr>
                 ))}
@@ -477,137 +478,139 @@ export default function AdminInfoPagesPage() {
 
       {/* Create / Edit Modal Dialog */}
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 overflow-y-auto">
-          <div className="bg-white rounded-2xl max-w-3xl w-full p-6 shadow-2xl border border-[#E5E0D8] space-y-6 max-h-[90vh] overflow-y-auto">
-            <div className="flex items-center justify-between border-b border-[#E5E0D8] pb-4">
-              <div className="flex items-center space-x-2">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/40 backdrop-blur-xs">
+          <div className="bg-white rounded-2xl max-w-3xl w-full shadow-xl border border-[#E2E8F0] overflow-hidden max-h-[90vh] flex flex-col animate-in fade-in zoom-in-95 duration-150">
+            <div className="bg-[#F8FAFC] px-6 py-4 border-b border-[#E2E8F0] flex items-center justify-between">
+              <div className="flex items-center space-x-2.5">
                 <FileText className="w-5 h-5 text-[#0B4F3A]" />
-                <h2 className="font-serif font-bold text-xl text-[#1A1918]">
+                <h2 className="font-bold text-lg text-[#0F172A]">
                   {editingPage ? 'Edit Info Page' : 'Create New Info Page'}
                 </h2>
               </div>
               <button
                 onClick={() => setIsModalOpen(false)}
-                className="text-[#706D65] hover:text-[#1A1918] p-1 rounded-lg"
+                className="text-[#64748B] hover:text-[#0F172A] p-1.5 rounded-lg hover:bg-slate-100 transition-colors"
               >
                 <X className="w-5 h-5" />
               </button>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-4 text-sm">
-              {/* Title & Slug */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-xs font-semibold text-[#1A1918] mb-1">
-                    Page Title *
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="e.g. FAQ & Cara Perawatan"
-                    value={formData.title}
-                    onChange={(e) => handleTitleChange(e.target.value)}
-                    className="w-full px-3 py-2 bg-[#FAF7F2] border border-[#E5E0D8] rounded-lg text-[#1A1918] focus:outline-none focus:border-[#0B4F3A]"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-xs font-semibold text-[#1A1918] mb-1">
-                    URL Slug * (/id/info/slug)
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="e.g. faq"
-                    value={formData.slug}
-                    onChange={(e) => {
-                      setIsSlugEdited(true);
-                      setFormData({ ...formData, slug: e.target.value });
-                    }}
-                    className="w-full px-3 py-2 bg-[#FAF7F2] border border-[#E5E0D8] rounded-lg text-[#1A1918] font-mono focus:outline-none focus:border-[#0B4F3A]"
-                    required
-                  />
-                </div>
-              </div>
-
-              {/* Tab Selector: Editor vs Live Preview */}
-              <div className="flex items-center justify-between border-b border-[#E5E0D8] pt-2">
-                <div className="flex space-x-2">
-                  <button
-                    type="button"
-                    onClick={() => setActiveTab('editor')}
-                    className={`flex items-center space-x-1.5 px-3 py-2 text-xs font-semibold border-b-2 transition-colors ${
-                      activeTab === 'editor'
-                        ? 'border-[#0B4F3A] text-[#0B4F3A]'
-                        : 'border-transparent text-[#706D65] hover:text-[#1A1918]'
-                    }`}
-                  >
-                    <Code className="w-3.5 h-3.5" />
-                    <span>Content Editor</span>
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setActiveTab('preview')}
-                    className={`flex items-center space-x-1.5 px-3 py-2 text-xs font-semibold border-b-2 transition-colors ${
-                      activeTab === 'preview'
-                        ? 'border-[#0B4F3A] text-[#0B4F3A]'
-                        : 'border-transparent text-[#706D65] hover:text-[#1A1918]'
-                    }`}
-                  >
-                    <Eye className="w-3.5 h-3.5" />
-                    <span>Live Preview</span>
-                  </button>
-                </div>
-              </div>
-
-              {/* Editor Tab */}
-              {activeTab === 'editor' && (
-                <div className="space-y-2">
-                  <div className="flex justify-between items-center">
-                    <label className="block text-xs font-semibold text-[#1A1918]">
-                      Content (Markdown or JSON structured format)
+            <form onSubmit={handleSubmit} className="flex flex-col flex-1 overflow-hidden">
+              <div className="p-6 space-y-4 text-sm overflow-y-auto flex-1">
+                {/* Title & Slug */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-xs font-bold uppercase tracking-wider text-[#475569] mb-1.5">
+                      Page Title *
                     </label>
-                    <span className="text-[11px] text-[#706D65]">
-                      Supports standard Markdown or JSON sections schema
-                    </span>
+                    <input
+                      type="text"
+                      placeholder="e.g. FAQ & Cara Perawatan"
+                      value={formData.title}
+                      onChange={(e) => handleTitleChange(e.target.value)}
+                      className="w-full px-3.5 py-2.5 border border-[#CBD5E1] rounded-xl text-sm placeholder-[#94A3B8] text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-[#0B4F3A] bg-white"
+                      required
+                    />
                   </div>
-                  <textarea
-                    rows={12}
-                    placeholder="Write content here..."
-                    value={formData.content}
-                    onChange={(e) => setFormData({ ...formData, content: e.target.value })}
-                    className="w-full p-3 bg-[#FAF7F2] border border-[#E5E0D8] rounded-lg font-mono text-xs text-[#1A1918] focus:outline-none focus:border-[#0B4F3A]"
-                    required
-                  />
-                </div>
-              )}
 
-              {/* Live Preview Tab */}
-              {activeTab === 'preview' && (
-                <div className="p-4 bg-[#FAF7F2] border border-[#E5E0D8] rounded-lg space-y-4 max-h-96 overflow-y-auto">
-                  <h3 className="font-serif font-bold text-2xl text-[#1A1918]">
-                    {formData.title || 'Page Title Preview'}
-                  </h3>
-                  <div className="prose prose-sm max-w-none text-[#4A4741] whitespace-pre-wrap font-sans">
-                    {formData.content || <em className="text-gray-400">No content entered yet...</em>}
+                  <div>
+                    <label className="block text-xs font-bold uppercase tracking-wider text-[#475569] mb-1.5">
+                      URL Slug * (/id/info/slug)
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="e.g. faq"
+                      value={formData.slug}
+                      onChange={(e) => {
+                        setIsSlugEdited(true);
+                        setFormData({ ...formData, slug: e.target.value });
+                      }}
+                      className="w-full px-3.5 py-2.5 border border-[#CBD5E1] rounded-xl text-sm placeholder-[#94A3B8] text-[#0F172A] font-mono focus:outline-none focus:ring-2 focus:ring-[#0B4F3A] bg-white"
+                      required
+                    />
                   </div>
                 </div>
-              )}
+
+                {/* Tab Selector: Editor vs Live Preview */}
+                <div className="flex items-center justify-between border-b border-[#E2E8F0] pt-2">
+                  <div className="flex space-x-2">
+                    <button
+                      type="button"
+                      onClick={() => setActiveTab('editor')}
+                      className={`flex items-center space-x-1.5 px-3 py-2 text-xs font-semibold border-b-2 transition-colors ${
+                        activeTab === 'editor'
+                          ? 'border-[#0B4F3A] text-[#0B4F3A]'
+                          : 'border-transparent text-[#64748B] hover:text-[#0F172A]'
+                      }`}
+                    >
+                      <Code className="w-3.5 h-3.5" />
+                      <span>Content Editor</span>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setActiveTab('preview')}
+                      className={`flex items-center space-x-1.5 px-3 py-2 text-xs font-semibold border-b-2 transition-colors ${
+                        activeTab === 'preview'
+                          ? 'border-[#0B4F3A] text-[#0B4F3A]'
+                          : 'border-transparent text-[#64748B] hover:text-[#0F172A]'
+                      }`}
+                    >
+                      <Eye className="w-3.5 h-3.5" />
+                      <span>Live Preview</span>
+                    </button>
+                  </div>
+                </div>
+
+                {/* Editor Tab */}
+                {activeTab === 'editor' && (
+                  <div className="space-y-2">
+                    <div className="flex justify-between items-center">
+                      <label className="block text-xs font-bold uppercase tracking-wider text-[#475569]">
+                        Content (Markdown or JSON structured format)
+                      </label>
+                      <span className="text-[11px] text-[#64748B]">
+                        Supports standard Markdown or JSON sections schema
+                      </span>
+                    </div>
+                    <textarea
+                      rows={12}
+                      placeholder="Write content here..."
+                      value={formData.content}
+                      onChange={(e) => setFormData({ ...formData, content: e.target.value })}
+                      className="w-full p-3.5 border border-[#CBD5E1] rounded-xl font-mono text-xs text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-[#0B4F3A] bg-white"
+                      required
+                    />
+                  </div>
+                )}
+
+                {/* Live Preview Tab */}
+                {activeTab === 'preview' && (
+                  <div className="p-4 bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl space-y-4 max-h-96 overflow-y-auto">
+                    <h3 className="font-bold text-2xl text-[#0F172A]">
+                      {formData.title || 'Page Title Preview'}
+                    </h3>
+                    <div className="prose prose-sm max-w-none text-[#334155] whitespace-pre-wrap font-sans">
+                      {formData.content || <em className="text-slate-400">No content entered yet...</em>}
+                    </div>
+                  </div>
+                )}
+              </div>
 
               {/* Modal Buttons */}
-              <div className="flex justify-end space-x-3 border-t border-[#E5E0D8] pt-4">
+              <div className="px-6 py-4 bg-[#F8FAFC] border-t border-[#E2E8F0] flex justify-end space-x-3">
                 <button
                   type="button"
                   onClick={() => setIsModalOpen(false)}
-                  className="px-4 py-2 border border-[#E5E0D8] rounded-lg text-xs font-semibold text-[#706D65] hover:bg-[#FAF7F2]"
+                  className="px-4 py-2.5 text-sm font-semibold text-[#475569] hover:text-[#0F172A] bg-white border border-[#CBD5E1] rounded-xl hover:bg-slate-50 transition-colors"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
                   disabled={saving}
-                  className="flex items-center space-x-2 px-5 py-2 bg-[#0B4F3A] text-white rounded-lg text-xs font-semibold hover:bg-[#083C2C] disabled:opacity-50 shadow-xs"
+                  className="bg-[#0B4F3A] hover:bg-[#083C2C] text-white px-5 py-2.5 rounded-xl font-bold text-sm shadow-xs transition-colors disabled:opacity-50 flex items-center space-x-2"
                 >
-                  {saving && <Loader2 className="w-3.5 h-3.5 animate-spin" />}
+                  {saving && <Loader2 className="w-4 h-4 animate-spin" />}
                   <span>{editingPage ? 'Save Changes' : 'Create Page'}</span>
                 </button>
               </div>
@@ -618,35 +621,39 @@ export default function AdminInfoPagesPage() {
 
       {/* Delete Confirmation Modal */}
       {deletingPage && (
-        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl border border-[#E5E0D8] space-y-4">
-            <div className="flex items-center space-x-3 text-red-600">
-              <AlertCircle className="w-6 h-6" />
-              <h3 className="font-serif font-bold text-lg text-[#1A1918]">Confirm Page Deletion</h3>
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/40 backdrop-blur-xs">
+          <div className="bg-white rounded-2xl max-w-md w-full shadow-xl border border-[#E2E8F0] overflow-hidden animate-in fade-in zoom-in-95 duration-150">
+            <div className="p-6 space-y-4">
+              <div className="flex items-center space-x-3 text-rose-600">
+                <div className="p-2.5 bg-rose-50 rounded-xl">
+                  <Trash2 className="w-6 h-6" />
+                </div>
+                <h3 className="font-bold text-lg text-[#0F172A]">Confirm Page Deletion</h3>
+              </div>
+
+              <p className="text-sm text-[#64748B]">
+                Are you sure you want to delete info page{' '}
+                <strong className="text-[#0F172A]">&quot;{deletingPage.title}&quot;</strong>? Visitors accessing{' '}
+                <code className="bg-slate-100 px-1.5 py-0.5 rounded text-rose-600 font-mono text-xs">
+                  /id/info/{deletingPage.slug}
+                </code>{' '}
+                will see fallback contents.
+              </p>
             </div>
 
-            <p className="text-xs text-[#706D65]">
-              Are you sure you want to delete info page{' '}
-              <strong className="text-[#1A1918]">&quot;{deletingPage.title}&quot;</strong>? Visitors accessing{' '}
-              <code className="bg-gray-100 px-1 py-0.5 rounded text-red-600">
-                /id/info/{deletingPage.slug}
-              </code>{' '}
-              will see fallback contents.
-            </p>
-
-            <div className="flex justify-end space-x-3 pt-3 border-t border-[#E5E0D8]">
+            <div className="px-6 py-4 bg-[#F8FAFC] border-t border-[#E2E8F0] flex justify-end space-x-3">
               <button
                 onClick={() => setDeletingPage(null)}
-                className="px-4 py-2 border border-[#E5E0D8] rounded-lg text-xs font-semibold text-[#706D65] hover:bg-[#FAF7F2]"
+                className="px-4 py-2.5 text-sm font-semibold text-[#475569] hover:text-[#0F172A] bg-white border border-[#CBD5E1] rounded-xl hover:bg-slate-50 transition-colors"
               >
                 Cancel
               </button>
               <button
                 onClick={handleDeleteConfirm}
                 disabled={isDeleting}
-                className="flex items-center space-x-2 px-4 py-2 bg-red-600 text-white rounded-lg text-xs font-semibold hover:bg-red-700 disabled:opacity-50"
+                className="bg-rose-600 hover:bg-rose-700 text-white px-5 py-2.5 rounded-xl font-bold text-sm shadow-xs transition-colors disabled:opacity-50 flex items-center space-x-2"
               >
-                {isDeleting && <Loader2 className="w-3.5 h-3.5 animate-spin" />}
+                {isDeleting && <Loader2 className="w-4 h-4 animate-spin" />}
                 <span>Delete Page</span>
               </button>
             </div>

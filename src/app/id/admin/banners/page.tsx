@@ -188,7 +188,6 @@ export default function AdminBannersPage() {
         setBanners((prev) => prev.map((b) => (b.id === data.id ? data : b)));
         showNotification('success', 'Banner updated successfully!');
       } else {
-        // Fallback update for mock state if unconfigured
         const updatedMock: Banner = { ...editingBanner, ...payload };
         setBanners((prev) => prev.map((b) => (b.id === editingBanner.id ? updatedMock : b)));
         showNotification('success', 'Banner updated (Mock mode)!');
@@ -206,7 +205,6 @@ export default function AdminBannersPage() {
         setBanners((prev) => [...prev, data]);
         showNotification('success', 'Banner created successfully!');
       } else {
-        // Fallback create for mock state
         const newMock: Banner = {
           id: `b-mock-${Date.now()}`,
           ...payload,
@@ -265,44 +263,44 @@ export default function AdminBannersPage() {
   const getTypeBadgeClass = (type: string) => {
     switch (type) {
       case 'hero':
-        return 'bg-purple-100 text-purple-800 border-purple-200';
+        return 'bg-emerald-50 text-emerald-800 border border-emerald-200/80 text-xs font-semibold px-2.5 py-1 rounded-full';
       case 'promo':
-        return 'bg-amber-100 text-amber-800 border-amber-200';
+        return 'bg-amber-50 text-amber-800 border border-amber-200 text-xs font-semibold px-2.5 py-1 rounded-full';
       case 'lifestyle':
-        return 'bg-teal-100 text-teal-800 border-teal-200';
+        return 'bg-teal-50 text-teal-800 border border-teal-200 text-xs font-semibold px-2.5 py-1 rounded-full';
       default:
-        return 'bg-gray-100 text-gray-800 border-gray-200';
+        return 'bg-slate-100 text-slate-700 border border-slate-200 text-xs font-semibold px-2.5 py-1 rounded-full';
     }
   };
 
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 border-b border-[#E5E0D8] pb-5">
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 border-b border-[#E2E8F0] pb-5">
         <div>
-          <div className="flex items-center space-x-2">
-            <h1 className="font-serif font-bold text-2xl sm:text-3xl text-[#1A1918]">
+          <div className="flex items-center space-x-2.5">
+            <h1 className="font-bold text-2xl sm:text-3xl text-[#0F172A]">
               Banner Management
             </h1>
             <span
-              className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold ${
+              className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold ${
                 isLiveDb
-                  ? 'bg-emerald-100 text-emerald-800 border border-emerald-300'
-                  : 'bg-amber-100 text-amber-800 border border-amber-300'
+                  ? 'bg-emerald-50 text-emerald-800 border border-emerald-200'
+                  : 'bg-amber-50 text-amber-800 border border-amber-200'
               }`}
             >
               {isLiveDb ? (
                 <>
-                  <CheckCircle2 className="w-3 h-3 mr-1" /> Live Database
+                  <CheckCircle2 className="w-3.5 h-3.5 mr-1 text-emerald-600" /> Live Database
                 </>
               ) : (
                 <>
-                  <AlertCircle className="w-3 h-3 mr-1" /> Static Fallback
+                  <AlertCircle className="w-3.5 h-3.5 mr-1 text-amber-600" /> Static Fallback
                 </>
               )}
             </span>
           </div>
-          <p className="text-sm text-[#706D65] mt-1">
+          <p className="text-sm text-[#64748B] mt-1">
             Manage storefront hero carousels, promo headers, and lifestyle visual assets.
           </p>
         </div>
@@ -311,7 +309,7 @@ export default function AdminBannersPage() {
           <button
             onClick={fetchBanners}
             disabled={loading}
-            className="flex items-center space-x-2 px-3.5 py-2 text-sm font-medium text-[#1A1918] bg-white border border-[#E5E0D8] rounded-lg hover:bg-[#FAF7F2] transition-colors disabled:opacity-50"
+            className="flex items-center space-x-2 px-3.5 py-2 text-sm font-semibold text-[#334155] bg-white border border-[#CBD5E1] rounded-xl hover:bg-[#F8FAFC] transition-colors disabled:opacity-50"
           >
             <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} />
             <span>Refresh</span>
@@ -319,7 +317,7 @@ export default function AdminBannersPage() {
 
           <button
             onClick={handleOpenCreateModal}
-            className="flex items-center space-x-2 px-4 py-2 text-sm font-medium text-white bg-[#0B4F3A] rounded-lg hover:bg-[#083C2C] transition-colors shadow-xs"
+            className="bg-[#0B4F3A] hover:bg-[#083C2C] text-white px-4 py-2.5 rounded-xl font-bold text-sm shadow-xs flex items-center space-x-2 transition-colors"
           >
             <Plus className="w-4 h-4" />
             <span>Add Banner</span>
@@ -333,20 +331,20 @@ export default function AdminBannersPage() {
           className={`p-4 rounded-xl border flex items-center justify-between transition-all ${
             notification.type === 'success'
               ? 'bg-emerald-50 border-emerald-200 text-emerald-800'
-              : 'bg-red-50 border-red-200 text-red-800'
+              : 'bg-rose-50 border-rose-200 text-rose-800'
           }`}
         >
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2.5">
             {notification.type === 'success' ? (
               <CheckCircle2 className="w-5 h-5 text-emerald-600 flex-shrink-0" />
             ) : (
-              <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0" />
+              <AlertCircle className="w-5 h-5 text-rose-600 flex-shrink-0" />
             )}
             <span className="text-sm font-medium">{notification.message}</span>
           </div>
           <button
             onClick={() => setNotification(null)}
-            className="text-gray-400 hover:text-gray-600"
+            className="text-slate-400 hover:text-slate-600 p-1"
           >
             <X className="w-4 h-4" />
           </button>
@@ -354,28 +352,28 @@ export default function AdminBannersPage() {
       )}
 
       {/* Search & Type Filters */}
-      <div className="bg-white p-4 rounded-xl border border-[#E5E0D8] shadow-xs flex flex-col sm:flex-row gap-4 justify-between items-stretch sm:items-center">
+      <div className="bg-white p-4 rounded-2xl border border-[#E2E8F0] shadow-xs flex flex-col sm:flex-row gap-4 justify-between items-stretch sm:items-center">
         <div className="relative flex-1 max-w-md">
-          <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-[#706D65]" />
+          <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-[#94A3B8]" />
           <input
             type="text"
             placeholder="Search by title, subtitle, or CTA..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 bg-[#FAF7F2] border border-[#E5E0D8] rounded-lg text-sm text-[#1A1918] focus:outline-none focus:border-[#0B4F3A] transition-colors"
+            className="w-full pl-10 pr-4 py-2 border border-[#CBD5E1] rounded-xl text-sm placeholder-[#94A3B8] text-[#0F172A] focus:ring-2 focus:ring-[#0B4F3A] bg-white focus:outline-hidden"
           />
         </div>
 
-        <div className="flex items-center space-x-2 overflow-x-auto pb-1 sm:pb-0">
-          <span className="text-xs font-semibold text-[#706D65] uppercase mr-1">Type:</span>
+        <div className="flex items-center space-x-1.5 bg-[#F8FAFC] p-1.5 rounded-xl border border-[#E2E8F0]">
+          <span className="text-[10px] font-bold text-[#475569] uppercase px-1">Type:</span>
           {(['all', 'hero', 'promo', 'lifestyle'] as const).map((type) => (
             <button
               key={type}
               onClick={() => setSelectedType(type)}
-              className={`px-3 py-1.5 rounded-lg text-xs font-semibold capitalize transition-colors ${
+              className={`px-3 py-1 rounded-lg text-xs font-semibold capitalize transition-colors ${
                 selectedType === type
-                  ? 'bg-[#0B4F3A] text-white'
-                  : 'bg-[#FAF7F2] text-[#4A4741] hover:bg-[#F2ECE1]'
+                  ? 'bg-[#0B4F3A] text-white shadow-xs'
+                  : 'text-[#475569] hover:text-[#0B4F3A]'
               }`}
             >
               {type}
@@ -385,38 +383,38 @@ export default function AdminBannersPage() {
       </div>
 
       {/* Banner Data Table */}
-      <div className="bg-white rounded-xl border border-[#E5E0D8] shadow-xs overflow-hidden">
+      <div className="bg-white rounded-2xl border border-[#E2E8F0] shadow-xs overflow-hidden">
         {loading ? (
-          <div className="p-12 text-center text-[#706D65]">
+          <div className="p-12 text-center text-[#64748B]">
             <Loader2 className="w-8 h-8 animate-spin mx-auto text-[#0B4F3A] mb-3" />
             <p className="text-sm font-medium">Loading banners...</p>
           </div>
         ) : filteredBanners.length === 0 ? (
-          <div className="p-12 text-center text-[#706D65]">
-            <ImageIcon className="w-12 h-12 mx-auto text-[#706D65]/40 mb-3" />
-            <p className="text-base font-serif font-bold text-[#1A1918]">No Banners Found</p>
+          <div className="p-12 text-center text-[#64748B]">
+            <ImageIcon className="w-12 h-12 mx-auto text-[#CBD5E1] mb-3" />
+            <p className="text-base font-bold text-[#0F172A]">No Banners Found</p>
             <p className="text-xs mt-1">Try adjusting your search filters or add a new banner.</p>
           </div>
         ) : (
           <div className="overflow-x-auto">
-            <table className="w-full text-left text-sm text-[#1A1918]">
-              <thead className="bg-[#FAF7F2] text-[#706D65] uppercase text-xs tracking-wider font-semibold border-b border-[#E5E0D8]">
+            <table className="w-full text-left text-sm text-[#0F172A]">
+              <thead className="bg-[#F8FAFC] text-[#475569] uppercase text-[11px] tracking-wider font-bold border-b border-[#E2E8F0]">
                 <tr>
-                  <th className="py-3 px-4">Preview</th>
-                  <th className="py-3 px-4">Banner Details</th>
-                  <th className="py-3 px-4">Type</th>
-                  <th className="py-3 px-4">CTA Link</th>
-                  <th className="py-3 px-4 text-center">Order</th>
-                  <th className="py-3 px-4 text-center">Status</th>
-                  <th className="py-3 px-4 text-right">Actions</th>
+                  <th className="py-3.5 px-4">Preview</th>
+                  <th className="py-3.5 px-4">Banner Details</th>
+                  <th className="py-3.5 px-4">Type</th>
+                  <th className="py-3.5 px-4">CTA Link</th>
+                  <th className="py-3.5 px-4 text-center">Order</th>
+                  <th className="py-3.5 px-4 text-center">Status</th>
+                  <th className="py-3.5 px-4 text-right">Actions</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-[#E5E0D8]">
+              <tbody className="divide-y divide-[#F1F5F9]">
                 {filteredBanners.map((banner) => (
-                  <tr key={banner.id} className="hover:bg-[#FAF7F2]/60 transition-colors">
+                  <tr key={banner.id} className="hover:bg-[#F8FAFC]/70 transition-colors border-b border-[#F1F5F9]">
                     {/* Image Preview */}
                     <td className="py-3 px-4">
-                      <div className="relative w-24 h-14 bg-[#FAF7F2] rounded-lg overflow-hidden border border-[#E5E0D8] flex items-center justify-center">
+                      <div className="relative w-24 h-14 bg-[#F8FAFC] rounded-xl overflow-hidden border border-[#E2E8F0] flex items-center justify-center">
                         {banner.image_url_desktop ? (
                           /* eslint-disable-next-line @next/next/no-img-element */
                           <img
@@ -425,28 +423,24 @@ export default function AdminBannersPage() {
                             className="w-full h-full object-cover"
                           />
                         ) : (
-                          <ImageIcon className="w-6 h-6 text-[#706D65]/40" />
+                          <ImageIcon className="w-6 h-6 text-[#94A3B8]" />
                         )}
                       </div>
                     </td>
 
                     {/* Banner Title & Subtitle */}
                     <td className="py-3 px-4">
-                      <p className="font-semibold text-[#1A1918]">
-                        {banner.title || <span className="text-[#706D65] italic">No Title</span>}
+                      <p className="font-semibold text-[#0F172A]">
+                        {banner.title || <span className="text-[#94A3B8] italic">No Title</span>}
                       </p>
-                      <p className="text-xs text-[#706D65] truncate max-w-xs mt-0.5">
+                      <p className="text-xs text-[#64748B] truncate max-w-xs mt-0.5">
                         {banner.subtitle || 'No subtitle provided'}
                       </p>
                     </td>
 
                     {/* Type Badge */}
                     <td className="py-3 px-4">
-                      <span
-                        className={`inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold uppercase border ${getTypeBadgeClass(
-                          banner.type
-                        )}`}
-                      >
+                      <span className={getTypeBadgeClass(banner.type)}>
                         {banner.type}
                       </span>
                     </td>
@@ -458,17 +452,17 @@ export default function AdminBannersPage() {
                           <span className="text-xs font-semibold text-[#0B4F3A]">
                             {banner.cta_label}
                           </span>
-                          <span className="text-[11px] text-[#706D65] block font-mono truncate max-w-[150px]">
+                          <span className="text-[11px] text-[#64748B] block font-mono truncate max-w-[150px]">
                             {banner.cta_url || '#'}
                           </span>
                         </div>
                       ) : (
-                        <span className="text-xs text-[#706D65] italic">None</span>
+                        <span className="text-xs text-[#94A3B8] italic">None</span>
                       )}
                     </td>
 
                     {/* Sort Order */}
-                    <td className="py-3 px-4 text-center font-mono font-bold text-[#1A1918]">
+                    <td className="py-3 px-4 text-center font-mono font-bold text-[#0F172A]">
                       {banner.sort_order}
                     </td>
 
@@ -476,10 +470,10 @@ export default function AdminBannersPage() {
                     <td className="py-3 px-4 text-center">
                       <button
                         onClick={() => handleToggleActive(banner)}
-                        className={`px-2.5 py-1 rounded-full text-xs font-semibold border transition-colors ${
+                        className={`transition-colors ${
                           banner.is_active
-                            ? 'bg-emerald-100 text-emerald-800 border-emerald-300 hover:bg-emerald-200'
-                            : 'bg-gray-100 text-gray-700 border-gray-300 hover:bg-gray-200'
+                            ? 'bg-emerald-50 text-emerald-800 border border-emerald-200 text-xs font-semibold px-2.5 py-1 rounded-full hover:bg-emerald-100'
+                            : 'bg-slate-100 text-slate-700 border border-slate-200 text-xs font-semibold px-2.5 py-1 rounded-full hover:bg-slate-200'
                         }`}
                       >
                         {banner.is_active ? 'Active' : 'Inactive'}
@@ -487,21 +481,23 @@ export default function AdminBannersPage() {
                     </td>
 
                     {/* Actions */}
-                    <td className="py-3 px-4 text-right space-x-2">
-                      <button
-                        onClick={() => handleOpenEditModal(banner)}
-                        className="p-1.5 text-[#0B4F3A] hover:bg-[#0B4F3A]/10 rounded-md transition-colors"
-                        title="Edit Banner"
-                      >
-                        <Edit2 className="w-4 h-4" />
-                      </button>
-                      <button
-                        onClick={() => setDeletingBanner(banner)}
-                        className="p-1.5 text-red-600 hover:bg-red-50 rounded-md transition-colors"
-                        title="Delete Banner"
-                      >
-                        <Trash2 className="w-4 h-4" />
-                      </button>
+                    <td className="py-3 px-4 text-right">
+                      <div className="flex items-center justify-end space-x-1">
+                        <button
+                          onClick={() => handleOpenEditModal(banner)}
+                          className="text-[#0B4F3A] hover:bg-[#0B4F3A]/10 p-2 rounded-lg transition-colors"
+                          title="Edit Banner"
+                        >
+                          <Edit2 className="w-4 h-4" />
+                        </button>
+                        <button
+                          onClick={() => setDeletingBanner(banner)}
+                          className="text-rose-600 hover:bg-rose-50 p-2 rounded-lg transition-colors"
+                          title="Delete Banner"
+                        >
+                          <Trash2 className="w-4 h-4" />
+                        </button>
+                      </div>
                     </td>
                   </tr>
                 ))}
@@ -513,204 +509,206 @@ export default function AdminBannersPage() {
 
       {/* Create / Edit Modal Dialog */}
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 overflow-y-auto">
-          <div className="bg-white rounded-2xl max-w-2xl w-full p-6 shadow-2xl border border-[#E5E0D8] space-y-6 max-h-[90vh] overflow-y-auto">
-            <div className="flex items-center justify-between border-b border-[#E5E0D8] pb-4">
-              <div className="flex items-center space-x-2">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/40 backdrop-blur-xs">
+          <div className="bg-white rounded-2xl max-w-2xl w-full shadow-xl border border-[#E2E8F0] overflow-hidden max-h-[90vh] flex flex-col animate-in fade-in zoom-in-95 duration-150">
+            <div className="bg-[#F8FAFC] px-6 py-4 border-b border-[#E2E8F0] flex items-center justify-between">
+              <div className="flex items-center space-x-2.5">
                 <ImageIcon className="w-5 h-5 text-[#0B4F3A]" />
-                <h2 className="font-serif font-bold text-xl text-[#1A1918]">
+                <h2 className="font-bold text-lg text-[#0F172A]">
                   {editingBanner ? 'Edit Banner' : 'Create New Banner'}
                 </h2>
               </div>
               <button
                 onClick={() => setIsModalOpen(false)}
-                className="text-[#706D65] hover:text-[#1A1918] p-1 rounded-lg"
+                className="text-[#64748B] hover:text-[#0F172A] p-1.5 rounded-lg hover:bg-slate-100 transition-colors"
               >
                 <X className="w-5 h-5" />
               </button>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-4 text-sm">
-              {/* Type & Sort Order */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-xs font-semibold text-[#1A1918] mb-1">
-                    Banner Type *
-                  </label>
-                  <select
-                    value={formData.type}
-                    onChange={(e) =>
-                      setFormData({ ...formData, type: e.target.value as 'hero' | 'promo' | 'lifestyle' })
-                    }
-                    className="w-full px-3 py-2 bg-[#FAF7F2] border border-[#E5E0D8] rounded-lg text-[#1A1918] focus:outline-none focus:border-[#0B4F3A]"
-                  >
-                    <option value="hero">Hero Slider (Homepage top)</option>
-                    <option value="promo">Promotional Header Banner</option>
-                    <option value="lifestyle">Lifestyle Showcase Banner</option>
-                  </select>
-                </div>
+            <form onSubmit={handleSubmit} className="flex flex-col flex-1 overflow-hidden">
+              <div className="p-6 space-y-4 text-sm overflow-y-auto flex-1">
+                {/* Type & Sort Order */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-xs font-bold uppercase tracking-wider text-[#475569] mb-1.5">
+                      Banner Type *
+                    </label>
+                    <select
+                      value={formData.type}
+                      onChange={(e) =>
+                        setFormData({ ...formData, type: e.target.value as 'hero' | 'promo' | 'lifestyle' })
+                      }
+                      className="w-full px-3.5 py-2.5 border border-[#CBD5E1] rounded-xl text-sm text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-[#0B4F3A] bg-white"
+                    >
+                      <option value="hero">Hero Slider (Homepage top)</option>
+                      <option value="promo">Promotional Header Banner</option>
+                      <option value="lifestyle">Lifestyle Showcase Banner</option>
+                    </select>
+                  </div>
 
-                <div>
-                  <label className="block text-xs font-semibold text-[#1A1918] mb-1">
-                    Sort Order Priority
-                  </label>
-                  <input
-                    type="number"
-                    min="0"
-                    value={formData.sort_order}
-                    onChange={(e) => setFormData({ ...formData, sort_order: Number(e.target.value) })}
-                    className="w-full px-3 py-2 bg-[#FAF7F2] border border-[#E5E0D8] rounded-lg text-[#1A1918] focus:outline-none focus:border-[#0B4F3A]"
-                  />
-                </div>
-              </div>
-
-              {/* Title & Subtitle */}
-              <div>
-                <label className="block text-xs font-semibold text-[#1A1918] mb-1">
-                  Banner Title (Optional)
-                </label>
-                <input
-                  type="text"
-                  placeholder="e.g. Koleksi Terbaru PLEATSSSI"
-                  value={formData.title}
-                  onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-                  className="w-full px-3 py-2 bg-[#FAF7F2] border border-[#E5E0D8] rounded-lg text-[#1A1918] focus:outline-none focus:border-[#0B4F3A]"
-                />
-              </div>
-
-              <div>
-                <label className="block text-xs font-semibold text-[#1A1918] mb-1">
-                  Subtitle (Optional)
-                </label>
-                <input
-                  type="text"
-                  placeholder="e.g. Temukan keanggunan lipit modern"
-                  value={formData.subtitle}
-                  onChange={(e) => setFormData({ ...formData, subtitle: e.target.value })}
-                  className="w-full px-3 py-2 bg-[#FAF7F2] border border-[#E5E0D8] rounded-lg text-[#1A1918] focus:outline-none focus:border-[#0B4F3A]"
-                />
-              </div>
-
-              {/* Desktop Image Upload & URL */}
-              <div className="space-y-2 border-t border-[#E5E0D8] pt-3">
-                <label className="block text-xs font-semibold text-[#1A1918]">
-                  Desktop Image Asset *
-                </label>
-                <div className="flex gap-2">
-                  <input
-                    type="text"
-                    placeholder="https://... or /images/hero-desktop.png"
-                    value={formData.image_url_desktop}
-                    onChange={(e) => setFormData({ ...formData, image_url_desktop: e.target.value })}
-                    className="flex-1 px-3 py-2 bg-[#FAF7F2] border border-[#E5E0D8] rounded-lg text-xs text-[#1A1918] focus:outline-none focus:border-[#0B4F3A]"
-                  />
-                  <label className="flex items-center space-x-1.5 px-3 py-2 bg-[#0B4F3A]/10 text-[#0B4F3A] hover:bg-[#0B4F3A]/20 rounded-lg cursor-pointer text-xs font-semibold transition-colors">
-                    {uploadingDesktop ? (
-                      <Loader2 className="w-4 h-4 animate-spin" />
-                    ) : (
-                      <Upload className="w-4 h-4" />
-                    )}
-                    <span>Upload File</span>
+                  <div>
+                    <label className="block text-xs font-bold uppercase tracking-wider text-[#475569] mb-1.5">
+                      Sort Order Priority
+                    </label>
                     <input
-                      type="file"
-                      accept="image/*"
-                      onChange={handleDesktopImageUpload}
-                      disabled={uploadingDesktop}
-                      className="hidden"
+                      type="number"
+                      min="0"
+                      value={formData.sort_order}
+                      onChange={(e) => setFormData({ ...formData, sort_order: Number(e.target.value) })}
+                      className="w-full px-3.5 py-2.5 border border-[#CBD5E1] rounded-xl text-sm placeholder-[#94A3B8] text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-[#0B4F3A] bg-white"
                     />
-                  </label>
+                  </div>
                 </div>
-              </div>
 
-              {/* Mobile Image Upload & URL */}
-              <div className="space-y-2">
-                <label className="block text-xs font-semibold text-[#1A1918]">
-                  Mobile Image Asset (Optional - falls back to Desktop Image)
-                </label>
-                <div className="flex gap-2">
+                {/* Title & Subtitle */}
+                <div>
+                  <label className="block text-xs font-bold uppercase tracking-wider text-[#475569] mb-1.5">
+                    Banner Title (Optional)
+                  </label>
                   <input
                     type="text"
-                    placeholder="https://... or /images/hero-mobile.png"
-                    value={formData.image_url_mobile}
-                    onChange={(e) => setFormData({ ...formData, image_url_mobile: e.target.value })}
-                    className="flex-1 px-3 py-2 bg-[#FAF7F2] border border-[#E5E0D8] rounded-lg text-xs text-[#1A1918] focus:outline-none focus:border-[#0B4F3A]"
+                    placeholder="e.g. Koleksi Terbaru PLEATSSSI"
+                    value={formData.title}
+                    onChange={(e) => setFormData({ ...formData, title: e.target.value })}
+                    className="w-full px-3.5 py-2.5 border border-[#CBD5E1] rounded-xl text-sm placeholder-[#94A3B8] text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-[#0B4F3A] bg-white"
                   />
-                  <label className="flex items-center space-x-1.5 px-3 py-2 bg-[#0B4F3A]/10 text-[#0B4F3A] hover:bg-[#0B4F3A]/20 rounded-lg cursor-pointer text-xs font-semibold transition-colors">
-                    {uploadingMobile ? (
-                      <Loader2 className="w-4 h-4 animate-spin" />
-                    ) : (
-                      <Upload className="w-4 h-4" />
-                    )}
-                    <span>Upload File</span>
+                </div>
+
+                <div>
+                  <label className="block text-xs font-bold uppercase tracking-wider text-[#475569] mb-1.5">
+                    Subtitle (Optional)
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="e.g. Temukan keanggunan lipit modern"
+                    value={formData.subtitle}
+                    onChange={(e) => setFormData({ ...formData, subtitle: e.target.value })}
+                    className="w-full px-3.5 py-2.5 border border-[#CBD5E1] rounded-xl text-sm placeholder-[#94A3B8] text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-[#0B4F3A] bg-white"
+                  />
+                </div>
+
+                {/* Desktop Image Upload & URL */}
+                <div className="space-y-2 border-t border-[#E2E8F0] pt-4">
+                  <label className="block text-xs font-bold uppercase tracking-wider text-[#475569]">
+                    Desktop Image Asset *
+                  </label>
+                  <div className="flex gap-2">
                     <input
-                      type="file"
-                      accept="image/*"
-                      onChange={handleMobileImageUpload}
-                      disabled={uploadingMobile}
-                      className="hidden"
+                      type="text"
+                      placeholder="https://... or /images/hero-desktop.png"
+                      value={formData.image_url_desktop}
+                      onChange={(e) => setFormData({ ...formData, image_url_desktop: e.target.value })}
+                      className="flex-1 px-3.5 py-2.5 border border-[#CBD5E1] rounded-xl text-xs placeholder-[#94A3B8] text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-[#0B4F3A] bg-white"
                     />
-                  </label>
+                    <label className="flex items-center space-x-1.5 px-4 py-2.5 bg-[#0B4F3A]/10 text-[#0B4F3A] hover:bg-[#0B4F3A]/20 rounded-xl cursor-pointer text-xs font-bold transition-colors">
+                      {uploadingDesktop ? (
+                        <Loader2 className="w-4 h-4 animate-spin" />
+                      ) : (
+                        <Upload className="w-4 h-4" />
+                      )}
+                      <span>Upload File</span>
+                      <input
+                        type="file"
+                        accept="image/*"
+                        onChange={handleDesktopImageUpload}
+                        disabled={uploadingDesktop}
+                        className="hidden"
+                      />
+                    </label>
+                  </div>
                 </div>
-              </div>
 
-              {/* CTA Label & URL */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 border-t border-[#E5E0D8] pt-3">
-                <div>
-                  <label className="block text-xs font-semibold text-[#1A1918] mb-1">
-                    CTA Button Label (Optional)
+                {/* Mobile Image Upload & URL */}
+                <div className="space-y-2">
+                  <label className="block text-xs font-bold uppercase tracking-wider text-[#475569]">
+                    Mobile Image Asset (Optional - falls back to Desktop Image)
                   </label>
+                  <div className="flex gap-2">
+                    <input
+                      type="text"
+                      placeholder="https://... or /images/hero-mobile.png"
+                      value={formData.image_url_mobile}
+                      onChange={(e) => setFormData({ ...formData, image_url_mobile: e.target.value })}
+                      className="flex-1 px-3.5 py-2.5 border border-[#CBD5E1] rounded-xl text-xs placeholder-[#94A3B8] text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-[#0B4F3A] bg-white"
+                    />
+                    <label className="flex items-center space-x-1.5 px-4 py-2.5 bg-[#0B4F3A]/10 text-[#0B4F3A] hover:bg-[#0B4F3A]/20 rounded-xl cursor-pointer text-xs font-bold transition-colors">
+                      {uploadingMobile ? (
+                        <Loader2 className="w-4 h-4 animate-spin" />
+                      ) : (
+                        <Upload className="w-4 h-4" />
+                      )}
+                      <span>Upload File</span>
+                      <input
+                        type="file"
+                        accept="image/*"
+                        onChange={handleMobileImageUpload}
+                        disabled={uploadingMobile}
+                        className="hidden"
+                      />
+                    </label>
+                  </div>
+                </div>
+
+                {/* CTA Label & URL */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 border-t border-[#E2E8F0] pt-4">
+                  <div>
+                    <label className="block text-xs font-bold uppercase tracking-wider text-[#475569] mb-1.5">
+                      CTA Button Label (Optional)
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="e.g. Belanja Sekarang"
+                      value={formData.cta_label}
+                      onChange={(e) => setFormData({ ...formData, cta_label: e.target.value })}
+                      className="w-full px-3.5 py-2.5 border border-[#CBD5E1] rounded-xl text-sm placeholder-[#94A3B8] text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-[#0B4F3A] bg-white"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-bold uppercase tracking-wider text-[#475569] mb-1.5">
+                      CTA Target URL (Optional)
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="e.g. /id/skirts or /id/new-arrivals"
+                      value={formData.cta_url}
+                      onChange={(e) => setFormData({ ...formData, cta_url: e.target.value })}
+                      className="w-full px-3.5 py-2.5 border border-[#CBD5E1] rounded-xl text-sm placeholder-[#94A3B8] text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-[#0B4F3A] bg-white"
+                    />
+                  </div>
+                </div>
+
+                {/* Active Toggle */}
+                <div className="flex items-center space-x-2.5 pt-2">
                   <input
-                    type="text"
-                    placeholder="e.g. Belanja Sekarang"
-                    value={formData.cta_label}
-                    onChange={(e) => setFormData({ ...formData, cta_label: e.target.value })}
-                    className="w-full px-3 py-2 bg-[#FAF7F2] border border-[#E5E0D8] rounded-lg text-[#1A1918] focus:outline-none focus:border-[#0B4F3A]"
+                    type="checkbox"
+                    id="is_active"
+                    checked={formData.is_active}
+                    onChange={(e) => setFormData({ ...formData, is_active: e.target.checked })}
+                    className="w-4 h-4 text-[#0B4F3A] rounded border-[#CBD5E1] focus:ring-[#0B4F3A]"
                   />
-                </div>
-
-                <div>
-                  <label className="block text-xs font-semibold text-[#1A1918] mb-1">
-                    CTA Target URL (Optional)
+                  <label htmlFor="is_active" className="text-xs font-semibold text-[#0F172A]">
+                    Publish banner immediately (Active)
                   </label>
-                  <input
-                    type="text"
-                    placeholder="e.g. /id/skirts or /id/new-arrivals"
-                    value={formData.cta_url}
-                    onChange={(e) => setFormData({ ...formData, cta_url: e.target.value })}
-                    className="w-full px-3 py-2 bg-[#FAF7F2] border border-[#E5E0D8] rounded-lg text-[#1A1918] focus:outline-none focus:border-[#0B4F3A]"
-                  />
                 </div>
-              </div>
-
-              {/* Active Toggle */}
-              <div className="flex items-center space-x-2 pt-2">
-                <input
-                  type="checkbox"
-                  id="is_active"
-                  checked={formData.is_active}
-                  onChange={(e) => setFormData({ ...formData, is_active: e.target.checked })}
-                  className="w-4 h-4 text-[#0B4F3A] rounded border-[#E5E0D8] focus:ring-[#0B4F3A]"
-                />
-                <label htmlFor="is_active" className="text-xs font-semibold text-[#1A1918]">
-                  Publish banner immediately (Active)
-                </label>
               </div>
 
               {/* Modal Actions */}
-              <div className="flex justify-end space-x-3 border-t border-[#E5E0D8] pt-4">
+              <div className="px-6 py-4 bg-[#F8FAFC] border-t border-[#E2E8F0] flex justify-end space-x-3">
                 <button
                   type="button"
                   onClick={() => setIsModalOpen(false)}
-                  className="px-4 py-2 border border-[#E5E0D8] rounded-lg text-xs font-semibold text-[#706D65] hover:bg-[#FAF7F2] transition-colors"
+                  className="px-4 py-2.5 text-sm font-semibold text-[#475569] hover:text-[#0F172A] bg-white border border-[#CBD5E1] rounded-xl hover:bg-slate-50 transition-colors"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
                   disabled={saving}
-                  className="flex items-center space-x-2 px-5 py-2 bg-[#0B4F3A] text-white rounded-lg text-xs font-semibold hover:bg-[#083C2C] transition-colors disabled:opacity-50 shadow-xs"
+                  className="bg-[#0B4F3A] hover:bg-[#083C2C] text-white px-5 py-2.5 rounded-xl font-bold text-sm shadow-xs transition-colors disabled:opacity-50 flex items-center space-x-2"
                 >
-                  {saving && <Loader2 className="w-3.5 h-3.5 animate-spin" />}
+                  {saving && <Loader2 className="w-4 h-4 animate-spin" />}
                   <span>{editingBanner ? 'Save Changes' : 'Create Banner'}</span>
                 </button>
               </div>
@@ -721,32 +719,36 @@ export default function AdminBannersPage() {
 
       {/* Delete Confirmation Modal */}
       {deletingBanner && (
-        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl border border-[#E5E0D8] space-y-4">
-            <div className="flex items-center space-x-3 text-red-600">
-              <AlertCircle className="w-6 h-6" />
-              <h3 className="font-serif font-bold text-lg text-[#1A1918]">Confirm Banner Deletion</h3>
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/40 backdrop-blur-xs">
+          <div className="bg-white rounded-2xl max-w-md w-full shadow-xl border border-[#E2E8F0] overflow-hidden animate-in fade-in zoom-in-95 duration-150">
+            <div className="p-6 space-y-4">
+              <div className="flex items-center space-x-3 text-rose-600">
+                <div className="p-2.5 bg-rose-50 rounded-xl">
+                  <Trash2 className="w-6 h-6" />
+                </div>
+                <h3 className="font-bold text-lg text-[#0F172A]">Confirm Banner Deletion</h3>
+              </div>
+
+              <p className="text-sm text-[#64748B]">
+                Are you sure you want to delete the banner{' '}
+                <strong className="text-[#0F172A]">&quot;{deletingBanner.title || 'Untitled Banner'}&quot;</strong>?
+                This action cannot be undone.
+              </p>
             </div>
 
-            <p className="text-xs text-[#706D65]">
-              Are you sure you want to delete the banner{' '}
-              <strong className="text-[#1A1918]">&quot;{deletingBanner.title || 'Untitled Banner'}&quot;</strong>?
-              This action cannot be undone.
-            </p>
-
-            <div className="flex justify-end space-x-3 pt-3 border-t border-[#E5E0D8]">
+            <div className="px-6 py-4 bg-[#F8FAFC] border-t border-[#E2E8F0] flex justify-end space-x-3">
               <button
                 onClick={() => setDeletingBanner(null)}
-                className="px-4 py-2 border border-[#E5E0D8] rounded-lg text-xs font-semibold text-[#706D65] hover:bg-[#FAF7F2]"
+                className="px-4 py-2.5 text-sm font-semibold text-[#475569] hover:text-[#0F172A] bg-white border border-[#CBD5E1] rounded-xl hover:bg-slate-50 transition-colors"
               >
                 Cancel
               </button>
               <button
                 onClick={handleDeleteConfirm}
                 disabled={isDeleting}
-                className="flex items-center space-x-2 px-4 py-2 bg-red-600 text-white rounded-lg text-xs font-semibold hover:bg-red-700 disabled:opacity-50"
+                className="bg-rose-600 hover:bg-rose-700 text-white px-5 py-2.5 rounded-xl font-bold text-sm shadow-xs transition-colors disabled:opacity-50 flex items-center space-x-2"
               >
-                {isDeleting && <Loader2 className="w-3.5 h-3.5 animate-spin" />}
+                {isDeleting && <Loader2 className="w-4 h-4 animate-spin" />}
                 <span>Delete Banner</span>
               </button>
             </div>

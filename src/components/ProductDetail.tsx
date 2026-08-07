@@ -1,14 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Check, Heart, MapPin, Minus, Plus, ShieldCheck } from "lucide-react";
+import { Check, Heart, MapPin, ShieldCheck } from "lucide-react";
+import { AnimatedAccordion, type AccordionItem } from "./AnimatedAccordion";
 import type { CategorySlug, Product } from "@/data/products";
 import { CATEGORY_LABELS } from "@/data/categories";
 import { cn } from "@/lib/utils";
 import { useCartStore } from "@/store/useCartStore";
 import { ProductCarousel } from "./ProductCarousel";
+import { gsap, ScrollTrigger } from "@/lib/gsap";
 
 const SIZE_OPTIONS: Record<CategorySlug, string[]> = {
   skirts: ["S", "M", "L", "XL"],
@@ -82,12 +84,56 @@ export function ProductDetail({
   const [selectedSize, setSelectedSize] = useState(sizes[0]);
   const [wishlisted, setWishlisted] = useState(false);
   const [added, setAdded] = useState(false);
-  const [openSection, setOpenSection] = useState<number | null>(0);
-
   const addItem = useCartStore((state) => state.addItem);
 
   const isTrending = product.collections?.includes("trending-now");
   const hasVariants = variants.length > 1;
+
+  // Refs for GSAP
+  const galleryRef = useRef<HTMLDivElement>(null);
+  const infoRef = useRef<HTMLDivElement>(null);
+  const categorySectionRef = useRef<HTMLElement>(null);
+
+  /* ── Mount entrance animation ── */
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+      tl.fromTo(
+        galleryRef.current,
+        { opacity: 0, x: -48 },
+        { opacity: 1, x: 0, duration: 0.7 }
+      ).fromTo(
+        infoRef.current,
+        { opacity: 0, x: 48 },
+        { opacity: 1, x: 0, duration: 0.7 },
+        "-=0.5"
+      );
+
+      // Category pills stagger on scroll
+      const pills = categorySectionRef.current
+        ? Array.from(categorySectionRef.current.querySelectorAll("a"))
+        : [];
+      gsap.fromTo(
+        pills,
+        { opacity: 0, y: 20, scale: 0.9 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.4,
+          ease: "back.out(1.3)",
+          stagger: 0.06,
+          scrollTrigger: {
+            trigger: categorySectionRef.current,
+            start: "top 88%",
+            once: true,
+          } satisfies ScrollTrigger.Vars,
+        }
+      );
+    });
+
+    return () => ctx.revert();
+  }, []);
 
   function handleAddToBag() {
     const numericPrice = parseInt(product.price.replace(/[^\d]/g, ""), 10) || 0;
@@ -109,7 +155,7 @@ export function ProductDetail({
   const productDetails = PRODUCT_DETAILS[product.category] || PRODUCT_DETAILS.others;
   const categoryLabel = CATEGORY_LABELS[product.category] || product.category;
 
-  const accordionSections = [
+  const accordionSections: AccordionItem[] = [
     {
       title: "Editor's Note",
       content: (
@@ -176,7 +222,7 @@ export function ProductDetail({
 
         <div className="mt-8 grid gap-10 lg:grid-cols-2">
           {/* ── Galeri ─────────────────────────────────────────────── */}
-          <div className="flex flex-col-reverse gap-4 md:flex-row">
+          <div ref={galleryRef} className="flex flex-col-reverse gap-4 md:flex-row will-change-transform">
             {/* Thumbnails */}
             <div className="flex gap-2.5 overflow-x-auto md:flex-col md:overflow-visible">
               {gallery.map((src, index) => (
@@ -222,7 +268,7 @@ export function ProductDetail({
           </div>
 
           {/* ── Info produk ────────────────────────────────────────── */}
-          <div className="flex flex-col justify-start">
+          <div ref={infoRef} className="flex flex-col justify-start will-change-transform">
             <h1 className="font-['Italiana',serif] text-2xl font-normal leading-snug text-[#1A1918] md:text-3xl">
               {product.name}
               {product.color && <span className="font-sans text-lg font-normal text-[#786E65]"> - {product.color}</span>}
@@ -319,7 +365,7 @@ export function ProductDetail({
                     onClick={() => setSelectedSize(size)}
                     aria-pressed={selectedSize === size}
                     className={cn(
-                      "min-w-[48px] rounded-sm border px-4 py-2.5 text-[13px] font-medium transition-all",
+                      "min-w-[48px] rounded-sm border px-4 py-2.5 text-[13px] font-medium transition-all hover:scale-105 active:scale-95",
                       selectedSize === size
                         ? "border-[#0B4F3A] bg-[#0B4F3A] text-[#FAF7F2] shadow-sm"
                         : "border-[#EADFD4] bg-[#FAF7F2] text-[#1A1918] hover:border-[#0B4F3A] hover:text-[#0B4F3A]"
@@ -337,10 +383,10 @@ export function ProductDetail({
                 type="button"
                 onClick={handleAddToBag}
                 className={cn(
-                  "flex h-12 flex-1 items-center justify-center gap-2 rounded-sm text-[12px] font-medium uppercase tracking-[0.2em] transition-all shadow-sm",
+                  "flex h-12 flex-1 items-center justify-center gap-2 rounded-sm text-[12px] font-medium uppercase tracking-[0.2em] transition-all shadow-sm active:scale-[0.97]",
                   added
                     ? "bg-[#073628] text-[#FAF7F2]"
-                    : "bg-[#0B4F3A] text-[#FAF7F2] hover:bg-[#073628]"
+                    : "bg-[#0B4F3A] text-[#FAF7F2] hover:bg-[#073628] hover:shadow-md"
                 )}
               >
                 {added && <Check size={16} strokeWidth={2} />}
@@ -351,7 +397,7 @@ export function ProductDetail({
                 onClick={() => setWishlisted((v) => !v)}
                 aria-label={wishlisted ? "Hapus dari wishlist" : "Tambahkan ke wishlist"}
                 aria-pressed={wishlisted}
-                className="flex h-12 w-12 items-center justify-center rounded-sm border border-[#EADFD4] bg-[#FAF7F2] text-[#1A1918] transition-colors hover:border-[#0B4F3A] hover:text-[#0B4F3A]"
+                className="flex h-12 w-12 items-center justify-center rounded-sm border border-[#EADFD4] bg-[#FAF7F2] text-[#1A1918] transition-all hover:border-[#0B4F3A] hover:text-[#0B4F3A] hover:scale-110 active:scale-90"
               >
                 <Heart
                   size={20}
@@ -376,34 +422,8 @@ export function ProductDetail({
               </span>
             </div>
 
-            {/* Accordion */}
-            <div className="mt-8 border-t border-[#EADFD4]">
-              {accordionSections.map((section, index) => {
-                const isOpen = openSection === index;
-                return (
-                  <div key={section.title} className="border-b border-[#EADFD4]">
-                    <button
-                      type="button"
-                      onClick={() => setOpenSection(isOpen ? null : index)}
-                      aria-expanded={isOpen}
-                      className="flex w-full items-center justify-between py-4 text-left font-['Italiana',serif] text-sm font-semibold uppercase tracking-[0.15em] text-[#1A1918] transition-colors hover:text-[#0B4F3A]"
-                    >
-                      {section.title}
-                      {isOpen ? (
-                        <Minus size={16} strokeWidth={1.5} className="text-[#0B4F3A]" />
-                      ) : (
-                        <Plus size={16} strokeWidth={1.5} className="text-[#786E65]" />
-                      )}
-                    </button>
-                    {isOpen && (
-                      <div className="pb-5 text-[13px] leading-relaxed text-[#5A524A]">
-                        {section.content}
-                      </div>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
+            {/* Accordion — GSAP animated height */}
+            <AnimatedAccordion sections={accordionSections} defaultOpen={0} />
           </div>
         </div>
       </div>
@@ -413,7 +433,7 @@ export function ProductDetail({
       <ProductCarousel title="Padukan Dengan" products={pairingProducts} />
 
       {/* Kategori terkait */}
-      <section className="mx-auto mt-8 w-full max-w-[1600px] border-t border-[#EADFD4] px-4 py-12 xl:px-8">
+      <section ref={categorySectionRef} className="mx-auto mt-8 w-full max-w-[1600px] border-t border-[#EADFD4] px-4 py-12 xl:px-8">
         <h2 className="mb-6 text-center font-['Italiana',serif] text-xl font-normal uppercase tracking-[0.2em] text-[#1A1918]">
           Kategori Terkait
         </h2>
@@ -422,7 +442,7 @@ export function ProductDetail({
             <Link
               key={slug}
               href={`/id/${slug}`}
-              className="rounded-sm border border-[#EADFD4] bg-[#FAF7F2] px-6 py-2.5 text-[12px] font-medium uppercase tracking-[0.15em] text-[#1A1918] transition-all hover:border-[#0B4F3A] hover:bg-[#0B4F3A] hover:text-[#FAF7F2]"
+              className="rounded-sm border border-[#EADFD4] bg-[#FAF7F2] px-6 py-2.5 text-[12px] font-medium uppercase tracking-[0.15em] text-[#1A1918] transition-all hover:border-[#0B4F3A] hover:bg-[#0B4F3A] hover:text-[#FAF7F2] hover:scale-105 active:scale-95"
             >
               {CATEGORY_LABELS[slug]}
             </Link>

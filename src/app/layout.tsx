@@ -1,5 +1,7 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import "./globals.css";
+import { EditorialCursor } from "@/components/EditorialCursor";
+import { PageTransition } from "@/components/PageTransition";
 
 export const metadata: Metadata = {
   title: "PLEATSSSI Indonesia - Belanja di situs resmi",
@@ -17,7 +19,15 @@ export default function RootLayout({
       <head>
         <meta name="theme-color" content="#FAF7F2" />
       </head>
-      <body className="min-h-full flex flex-col bg-[#FAF7F2] text-[#1A1918] font-sans antialiased">{children}</body>
+      <body className="min-h-full flex flex-col bg-[#FAF7F2] text-[#1A1918] font-sans antialiased">
+        {/* Page-wipe transition overlay */}
+        <PageTransition />
+
+        {/* Custom editorial cursor (desktop only) */}
+        <EditorialCursor />
+
+        {children}
+      </body>
     </html>
   );
 }

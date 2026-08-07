@@ -1,3 +1,4 @@
+import { headers } from 'next/headers';
 import { Header, type NavItem } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { getDynamicCategories } from '@/lib/services/categoryService';
@@ -41,6 +42,14 @@ export default async function IdLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Skip public Header/Footer for all admin routes
+  const headersList = await headers();
+  const pathname = headersList.get('x-pathname') ?? headersList.get('x-invoke-path') ?? '';
+  const isAdminRoute = pathname.startsWith('/id/admin');
+  if (isAdminRoute) {
+    return <>{children}</>;
+  }
+
   const navItems = await buildNavItems();
 
   return (

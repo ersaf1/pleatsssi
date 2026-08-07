@@ -2,8 +2,15 @@ import { NextResponse, type NextRequest } from 'next/server';
 import { createServerClient } from '@supabase/ssr';
 import { isSupabaseConfigured } from '@/lib/services/serviceUtils';
 
-export async function middleware(request: NextRequest) {
-  let response = NextResponse.next({ request });
+export async function proxy(request: NextRequest) {
+  const requestHeaders = new Headers(request.headers);
+  requestHeaders.set('x-pathname', request.nextUrl.pathname);
+
+  let response = NextResponse.next({
+    request: {
+      headers: requestHeaders,
+    },
+  });
 
   // If Supabase credentials are missing or default placeholders, bypass auth guard gracefully
   if (!isSupabaseConfigured()) {
@@ -21,7 +28,11 @@ export async function middleware(request: NextRequest) {
           },
           setAll(cookiesToSet) {
             cookiesToSet.forEach(({ name, value }) => request.cookies.set(name, value));
-            response = NextResponse.next({ request });
+            response = NextResponse.next({
+              request: {
+                headers: requestHeaders,
+              },
+            });
             cookiesToSet.forEach(({ name, value, options }) =>
               response.cookies.set(name, value, options)
             );
@@ -78,7 +89,7 @@ export async function middleware(request: NextRequest) {
       }
     }
   } catch (err) {
-    console.error('Middleware Supabase auth error:', err);
+    console.error('Proxy Supabase auth error:', err);
   }
 
   return response;

@@ -1,6 +1,6 @@
 import { expect, test, vi, describe, beforeEach } from 'vitest';
 import { NextRequest } from 'next/server';
-import { middleware } from '../src/middleware';
+import { proxy as middleware } from '../src/proxy';
 import { createServerClient } from '@supabase/ssr';
 import { isSupabaseConfigured } from '../src/lib/services/serviceUtils';
 
