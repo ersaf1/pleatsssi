@@ -1,10 +1,10 @@
-# Product Card Redesign Implementation Plan
+# Product Card Redesign & Family Grouping Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Redesign product cards with Parisian haute-couture aesthetics, distinct model hover crossfade, and floating action pill while ensuring valid model hover images in dataset.
+**Goal:** Redesign product cards with Parisian haute-couture aesthetics, distinct model hover crossfade, floating action pill, and group products by base family name (e.g. BAGGY, AGATE, ALPHA) into 1 consolidated card per family on visual catalog views.
 
-**Architecture:** Update dataset model image mappings, revamp `ProductCard.tsx` with smooth CSS/Tailwind transitions and GSAP scroll triggers, and verify rendering across grid/carousel pages.
+**Architecture:** Add `groupProductsByFamily` helper in `src/data/products.ts`, update `ProductCard.tsx` with couture styling + floating actions + model hover, and integrate grouped product display into `ProductGrid.tsx`.
 
 **Tech Stack:** Next.js 16 (App Router, React 19, TypeScript), Tailwind CSS v4, Lucide React icons, GSAP / ScrollTrigger.
 
@@ -16,54 +16,58 @@
 
 ---
 
-### Task 1: Product Dataset Model Hover Image Alignment
+### Task 1: Product Family Consolidation Helper & Data Mapping
 
 **Files:**
+- Modify: `src/data/products.ts`
 - Modify: `src/data/pleatsssi-products.json`
-- Verify: `src/data/products.ts`
 
 **Interfaces:**
-- Produces: Updated `pleatsssi-products.json` where products have distinct `hoverImage` paths showcasing model photos or secondary editorial views rather than duplicate flat shots.
+- Produces: 
+  - `GroupedProduct` interface & `groupProductsByFamily(products: Product[]): GroupedProduct[]` helper in `src/data/products.ts`.
+  - Updated `pleatsssi-products.json` with distinct `hoverImage` paths for model photos.
 
-- [ ] **Step 1: Inspect product folders in public/images/products/**
-  Verify existing product image directories (e.g., `RAIA ONE`, `AURORA ONE`, `AGATE`, etc.) to map secondary model/top/skirt photos to `hoverImage`.
+- [ ] **Step 1: Implement family extraction helper in products.ts**
+  Create `groupProductsByFamily` function that groups items like `BAGGY SHORT PANTS`, `BAGGY SKIRT`, `BAGGY PANTS` under base name `"BAGGY"` with piece count, price range, and combined gallery/swatches.
 
-- [ ] **Step 2: Update pleatsssi-products.json hoverImage properties**
-  Set distinct model hover images across product entries in `src/data/pleatsssi-products.json`.
+- [ ] **Step 2: Update model hover images in pleatsssi-products.json**
+  Set distinct model hover images across product families.
 
-- [ ] **Step 3: Verify TypeScript build & data parsing**
-  Run `npm run typecheck` to confirm JSON data matches `Product` interface.
+- [ ] **Step 3: Verify TypeScript build & type check**
+  Run: `npm run typecheck`
+  Expected: PASS
 
-- [ ] **Step 4: Commit task changes**
+- [ ] **Step 4: Commit Task 1 changes**
   ```bash
-  git add src/data/pleatsssi-products.json
-  git commit -m "feat(data): update product hoverImage paths with model editorial shots"
+  git add src/data/products.ts src/data/pleatsssi-products.json
+  git commit -m "feat(data): add groupProductsByFamily helper and update model hover images"
   ```
 
 ---
 
-### Task 2: Refactor ProductCard Component Layout & Model Hover Transition
+### Task 2: Refactor ProductCard Component with Model Hover & Floating Actions
 
 **Files:**
 - Modify: `src/components/ProductCard.tsx`
 
 **Interfaces:**
-- Consumes: `Product` interface from `src/data/products.ts`
+- Consumes: `Product` or `GroupedProduct` interface from `src/data/products.ts`
 - Produces: Redesigned `ProductCard` component featuring:
   - `aspect-[3/4]` frame with `rounded-md`, `#FAF7F2` background, and `#EADFD4` border.
   - Dual-layer image crossfade: Product flat shot -> Model photo on hover.
   - Floating Action Pill (`"Lihat Detail"` + Heart icon) with `backdrop-blur-md bg-[#1A1918]/90 text-white` sliding up on hover.
+  - Family pieces pill (e.g. `"3 Varian Model"`) if grouped.
   - Status badge in signature emerald (`#0B4F3A`).
   - Refined typography with emerald title hover transition.
 
 - [ ] **Step 1: Redesign ProductCard component structure**
-  Update `ProductCard.tsx` with floating action pill, glassmorphism blur, rounded-md framing, and model hover transition.
+  Update `ProductCard.tsx` with floating action pill, glassmorphism blur, rounded-md framing, piece badge, and model hover transition.
 
 - [ ] **Step 2: Run typecheck and linting**
   Run: `npm run typecheck`
   Expected: PASS
 
-- [ ] **Step 3: Commit component redesign**
+- [ ] **Step 3: Commit Task 2 changes**
   ```bash
   git add src/components/ProductCard.tsx
   git commit -m "feat(ui): redesign ProductCard with couture frame, model hover, and floating actions"
@@ -71,18 +75,21 @@
 
 ---
 
-### Task 3: End-to-End Verification & Build Check
+### Task 3: ProductGrid & Catalog Integration & Verification
 
 **Files:**
-- Check: `src/components/ProductGrid.tsx`
-- Check: `src/components/ProductCarousel.tsx`
+- Modify: `src/components/ProductGrid.tsx`
+- Modify: `src/components/CategoryPage.tsx`
 
-- [ ] **Step 1: Run full project check**
+- [ ] **Step 1: Integrate family grouping in ProductGrid**
+  Update `ProductGrid.tsx` to automatically group products by family when rendering visual grids.
+
+- [ ] **Step 2: Run full project check**
   Run: `npm run check`
   Expected: Lint, Typecheck, and Next.js Build all pass without errors.
 
-- [ ] **Step 2: Final commit**
+- [ ] **Step 3: Commit Task 3 changes**
   ```bash
-  git add -A
-  git commit -m "chore: verify product card redesign in grid and carousel"
+  git add src/components/ProductGrid.tsx src/components/CategoryPage.tsx
+  git commit -m "feat(grid): integrate product family grouping in catalog grid"
   ```
