@@ -1,13 +1,15 @@
 'use client';
 
 import { useRef, useEffect } from 'react';
-import type { Product } from '@/data/products';
+import type { Product, GroupedProduct } from '@/data/products';
+import { groupProductsByFamily } from '@/data/products';
 import { ProductCard } from './ProductCard';
 import { gsap, ScrollTrigger } from '@/lib/gsap';
 
 interface ProductGridProps {
-  products: Product[];
+  products: (Product | GroupedProduct)[];
   title?: string;
+  groupByFamily?: boolean;
 }
 
 /**
@@ -20,7 +22,18 @@ function waveDelay(index: number, cols: number): number {
   return row * 0.04 + col * 0.07;
 }
 
-export function ProductGrid({ products, title }: ProductGridProps) {
+export function ProductGrid({ products, title, groupByFamily = true }: ProductGridProps) {
+  const displayProducts: (Product | GroupedProduct)[] = (() => {
+    if (groupByFamily === false) {
+      return products;
+    }
+    const isAlreadyGrouped = products.some((p) => 'items' in p || 'familyName' in p);
+    if (isAlreadyGrouped) {
+      return products;
+    }
+    return groupProductsByFamily(products as Product[]);
+  })();
+
   const titleWrapRef = useRef<HTMLDivElement>(null);
   const lineLeftRef = useRef<HTMLSpanElement>(null);
   const lineRightRef = useRef<HTMLSpanElement>(null);
@@ -88,7 +101,7 @@ export function ProductGrid({ products, title }: ProductGridProps) {
       )}
 
       <div className="grid grid-cols-2 gap-6 md:grid-cols-3 md:gap-8 xl:grid-cols-4">
-        {products.map((product, i) => (
+        {displayProducts.map((product, i) => (
           <ProductCard
             key={product.id}
             product={product}
