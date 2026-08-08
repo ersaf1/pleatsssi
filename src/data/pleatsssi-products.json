@@ -9,7 +9,7 @@
     "priceValue": 960000,
     "installment": "IDR320,000",
     "image": "/images/products/AGATE/AGATE SKIRT.jpg",
-    "hoverImage": "/images/products/AGATE/AGATE SKIRT.jpg",
+    "hoverImage": "/images/products/AGATE/AGATE TOP.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/AGATE/AGATE SKIRT.jpg"
@@ -34,7 +34,7 @@
     "priceValue": 865000,
     "installment": "IDR288,333",
     "image": "/images/products/AGATE/AGATE TOP.jpg",
-    "hoverImage": "/images/products/AGATE/AGATE TOP.jpg",
+    "hoverImage": "/images/products/AGATE/AGATE SKIRT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/AGATE/AGATE TOP.jpg"
@@ -59,7 +59,7 @@
     "priceValue": 980000,
     "installment": "IDR326,666",
     "image": "/images/products/APLHA/ALPHA SHORT PANTS.jpg",
-    "hoverImage": "/images/products/APLHA/ALPHA SHORT PANTS.jpg",
+    "hoverImage": "/images/products/APLHA/ALPHA SKIRT.JPG",
     "swatches": [],
     "gallery": [
       "/images/products/APLHA/ALPHA SHORT PANTS.jpg"
@@ -84,7 +84,7 @@
     "priceValue": 810000,
     "installment": "IDR270,000",
     "image": "/images/products/APLHA/ALPHA SKIRT.JPG",
-    "hoverImage": "/images/products/APLHA/ALPHA SKIRT.JPG",
+    "hoverImage": "/images/products/APLHA/ALPHA SHORT PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/APLHA/ALPHA SKIRT.JPG"
@@ -109,7 +109,7 @@
     "priceValue": 820000,
     "installment": "IDR273,333",
     "image": "/images/products/APLHA/ALPHA TOP.jpg",
-    "hoverImage": "/images/products/APLHA/ALPHA TOP.jpg",
+    "hoverImage": "/images/products/APLHA/ALPHA SHORT PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/APLHA/ALPHA TOP.jpg"
@@ -134,7 +134,7 @@
     "priceValue": 850000,
     "installment": "IDR283,333",
     "image": "/images/products/APLHA/APLHA PANTS.jpg",
-    "hoverImage": "/images/products/APLHA/APLHA PANTS.jpg",
+    "hoverImage": "/images/products/APLHA/ALPHA SHORT PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/APLHA/APLHA PANTS.jpg"
@@ -159,7 +159,7 @@
     "priceValue": 970000,
     "installment": "IDR323,333",
     "image": "/images/products/ARROW/ARROW PANTS.jpg",
-    "hoverImage": "/images/products/ARROW/ARROW PANTS.jpg",
+    "hoverImage": "/images/products/ARROW/ARROW SHORT PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/ARROW/ARROW PANTS.jpg"
@@ -184,7 +184,7 @@
     "priceValue": 910000,
     "installment": "IDR303,333",
     "image": "/images/products/ARROW/ARROW SHORT PANTS.jpg",
-    "hoverImage": "/images/products/ARROW/ARROW SHORT PANTS.jpg",
+    "hoverImage": "/images/products/ARROW/ARROW PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/ARROW/ARROW SHORT PANTS.jpg"
@@ -209,7 +209,7 @@
     "priceValue": 975000,
     "installment": "IDR325,000",
     "image": "/images/products/ARROW/ARROW SKIRT.JPG",
-    "hoverImage": "/images/products/ARROW/ARROW SKIRT.JPG",
+    "hoverImage": "/images/products/ARROW/ARROW PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/ARROW/ARROW SKIRT.JPG"
@@ -234,7 +234,7 @@
     "priceValue": 940000,
     "installment": "IDR313,333",
     "image": "/images/products/ARROW/ARROW TOP.jpg",
-    "hoverImage": "/images/products/ARROW/ARROW TOP.jpg",
+    "hoverImage": "/images/products/ARROW/ARROW PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/ARROW/ARROW TOP.jpg"
@@ -259,7 +259,7 @@
     "priceValue": 985000,
     "installment": "IDR328,333",
     "image": "/images/products/AURORA ONE/AURORA SKIRT.JPG",
-    "hoverImage": "/images/products/AURORA ONE/AURORA SKIRT.JPG",
+    "hoverImage": "/images/products/AURORA TOO/AURORA TOO SHORT TOP.JPG",
     "swatches": [],
     "gallery": [
       "/images/products/AURORA ONE/AURORA SKIRT.JPG"
@@ -284,7 +284,7 @@
     "priceValue": 860000,
     "installment": "IDR286,666",
     "image": "/images/products/AURORA TOO/AURORA TOO SHORT TOP.JPG",
-    "hoverImage": "/images/products/AURORA TOO/AURORA TOO SHORT TOP.JPG",
+    "hoverImage": "/images/products/AURORA ONE/AURORA SKIRT.JPG",
     "swatches": [],
     "gallery": [
       "/images/products/AURORA TOO/AURORA TOO SHORT TOP.JPG"
@@ -309,7 +309,7 @@
     "priceValue": 895000,
     "installment": "IDR298,333",
     "image": "/images/products/AURORA TOO/AURORA TOO SKIRT.jpg",
-    "hoverImage": "/images/products/AURORA TOO/AURORA TOO SKIRT.jpg",
+    "hoverImage": "/images/products/AURORA ONE/AURORA SKIRT.JPG",
     "swatches": [],
     "gallery": [
       "/images/products/AURORA TOO/AURORA TOO SKIRT.jpg"
@@ -334,7 +334,7 @@
     "priceValue": 855000,
     "installment": "IDR285,000",
     "image": "/images/products/AURORA TOO/AURORA TOO TOP.jpg",
-    "hoverImage": "/images/products/AURORA TOO/AURORA TOO TOP.jpg",
+    "hoverImage": "/images/products/AURORA ONE/AURORA SKIRT.JPG",
     "swatches": [],
     "gallery": [
       "/images/products/AURORA TOO/AURORA TOO TOP.jpg"
@@ -359,7 +359,7 @@
     "priceValue": 820000,
     "installment": "IDR273,333",
     "image": "/images/products/AURORA ONE/AURORA TOO TOP 65 CM.jpg",
-    "hoverImage": "/images/products/AURORA ONE/AURORA TOO TOP 65 CM.jpg",
+    "hoverImage": "/images/products/AURORA ONE/AURORA SKIRT.JPG",
     "swatches": [],
     "gallery": [
       "/images/products/AURORA ONE/AURORA TOO TOP 65 CM.jpg"
@@ -384,7 +384,7 @@
     "priceValue": 960000,
     "installment": "IDR320,000",
     "image": "/images/products/AURORA ONE/AURORA TOP.JPG",
-    "hoverImage": "/images/products/AURORA ONE/AURORA TOP.JPG",
+    "hoverImage": "/images/products/AURORA ONE/AURORA SKIRT.JPG",
     "swatches": [],
     "gallery": [
       "/images/products/AURORA ONE/AURORA TOP.JPG"
@@ -409,7 +409,7 @@
     "priceValue": 890000,
     "installment": "IDR296,666",
     "image": "/images/products/BACKY/BACKY SKIRT.JPG",
-    "hoverImage": "/images/products/BACKY/BACKY SKIRT.JPG",
+    "hoverImage": "/images/products/BAGGY/BAGGY PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/BACKY/BACKY SKIRT.JPG"
@@ -434,7 +434,7 @@
     "priceValue": 815000,
     "installment": "IDR271,666",
     "image": "/images/products/BAGGY/BAGGY PANTS.jpg",
-    "hoverImage": "/images/products/BAGGY/BAGGY PANTS.jpg",
+    "hoverImage": "/images/products/BACKY/BACKY SKIRT.JPG",
     "swatches": [],
     "gallery": [
       "/images/products/BAGGY/BAGGY PANTS.jpg"
@@ -459,7 +459,7 @@
     "priceValue": 940000,
     "installment": "IDR313,333",
     "image": "/images/products/BAGGY/BAGGY SHORT PANTS.jpg",
-    "hoverImage": "/images/products/BAGGY/BAGGY SHORT PANTS.jpg",
+    "hoverImage": "/images/products/BACKY/BACKY SKIRT.JPG",
     "swatches": [],
     "gallery": [
       "/images/products/BAGGY/BAGGY SHORT PANTS.jpg"
@@ -484,7 +484,7 @@
     "priceValue": 940000,
     "installment": "IDR313,333",
     "image": "/images/products/BAGGY/BAGGY SKIRT.jpg",
-    "hoverImage": "/images/products/BAGGY/BAGGY SKIRT.jpg",
+    "hoverImage": "/images/products/BACKY/BACKY SKIRT.JPG",
     "swatches": [],
     "gallery": [
       "/images/products/BAGGY/BAGGY SKIRT.jpg"
@@ -509,7 +509,7 @@
     "priceValue": 955000,
     "installment": "IDR318,333",
     "image": "/images/products/BAMBI/BAMBI SKIRT.jpg",
-    "hoverImage": "/images/products/BAMBI/BAMBI SKIRT.jpg",
+    "hoverImage": "/images/products/BAMBI/BAMBI TOP.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/BAMBI/BAMBI SKIRT.jpg"
@@ -534,7 +534,7 @@
     "priceValue": 955000,
     "installment": "IDR318,333",
     "image": "/images/products/BAMBI/BAMBI TOP.jpg",
-    "hoverImage": "/images/products/BAMBI/BAMBI TOP.jpg",
+    "hoverImage": "/images/products/BAMBI/BAMBI SKIRT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/BAMBI/BAMBI TOP.jpg"
@@ -559,7 +559,7 @@
     "priceValue": 800000,
     "installment": "IDR266,666",
     "image": "/images/products/BECKY/BECKY PANTS.jpg",
-    "hoverImage": "/images/products/BECKY/BECKY PANTS.jpg",
+    "hoverImage": "/images/products/BECKY/BECKY SHORT PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/BECKY/BECKY PANTS.jpg"
@@ -584,7 +584,7 @@
     "priceValue": 970000,
     "installment": "IDR323,333",
     "image": "/images/products/BECKY/BECKY SHORT PANTS.jpg",
-    "hoverImage": "/images/products/BECKY/BECKY SHORT PANTS.jpg",
+    "hoverImage": "/images/products/BECKY/BECKY PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/BECKY/BECKY SHORT PANTS.jpg"
@@ -609,7 +609,7 @@
     "priceValue": 815000,
     "installment": "IDR271,666",
     "image": "/images/products/BLOOM/BLOOM SKIRT.JPG",
-    "hoverImage": "/images/products/BLOOM/BLOOM SKIRT.JPG",
+    "hoverImage": "/images/products/BLOOM/BLOOM TOP.JPG",
     "swatches": [],
     "gallery": [
       "/images/products/BLOOM/BLOOM SKIRT.JPG"
@@ -634,7 +634,7 @@
     "priceValue": 980000,
     "installment": "IDR326,666",
     "image": "/images/products/BLOOM/BLOOM TOP.JPG",
-    "hoverImage": "/images/products/BLOOM/BLOOM TOP.JPG",
+    "hoverImage": "/images/products/BLOOM/BLOOM SKIRT.JPG",
     "swatches": [],
     "gallery": [
       "/images/products/BLOOM/BLOOM TOP.JPG"
@@ -659,7 +659,7 @@
     "priceValue": 800000,
     "installment": "IDR266,666",
     "image": "/images/products/BOLDEN/BOLDEN LONG TOP  TUNIK.jpg",
-    "hoverImage": "/images/products/BOLDEN/BOLDEN LONG TOP  TUNIK.jpg",
+    "hoverImage": "/images/products/BOLDEN/BOLDEN SHORT PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/BOLDEN/BOLDEN LONG TOP  TUNIK.jpg"
@@ -684,7 +684,7 @@
     "priceValue": 840000,
     "installment": "IDR280,000",
     "image": "/images/products/BOLDEN/BOLDEN SHORT PANTS.jpg",
-    "hoverImage": "/images/products/BOLDEN/BOLDEN SHORT PANTS.jpg",
+    "hoverImage": "/images/products/BOLDEN/BOLDEN LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/BOLDEN/BOLDEN SHORT PANTS.jpg"
@@ -709,7 +709,7 @@
     "priceValue": 825000,
     "installment": "IDR275,000",
     "image": "/images/products/BOLDEN/BOLDEN SKIRT.jpg",
-    "hoverImage": "/images/products/BOLDEN/BOLDEN SKIRT.jpg",
+    "hoverImage": "/images/products/BOLDEN/BOLDEN LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/BOLDEN/BOLDEN SKIRT.jpg"
@@ -734,7 +734,7 @@
     "priceValue": 800000,
     "installment": "IDR266,666",
     "image": "/images/products/BOLDEN/BOLDEN TOP.jpg",
-    "hoverImage": "/images/products/BOLDEN/BOLDEN TOP.jpg",
+    "hoverImage": "/images/products/BOLDEN/BOLDEN LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/BOLDEN/BOLDEN TOP.jpg"
@@ -759,7 +759,7 @@
     "priceValue": 905000,
     "installment": "IDR301,666",
     "image": "/images/products/CALYA/CALYA PANTS .jpg",
-    "hoverImage": "/images/products/CALYA/CALYA PANTS .jpg",
+    "hoverImage": "/images/products/CALYA/CALYA SHORT PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/CALYA/CALYA PANTS .jpg"
@@ -784,7 +784,7 @@
     "priceValue": 820000,
     "installment": "IDR273,333",
     "image": "/images/products/CALYA/CALYA SHORT PANTS.jpg",
-    "hoverImage": "/images/products/CALYA/CALYA SHORT PANTS.jpg",
+    "hoverImage": "/images/products/CALYA/CALYA PANTS .jpg",
     "swatches": [],
     "gallery": [
       "/images/products/CALYA/CALYA SHORT PANTS.jpg"
@@ -809,7 +809,7 @@
     "priceValue": 920000,
     "installment": "IDR306,666",
     "image": "/images/products/CALYA/CALYA SKIRT.JPG",
-    "hoverImage": "/images/products/CALYA/CALYA SKIRT.JPG",
+    "hoverImage": "/images/products/CALYA/CALYA PANTS .jpg",
     "swatches": [],
     "gallery": [
       "/images/products/CALYA/CALYA SKIRT.JPG"
@@ -834,7 +834,7 @@
     "priceValue": 915000,
     "installment": "IDR305,000",
     "image": "/images/products/CALYA/CALYA TOP.JPG",
-    "hoverImage": "/images/products/CALYA/CALYA TOP.JPG",
+    "hoverImage": "/images/products/CALYA/CALYA PANTS .jpg",
     "swatches": [],
     "gallery": [
       "/images/products/CALYA/CALYA TOP.JPG"
@@ -859,7 +859,7 @@
     "priceValue": 800000,
     "installment": "IDR266,666",
     "image": "/images/products/CANAL/CANAL SHORT PANTS.jpg",
-    "hoverImage": "/images/products/CANAL/CANAL SHORT PANTS.jpg",
+    "hoverImage": "/images/products/CANAL/CANAL SKIRT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/CANAL/CANAL SHORT PANTS.jpg"
@@ -884,7 +884,7 @@
     "priceValue": 885000,
     "installment": "IDR295,000",
     "image": "/images/products/CANAL/CANAL SKIRT.jpg",
-    "hoverImage": "/images/products/CANAL/CANAL SKIRT.jpg",
+    "hoverImage": "/images/products/CANAL/CANAL SHORT PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/CANAL/CANAL SKIRT.jpg"
@@ -909,7 +909,7 @@
     "priceValue": 945000,
     "installment": "IDR315,000",
     "image": "/images/products/CANIS/CANIS PANTS.jpg",
-    "hoverImage": "/images/products/CANIS/CANIS PANTS.jpg",
+    "hoverImage": "/images/products/CANIS/IMG_4615.PNG",
     "swatches": [],
     "gallery": [
       "/images/products/CANIS/CANIS PANTS.jpg"
@@ -934,7 +934,7 @@
     "priceValue": 990000,
     "installment": "IDR330,000",
     "image": "/images/products/CANIS/CANIS SHORT PANTS.jpg",
-    "hoverImage": "/images/products/CANIS/CANIS SHORT PANTS.jpg",
+    "hoverImage": "/images/products/CANIS/IMG_4615.PNG",
     "swatches": [],
     "gallery": [
       "/images/products/CANIS/CANIS SHORT PANTS.jpg"
@@ -959,7 +959,7 @@
     "priceValue": 955000,
     "installment": "IDR318,333",
     "image": "/images/products/CANIS/CANIS SKIRT.JPG",
-    "hoverImage": "/images/products/CANIS/CANIS SKIRT.JPG",
+    "hoverImage": "/images/products/CANIS/IMG_4615.PNG",
     "swatches": [],
     "gallery": [
       "/images/products/CANIS/CANIS SKIRT.JPG"
@@ -984,7 +984,7 @@
     "priceValue": 875000,
     "installment": "IDR291,666",
     "image": "/images/products/CANIS/CANIS TOP.JPG",
-    "hoverImage": "/images/products/CANIS/CANIS TOP.JPG",
+    "hoverImage": "/images/products/CANIS/IMG_4615.PNG",
     "swatches": [],
     "gallery": [
       "/images/products/CANIS/CANIS TOP.JPG"
@@ -1009,7 +1009,7 @@
     "priceValue": 840000,
     "installment": "IDR280,000",
     "image": "/images/products/CANVA/CANVA LONG TOP  TUNIK.jpg",
-    "hoverImage": "/images/products/CANVA/CANVA LONG TOP  TUNIK.jpg",
+    "hoverImage": "/images/products/CANVA/IMG_4614.PNG",
     "swatches": [],
     "gallery": [
       "/images/products/CANVA/CANVA LONG TOP  TUNIK.jpg"
@@ -1034,7 +1034,7 @@
     "priceValue": 840000,
     "installment": "IDR280,000",
     "image": "/images/products/CANVA/CANVA PANTS.jpg",
-    "hoverImage": "/images/products/CANVA/CANVA PANTS.jpg",
+    "hoverImage": "/images/products/CANVA/IMG_4614.PNG",
     "swatches": [],
     "gallery": [
       "/images/products/CANVA/CANVA PANTS.jpg"
@@ -1059,7 +1059,7 @@
     "priceValue": 930000,
     "installment": "IDR310,000",
     "image": "/images/products/CANVA/CANVA SHORT PANTS.jpg",
-    "hoverImage": "/images/products/CANVA/CANVA SHORT PANTS.jpg",
+    "hoverImage": "/images/products/CANVA/IMG_4614.PNG",
     "swatches": [],
     "gallery": [
       "/images/products/CANVA/CANVA SHORT PANTS.jpg"
@@ -1084,7 +1084,7 @@
     "priceValue": 965000,
     "installment": "IDR321,666",
     "image": "/images/products/CANVA/CANVA SKIRT.JPG",
-    "hoverImage": "/images/products/CANVA/CANVA SKIRT.JPG",
+    "hoverImage": "/images/products/CANVA/IMG_4614.PNG",
     "swatches": [],
     "gallery": [
       "/images/products/CANVA/CANVA SKIRT.JPG"
@@ -1109,7 +1109,7 @@
     "priceValue": 810000,
     "installment": "IDR270,000",
     "image": "/images/products/CANVA/CANVA TOP.JPG",
-    "hoverImage": "/images/products/CANVA/CANVA TOP.JPG",
+    "hoverImage": "/images/products/CANVA/IMG_4614.PNG",
     "swatches": [],
     "gallery": [
       "/images/products/CANVA/CANVA TOP.JPG"
@@ -1134,7 +1134,7 @@
     "priceValue": 810000,
     "installment": "IDR270,000",
     "image": "/images/products/CATHY SKIRT.jpg",
-    "hoverImage": "/images/products/CATHY SKIRT.jpg",
+    "hoverImage": "/images/products/IMG_3835.JPG",
     "swatches": [],
     "gallery": [
       "/images/products/CATHY SKIRT.jpg"
@@ -1159,7 +1159,7 @@
     "priceValue": 895000,
     "installment": "IDR298,333",
     "image": "/images/products/CATTLEYA/CATTLEYA LONG TOP  TUNIK.jpg",
-    "hoverImage": "/images/products/CATTLEYA/CATTLEYA LONG TOP  TUNIK.jpg",
+    "hoverImage": "/images/products/CATTLEYA/IMG_4611.PNG",
     "swatches": [],
     "gallery": [
       "/images/products/CATTLEYA/CATTLEYA LONG TOP  TUNIK.jpg"
@@ -1184,7 +1184,7 @@
     "priceValue": 860000,
     "installment": "IDR286,666",
     "image": "/images/products/CATTLEYA/CATTLEYA SHORT TOP.jpg",
-    "hoverImage": "/images/products/CATTLEYA/CATTLEYA SHORT TOP.jpg",
+    "hoverImage": "/images/products/CATTLEYA/IMG_4611.PNG",
     "swatches": [],
     "gallery": [
       "/images/products/CATTLEYA/CATTLEYA SHORT TOP.jpg"
@@ -1209,7 +1209,7 @@
     "priceValue": 890000,
     "installment": "IDR296,666",
     "image": "/images/products/CATTLEYA/CATTLEYA SKIRT.jpg",
-    "hoverImage": "/images/products/CATTLEYA/CATTLEYA SKIRT.jpg",
+    "hoverImage": "/images/products/CATTLEYA/IMG_4611.PNG",
     "swatches": [],
     "gallery": [
       "/images/products/CATTLEYA/CATTLEYA SKIRT.jpg"
@@ -1234,7 +1234,7 @@
     "priceValue": 955000,
     "installment": "IDR318,333",
     "image": "/images/products/CATTLEYA/CATTLEYA TOP.jpg",
-    "hoverImage": "/images/products/CATTLEYA/CATTLEYA TOP.jpg",
+    "hoverImage": "/images/products/CATTLEYA/IMG_4611.PNG",
     "swatches": [],
     "gallery": [
       "/images/products/CATTLEYA/CATTLEYA TOP.jpg"
@@ -1259,7 +1259,7 @@
     "priceValue": 895000,
     "installment": "IDR298,333",
     "image": "/images/products/CECILE/CECILE LONG TOP  TUNIK.jpg",
-    "hoverImage": "/images/products/CECILE/CECILE LONG TOP  TUNIK.jpg",
+    "hoverImage": "/images/products/CECILE/CECILE SKIRT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/CECILE/CECILE LONG TOP  TUNIK.jpg"
@@ -1284,7 +1284,7 @@
     "priceValue": 800000,
     "installment": "IDR266,666",
     "image": "/images/products/CECILE/CECILE SKIRT.jpg",
-    "hoverImage": "/images/products/CECILE/CECILE SKIRT.jpg",
+    "hoverImage": "/images/products/CECILE/CECILE LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/CECILE/CECILE SKIRT.jpg"
@@ -1309,7 +1309,7 @@
     "priceValue": 855000,
     "installment": "IDR285,000",
     "image": "/images/products/CECILE/CECILIA PANTS.jpg",
-    "hoverImage": "/images/products/CECILE/CECILIA PANTS.jpg",
+    "hoverImage": "/images/products/CECILE/CECILIA SHORT PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/CECILE/CECILIA PANTS.jpg"
@@ -1334,7 +1334,7 @@
     "priceValue": 830000,
     "installment": "IDR276,666",
     "image": "/images/products/CECILE/CECILIA SHORT PANTS.jpg",
-    "hoverImage": "/images/products/CECILE/CECILIA SHORT PANTS.jpg",
+    "hoverImage": "/images/products/CECILE/CECILIA PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/CECILE/CECILIA SHORT PANTS.jpg"
@@ -1359,7 +1359,7 @@
     "priceValue": 835000,
     "installment": "IDR278,333",
     "image": "/images/products/CECILE/CECILIA TOP.jpg",
-    "hoverImage": "/images/products/CECILE/CECILIA TOP.jpg",
+    "hoverImage": "/images/products/CECILE/CECILIA PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/CECILE/CECILIA TOP.jpg"
@@ -1384,7 +1384,7 @@
     "priceValue": 940000,
     "installment": "IDR313,333",
     "image": "/images/products/CLAUDE/CLAUDE LONG TOP  TUNIK.jpg",
-    "hoverImage": "/images/products/CLAUDE/CLAUDE LONG TOP  TUNIK.jpg",
+    "hoverImage": "/images/products/CLAUDE/CLAUDE SHORT PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/CLAUDE/CLAUDE LONG TOP  TUNIK.jpg"
@@ -1409,7 +1409,7 @@
     "priceValue": 985000,
     "installment": "IDR328,333",
     "image": "/images/products/CLAUDE/CLAUDE SHORT PANTS.jpg",
-    "hoverImage": "/images/products/CLAUDE/CLAUDE SHORT PANTS.jpg",
+    "hoverImage": "/images/products/CLAUDE/CLAUDE LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/CLAUDE/CLAUDE SHORT PANTS.jpg"
@@ -1434,7 +1434,7 @@
     "priceValue": 815000,
     "installment": "IDR271,666",
     "image": "/images/products/CLAUDE/CLAUDE SHORT TOP.jpg",
-    "hoverImage": "/images/products/CLAUDE/CLAUDE SHORT TOP.jpg",
+    "hoverImage": "/images/products/CLAUDE/CLAUDE LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/CLAUDE/CLAUDE SHORT TOP.jpg"
@@ -1459,7 +1459,7 @@
     "priceValue": 825000,
     "installment": "IDR275,000",
     "image": "/images/products/CLAUDE/CLAUDE SKIRT.jpg",
-    "hoverImage": "/images/products/CLAUDE/CLAUDE SKIRT.jpg",
+    "hoverImage": "/images/products/CLAUDE/CLAUDE LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/CLAUDE/CLAUDE SKIRT.jpg"
@@ -1484,7 +1484,7 @@
     "priceValue": 825000,
     "installment": "IDR275,000",
     "image": "/images/products/CLAUDE/CLAUDE TOP.jpg",
-    "hoverImage": "/images/products/CLAUDE/CLAUDE TOP.jpg",
+    "hoverImage": "/images/products/CLAUDE/CLAUDE LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/CLAUDE/CLAUDE TOP.jpg"
@@ -1509,7 +1509,7 @@
     "priceValue": 930000,
     "installment": "IDR310,000",
     "image": "/images/products/CORNELIA/CORNELIA SKIRT.jpg",
-    "hoverImage": "/images/products/CORNELIA/CORNELIA SKIRT.jpg",
+    "hoverImage": "/images/products/CORNELIA/CORNELIA TOP.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/CORNELIA/CORNELIA SKIRT.jpg"
@@ -1534,7 +1534,7 @@
     "priceValue": 845000,
     "installment": "IDR281,666",
     "image": "/images/products/CORNELIA/CORNELIA TOP.jpg",
-    "hoverImage": "/images/products/CORNELIA/CORNELIA TOP.jpg",
+    "hoverImage": "/images/products/CORNELIA/CORNELIA SKIRT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/CORNELIA/CORNELIA TOP.jpg"
@@ -1559,7 +1559,7 @@
     "priceValue": 985000,
     "installment": "IDR328,333",
     "image": "/images/products/CUSH/CUSH SHORT PANTS.jpg",
-    "hoverImage": "/images/products/CUSH/CUSH SHORT PANTS.jpg",
+    "hoverImage": "/images/products/CUSH/CUSH SKIRT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/CUSH/CUSH SHORT PANTS.jpg"
@@ -1584,7 +1584,7 @@
     "priceValue": 940000,
     "installment": "IDR313,333",
     "image": "/images/products/CUSH/CUSH SKIRT.jpg",
-    "hoverImage": "/images/products/CUSH/CUSH SKIRT.jpg",
+    "hoverImage": "/images/products/CUSH/CUSH SHORT PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/CUSH/CUSH SKIRT.jpg"
@@ -1609,7 +1609,7 @@
     "priceValue": 980000,
     "installment": "IDR326,666",
     "image": "/images/products/CUSH/CUSH TOP.jpg",
-    "hoverImage": "/images/products/CUSH/CUSH TOP.jpg",
+    "hoverImage": "/images/products/CUSH/CUSH SHORT PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/CUSH/CUSH TOP.jpg"
@@ -1634,7 +1634,7 @@
     "priceValue": 920000,
     "installment": "IDR306,666",
     "image": "/images/products/DARDEN/DARDEN LONG TOP  TUNIK.jpg",
-    "hoverImage": "/images/products/DARDEN/DARDEN LONG TOP  TUNIK.jpg",
+    "hoverImage": "/images/products/DARDEN/DARDEN PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/DARDEN/DARDEN LONG TOP  TUNIK.jpg"
@@ -1659,7 +1659,7 @@
     "priceValue": 840000,
     "installment": "IDR280,000",
     "image": "/images/products/DARDEN/DARDEN PANTS.jpg",
-    "hoverImage": "/images/products/DARDEN/DARDEN PANTS.jpg",
+    "hoverImage": "/images/products/DARDEN/DARDEN LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/DARDEN/DARDEN PANTS.jpg"
@@ -1684,7 +1684,7 @@
     "priceValue": 850000,
     "installment": "IDR283,333",
     "image": "/images/products/DARDEN/DARDEN SHORT PANTS.jpg",
-    "hoverImage": "/images/products/DARDEN/DARDEN SHORT PANTS.jpg",
+    "hoverImage": "/images/products/DARDEN/DARDEN LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/DARDEN/DARDEN SHORT PANTS.jpg"
@@ -1709,7 +1709,7 @@
     "priceValue": 930000,
     "installment": "IDR310,000",
     "image": "/images/products/DARDEN/DARDEN SHORT TOP.jpg",
-    "hoverImage": "/images/products/DARDEN/DARDEN SHORT TOP.jpg",
+    "hoverImage": "/images/products/DARDEN/DARDEN LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/DARDEN/DARDEN SHORT TOP.jpg"
@@ -1734,7 +1734,7 @@
     "priceValue": 930000,
     "installment": "IDR310,000",
     "image": "/images/products/DARDEN/DARDEN SKIRT.jpg",
-    "hoverImage": "/images/products/DARDEN/DARDEN SKIRT.jpg",
+    "hoverImage": "/images/products/DARDEN/DARDEN LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/DARDEN/DARDEN SKIRT.jpg"
@@ -1759,7 +1759,7 @@
     "priceValue": 875000,
     "installment": "IDR291,666",
     "image": "/images/products/DARDEN/DARDEN TOP.jpg",
-    "hoverImage": "/images/products/DARDEN/DARDEN TOP.jpg",
+    "hoverImage": "/images/products/DARDEN/DARDEN LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/DARDEN/DARDEN TOP.jpg"
@@ -1784,7 +1784,7 @@
     "priceValue": 875000,
     "installment": "IDR291,666",
     "image": "/images/products/DARDEN/DARDEN TOP 65 CM.jpg",
-    "hoverImage": "/images/products/DARDEN/DARDEN TOP 65 CM.jpg",
+    "hoverImage": "/images/products/DARDEN/DARDEN LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/DARDEN/DARDEN TOP 65 CM.jpg"
@@ -1809,7 +1809,7 @@
     "priceValue": 855000,
     "installment": "IDR285,000",
     "image": "/images/products/DAY NIGHT/DAY NIGHT PANTS.jpg",
-    "hoverImage": "/images/products/DAY NIGHT/DAY NIGHT PANTS.jpg",
+    "hoverImage": "/images/products/DAY NIGHT/DAY NIGT SKIRT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/DAY NIGHT/DAY NIGHT PANTS.jpg"
@@ -1834,7 +1834,7 @@
     "priceValue": 875000,
     "installment": "IDR291,666",
     "image": "/images/products/DAY NIGHT/DAY NIGT SKIRT.jpg",
-    "hoverImage": "/images/products/DAY NIGHT/DAY NIGT SKIRT.jpg",
+    "hoverImage": "/images/products/DAY NIGHT/DAY NIGHT PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/DAY NIGHT/DAY NIGT SKIRT.jpg"
@@ -1859,7 +1859,7 @@
     "priceValue": 830000,
     "installment": "IDR276,666",
     "image": "/images/products/FLONET/FLONET PANT.jpg",
-    "hoverImage": "/images/products/FLONET/FLONET PANT.jpg",
+    "hoverImage": "/images/products/FLONET/FLONET SHORT PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/FLONET/FLONET PANT.jpg"
@@ -1884,7 +1884,7 @@
     "priceValue": 885000,
     "installment": "IDR295,000",
     "image": "/images/products/FLONET/FLONET SHORT PANTS.jpg",
-    "hoverImage": "/images/products/FLONET/FLONET SHORT PANTS.jpg",
+    "hoverImage": "/images/products/FLONET/FLONET PANT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/FLONET/FLONET SHORT PANTS.jpg"
@@ -1909,7 +1909,7 @@
     "priceValue": 815000,
     "installment": "IDR271,666",
     "image": "/images/products/FLONET/FLONET SKIRT.jpg",
-    "hoverImage": "/images/products/FLONET/FLONET SKIRT.jpg",
+    "hoverImage": "/images/products/FLONET/FLONET PANT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/FLONET/FLONET SKIRT.jpg"
@@ -1934,7 +1934,7 @@
     "priceValue": 805000,
     "installment": "IDR268,333",
     "image": "/images/products/GARDENY/GARDENY SHORT PANTS.jpg",
-    "hoverImage": "/images/products/GARDENY/GARDENY SHORT PANTS.jpg",
+    "hoverImage": "/images/products/GARDENY/GARDENY SKIRT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/GARDENY/GARDENY SHORT PANTS.jpg"
@@ -1959,7 +1959,7 @@
     "priceValue": 980000,
     "installment": "IDR326,666",
     "image": "/images/products/GARDENY/GARDENY SKIRT.jpg",
-    "hoverImage": "/images/products/GARDENY/GARDENY SKIRT.jpg",
+    "hoverImage": "/images/products/GARDENY/GARDENY SHORT PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/GARDENY/GARDENY SKIRT.jpg"
@@ -1984,7 +1984,7 @@
     "priceValue": 940000,
     "installment": "IDR313,333",
     "image": "/images/products/IMG_3835.JPG",
-    "hoverImage": "/images/products/IMG_3835.JPG",
+    "hoverImage": "/images/products/CATHY SKIRT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/IMG_3835.JPG"
@@ -2034,7 +2034,7 @@
     "priceValue": 965000,
     "installment": "IDR321,666",
     "image": "/images/products/CATTLEYA/IMG_4611.PNG",
-    "hoverImage": "/images/products/CATTLEYA/IMG_4611.PNG",
+    "hoverImage": "/images/products/CATTLEYA/CATTLEYA LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/CATTLEYA/IMG_4611.PNG"
@@ -2059,7 +2059,7 @@
     "priceValue": 860000,
     "installment": "IDR286,666",
     "image": "/images/products/SALUR/IMG_4612.PNG",
-    "hoverImage": "/images/products/SALUR/IMG_4612.PNG",
+    "hoverImage": "/images/products/SALUR/SALUR SKIRT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/SALUR/IMG_4612.PNG"
@@ -2109,7 +2109,7 @@
     "priceValue": 945000,
     "installment": "IDR315,000",
     "image": "/images/products/CANVA/IMG_4614.PNG",
-    "hoverImage": "/images/products/CANVA/IMG_4614.PNG",
+    "hoverImage": "/images/products/CANVA/CANVA LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/CANVA/IMG_4614.PNG"
@@ -2134,7 +2134,7 @@
     "priceValue": 925000,
     "installment": "IDR308,333",
     "image": "/images/products/CANIS/IMG_4615.PNG",
-    "hoverImage": "/images/products/CANIS/IMG_4615.PNG",
+    "hoverImage": "/images/products/CANIS/CANIS PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/CANIS/IMG_4615.PNG"
@@ -2159,7 +2159,7 @@
     "priceValue": 800000,
     "installment": "IDR266,666",
     "image": "/images/products/IMG_4666.JPG",
-    "hoverImage": "/images/products/IMG_4666.JPG",
+    "hoverImage": "/images/products/CATHY SKIRT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/IMG_4666.JPG"
@@ -2184,7 +2184,7 @@
     "priceValue": 830000,
     "installment": "IDR276,666",
     "image": "/images/products/IMG_7538.JPG",
-    "hoverImage": "/images/products/IMG_7538.JPG",
+    "hoverImage": "/images/products/CATHY SKIRT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/IMG_7538.JPG"
@@ -2209,7 +2209,7 @@
     "priceValue": 965000,
     "installment": "IDR321,666",
     "image": "/images/products/IMG_7840.JPG",
-    "hoverImage": "/images/products/IMG_7840.JPG",
+    "hoverImage": "/images/products/CATHY SKIRT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/IMG_7840.JPG"
@@ -2234,7 +2234,7 @@
     "priceValue": 960000,
     "installment": "IDR320,000",
     "image": "/images/products/KLEE/KLEE LONG TOP  TUNIK.jpg",
-    "hoverImage": "/images/products/KLEE/KLEE LONG TOP  TUNIK.jpg",
+    "hoverImage": "/images/products/KLEE/KLEE SKIRT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/KLEE/KLEE LONG TOP  TUNIK.jpg"
@@ -2259,7 +2259,7 @@
     "priceValue": 875000,
     "installment": "IDR291,666",
     "image": "/images/products/KLEE/KLEE SKIRT.jpg",
-    "hoverImage": "/images/products/KLEE/KLEE SKIRT.jpg",
+    "hoverImage": "/images/products/KLEE/KLEE LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/KLEE/KLEE SKIRT.jpg"
@@ -2284,7 +2284,7 @@
     "priceValue": 930000,
     "installment": "IDR310,000",
     "image": "/images/products/KLEE/KLEE TOP.jpg",
-    "hoverImage": "/images/products/KLEE/KLEE TOP.jpg",
+    "hoverImage": "/images/products/KLEE/KLEE LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/KLEE/KLEE TOP.jpg"
@@ -2309,7 +2309,7 @@
     "priceValue": 860000,
     "installment": "IDR286,666",
     "image": "/images/products/KREI/KREI 65CM.jpg",
-    "hoverImage": "/images/products/KREI/KREI 65CM.jpg",
+    "hoverImage": "/images/products/KREI/KREI TOP.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/KREI/KREI 65CM.jpg"
@@ -2334,7 +2334,7 @@
     "priceValue": 885000,
     "installment": "IDR295,000",
     "image": "/images/products/KREI/KREI TOP.jpg",
-    "hoverImage": "/images/products/KREI/KREI TOP.jpg",
+    "hoverImage": "/images/products/KREI/KREI 65CM.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/KREI/KREI TOP.jpg"
@@ -2359,7 +2359,7 @@
     "priceValue": 800000,
     "installment": "IDR266,666",
     "image": "/images/products/KRISTIN/KRISTIN LONG TOP  TUNIK.jpg",
-    "hoverImage": "/images/products/KRISTIN/KRISTIN LONG TOP  TUNIK.jpg",
+    "hoverImage": "/images/products/KRISTIN/KRISTIN PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/KRISTIN/KRISTIN LONG TOP  TUNIK.jpg"
@@ -2384,7 +2384,7 @@
     "priceValue": 880000,
     "installment": "IDR293,333",
     "image": "/images/products/KRISTIN/KRISTIN PANTS.jpg",
-    "hoverImage": "/images/products/KRISTIN/KRISTIN PANTS.jpg",
+    "hoverImage": "/images/products/KRISTIN/KRISTIN LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/KRISTIN/KRISTIN PANTS.jpg"
@@ -2409,7 +2409,7 @@
     "priceValue": 890000,
     "installment": "IDR296,666",
     "image": "/images/products/KRISTIN/KRISTIN SHORT PANTS.jpg",
-    "hoverImage": "/images/products/KRISTIN/KRISTIN SHORT PANTS.jpg",
+    "hoverImage": "/images/products/KRISTIN/KRISTIN LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/KRISTIN/KRISTIN SHORT PANTS.jpg"
@@ -2434,7 +2434,7 @@
     "priceValue": 925000,
     "installment": "IDR308,333",
     "image": "/images/products/KRISTIN/KRISTIN SKIRT.jpg",
-    "hoverImage": "/images/products/KRISTIN/KRISTIN SKIRT.jpg",
+    "hoverImage": "/images/products/KRISTIN/KRISTIN LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/KRISTIN/KRISTIN SKIRT.jpg"
@@ -2459,7 +2459,7 @@
     "priceValue": 935000,
     "installment": "IDR311,666",
     "image": "/images/products/KRISTIN/KRISTIN TOP.jpg",
-    "hoverImage": "/images/products/KRISTIN/KRISTIN TOP.jpg",
+    "hoverImage": "/images/products/KRISTIN/KRISTIN LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/KRISTIN/KRISTIN TOP.jpg"
@@ -2484,7 +2484,7 @@
     "priceValue": 935000,
     "installment": "IDR311,666",
     "image": "/images/products/KROSE/KROSE SKIRT.jpg",
-    "hoverImage": "/images/products/KROSE/KROSE SKIRT.jpg",
+    "hoverImage": "/images/products/KROSE/KROSE TOP.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/KROSE/KROSE SKIRT.jpg"
@@ -2509,7 +2509,7 @@
     "priceValue": 800000,
     "installment": "IDR266,666",
     "image": "/images/products/KROSE/KROSE TOP.jpg",
-    "hoverImage": "/images/products/KROSE/KROSE TOP.jpg",
+    "hoverImage": "/images/products/KROSE/KROSE SKIRT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/KROSE/KROSE TOP.jpg"
@@ -2534,7 +2534,7 @@
     "priceValue": 920000,
     "installment": "IDR306,666",
     "image": "/images/products/KUMBANG/KUMBANG LONG TOP TUNIK.jpg",
-    "hoverImage": "/images/products/KUMBANG/KUMBANG LONG TOP TUNIK.jpg",
+    "hoverImage": "/images/products/KUMBANG/KUMBANG SHORT PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/KUMBANG/KUMBANG LONG TOP TUNIK.jpg"
@@ -2559,7 +2559,7 @@
     "priceValue": 945000,
     "installment": "IDR315,000",
     "image": "/images/products/KUMBANG/KUMBANG SHORT PANTS.jpg",
-    "hoverImage": "/images/products/KUMBANG/KUMBANG SHORT PANTS.jpg",
+    "hoverImage": "/images/products/KUMBANG/KUMBANG LONG TOP TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/KUMBANG/KUMBANG SHORT PANTS.jpg"
@@ -2584,7 +2584,7 @@
     "priceValue": 885000,
     "installment": "IDR295,000",
     "image": "/images/products/KUMBANG/KUMBANG SKIRT.jpg",
-    "hoverImage": "/images/products/KUMBANG/KUMBANG SKIRT.jpg",
+    "hoverImage": "/images/products/KUMBANG/KUMBANG LONG TOP TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/KUMBANG/KUMBANG SKIRT.jpg"
@@ -2609,7 +2609,7 @@
     "priceValue": 870000,
     "installment": "IDR290,000",
     "image": "/images/products/KUMBANG/KUMBANG TOP.jpg",
-    "hoverImage": "/images/products/KUMBANG/KUMBANG TOP.jpg",
+    "hoverImage": "/images/products/KUMBANG/KUMBANG LONG TOP TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/KUMBANG/KUMBANG TOP.jpg"
@@ -2634,7 +2634,7 @@
     "priceValue": 900000,
     "installment": "IDR300,000",
     "image": "/images/products/LILAA/LILAA LONG TOP TUNIK.jpg",
-    "hoverImage": "/images/products/LILAA/LILAA LONG TOP TUNIK.jpg",
+    "hoverImage": "/images/products/LILAA/LILAA SKIRT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/LILAA/LILAA LONG TOP TUNIK.jpg"
@@ -2659,7 +2659,7 @@
     "priceValue": 885000,
     "installment": "IDR295,000",
     "image": "/images/products/LILAA/LILAA SKIRT.jpg",
-    "hoverImage": "/images/products/LILAA/LILAA SKIRT.jpg",
+    "hoverImage": "/images/products/LILAA/LILAA LONG TOP TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/LILAA/LILAA SKIRT.jpg"
@@ -2684,7 +2684,7 @@
     "priceValue": 825000,
     "installment": "IDR275,000",
     "image": "/images/products/LILAA/LILAA TOP.jpg",
-    "hoverImage": "/images/products/LILAA/LILAA TOP.jpg",
+    "hoverImage": "/images/products/LILAA/LILAA LONG TOP TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/LILAA/LILAA TOP.jpg"
@@ -2709,7 +2709,7 @@
     "priceValue": 890000,
     "installment": "IDR296,666",
     "image": "/images/products/LINN/LINN CURL.jpg",
-    "hoverImage": "/images/products/LINN/LINN CURL.jpg",
+    "hoverImage": "/images/products/LINN/LINN HALF KANAN SKIRT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/LINN/LINN CURL.jpg"
@@ -2734,7 +2734,7 @@
     "priceValue": 930000,
     "installment": "IDR310,000",
     "image": "/images/products/LINN/LINN HALF KANAN SKIRT.jpg",
-    "hoverImage": "/images/products/LINN/LINN HALF KANAN SKIRT.jpg",
+    "hoverImage": "/images/products/LINN/LINN CURL.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/LINN/LINN HALF KANAN SKIRT.jpg"
@@ -2759,7 +2759,7 @@
     "priceValue": 960000,
     "installment": "IDR320,000",
     "image": "/images/products/LINN/LINN HALF KIRI SKIRT.jpg",
-    "hoverImage": "/images/products/LINN/LINN HALF KIRI SKIRT.jpg",
+    "hoverImage": "/images/products/LINN/LINN CURL.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/LINN/LINN HALF KIRI SKIRT.jpg"
@@ -2784,7 +2784,7 @@
     "priceValue": 925000,
     "installment": "IDR308,333",
     "image": "/images/products/LINN/LINN PANTS.jpg",
-    "hoverImage": "/images/products/LINN/LINN PANTS.jpg",
+    "hoverImage": "/images/products/LINN/LINN CURL.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/LINN/LINN PANTS.jpg"
@@ -2809,7 +2809,7 @@
     "priceValue": 835000,
     "installment": "IDR278,333",
     "image": "/images/products/LINN/LINN SHORT PANT.jpg",
-    "hoverImage": "/images/products/LINN/LINN SHORT PANT.jpg",
+    "hoverImage": "/images/products/LINN/LINN CURL.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/LINN/LINN SHORT PANT.jpg"
@@ -2834,7 +2834,7 @@
     "priceValue": 900000,
     "installment": "IDR300,000",
     "image": "/images/products/LINN/LINN TOP.jpg",
-    "hoverImage": "/images/products/LINN/LINN TOP.jpg",
+    "hoverImage": "/images/products/LINN/LINN CURL.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/LINN/LINN TOP.jpg"
@@ -2859,7 +2859,7 @@
     "priceValue": 840000,
     "installment": "IDR280,000",
     "image": "/images/products/LONDON/LONDON PANTS.jpg",
-    "hoverImage": "/images/products/LONDON/LONDON PANTS.jpg",
+    "hoverImage": "/images/products/LONDON/LONDON SHORT PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/LONDON/LONDON PANTS.jpg"
@@ -2884,7 +2884,7 @@
     "priceValue": 950000,
     "installment": "IDR316,666",
     "image": "/images/products/LONDON/LONDON SHORT PANTS.jpg",
-    "hoverImage": "/images/products/LONDON/LONDON SHORT PANTS.jpg",
+    "hoverImage": "/images/products/LONDON/LONDON PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/LONDON/LONDON SHORT PANTS.jpg"
@@ -2909,7 +2909,7 @@
     "priceValue": 825000,
     "installment": "IDR275,000",
     "image": "/images/products/LONDON/LONDON SKIRT.jpg",
-    "hoverImage": "/images/products/LONDON/LONDON SKIRT.jpg",
+    "hoverImage": "/images/products/LONDON/LONDON PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/LONDON/LONDON SKIRT.jpg"
@@ -2934,7 +2934,7 @@
     "priceValue": 940000,
     "installment": "IDR313,333",
     "image": "/images/products/LOTUS/LOTUS LONG TOP  TUNIK.jpg",
-    "hoverImage": "/images/products/LOTUS/LOTUS LONG TOP  TUNIK.jpg",
+    "hoverImage": "/images/products/LOTUS/LOTUS SKIRT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/LOTUS/LOTUS LONG TOP  TUNIK.jpg"
@@ -2959,7 +2959,7 @@
     "priceValue": 830000,
     "installment": "IDR276,666",
     "image": "/images/products/LOTUS/LOTUS SKIRT.jpg",
-    "hoverImage": "/images/products/LOTUS/LOTUS SKIRT.jpg",
+    "hoverImage": "/images/products/LOTUS/LOTUS LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/LOTUS/LOTUS SKIRT.jpg"
@@ -2984,7 +2984,7 @@
     "priceValue": 940000,
     "installment": "IDR313,333",
     "image": "/images/products/LOTUS/LOTUS TOP.jpg",
-    "hoverImage": "/images/products/LOTUS/LOTUS TOP.jpg",
+    "hoverImage": "/images/products/LOTUS/LOTUS LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/LOTUS/LOTUS TOP.jpg"
@@ -3009,7 +3009,7 @@
     "priceValue": 995000,
     "installment": "IDR331,666",
     "image": "/images/products/MARRE/MARRE SKIRT.jpg",
-    "hoverImage": "/images/products/MARRE/MARRE SKIRT.jpg",
+    "hoverImage": "/images/products/MARRE/MARRE TOP.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/MARRE/MARRE SKIRT.jpg"
@@ -3034,7 +3034,7 @@
     "priceValue": 875000,
     "installment": "IDR291,666",
     "image": "/images/products/MARRE/MARRE TOP.jpg",
-    "hoverImage": "/images/products/MARRE/MARRE TOP.jpg",
+    "hoverImage": "/images/products/MARRE/MARRE SKIRT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/MARRE/MARRE TOP.jpg"
@@ -3059,7 +3059,7 @@
     "priceValue": 905000,
     "installment": "IDR301,666",
     "image": "/images/products/MARS/MARS LONG TOP  TUNIK.jpg",
-    "hoverImage": "/images/products/MARS/MARS LONG TOP  TUNIK.jpg",
+    "hoverImage": "/images/products/MARS/MARS SKIRT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/MARS/MARS LONG TOP  TUNIK.jpg"
@@ -3084,7 +3084,7 @@
     "priceValue": 935000,
     "installment": "IDR311,666",
     "image": "/images/products/MARS/MARS SKIRT.jpg",
-    "hoverImage": "/images/products/MARS/MARS SKIRT.jpg",
+    "hoverImage": "/images/products/MARS/MARS LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/MARS/MARS SKIRT.jpg"
@@ -3109,7 +3109,7 @@
     "priceValue": 970000,
     "installment": "IDR323,333",
     "image": "/images/products/MARS/MARS TOP.jpg",
-    "hoverImage": "/images/products/MARS/MARS TOP.jpg",
+    "hoverImage": "/images/products/MARS/MARS LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/MARS/MARS TOP.jpg"
@@ -3134,7 +3134,7 @@
     "priceValue": 985000,
     "installment": "IDR328,333",
     "image": "/images/products/MEKO/MEKO SKIRT.jpg",
-    "hoverImage": "/images/products/MEKO/MEKO SKIRT.jpg",
+    "hoverImage": "/images/products/MEKO/MEKO TOP.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/MEKO/MEKO SKIRT.jpg"
@@ -3159,7 +3159,7 @@
     "priceValue": 845000,
     "installment": "IDR281,666",
     "image": "/images/products/MEKO/MEKO TOP.jpg",
-    "hoverImage": "/images/products/MEKO/MEKO TOP.jpg",
+    "hoverImage": "/images/products/MEKO/MEKO SKIRT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/MEKO/MEKO TOP.jpg"
@@ -3184,7 +3184,7 @@
     "priceValue": 900000,
     "installment": "IDR300,000",
     "image": "/images/products/MOZA/MOZA SKIRT.jpg",
-    "hoverImage": "/images/products/MOZA/MOZA SKIRT.jpg",
+    "hoverImage": "/images/products/MOZA/MOZA TOP.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/MOZA/MOZA SKIRT.jpg"
@@ -3209,7 +3209,7 @@
     "priceValue": 860000,
     "installment": "IDR286,666",
     "image": "/images/products/MOZA/MOZA TOP.jpg",
-    "hoverImage": "/images/products/MOZA/MOZA TOP.jpg",
+    "hoverImage": "/images/products/MOZA/MOZA SKIRT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/MOZA/MOZA TOP.jpg"
@@ -3234,7 +3234,7 @@
     "priceValue": 855000,
     "installment": "IDR285,000",
     "image": "/images/products/NANCY SKIRT.jpg",
-    "hoverImage": "/images/products/NANCY SKIRT.jpg",
+    "hoverImage": "/images/products/CATHY SKIRT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/NANCY SKIRT.jpg"
@@ -3259,7 +3259,7 @@
     "priceValue": 910000,
     "installment": "IDR303,333",
     "image": "/images/products/ORION PANTS.jpg",
-    "hoverImage": "/images/products/ORION PANTS.jpg",
+    "hoverImage": "/images/products/ORION SHORT PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/ORION PANTS.jpg"
@@ -3284,7 +3284,7 @@
     "priceValue": 835000,
     "installment": "IDR278,333",
     "image": "/images/products/ORION SHORT PANTS.jpg",
-    "hoverImage": "/images/products/ORION SHORT PANTS.jpg",
+    "hoverImage": "/images/products/ORION PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/ORION SHORT PANTS.jpg"
@@ -3334,7 +3334,7 @@
     "priceValue": 810000,
     "installment": "IDR270,000",
     "image": "/images/products/PIGI/PIGI PANTS.jpg",
-    "hoverImage": "/images/products/PIGI/PIGI PANTS.jpg",
+    "hoverImage": "/images/products/PIGI/PIGI SHORT PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/PIGI/PIGI PANTS.jpg"
@@ -3359,7 +3359,7 @@
     "priceValue": 840000,
     "installment": "IDR280,000",
     "image": "/images/products/PIGI/PIGI SHORT PANTS.jpg",
-    "hoverImage": "/images/products/PIGI/PIGI SHORT PANTS.jpg",
+    "hoverImage": "/images/products/PIGI/PIGI PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/PIGI/PIGI SHORT PANTS.jpg"
@@ -3384,7 +3384,7 @@
     "priceValue": 825000,
     "installment": "IDR275,000",
     "image": "/images/products/PIGI/PIGI SKIRT.jpg",
-    "hoverImage": "/images/products/PIGI/PIGI SKIRT.jpg",
+    "hoverImage": "/images/products/PIGI/PIGI PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/PIGI/PIGI SKIRT.jpg"
@@ -3409,7 +3409,7 @@
     "priceValue": 815000,
     "installment": "IDR271,666",
     "image": "/images/products/PIGI/PIGI TOP.jpg",
-    "hoverImage": "/images/products/PIGI/PIGI TOP.jpg",
+    "hoverImage": "/images/products/PIGI/PIGI PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/PIGI/PIGI TOP.jpg"
@@ -3434,7 +3434,7 @@
     "priceValue": 965000,
     "installment": "IDR321,666",
     "image": "/images/products/PLEATSSSI/PLEATSSSI SHORT PANTS.jpg",
-    "hoverImage": "/images/products/PLEATSSSI/PLEATSSSI SHORT PANTS.jpg",
+    "hoverImage": "/images/products/PLEATSSSI/PLEATSSSI SKIRT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/PLEATSSSI/PLEATSSSI SHORT PANTS.jpg"
@@ -3459,7 +3459,7 @@
     "priceValue": 830000,
     "installment": "IDR276,666",
     "image": "/images/products/PLEATSSSI/PLEATSSSI SKIRT.jpg",
-    "hoverImage": "/images/products/PLEATSSSI/PLEATSSSI SKIRT.jpg",
+    "hoverImage": "/images/products/PLEATSSSI/PLEATSSSI SHORT PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/PLEATSSSI/PLEATSSSI SKIRT.jpg"
@@ -3509,7 +3509,7 @@
     "priceValue": 1000000,
     "installment": "IDR333,333",
     "image": "/images/products/POLY/POLY SKIRT.jpg",
-    "hoverImage": "/images/products/POLY/POLY SKIRT.jpg",
+    "hoverImage": "/images/products/POLY/POLY TOP.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/POLY/POLY SKIRT.jpg"
@@ -3534,7 +3534,7 @@
     "priceValue": 915000,
     "installment": "IDR305,000",
     "image": "/images/products/POLY/POLY TOP.jpg",
-    "hoverImage": "/images/products/POLY/POLY TOP.jpg",
+    "hoverImage": "/images/products/POLY/POLY SKIRT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/POLY/POLY TOP.jpg"
@@ -3559,7 +3559,7 @@
     "priceValue": 940000,
     "installment": "IDR313,333",
     "image": "/images/products/POPPY/POPPY SKIRT.jpg",
-    "hoverImage": "/images/products/POPPY/POPPY SKIRT.jpg",
+    "hoverImage": "/images/products/POPPY/POPPY TOP.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/POPPY/POPPY SKIRT.jpg"
@@ -3584,7 +3584,7 @@
     "priceValue": 810000,
     "installment": "IDR270,000",
     "image": "/images/products/POPPY/POPPY TOP.jpg",
-    "hoverImage": "/images/products/POPPY/POPPY TOP.jpg",
+    "hoverImage": "/images/products/POPPY/POPPY SKIRT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/POPPY/POPPY TOP.jpg"
@@ -3609,7 +3609,7 @@
     "priceValue": 800000,
     "installment": "IDR266,666",
     "image": "/images/products/POWDER ONE/POWDER LONG TOP  TUNIK.jpg",
-    "hoverImage": "/images/products/POWDER ONE/POWDER LONG TOP  TUNIK.jpg",
+    "hoverImage": "/images/products/POWDER ONE/POWDER PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/POWDER ONE/POWDER LONG TOP  TUNIK.jpg"
@@ -3634,7 +3634,7 @@
     "priceValue": 885000,
     "installment": "IDR295,000",
     "image": "/images/products/POWDER ONE/POWDER PANTS.jpg",
-    "hoverImage": "/images/products/POWDER ONE/POWDER PANTS.jpg",
+    "hoverImage": "/images/products/POWDER ONE/POWDER LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/POWDER ONE/POWDER PANTS.jpg"
@@ -3659,7 +3659,7 @@
     "priceValue": 905000,
     "installment": "IDR301,666",
     "image": "/images/products/POWDER ONE/POWDER SHORT PANTS.jpg",
-    "hoverImage": "/images/products/POWDER ONE/POWDER SHORT PANTS.jpg",
+    "hoverImage": "/images/products/POWDER ONE/POWDER LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/POWDER ONE/POWDER SHORT PANTS.jpg"
@@ -3684,7 +3684,7 @@
     "priceValue": 855000,
     "installment": "IDR285,000",
     "image": "/images/products/POWDER ONE/POWDER SHORT TOP.jpg",
-    "hoverImage": "/images/products/POWDER ONE/POWDER SHORT TOP.jpg",
+    "hoverImage": "/images/products/POWDER ONE/POWDER LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/POWDER ONE/POWDER SHORT TOP.jpg"
@@ -3709,7 +3709,7 @@
     "priceValue": 950000,
     "installment": "IDR316,666",
     "image": "/images/products/POWDER ONE/POWDER SKIRT.jpg",
-    "hoverImage": "/images/products/POWDER ONE/POWDER SKIRT.jpg",
+    "hoverImage": "/images/products/POWDER ONE/POWDER LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/POWDER ONE/POWDER SKIRT.jpg"
@@ -3734,7 +3734,7 @@
     "priceValue": 800000,
     "installment": "IDR266,666",
     "image": "/images/products/POWDER TOO/POWDER TOO LONG TOP  TUNIK.jpg",
-    "hoverImage": "/images/products/POWDER TOO/POWDER TOO LONG TOP  TUNIK.jpg",
+    "hoverImage": "/images/products/POWDER ONE/POWDER LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/POWDER TOO/POWDER TOO LONG TOP  TUNIK.jpg"
@@ -3759,7 +3759,7 @@
     "priceValue": 965000,
     "installment": "IDR321,666",
     "image": "/images/products/POWDER TOO/POWDER TOO SHORT TOP.jpg",
-    "hoverImage": "/images/products/POWDER TOO/POWDER TOO SHORT TOP.jpg",
+    "hoverImage": "/images/products/POWDER ONE/POWDER LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/POWDER TOO/POWDER TOO SHORT TOP.jpg"
@@ -3784,7 +3784,7 @@
     "priceValue": 860000,
     "installment": "IDR286,666",
     "image": "/images/products/POWDER TOO/POWDER TOO SKIRT.JPG",
-    "hoverImage": "/images/products/POWDER TOO/POWDER TOO SKIRT.JPG",
+    "hoverImage": "/images/products/POWDER ONE/POWDER LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/POWDER TOO/POWDER TOO SKIRT.JPG"
@@ -3809,7 +3809,7 @@
     "priceValue": 915000,
     "installment": "IDR305,000",
     "image": "/images/products/POWDER TOO/POWDER TOO TOP.jpg",
-    "hoverImage": "/images/products/POWDER TOO/POWDER TOO TOP.jpg",
+    "hoverImage": "/images/products/POWDER ONE/POWDER LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/POWDER TOO/POWDER TOO TOP.jpg"
@@ -3834,7 +3834,7 @@
     "priceValue": 920000,
     "installment": "IDR306,666",
     "image": "/images/products/POWDER ONE/POWDER TOP.jpg",
-    "hoverImage": "/images/products/POWDER ONE/POWDER TOP.jpg",
+    "hoverImage": "/images/products/POWDER ONE/POWDER LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/POWDER ONE/POWDER TOP.jpg"
@@ -3859,7 +3859,7 @@
     "priceValue": 920000,
     "installment": "IDR306,666",
     "image": "/images/products/POWDER TREE/POWDER TREE LONG TOPTUNIK.jpg",
-    "hoverImage": "/images/products/POWDER TREE/POWDER TREE LONG TOPTUNIK.jpg",
+    "hoverImage": "/images/products/POWDER ONE/POWDER LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/POWDER TREE/POWDER TREE LONG TOPTUNIK.jpg"
@@ -3884,7 +3884,7 @@
     "priceValue": 800000,
     "installment": "IDR266,666",
     "image": "/images/products/POWDER TREE/POWDER TREE SKIRT.jpg",
-    "hoverImage": "/images/products/POWDER TREE/POWDER TREE SKIRT.jpg",
+    "hoverImage": "/images/products/POWDER ONE/POWDER LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/POWDER TREE/POWDER TREE SKIRT.jpg"
@@ -3909,7 +3909,7 @@
     "priceValue": 955000,
     "installment": "IDR318,333",
     "image": "/images/products/POWDER TREE/POWDER TREE TOP.jpg",
-    "hoverImage": "/images/products/POWDER TREE/POWDER TREE TOP.jpg",
+    "hoverImage": "/images/products/POWDER ONE/POWDER LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/POWDER TREE/POWDER TREE TOP.jpg"
@@ -3934,7 +3934,7 @@
     "priceValue": 985000,
     "installment": "IDR328,333",
     "image": "/images/products/PREGO/PREGO SHORT PANTS.jpg",
-    "hoverImage": "/images/products/PREGO/PREGO SHORT PANTS.jpg",
+    "hoverImage": "/images/products/PREGO/PREGO SKIRT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/PREGO/PREGO SHORT PANTS.jpg"
@@ -3959,7 +3959,7 @@
     "priceValue": 845000,
     "installment": "IDR281,666",
     "image": "/images/products/PREGO/PREGO SKIRT.jpg",
-    "hoverImage": "/images/products/PREGO/PREGO SKIRT.jpg",
+    "hoverImage": "/images/products/PREGO/PREGO SHORT PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/PREGO/PREGO SKIRT.jpg"
@@ -3984,7 +3984,7 @@
     "priceValue": 870000,
     "installment": "IDR290,000",
     "image": "/images/products/PREGO/PREGO TOP.jpg",
-    "hoverImage": "/images/products/PREGO/PREGO TOP.jpg",
+    "hoverImage": "/images/products/PREGO/PREGO SHORT PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/PREGO/PREGO TOP.jpg"
@@ -4009,7 +4009,7 @@
     "priceValue": 960000,
     "installment": "IDR320,000",
     "image": "/images/products/RAIA ONE/RAIA SHORT TOP.jpg",
-    "hoverImage": "/images/products/RAIA ONE/RAIA SHORT TOP.jpg",
+    "hoverImage": "/images/products/RAIA ONE/RAIA SKIRT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/RAIA ONE/RAIA SHORT TOP.jpg"
@@ -4034,7 +4034,7 @@
     "priceValue": 995000,
     "installment": "IDR331,666",
     "image": "/images/products/RAIA ONE/RAIA SKIRT.jpg",
-    "hoverImage": "/images/products/RAIA ONE/RAIA SKIRT.jpg",
+    "hoverImage": "/images/products/RAIA ONE/RAIA SHORT TOP.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/RAIA ONE/RAIA SKIRT.jpg"
@@ -4059,7 +4059,7 @@
     "priceValue": 915000,
     "installment": "IDR305,000",
     "image": "/images/products/RAIA TOO/RAIA TOO LONG TOPTUNIK.jpg",
-    "hoverImage": "/images/products/RAIA TOO/RAIA TOO LONG TOPTUNIK.jpg",
+    "hoverImage": "/images/products/RAIA ONE/RAIA SHORT TOP.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/RAIA TOO/RAIA TOO LONG TOPTUNIK.jpg"
@@ -4084,7 +4084,7 @@
     "priceValue": 985000,
     "installment": "IDR328,333",
     "image": "/images/products/RAIA TOO/RAIA TOO SKIRT.jpg",
-    "hoverImage": "/images/products/RAIA TOO/RAIA TOO SKIRT.jpg",
+    "hoverImage": "/images/products/RAIA ONE/RAIA SHORT TOP.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/RAIA TOO/RAIA TOO SKIRT.jpg"
@@ -4109,7 +4109,7 @@
     "priceValue": 840000,
     "installment": "IDR280,000",
     "image": "/images/products/RAIA TOO/RAIA TOO TOP.jpg",
-    "hoverImage": "/images/products/RAIA TOO/RAIA TOO TOP.jpg",
+    "hoverImage": "/images/products/RAIA ONE/RAIA SHORT TOP.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/RAIA TOO/RAIA TOO TOP.jpg"
@@ -4134,7 +4134,7 @@
     "priceValue": 800000,
     "installment": "IDR266,666",
     "image": "/images/products/RAIA ONE/RAIA TOP.jpg",
-    "hoverImage": "/images/products/RAIA ONE/RAIA TOP.jpg",
+    "hoverImage": "/images/products/RAIA ONE/RAIA SHORT TOP.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/RAIA ONE/RAIA TOP.jpg"
@@ -4159,7 +4159,7 @@
     "priceValue": 865000,
     "installment": "IDR288,333",
     "image": "/images/products/RAIA TREE/RAIA TREE LONGTOPTUNIK.jpg",
-    "hoverImage": "/images/products/RAIA TREE/RAIA TREE LONGTOPTUNIK.jpg",
+    "hoverImage": "/images/products/RAIA ONE/RAIA SHORT TOP.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/RAIA TREE/RAIA TREE LONGTOPTUNIK.jpg"
@@ -4184,7 +4184,7 @@
     "priceValue": 905000,
     "installment": "IDR301,666",
     "image": "/images/products/RAIA TREE/RAIA TREE SHORT TOP.jpg",
-    "hoverImage": "/images/products/RAIA TREE/RAIA TREE SHORT TOP.jpg",
+    "hoverImage": "/images/products/RAIA ONE/RAIA SHORT TOP.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/RAIA TREE/RAIA TREE SHORT TOP.jpg"
@@ -4209,7 +4209,7 @@
     "priceValue": 990000,
     "installment": "IDR330,000",
     "image": "/images/products/RAIA TREE/RAIA TREE SKIRT.jpg",
-    "hoverImage": "/images/products/RAIA TREE/RAIA TREE SKIRT.jpg",
+    "hoverImage": "/images/products/RAIA ONE/RAIA SHORT TOP.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/RAIA TREE/RAIA TREE SKIRT.jpg"
@@ -4234,7 +4234,7 @@
     "priceValue": 820000,
     "installment": "IDR273,333",
     "image": "/images/products/RAIA TREE/RAIA TREE TOP.jpg",
-    "hoverImage": "/images/products/RAIA TREE/RAIA TREE TOP.jpg",
+    "hoverImage": "/images/products/RAIA ONE/RAIA SHORT TOP.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/RAIA TREE/RAIA TREE TOP.jpg"
@@ -4259,7 +4259,7 @@
     "priceValue": 940000,
     "installment": "IDR313,333",
     "image": "/images/products/RAIL/RAIL PANTS.jpg",
-    "hoverImage": "/images/products/RAIL/RAIL PANTS.jpg",
+    "hoverImage": "/images/products/RAIL/RAIL SHORT PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/RAIL/RAIL PANTS.jpg"
@@ -4284,7 +4284,7 @@
     "priceValue": 900000,
     "installment": "IDR300,000",
     "image": "/images/products/RAIL/RAIL SHORT PANTS.jpg",
-    "hoverImage": "/images/products/RAIL/RAIL SHORT PANTS.jpg",
+    "hoverImage": "/images/products/RAIL/RAIL PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/RAIL/RAIL SHORT PANTS.jpg"
@@ -4309,7 +4309,7 @@
     "priceValue": 840000,
     "installment": "IDR280,000",
     "image": "/images/products/RAIL/RAIL SKIRT.jpg",
-    "hoverImage": "/images/products/RAIL/RAIL SKIRT.jpg",
+    "hoverImage": "/images/products/RAIL/RAIL PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/RAIL/RAIL SKIRT.jpg"
@@ -4334,7 +4334,7 @@
     "priceValue": 810000,
     "installment": "IDR270,000",
     "image": "/images/products/RAIL/RAIL TOP.jpg",
-    "hoverImage": "/images/products/RAIL/RAIL TOP.jpg",
+    "hoverImage": "/images/products/RAIL/RAIL PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/RAIL/RAIL TOP.jpg"
@@ -4359,7 +4359,7 @@
     "priceValue": 825000,
     "installment": "IDR275,000",
     "image": "/images/products/SAROONG & SAGE/SAGE SKIRT.jpg",
-    "hoverImage": "/images/products/SAROONG & SAGE/SAGE SKIRT.jpg",
+    "hoverImage": "/images/products/SAROONG & SAGE/SAROONG PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/SAROONG & SAGE/SAGE SKIRT.jpg"
@@ -4384,7 +4384,7 @@
     "priceValue": 910000,
     "installment": "IDR303,333",
     "image": "/images/products/SALUR/SALUR SKIRT.jpg",
-    "hoverImage": "/images/products/SALUR/SALUR SKIRT.jpg",
+    "hoverImage": "/images/products/SALUR/IMG_4612.PNG",
     "swatches": [],
     "gallery": [
       "/images/products/SALUR/SALUR SKIRT.jpg"
@@ -4409,7 +4409,7 @@
     "priceValue": 945000,
     "installment": "IDR315,000",
     "image": "/images/products/SALUR/SALUR TOP.jpg",
-    "hoverImage": "/images/products/SALUR/SALUR TOP.jpg",
+    "hoverImage": "/images/products/SALUR/IMG_4612.PNG",
     "swatches": [],
     "gallery": [
       "/images/products/SALUR/SALUR TOP.jpg"
@@ -4434,7 +4434,7 @@
     "priceValue": 965000,
     "installment": "IDR321,666",
     "image": "/images/products/SAROONG & SAGE/SAROONG PANTS.jpg",
-    "hoverImage": "/images/products/SAROONG & SAGE/SAROONG PANTS.jpg",
+    "hoverImage": "/images/products/SAROONG & SAGE/SAROONG SHORT PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/SAROONG & SAGE/SAROONG PANTS.jpg"
@@ -4459,7 +4459,7 @@
     "priceValue": 805000,
     "installment": "IDR268,333",
     "image": "/images/products/SAROONG & SAGE/SAROONG SHORT PANTS.jpg",
-    "hoverImage": "/images/products/SAROONG & SAGE/SAROONG SHORT PANTS.jpg",
+    "hoverImage": "/images/products/SAROONG & SAGE/SAROONG PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/SAROONG & SAGE/SAROONG SHORT PANTS.jpg"
@@ -4484,7 +4484,7 @@
     "priceValue": 900000,
     "installment": "IDR300,000",
     "image": "/images/products/SAROONG & SAGE/SAROONG SKIRT.jpg",
-    "hoverImage": "/images/products/SAROONG & SAGE/SAROONG SKIRT.jpg",
+    "hoverImage": "/images/products/SAROONG & SAGE/SAROONG PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/SAROONG & SAGE/SAROONG SKIRT.jpg"
@@ -4509,7 +4509,7 @@
     "priceValue": 935000,
     "installment": "IDR311,666",
     "image": "/images/products/SASHI/SASHI PAHING SKIRT.jpg",
-    "hoverImage": "/images/products/SASHI/SASHI PAHING SKIRT.jpg",
+    "hoverImage": "/images/products/SASHI/SASHI PAHING TOP.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/SASHI/SASHI PAHING SKIRT.jpg"
@@ -4534,7 +4534,7 @@
     "priceValue": 840000,
     "installment": "IDR280,000",
     "image": "/images/products/SASHI/SASHI PAHING TOP.jpg",
-    "hoverImage": "/images/products/SASHI/SASHI PAHING TOP.jpg",
+    "hoverImage": "/images/products/SASHI/SASHI PAHING SKIRT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/SASHI/SASHI PAHING TOP.jpg"
@@ -4559,7 +4559,7 @@
     "priceValue": 840000,
     "installment": "IDR280,000",
     "image": "/images/products/SECRET GARDEN/SECRET GARDEN LONG TOPTUNIK.jpg",
-    "hoverImage": "/images/products/SECRET GARDEN/SECRET GARDEN LONG TOPTUNIK.jpg",
+    "hoverImage": "/images/products/SECRET GARDEN/SECRET GARDEN SKIRT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/SECRET GARDEN/SECRET GARDEN LONG TOPTUNIK.jpg"
@@ -4584,7 +4584,7 @@
     "priceValue": 965000,
     "installment": "IDR321,666",
     "image": "/images/products/SECRET GARDEN/SECRET GARDEN SKIRT.jpg",
-    "hoverImage": "/images/products/SECRET GARDEN/SECRET GARDEN SKIRT.jpg",
+    "hoverImage": "/images/products/SECRET GARDEN/SECRET GARDEN LONG TOPTUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/SECRET GARDEN/SECRET GARDEN SKIRT.jpg"
@@ -4609,7 +4609,7 @@
     "priceValue": 825000,
     "installment": "IDR275,000",
     "image": "/images/products/SECRET GARDEN/SECRET GARDEN TOP.jpg",
-    "hoverImage": "/images/products/SECRET GARDEN/SECRET GARDEN TOP.jpg",
+    "hoverImage": "/images/products/SECRET GARDEN/SECRET GARDEN LONG TOPTUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/SECRET GARDEN/SECRET GARDEN TOP.jpg"
@@ -4634,7 +4634,7 @@
     "priceValue": 805000,
     "installment": "IDR268,333",
     "image": "/images/products/SEDAYU/SEDAYU SHORT PANTS.jpg",
-    "hoverImage": "/images/products/SEDAYU/SEDAYU SHORT PANTS.jpg",
+    "hoverImage": "/images/products/SEDAYU/SEDAYU SKIRT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/SEDAYU/SEDAYU SHORT PANTS.jpg"
@@ -4659,7 +4659,7 @@
     "priceValue": 915000,
     "installment": "IDR305,000",
     "image": "/images/products/SEDAYU/SEDAYU SKIRT.jpg",
-    "hoverImage": "/images/products/SEDAYU/SEDAYU SKIRT.jpg",
+    "hoverImage": "/images/products/SEDAYU/SEDAYU SHORT PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/SEDAYU/SEDAYU SKIRT.jpg"
@@ -4684,7 +4684,7 @@
     "priceValue": 850000,
     "installment": "IDR283,333",
     "image": "/images/products/SEEDY/SEEDY LONG TOP  TUNIK.jpg",
-    "hoverImage": "/images/products/SEEDY/SEEDY LONG TOP  TUNIK.jpg",
+    "hoverImage": "/images/products/SEEDY/SEEDY SHORT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/SEEDY/SEEDY LONG TOP  TUNIK.jpg"
@@ -4709,7 +4709,7 @@
     "priceValue": 965000,
     "installment": "IDR321,666",
     "image": "/images/products/SEEDY/SEEDY SHORT.jpg",
-    "hoverImage": "/images/products/SEEDY/SEEDY SHORT.jpg",
+    "hoverImage": "/images/products/SEEDY/SEEDY LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/SEEDY/SEEDY SHORT.jpg"
@@ -4734,7 +4734,7 @@
     "priceValue": 895000,
     "installment": "IDR298,333",
     "image": "/images/products/SEEDY/SEEDY SKIRT.jpg",
-    "hoverImage": "/images/products/SEEDY/SEEDY SKIRT.jpg",
+    "hoverImage": "/images/products/SEEDY/SEEDY LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/SEEDY/SEEDY SKIRT.jpg"
@@ -4759,7 +4759,7 @@
     "priceValue": 820000,
     "installment": "IDR273,333",
     "image": "/images/products/SHELLEN/SHELLEN LONGTOPTUNIK.jpg",
-    "hoverImage": "/images/products/SHELLEN/SHELLEN LONGTOPTUNIK.jpg",
+    "hoverImage": "/images/products/SHELLEN/SHELLEN TOP.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/SHELLEN/SHELLEN LONGTOPTUNIK.jpg"
@@ -4784,7 +4784,7 @@
     "priceValue": 915000,
     "installment": "IDR305,000",
     "image": "/images/products/SHELLEN/SHELLEN TOP.jpg",
-    "hoverImage": "/images/products/SHELLEN/SHELLEN TOP.jpg",
+    "hoverImage": "/images/products/SHELLEN/SHELLEN LONGTOPTUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/SHELLEN/SHELLEN TOP.jpg"
@@ -4809,7 +4809,7 @@
     "priceValue": 955000,
     "installment": "IDR318,333",
     "image": "/images/products/SILIKA/SILIKA SKIRT.jpg",
-    "hoverImage": "/images/products/SILIKA/SILIKA SKIRT.jpg",
+    "hoverImage": "/images/products/SILIKA/SILIKA TOP.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/SILIKA/SILIKA SKIRT.jpg"
@@ -4834,7 +4834,7 @@
     "priceValue": 910000,
     "installment": "IDR303,333",
     "image": "/images/products/SILIKA/SILIKA TOP.jpg",
-    "hoverImage": "/images/products/SILIKA/SILIKA TOP.jpg",
+    "hoverImage": "/images/products/SILIKA/SILIKA SKIRT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/SILIKA/SILIKA TOP.jpg"
@@ -4859,7 +4859,7 @@
     "priceValue": 870000,
     "installment": "IDR290,000",
     "image": "/images/products/SOFIA/SOFIA LONG TOP  TUNIK.jpg",
-    "hoverImage": "/images/products/SOFIA/SOFIA LONG TOP  TUNIK.jpg",
+    "hoverImage": "/images/products/SOFIA/SOFIA SKIRT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/SOFIA/SOFIA LONG TOP  TUNIK.jpg"
@@ -4884,7 +4884,7 @@
     "priceValue": 860000,
     "installment": "IDR286,666",
     "image": "/images/products/SOFIA/SOFIA SKIRT.jpg",
-    "hoverImage": "/images/products/SOFIA/SOFIA SKIRT.jpg",
+    "hoverImage": "/images/products/SOFIA/SOFIA LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/SOFIA/SOFIA SKIRT.jpg"
@@ -4909,7 +4909,7 @@
     "priceValue": 915000,
     "installment": "IDR305,000",
     "image": "/images/products/SOFIA/SOFIA TOP.jpg",
-    "hoverImage": "/images/products/SOFIA/SOFIA TOP.jpg",
+    "hoverImage": "/images/products/SOFIA/SOFIA LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/SOFIA/SOFIA TOP.jpg"
@@ -4934,7 +4934,7 @@
     "priceValue": 825000,
     "installment": "IDR275,000",
     "image": "/images/products/SWEELY&TABUR/SWEELY SKIRT.jpg",
-    "hoverImage": "/images/products/SWEELY&TABUR/SWEELY SKIRT.jpg",
+    "hoverImage": "/images/products/SWEELY&TABUR/SWEELY TOP.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/SWEELY&TABUR/SWEELY SKIRT.jpg"
@@ -4959,7 +4959,7 @@
     "priceValue": 950000,
     "installment": "IDR316,666",
     "image": "/images/products/SWEELY&TABUR/SWEELY TOP.jpg",
-    "hoverImage": "/images/products/SWEELY&TABUR/SWEELY TOP.jpg",
+    "hoverImage": "/images/products/SWEELY&TABUR/SWEELY SKIRT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/SWEELY&TABUR/SWEELY TOP.jpg"
@@ -4984,7 +4984,7 @@
     "priceValue": 870000,
     "installment": "IDR290,000",
     "image": "/images/products/SWEELY&TABUR/TABUR SKIRT.jpg",
-    "hoverImage": "/images/products/SWEELY&TABUR/TABUR SKIRT.jpg",
+    "hoverImage": "/images/products/SWEELY&TABUR/SWEELY SKIRT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/SWEELY&TABUR/TABUR SKIRT.jpg"
@@ -5009,7 +5009,7 @@
     "priceValue": 935000,
     "installment": "IDR311,666",
     "image": "/images/products/THE EYE ONE/THE AYE TOP.jpg",
-    "hoverImage": "/images/products/THE EYE ONE/THE AYE TOP.jpg",
+    "hoverImage": "/images/products/THE EYE ONE/THE EYE LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/THE EYE ONE/THE AYE TOP.jpg"
@@ -5034,7 +5034,7 @@
     "priceValue": 860000,
     "installment": "IDR286,666",
     "image": "/images/products/THE EYE ONE/THE EYE LONG TOP  TUNIK.jpg",
-    "hoverImage": "/images/products/THE EYE ONE/THE EYE LONG TOP  TUNIK.jpg",
+    "hoverImage": "/images/products/THE EYE ONE/THE AYE TOP.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/THE EYE ONE/THE EYE LONG TOP  TUNIK.jpg"
@@ -5059,7 +5059,7 @@
     "priceValue": 985000,
     "installment": "IDR328,333",
     "image": "/images/products/THE EYE ONE/THE EYE ONE SHORT TOP.jpg",
-    "hoverImage": "/images/products/THE EYE ONE/THE EYE ONE SHORT TOP.jpg",
+    "hoverImage": "/images/products/THE EYE ONE/THE AYE TOP.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/THE EYE ONE/THE EYE ONE SHORT TOP.jpg"
@@ -5084,7 +5084,7 @@
     "priceValue": 995000,
     "installment": "IDR331,666",
     "image": "/images/products/THE EYE ONE/THE EYE PANTS.jpg",
-    "hoverImage": "/images/products/THE EYE ONE/THE EYE PANTS.jpg",
+    "hoverImage": "/images/products/THE EYE ONE/THE AYE TOP.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/THE EYE ONE/THE EYE PANTS.jpg"
@@ -5109,7 +5109,7 @@
     "priceValue": 800000,
     "installment": "IDR266,666",
     "image": "/images/products/THE EYE ONE/THE EYE SHORT PANTS.jpg",
-    "hoverImage": "/images/products/THE EYE ONE/THE EYE SHORT PANTS.jpg",
+    "hoverImage": "/images/products/THE EYE ONE/THE AYE TOP.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/THE EYE ONE/THE EYE SHORT PANTS.jpg"
@@ -5134,7 +5134,7 @@
     "priceValue": 810000,
     "installment": "IDR270,000",
     "image": "/images/products/THE EYE ONE/THE EYE SKIRT.jpg",
-    "hoverImage": "/images/products/THE EYE ONE/THE EYE SKIRT.jpg",
+    "hoverImage": "/images/products/THE EYE ONE/THE AYE TOP.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/THE EYE ONE/THE EYE SKIRT.jpg"
@@ -5159,7 +5159,7 @@
     "priceValue": 945000,
     "installment": "IDR315,000",
     "image": "/images/products/THE EYE TOO/THE EYE TOO SKIRT.jpg",
-    "hoverImage": "/images/products/THE EYE TOO/THE EYE TOO SKIRT.jpg",
+    "hoverImage": "/images/products/THE EYE ONE/THE AYE TOP.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/THE EYE TOO/THE EYE TOO SKIRT.jpg"
@@ -5184,7 +5184,7 @@
     "priceValue": 970000,
     "installment": "IDR323,333",
     "image": "/images/products/THE EYE TOO/THE EYE TOO TOP.jpg",
-    "hoverImage": "/images/products/THE EYE TOO/THE EYE TOO TOP.jpg",
+    "hoverImage": "/images/products/THE EYE ONE/THE AYE TOP.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/THE EYE TOO/THE EYE TOO TOP.jpg"
@@ -5209,7 +5209,7 @@
     "priceValue": 820000,
     "installment": "IDR273,333",
     "image": "/images/products/THE EYE TOO/THE EYE TWO PANT.jpg",
-    "hoverImage": "/images/products/THE EYE TOO/THE EYE TWO PANT.jpg",
+    "hoverImage": "/images/products/THE EYE ONE/THE AYE TOP.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/THE EYE TOO/THE EYE TWO PANT.jpg"
@@ -5234,7 +5234,7 @@
     "priceValue": 805000,
     "installment": "IDR268,333",
     "image": "/images/products/THE EYE TOO/THE EYE TWO SHORT PANTS.jpg",
-    "hoverImage": "/images/products/THE EYE TOO/THE EYE TWO SHORT PANTS.jpg",
+    "hoverImage": "/images/products/THE EYE ONE/THE AYE TOP.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/THE EYE TOO/THE EYE TWO SHORT PANTS.jpg"
@@ -5259,7 +5259,7 @@
     "priceValue": 920000,
     "installment": "IDR306,666",
     "image": "/images/products/THE HILLS/THE HILLS LONG TOP  TUNIK.jpg",
-    "hoverImage": "/images/products/THE HILLS/THE HILLS LONG TOP  TUNIK.jpg",
+    "hoverImage": "/images/products/THE HILLS/THE HILLS SHORT TOP.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/THE HILLS/THE HILLS LONG TOP  TUNIK.jpg"
@@ -5284,7 +5284,7 @@
     "priceValue": 835000,
     "installment": "IDR278,333",
     "image": "/images/products/THE HILLS/THE HILLS SHORT TOP.jpg",
-    "hoverImage": "/images/products/THE HILLS/THE HILLS SHORT TOP.jpg",
+    "hoverImage": "/images/products/THE HILLS/THE HILLS LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/THE HILLS/THE HILLS SHORT TOP.jpg"
@@ -5309,7 +5309,7 @@
     "priceValue": 1000000,
     "installment": "IDR333,333",
     "image": "/images/products/THE HILLS/THE HILLS SKIRT.jpg",
-    "hoverImage": "/images/products/THE HILLS/THE HILLS SKIRT.jpg",
+    "hoverImage": "/images/products/THE HILLS/THE HILLS LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/THE HILLS/THE HILLS SKIRT.jpg"
@@ -5334,7 +5334,7 @@
     "priceValue": 910000,
     "installment": "IDR303,333",
     "image": "/images/products/THE HILLS/THE HILLS TOP.jpg",
-    "hoverImage": "/images/products/THE HILLS/THE HILLS TOP.jpg",
+    "hoverImage": "/images/products/THE HILLS/THE HILLS LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/THE HILLS/THE HILLS TOP.jpg"
@@ -5359,7 +5359,7 @@
     "priceValue": 850000,
     "installment": "IDR283,333",
     "image": "/images/products/THE VIEW&TULIPE/THE VIEW SKIRT.jpg",
-    "hoverImage": "/images/products/THE VIEW&TULIPE/THE VIEW SKIRT.jpg",
+    "hoverImage": "/images/products/THE VIEW&TULIPE/THE VIEW TOP.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/THE VIEW&TULIPE/THE VIEW SKIRT.jpg"
@@ -5384,7 +5384,7 @@
     "priceValue": 875000,
     "installment": "IDR291,666",
     "image": "/images/products/THE VIEW&TULIPE/THE VIEW TOP.jpg",
-    "hoverImage": "/images/products/THE VIEW&TULIPE/THE VIEW TOP.jpg",
+    "hoverImage": "/images/products/THE VIEW&TULIPE/THE VIEW SKIRT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/THE VIEW&TULIPE/THE VIEW TOP.jpg"
@@ -5409,7 +5409,7 @@
     "priceValue": 925000,
     "installment": "IDR308,333",
     "image": "/images/products/TOMA/TOMA LONG TOP.jpg",
-    "hoverImage": "/images/products/TOMA/TOMA LONG TOP.jpg",
+    "hoverImage": "/images/products/TOMA/TOMA SHORT TOP.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/TOMA/TOMA LONG TOP.jpg"
@@ -5434,7 +5434,7 @@
     "priceValue": 810000,
     "installment": "IDR270,000",
     "image": "/images/products/TOMA/TOMA SHORT TOP.jpg",
-    "hoverImage": "/images/products/TOMA/TOMA SHORT TOP.jpg",
+    "hoverImage": "/images/products/TOMA/TOMA LONG TOP.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/TOMA/TOMA SHORT TOP.jpg"
@@ -5459,7 +5459,7 @@
     "priceValue": 980000,
     "installment": "IDR326,666",
     "image": "/images/products/TOMA/TOMA SKIRT.jpg",
-    "hoverImage": "/images/products/TOMA/TOMA SKIRT.jpg",
+    "hoverImage": "/images/products/TOMA/TOMA LONG TOP.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/TOMA/TOMA SKIRT.jpg"
@@ -5484,7 +5484,7 @@
     "priceValue": 910000,
     "installment": "IDR303,333",
     "image": "/images/products/TOMA/TOMA TOP.jpg",
-    "hoverImage": "/images/products/TOMA/TOMA TOP.jpg",
+    "hoverImage": "/images/products/TOMA/TOMA LONG TOP.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/TOMA/TOMA TOP.jpg"
@@ -5509,7 +5509,7 @@
     "priceValue": 930000,
     "installment": "IDR310,000",
     "image": "/images/products/THE VIEW&TULIPE/TULIPE LONG TOP.jpg",
-    "hoverImage": "/images/products/THE VIEW&TULIPE/TULIPE LONG TOP.jpg",
+    "hoverImage": "/images/products/THE VIEW&TULIPE/TULIPE SKIRT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/THE VIEW&TULIPE/TULIPE LONG TOP.jpg"
@@ -5534,7 +5534,7 @@
     "priceValue": 920000,
     "installment": "IDR306,666",
     "image": "/images/products/THE VIEW&TULIPE/TULIPE SKIRT.jpg",
-    "hoverImage": "/images/products/THE VIEW&TULIPE/TULIPE SKIRT.jpg",
+    "hoverImage": "/images/products/THE VIEW&TULIPE/TULIPE LONG TOP.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/THE VIEW&TULIPE/TULIPE SKIRT.jpg"
@@ -5559,7 +5559,7 @@
     "priceValue": 845000,
     "installment": "IDR281,666",
     "image": "/images/products/THE VIEW&TULIPE/TULIPE TOP.jpg",
-    "hoverImage": "/images/products/THE VIEW&TULIPE/TULIPE TOP.jpg",
+    "hoverImage": "/images/products/THE VIEW&TULIPE/TULIPE LONG TOP.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/THE VIEW&TULIPE/TULIPE TOP.jpg"
@@ -5584,7 +5584,7 @@
     "priceValue": 965000,
     "installment": "IDR321,666",
     "image": "/images/products/Untitled_Artwork.JPG",
-    "hoverImage": "/images/products/Untitled_Artwork.JPG",
+    "hoverImage": "/images/products/CATHY SKIRT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/Untitled_Artwork.JPG"
@@ -5609,7 +5609,7 @@
     "priceValue": 890000,
     "installment": "IDR296,666",
     "image": "/images/products/VOIR/VOIR LONG TOP TUNIK.jpg",
-    "hoverImage": "/images/products/VOIR/VOIR LONG TOP TUNIK.jpg",
+    "hoverImage": "/images/products/VOIR/VOIR SHORT TOP.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/VOIR/VOIR LONG TOP TUNIK.jpg"
@@ -5634,7 +5634,7 @@
     "priceValue": 810000,
     "installment": "IDR270,000",
     "image": "/images/products/VOIR/VOIR SHORT TOP.jpg",
-    "hoverImage": "/images/products/VOIR/VOIR SHORT TOP.jpg",
+    "hoverImage": "/images/products/VOIR/VOIR LONG TOP TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/VOIR/VOIR SHORT TOP.jpg"
@@ -5659,7 +5659,7 @@
     "priceValue": 805000,
     "installment": "IDR268,333",
     "image": "/images/products/VOIR/VOIR SKIRT.jpg",
-    "hoverImage": "/images/products/VOIR/VOIR SKIRT.jpg",
+    "hoverImage": "/images/products/VOIR/VOIR LONG TOP TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/VOIR/VOIR SKIRT.jpg"
@@ -5684,7 +5684,7 @@
     "priceValue": 995000,
     "installment": "IDR331,666",
     "image": "/images/products/VOIR/VOIR TOP.jpg",
-    "hoverImage": "/images/products/VOIR/VOIR TOP.jpg",
+    "hoverImage": "/images/products/VOIR/VOIR LONG TOP TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/VOIR/VOIR TOP.jpg"
@@ -5734,7 +5734,7 @@
     "priceValue": 850000,
     "installment": "IDR283,333",
     "image": "/images/products/WILLOW/WILLOW PANTS.jpg",
-    "hoverImage": "/images/products/WILLOW/WILLOW PANTS.jpg",
+    "hoverImage": "/images/products/WILLOW/WILLOW SHORT PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/WILLOW/WILLOW PANTS.jpg"
@@ -5759,7 +5759,7 @@
     "priceValue": 840000,
     "installment": "IDR280,000",
     "image": "/images/products/WILLOW/WILLOW SHORT PANTS.jpg",
-    "hoverImage": "/images/products/WILLOW/WILLOW SHORT PANTS.jpg",
+    "hoverImage": "/images/products/WILLOW/WILLOW PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/WILLOW/WILLOW SHORT PANTS.jpg"
@@ -5784,7 +5784,7 @@
     "priceValue": 960000,
     "installment": "IDR320,000",
     "image": "/images/products/WILLOW/WILLOW SHORT TOP.jpg",
-    "hoverImage": "/images/products/WILLOW/WILLOW SHORT TOP.jpg",
+    "hoverImage": "/images/products/WILLOW/WILLOW PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/WILLOW/WILLOW SHORT TOP.jpg"
@@ -5809,7 +5809,7 @@
     "priceValue": 840000,
     "installment": "IDR280,000",
     "image": "/images/products/WILLOW/WILLOW SKIRT.jpg",
-    "hoverImage": "/images/products/WILLOW/WILLOW SKIRT.jpg",
+    "hoverImage": "/images/products/WILLOW/WILLOW PANTS.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/WILLOW/WILLOW SKIRT.jpg"
@@ -5834,7 +5834,7 @@
     "priceValue": 925000,
     "installment": "IDR308,333",
     "image": "/images/products/WINE & YUNA/WINE SKIRT.jpg",
-    "hoverImage": "/images/products/WINE & YUNA/WINE SKIRT.jpg",
+    "hoverImage": "/images/products/WINE & YUNA/YUNA LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/WINE & YUNA/WINE SKIRT.jpg"
@@ -5859,7 +5859,7 @@
     "priceValue": 820000,
     "installment": "IDR273,333",
     "image": "/images/products/WINE & YUNA/YUNA LONG TOP  TUNIK.jpg",
-    "hoverImage": "/images/products/WINE & YUNA/YUNA LONG TOP  TUNIK.jpg",
+    "hoverImage": "/images/products/WINE & YUNA/YUNA SKIRT.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/WINE & YUNA/YUNA LONG TOP  TUNIK.jpg"
@@ -5884,7 +5884,7 @@
     "priceValue": 975000,
     "installment": "IDR325,000",
     "image": "/images/products/WINE & YUNA/YUNA SKIRT.jpg",
-    "hoverImage": "/images/products/WINE & YUNA/YUNA SKIRT.jpg",
+    "hoverImage": "/images/products/WINE & YUNA/YUNA LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/WINE & YUNA/YUNA SKIRT.jpg"
@@ -5909,7 +5909,7 @@
     "priceValue": 845000,
     "installment": "IDR281,666",
     "image": "/images/products/WINE & YUNA/YUNA TOP.jpg",
-    "hoverImage": "/images/products/WINE & YUNA/YUNA TOP.jpg",
+    "hoverImage": "/images/products/WINE & YUNA/YUNA LONG TOP  TUNIK.jpg",
     "swatches": [],
     "gallery": [
       "/images/products/WINE & YUNA/YUNA TOP.jpg"
