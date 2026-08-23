@@ -10,6 +10,8 @@ import { CATEGORY_LABELS } from "@/data/categories";
 import { cn } from "@/lib/utils";
 import { useCartStore } from "@/store/useCartStore";
 import { ProductCarousel } from "./ProductCarousel";
+import { AuthModal } from "./AuthModal";
+import { supabaseBrowserClient } from "@/lib/supabaseClient";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
 
 const SIZE_OPTIONS: Record<CategorySlug, string[]> = {
@@ -85,6 +87,7 @@ export function ProductDetail({
   const [wishlisted, setWishlisted] = useState(false);
   const [added, setAdded] = useState(false);
   const [addingPulse, setAddingPulse] = useState(false);
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
   const addItem = useCartStore((state) => state.addItem);
 
   const isTrending = product.collections?.includes("trending-now");
@@ -152,8 +155,22 @@ export function ProductDetail({
   const handlePrevImage = () => handleThumbnailClick((activeImage - 1 + gallery.length) % gallery.length);
   const handleNextImage = () => handleThumbnailClick((activeImage + 1) % gallery.length);
 
-  /* ── Add to bag ── */
-  function handleAddToBag() {
+  /* ── Add to bag with Auth check ── */
+  async function handleAddToBag() {
+    try {
+      const { data: { user } } = await supabaseBrowserClient.auth.getUser();
+      if (!user) {
+        setIsAuthModalOpen(true);
+        return;
+      }
+    } catch {
+      setIsAuthModalOpen(true);
+      return;
+    }
+    executeAddToCart();
+  }
+
+  function executeAddToCart() {
     const numericPrice = parseInt(product.price.replace(/[^\d]/g, ""), 10) || 0;
     addItem({
       variantId: `${product.id}-${selectedSize}`,
@@ -547,6 +564,13 @@ export function ProductDetail({
           ))}
         </div>
       </section>
+      {/* ── Auth Required Modal ── */}
+      <AuthModal
+        isOpen={isAuthModalOpen}
+        onClose={() => setIsAuthModalOpen(false)}
+        onSuccess={executeAddToCart}
+        message="Silakan masuk ke akun PLEATSSSI Anda terlebih dahulu untuk menambahkan produk ke keranjang belanja."
+      />
     </div>
   );
 }

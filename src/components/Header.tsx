@@ -7,6 +7,8 @@ import { cn } from '@/lib/utils';
 import { MobileNav } from './MobileNav';
 import { AnnouncementBanner } from './AnnouncementBanner';
 import { CartDrawer } from './CartDrawer';
+import { AuthModal } from './AuthModal';
+import { supabaseBrowserClient } from '@/lib/supabaseClient';
 import { gsap } from '@/lib/gsap';
 import { useCartStore } from '@/store/useCartStore';
 
@@ -36,6 +38,9 @@ interface HeaderProps {
 export function Header({ navItems = DEFAULT_NAV_ITEMS }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [isAuthOpen, setIsAuthOpen] = useState(false);
+  const [currentUser, setCurrentUser] = useState<string | null>(null);
+  const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
   const headerRef = useRef<HTMLElement>(null);
   const logoRef = useRef<HTMLAnchorElement>(null);
   const iconsRef = useRef<HTMLDivElement>(null);
@@ -43,6 +48,24 @@ export function Header({ navItems = DEFAULT_NAV_ITEMS }: HeaderProps) {
   const cartBtnRef = useRef<HTMLButtonElement>(null);
 
   const itemCount = useCartStore((s) => s.items.reduce((n, i) => n + i.quantity, 0));
+
+  useEffect(() => {
+    supabaseBrowserClient.auth.getUser().then(({ data: { user } }) => {
+      if (user) {
+        setCurrentUser(user.user_metadata?.name || user.email || 'Pelanggan');
+      }
+    });
+
+    const { data: { subscription } } = supabaseBrowserClient.auth.onAuthStateChange((_event, session) => {
+      if (session?.user) {
+        setCurrentUser(session.user.user_metadata?.name || session.user.email || 'Pelanggan');
+      } else {
+        setCurrentUser(null);
+      }
+    });
+
+    return () => subscription.unsubscribe();
+  }, []);
 
   /* ── Bounce cart icon when count changes ── */
   useEffect(() => {
@@ -138,14 +161,71 @@ export function Header({ navItems = DEFAULT_NAV_ITEMS }: HeaderProps) {
                 <button aria-label="Wishlist" className="p-2 text-[#1A1918] hover:text-[#0B4F3A] transition-all hover:scale-110 active:scale-90">
                   <Heart size={20} strokeWidth={1.5} />
                 </button>
-                <button aria-label="Akun saya" className="p-2 text-[#1A1918] hover:text-[#0B4F3A] transition-all hover:scale-110 active:scale-90">
-                  <User size={20} strokeWidth={1.5} />
-                </button>
+                {/* User Account Button & Dropdown */}
+                <div className="relative">
+                  <button
+                    aria-label="Akun saya"
+                    onClick={() => {
+                      if (!currentUser) {
+                        setIsAuthOpen(true);
+                      } else {
+                        setIsUserMenuOpen(!isUserMenuOpen);
+                      }
+                    }}
+                    className={cn(
+                      "p-2 text-[#1A1918] hover:text-[#0B4F3A] transition-all hover:scale-110 active:scale-90 flex items-center gap-1",
+                      currentUser && "text-[#0B4F3A]"
+                    )}
+                  >
+                    <User size={20} strokeWidth={1.5} />
+                    {currentUser && (
+                      <span className="text-[10px] font-semibold uppercase tracking-wider max-w-[80px] truncate">
+                        {currentUser.split(' ')[0]}
+                      </span>
+                    )}
+                  </button>
+
+                  {/* Dropdown Menu when logged in */}
+                  {currentUser && isUserMenuOpen && (
+                    <div className="absolute right-0 mt-2 w-48 bg-[#FAF7F2] border border-[#EADFD4] shadow-xl py-2 z-50 animate-in fade-in zoom-in-95">
+                      <div className="px-4 py-2 border-b border-[#EADFD4]">
+                        <p className="text-[10px] uppercase tracking-wider text-[#786E65]">Masuk Sebagai</p>
+                        <p className="text-xs font-semibold text-[#1A1918] truncate">{currentUser}</p>
+                      </div>
+                      <button
+                        onClick={async () => {
+                          await supabaseBrowserClient.auth.signOut();
+                          setCurrentUser(null);
+                          setIsUserMenuOpen(false);
+                        }}
+                        className="w-full text-left px-4 py-2 text-xs text-[#8C2323] hover:bg-[#8C2323]/10 font-semibold transition-colors uppercase tracking-wider"
+                      >
+                        Keluar (Logout)
+                      </button>
+                    </div>
+                  )}
+                </div>
                 <CartButton />
               </div>
 
               {/* Mobile */}
               <div className="flex xl:hidden items-center gap-1">
+                <button
+                  aria-label="Akun saya"
+                  onClick={() => {
+                    if (!currentUser) {
+                      setIsAuthOpen(true);
+                    } else {
+                      setIsUserMenuOpen(!isUserMenuOpen);
+                    }
+                  }}
+                  className={cn(
+                    "p-2 text-[#1A1918] hover:text-[#0B4F3A] transition-all hover:scale-110 active:scale-90",
+                    currentUser && "text-[#0B4F3A]"
+                  )}
+                >
+                  <User size={20} strokeWidth={1.5} />
+                </button>
                 <button aria-label="Cari produk" className="p-2 text-[#1A1918] hover:text-[#0B4F3A] transition-all hover:scale-110 active:scale-90">
                   <Search size={20} strokeWidth={1.5} />
                 </button>
@@ -187,6 +267,7 @@ export function Header({ navItems = DEFAULT_NAV_ITEMS }: HeaderProps) {
 
       <MobileNav isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} navItems={navItems} />
       <CartDrawer isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
+      <AuthModal isOpen={isAuthOpen} onClose={() => setIsAuthOpen(false)} />
     </>
   );
 }
