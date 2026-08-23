@@ -69,40 +69,37 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
-  --radius-sm: calc(var(--radius) * 0.6);
-  --radius-md: calc(var(--radius) * 0.8);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) * 1.4);
-  --radius-2xl: calc(var(--radius) * 1.8);
-  --radius-3xl: calc(var(--radius) * 2.2);
-  --radius-4xl: calc(var(--radius) * 2.6);
+  --radius-xl: calc(var(--radius) + 4px);
 }
 
 :root {
+  --radius: 0.25rem;
   --background: #FAF7F2;
   --foreground: #1A1918;
   --card: #FFFFFF;
   --card-foreground: #1A1918;
-  --popover: #FAF7F2;
+  --popover: #FFFFFF;
   --popover-foreground: #1A1918;
-  --primary: #0B4F3A;
+  --primary: #1A1918;
   --primary-foreground: #FAF7F2;
   --secondary: #F5F0E6;
   --secondary-foreground: #1A1918;
   --muted: #F5F0E6;
-  --muted-foreground: #666666;
-  --accent: #F5F0E6;
+  --muted-foreground: #786E65;
+  --accent: #EADFD4;
   --accent-foreground: #1A1918;
-  --destructive: oklch(0.577 0.245 27.325);
+  --destructive: #8C2323;
   --border: #EADFD4;
   --input: #EADFD4;
   --ring: #0B4F3A;
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --radius: 0.625rem;
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
   --sidebar: #FAF7F2;
   --sidebar-foreground: #1A1918;
   --sidebar-primary: #0B4F3A;
@@ -116,27 +113,27 @@
 .dark {
   --background: #1A1918;
   --foreground: #FAF7F2;
-  --card: #242220;
+  --card: #2E2B28;
   --card-foreground: #FAF7F2;
-  --popover: #242220;
+  --popover: #2E2B28;
   --popover-foreground: #FAF7F2;
-  --primary: #0B4F3A;
-  --primary-foreground: #FAF7F2;
+  --primary: #FAF7F2;
+  --primary-foreground: #1A1918;
   --secondary: #2E2B28;
   --secondary-foreground: #FAF7F2;
   --muted: #2E2B28;
-  --muted-foreground: #A09A93;
+  --muted-foreground: oklch(0.708 0 0);
   --accent: #2E2B28;
   --accent-foreground: #FAF7F2;
   --destructive: oklch(0.704 0.191 22.216);
   --border: rgba(234, 223, 212, 0.15);
-  --input: rgba(234, 223, 212, 0.2);
+  --input: rgba(234, 223, 212, 0.15);
   --ring: #0B4F3A;
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
   --sidebar: #1A1918;
   --sidebar-foreground: #FAF7F2;
   --sidebar-primary: #0B4F3A;
@@ -175,4 +172,108 @@ html {
 /* ── Scroll-reveal base: prevent flash of unstyled content ── */
 [data-word] {
   display: inline-block;
-}
+}
+
+/* ─────────────────────────────────────────────────────────────
+   PREMIUM BROWSER SURFACE THEMING
+   ───────────────────────────────────────────────────────────── */
+
+/* Custom scrollbar — thin luxury rail */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #EADFD4;
+  border-radius: 2px;
+  transition: background 0.2s;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #786E65;
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #EADFD4 #FAF7F2;
+}
+
+/* Text selection — emerald on cream */
+::selection {
+  background-color: #0B4F3A;
+  color: #FAF7F2;
+}
+::-moz-selection {
+  background-color: #0B4F3A;
+  color: #FAF7F2;
+}
+
+/* Focus ring — elegant emerald glow */
+:focus-visible {
+  outline: 2px solid #0B4F3A;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Input caret */
+input, textarea {
+  caret-color: #0B4F3A;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   PAGE TRANSITION — fade-through
+   ───────────────────────────────────────────────────────────── */
+@keyframes pleatsssi-page-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.page-enter {
+  animation: pleatsssi-page-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   PREMIUM BUTTON SHIMMER UTILITY
+   ───────────────────────────────────────────────────────────── */
+@keyframes shimmer-sweep {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(100%); }
+}
+
+.btn-shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.18) 50%, transparent 100%);
+  transform: translateX(-100%);
+  pointer-events: none;
+}
+.btn-shimmer:hover::after {
+  animation: shimmer-sweep 0.65s ease-in-out;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   UNDERLINE OFFSET GLOBAL
+   ───────────────────────────────────────────────────────────── */
+a {
+  text-underline-offset: 3px;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   CART DRAWER TRANSITION
+   ───────────────────────────────────────────────────────────── */
+.cart-drawer-backdrop {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   NUMBER / PRICE TABULAR FIGURES
+   ───────────────────────────────────────────────────────────── */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}

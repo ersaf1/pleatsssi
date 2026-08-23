@@ -157,7 +157,7 @@ export async function getDynamicProducts(): Promise<Product[]> {
       }
 
       return {
-        id: p.id,
+        id: p.slug || p.id,
         name: p.name,
         color: p.product_variants?.[0]?.color || '',
         price: `IDR${priceNum.toLocaleString('en-US')}`,
@@ -172,7 +172,7 @@ export async function getDynamicProducts(): Promise<Product[]> {
         category: (p.categories?.slug || 'others') as Product['category'],
         collections: p.collections && p.collections.length > 0 ? p.collections : ['new-arrivals'],
         isSale: discountNum > 0,
-        pdpUrl: `/id/products/${p.id}`
+        pdpUrl: `/id/products/${p.slug || p.id}`
       };
     }) as Product[];
   } catch {

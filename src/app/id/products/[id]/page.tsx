@@ -31,8 +31,9 @@ export default async function ProductPage({
   const products = await getDynamicProducts();
   const product = products.find((p) => p.id.toUpperCase() === id.toUpperCase());
   if (!product) notFound();
+  const foundProduct = product!;
 
-  const variants = products.filter((p) => p.name === product.name);
+  const variants = products.filter((p) => p.name === foundProduct.name);
   const sameCategory = products.filter((p) => p.category === product.category && p.id.toUpperCase() !== id.toUpperCase());
   const otherCategory = products.filter((p) => p.category !== product.category && p.id.toUpperCase() !== id.toUpperCase());
   const relatedProducts = (sameCategory.length >= 4 ? sameCategory : [...sameCategory, ...otherCategory]).slice(0, 4);

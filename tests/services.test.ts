@@ -110,13 +110,14 @@ describe('Dynamic Services with configured Supabase', () => {
 
     vi.spyOn(supabaseBrowserClient, 'from').mockReturnValue({
       select: () => ({
-        eq: () => Promise.resolve({ data: mockDbProducts, error: null })
+        eq: () => Promise.resolve({ data: mockDbProducts, error: null }),
       })
     } as unknown as ReturnType<typeof supabaseBrowserClient.from>);
 
     const products = await getDynamicProducts();
     expect(products.length).toBe(1);
-    expect(products[0].id).toBe('p1');
+    // service maps id to slug || id
+    expect(products[0].id).toBe('pleated-shirt');
     expect(products[0].name).toBe('Pleated Shirt');
     expect(products[0].color).toBe('Black');
     expect(products[0].price).toBe('IDR500,000');
@@ -129,6 +130,6 @@ describe('Dynamic Services with configured Supabase', () => {
     expect(products[0].gallery).toEqual(['/primary.jpg', '/hover.jpg']);
     expect(products[0].category).toBe('tops');
     expect(products[0].isSale).toBe(true);
-    expect(products[0].pdpUrl).toBe('/id/products/p1');
+    expect(products[0].pdpUrl).toBe('/id/products/pleated-shirt');
   });
 });

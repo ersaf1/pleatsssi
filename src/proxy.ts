@@ -44,8 +44,8 @@ export async function proxy(request: NextRequest) {
     const { data: { user } } = await supabase.auth.getUser();
     const pathname = request.nextUrl.pathname;
 
-    // Protect checkout and profile routes
-    if (!user && (pathname.startsWith('/id/profile') || pathname.startsWith('/id/checkout'))) {
+    // Protect profile routes (checkout is guest-accessible)
+    if (!user && pathname.startsWith('/id/profile')) {
       return NextResponse.redirect(new URL('/id/login', request.url));
     }
 
@@ -96,5 +96,5 @@ export async function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/id/profile/:path*', '/id/checkout/:path*', '/id/admin', '/id/admin/:path*'],
+  matcher: ['/id/profile/:path*', '/id/admin', '/id/admin/:path*'],
 };

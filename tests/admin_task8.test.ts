@@ -1,6 +1,11 @@
-import { describe, test, expect } from 'vitest';
+import { describe, test, expect, vi } from 'vitest';
 import fs from 'fs';
 import path from 'path';
+
+vi.mock('../src/lib/services/serviceUtils', () => ({
+  isSupabaseConfigured: () => false,
+  withTimeout: <T>(p: PromiseLike<T>) => Promise.resolve(p),
+}));
 
 import {
   getAllBanners,
